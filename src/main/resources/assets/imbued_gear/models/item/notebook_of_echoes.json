@@ -1,0 +1,26 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "imbued_gear:item/notebook_of_echoes"
+  },
+  "overrides": [
+        {
+            "predicate": {
+                "stage": 0.3
+            },
+            "model": "imbued_gear:item/notebook_of_echoes_1"
+        },
+        {
+            "predicate": {
+                "stage": 0.7
+            },
+            "model": "imbued_gear:item/notebook_of_echoes_2"
+        },
+        {
+            "predicate": {
+                "stage": 1.0
+            },
+            "model": "imbued_gear:item/notebook_of_echoes_3"
+        }
+    ]
+}

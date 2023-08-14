@@ -1,0 +1,46 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:citrine"
+  },
+  "imbueB": {
+	"item": "minecraft:amethyst_shard"
+  },
+  "imbueC": {
+	"item": "minecraft:amethyst_shard"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:citrine"
+  },
+  "craftA": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftB": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftC": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftD": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet"
+  },
+  "craftF": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftG": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftH": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftI": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "title": "Crystalline Arrow",
+  "cost": 15,
+  "resultA": "imbued_gear:crystalline_arrow",
+  "countA": 16
+}

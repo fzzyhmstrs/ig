@@ -1,0 +1,35 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:steel_ingot"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:ametrine_boots"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:steel_ingot"
+  },
+  "craftG": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "craftI": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "title": "Champions Boots",
+  "cost": 33,
+  "resultA": "imbued_gear:champions_boots",
+  "countA": 1,
+  "transferEnchant": true
+}

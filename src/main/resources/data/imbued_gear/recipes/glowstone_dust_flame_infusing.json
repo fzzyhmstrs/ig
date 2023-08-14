@@ -1,0 +1,21 @@
+{
+  "type": "imbued_gear:flame_imfusing",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:sunflower"
+    },
+    {
+      "item": "minecraft:netherrack"
+    }
+  ],
+  "base": {
+    "block": "minecraft:glowstone"
+  }
+  "result": {
+    "item": "minecraft:glowstone_dust",
+    "count": 1
+  }
+}

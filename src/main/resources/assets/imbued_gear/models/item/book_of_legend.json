@@ -1,0 +1,26 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "imbued_gear:item/book_of_legend"
+  },
+  "overrides": [
+        {
+            "predicate": {
+                "type": 0.3
+            },
+            "model": "imbued_gear:item/book_of_legend_fury"
+        },
+        {
+            "predicate": {
+                "type": 0.7
+            },
+            "model": "imbued_gear:item/book_of_legend_grace"
+        },
+        {
+            "predicate": {
+                "type": 1.0
+            },
+            "model": "imbued_gear:item/book_of_legend_wit"
+        }
+    ]
+}

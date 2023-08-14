@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "imbued_gear:item/steel_axe"
+  }
+}

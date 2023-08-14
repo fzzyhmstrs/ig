@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftA": {
+    "item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:brutal_gem"
+  },
+  "craftC": {
+    "item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftD": {
+	"item": "imbued_gear:puresteel"
+  },
+  "craftE": {
+	"item": "imbued_gear:glowing_helmet"
+  },
+  "craftF": {
+	"item": "imbued_gear:puresteel"
+  },
+  "title": "Warriors Helmet",
+  "cost": 35,
+  "resultA": "imbued_gear:warriors_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

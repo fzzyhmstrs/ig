@@ -1,0 +1,15 @@
+{
+  "type": "amethyst_imbuement:enhancing",
+  "dust": {
+    "item": "imbued_gear:soul_powder"
+  },
+  "base": {
+    "tag": "minecraft:sand"
+  },
+  "addition": {
+    "item": "minecraft:peony"
+  },
+  "result": {
+    "item": "imbued_gear:livingsteel"
+  }
+}

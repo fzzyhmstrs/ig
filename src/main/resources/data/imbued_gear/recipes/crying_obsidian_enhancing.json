@@ -1,0 +1,15 @@
+{
+  "type": "amethyst_imbuement:enhancing",
+  "dust": {
+    "item": "imbued_gear:soul_powder"
+  },
+  "base": {
+    "item": "minecraft:obsidian"
+  },
+  "addition": {
+    "item": "minecraft:blue_orchid"
+  },
+  "result": {
+    "item": "minecraft:grass_block"
+  }
+}

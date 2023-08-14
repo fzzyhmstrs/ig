@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "addition": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "result": {
+    "item": "imbued_gear:garnet_chestplate"
+  }
+}

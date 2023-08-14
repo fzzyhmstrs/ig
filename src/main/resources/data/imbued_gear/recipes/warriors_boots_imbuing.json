@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftE": {
+	"item": "imbued_gear:glowing_boots"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftG": {
+	"item": "imbued_gear:puresteel"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:brutal_gem"
+  },
+  "craftI": {
+	"item": "imbued_gear:puresteel"
+  },
+  "title": "Warriors Boots",
+  "cost": 35,
+  "resultA": "imbued_gear:warriors_boots",
+  "countA": 1,
+  "transferEnchant": true
+}

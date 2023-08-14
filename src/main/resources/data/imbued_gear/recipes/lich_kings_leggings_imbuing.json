@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueB": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueC": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueD": {
+	"item": "imbued_gear:serpentine"
+  },
+  "craftA": {
+    "item": "minecraft:bone_block"
+  },
+  "craftB": {
+    "item": "imbued_gear:ensouled_gem"
+  },
+  "craftC": {
+    "item": "minecraft:bone_block"
+  },
+  "craftD": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftE": {
+	"item": "imbued_gear:shimmering_pants"
+  },
+  "craftF": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftG": {
+	"item": "minecraft:bone_block"
+  },
+  "craftI": {
+	"item": "minecraft:bone_block"
+  },
+  "title": "Lich Kings Leggings",
+  "cost": 29,
+  "resultA": "imbued_gear:lich_kings_leggings",
+  "countA": 1,
+  "transferEnchant": true
+}

@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueB": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueC": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueD": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "craftA": {
+	"item": "minecraft:chain"
+  },
+  "craftB": {
+	"item": "imbued_gear:void_gem"
+  },
+  "craftC": {
+	"item": "minecraft:chain"
+  },
+  "craftD": {
+	"item": "minecraft:chain"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:steel_helmet"
+  },
+  "craftF": {
+	"item": "minecraft:chain"
+  },
+  "title": "Void Mail Helmet",
+  "cost": 27,
+  "resultA": "imbued_gear:void_mail_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

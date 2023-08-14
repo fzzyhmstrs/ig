@@ -1,0 +1,34 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueB": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueC": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "imbueD": {
+	"item": "imbued_gear:null_onyx"
+  },
+  "craftB": {
+	"item": "imbued_gear:void_gem"
+  },
+  "craftD": {
+	"item": "imbued_gear:null_powder"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:glowing_blade"
+  },
+  "craftF": {
+	"item": "imbued_gear:null_powder"
+  },
+  "craftH": {
+	"item": "imbued_gear:null_powder"
+  },
+  "title": "Nihil Blade",
+  "cost": 19,
+  "resultA": "imbued_gear:nihil_blade",
+  "countA": 1
+}

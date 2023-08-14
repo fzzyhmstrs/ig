@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "imbued_gear:item/crown_of_sorrows"
+  },
+  "overrides": [
+      {
+          "predicate": {
+              "active": 1
+          },
+          "model": "imbued_gear:item/crown_of_sorrows_active"
+      }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "imbued_gear",
+  "version": "${version}",
+  "name": "Imbued Gear",
+  "description": "An expansion for Amethyst Imbuement that expands on the gear offered, including brand new armor, trinkets, weapons, supplies, potions, and more! Configurable to provide a unique experience for the mid-to-end-game.",
+  "authors": [
+    "fzzyhmstrs"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/imbued-gear",
+    "issues": "https://github.com/fzzyhmstrs/ig/issues",
+    "sources": "https://github.com/fzzyhmstrs/ig"
+  },
+  "license": "MIT License",
+  "icon": "assets/imbued_gear/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "me.fzzyhmstrs.imbued_gear.IG"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "me.fzzyhmstrs.imbued_gear.IGClient"
+      }
+    ],
+    "preLaunch": [
+      {
+        "adapter": "kotlin",
+        "value": "me.fzzyhmstrs.imbued_gear.IGPreLaunch"
+      }
+    ]
+  },
+  "mixins": [
+    "imbued_gear.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "fabric": "*",
+    "fabric-key-binding-api-v1": "*",
+    "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21",
+    "minecraft": ">=1.20.1",
+    "java": ">=17",
+	"amethyst_imbuement": ">=1.20.1-09",
+    "fzzy_core": ">=0.2.7+1.20.1",
+    "amethyst_core": ">=1.2.1+1.20.1",
+    "gear_core": ">=0.2.1.1+1.20.1",
+    "trinkets": ">=3.7.0"
+  }
+}

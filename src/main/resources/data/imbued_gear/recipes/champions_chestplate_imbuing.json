@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:steel_ingot"
+  },
+  "craftC": {
+	"item": "amethyst_imbuement:steel_ingot"
+  },
+  "craftD": {
+	"item": "minecraft:obsidian"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:ametrine_chestplate"
+  },
+  "craftF": {
+	"item": "minecraft:obsidian"
+  },
+  "craftG": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "craftH": {
+    	"item": "minecraft:obsidian"
+  },
+  "craftI": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "title": "Champions Chestplate",
+  "cost": 33,
+  "resultA": "imbued_gear:champions_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "imbued_gear:shimmering_fabric"
+    }
+  },
+  "result": {
+    "item": "imbued_gear:shimmering_robe",
+    "count": 1
+  }
+}

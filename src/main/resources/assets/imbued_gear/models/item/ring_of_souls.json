@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "imbued_gear:item/ring_of_souls"
+  }
+  "overrides": [
+      {
+          "predicate": {
+              "active": 1
+          },
+          "model": "imbued_gear:item/ring_of_souls_active"
+      }
+  ]
+}

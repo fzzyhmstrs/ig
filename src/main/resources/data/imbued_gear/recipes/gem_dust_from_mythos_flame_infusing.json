@@ -1,0 +1,18 @@
+{
+  "type": "imbued_gear:flame_imfusing",
+  "ingredients": [
+    {
+      "item": "amethyst_imbuement:book_of_mythos"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "base": {
+    "block": "amethyst_imbuement:chiseled_polished_amethyst"
+  }
+  "result": {
+    "item": "amethyst_imbuement:gem_dust",
+    "count": 9
+  }
+}

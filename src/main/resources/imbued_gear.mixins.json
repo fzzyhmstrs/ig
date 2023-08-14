@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "me.fzzyhmstrs.imbued_gear.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "EntityMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

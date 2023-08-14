@@ -1,0 +1,15 @@
+{
+  "type": "amethyst_imbuement:enhancing",
+  "dust": {
+    "item": "imbued_gear:null_powder"
+  },
+  "base": {
+    "item": "imbued_gear:sardonyx"
+  },
+  "addition": {
+    "item": "minecraft:red_mushroom"
+  },
+  "result": {
+    "item": "imbued_gear:null_onyx"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueB": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueC": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueD": {
+	"item": "imbued_gear:serpentine"
+  },
+  "craftD": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftE": {
+	"item": "imbued_gear:shimmering_boots"
+  },
+  "craftF": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftG": {
+	"item": "minecraft:bone_block"
+  },
+  "craftH": {
+	"item": "imbued_gear:ensouled_gem"
+  },
+  "craftI": {
+	"item": "minecraft:bone_block"
+  },
+  "title": "Lich Kings Helmet",
+  "cost": 29,
+  "resultA": "imbued_gear:lich_kings_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

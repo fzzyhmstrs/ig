@@ -1,0 +1,21 @@
+{
+  "type": "imbued_gear:flame_imfusing",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "base": {
+    "block": "minecraft:bedrock"
+  }
+  "result": {
+    "item": "imbued_gear:null_powder",
+    "count": 2
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "imbued_gear:celestial_altar",
+  "imbueA": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "imbueB": {
+	"item": "minecraft:nether_star"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:energetic_opal"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:celestine"
+  },
+  "craftC": {
+	"item": "amethyst_imbuement:energetic_opal"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:resonant_rod"
+  },
+  "craftE": {
+	"item": "imbued_gear:champions_trident"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:resonant_rod"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:energetic_opal"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:lethal_gem"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:energetic_opal"
+  },
+  "title": "Celestial Trident",
+  "cost": 99,
+  "resultA": "imbued_gear:celestial_trident",
+  "countA": 1,
+  "transferEnchant": true
+}
