@@ -40,14 +40,15 @@ object RegisterItem {
     val SERPENTINE = register(Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)),"serpentine")
     val ENSOULED_GEM = register(EnsouledGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
     //make a spellcasters reagent that does less magic resist
-    val REALITY_GEM = register(RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
+    //val REALITY_GEM = register(RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
     val VOID_GEM = register(VoidGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"void_gem")
-    val MYSTIC_FRAGMENT = register(SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
-        EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
-        AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint(),"mystic_fragment")
-    val PURESTEEL = register(Item(AiItemSettings()),"puresteel")
-    val VOIDSTEEL = register(Item(AiItemSettings()),"voidsteel")
+    //val MYSTIC_FRAGMENT = register(SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
+    //    EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
+    //    AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint(),"mystic_fragment")
+    val PURESTEEL_INGOT = register(Item(AiItemSettings()),"puresteel_ingot")
+    val VOIDSTEEL_INGOT = register(Item(AiItemSettings()),"voidsteel_ingot")
     val NULL_POWDER = register(Item(FabricItemSettings()),"null_powder") //lighting bedrock on fire
+    val PURE_POWDER = register(Item(FabricItemSettings()),"pure_powder") //killing a mob with gem fire
     val SOUL_POWDER = register(Item(FabricItemSettings()),"soul_powder") //killing a mob with gem fire
     val WITHER_BONE = register(Item(FabricItemSettings()),"wither_bone") //killing a mob with gem fire
 
