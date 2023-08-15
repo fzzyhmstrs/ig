@@ -1,0 +1,35 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:bone_meal"
+  },
+  "imbueB": {
+	"item": "minecraft:bone_meal"
+  },
+  "imbueC": {
+	"item": "minecraft:bone_meal"
+  },
+  "imbueD": {
+	"item": "minecraft:bone_meal"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:xp_bush_seed"
+  },
+  "craftD": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftE": {
+	"item": "imbued_gear:ensouled_gem"
+  },
+  "craftF": {
+	"item": "minecraft:soul_sand"
+  },
+  "craftH": {
+	"item": "minecraft:soul_sand"
+  },
+  "title": "Soul Powder",
+  "cost": 13,
+  "resultA": "imbued_gear:soul_powder",
+  "countA": 8,
+  "transferEnchant": true
+}

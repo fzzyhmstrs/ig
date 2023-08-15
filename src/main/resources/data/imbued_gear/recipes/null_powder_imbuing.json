@@ -1,0 +1,35 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:gem_dust"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:gem_dust"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:gem_dust"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:gem_dust"
+  },
+  "craftB": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftD": {
+	"item": "minecraft:black_dye"
+  },
+  "craftE": {
+	"item": "imbued_gear:void_gem"
+  },
+  "craftF": {
+	"item": "minecraft:black_dye"
+  },
+  "craftH": {
+	"item": "minecraft:black_dye"
+  },
+  "title": "Null Powder",
+  "cost": 13,
+  "resultA": "imbued_gear:null_powder",
+  "countA": 8,
+  "transferEnchant": true
+}
