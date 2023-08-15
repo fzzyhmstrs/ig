@@ -17,7 +17,6 @@ import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.loot.provider.number.UniformLootNumberProvider
 import net.minecraft.util.Identifier
-import me.fzzyhmstrs.imbued_gear.modifier.ModifierPredicates as ModifierPredicates1
 
 object RegisterModifier {
 
@@ -48,8 +47,8 @@ object RegisterModifier {
     }
 
     //scepter modifiers
-    val DAMNABLE_SUMMONS = AugmentModifier(Identifier(IG.MOD_ID,"damnable_summons"), cooldownModifier = -6.25, availableForRoll = false).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod.add(it) }
-    val CHAMPIONS_FAITH = AugmentModifier(Identifier(IG.MOD_ID,"champions_faith"), levelModifier = 1, availableForRoll = false).withDuration(0,0,25).withSpellToAffect(ModifierPredicates1.CHAMPIONS_PREDICATE).also { regMod.add(it) }
+    //val DAMNABLE_SUMMONS = AugmentModifier(Identifier(IG.MOD_ID,"damnable_summons"), cooldownModifier = -6.25, availableForRoll = false).withDamage(1f).withSpellToAffect(ModifierPredicates.SUMMONERS_PREDICATE).also { regMod.add(it) }
+    //val CHAMPIONS_FAITH = AugmentModifier(Identifier(IG.MOD_ID,"champions_faith"), levelModifier = 1, availableForRoll = false).withDuration(0,0,25).withSpellToAffect(ModifierPredicates1.CHAMPIONS_PREDICATE).also { regMod.add(it) }
     val HEALERS_REWARD = AugmentModifier(Identifier(IG.MOD_ID,"healers_reward")).withConsumer(ModifierConsumers.HEALERS_REWARD_CONSUMER).withSpellToAffect(ModifierPredicates.HEALERS_PREDICATE).also { regMod.add(it) }
     val COSMIC = AugmentModifier(Identifier(IG.MOD_ID,"cosmic"), levelModifier = 1, cooldownModifier = -25.0, manaCostModifier = -25.0,availableForRoll = false).withDamage(2f).withDuration(0,0,20).also { regMod.add(it) }
 
@@ -103,7 +102,6 @@ object RegisterModifier {
         .withKilledOther(ModifierConsumers.MANA_DRAINING_KILL_CONSUMER)
         .withToll(EXPENSIVE_TOLL)
         .also { regMod.add(it) }
-        
     val MANA_REACTIVE = buildModifier(Identifier(IG.MOD_ID,"mana_reactive"), EquipmentModifier.EquipmentModifierTarget.ARMOR, 5, EquipmentModifier.Rarity.RARE)
         .withOnDamaged(ModifierFunctions.MANA_REACTIVE_DAMAGE_FUNCTION)
         .withToll(EXPENSIVE_TOLL)
@@ -112,6 +110,14 @@ object RegisterModifier {
     /////////////////////////////////////////////////
         
     //Set and Special equipment modifiers
+    val NOTHINGNESS = buildModifier(Identifier(IG.MOD_ID,"nothingness"), persistent = true, availableForSelection = false)
+        .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
+        .also { regMod.add(it) }
+    val WHISPER_OF_REGRET = EquipmentModifier(Identifier(IG.MOD_ID,"whisper_of_regret"), persistent = true, randomSelectable = false)
+        .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
+        .also { regMod.add(it) }
+
+
     val VOID_SHROUDED = buildModifier(Identifier(IG.MOD_ID,"void_shrouded"), persistent = true, availableForSelection = false)
         .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
@@ -119,13 +125,11 @@ object RegisterModifier {
         .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .withAttributeModifier(RegisterAttribute.SPELL_COOLDOWN,-0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .also { regMod.add(it) }
-    val NOTHINGNESS = buildModifier(Identifier(IG.MOD_ID,"nothingness"), persistent = true, availableForSelection = false)
-        .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
-        .also { regMod.add(it) }
-    val RULER_OF_THE_DAMNED = buildModifier(Identifier(IG.MOD_ID,"ruler_of_the_damned"), persistent = true, availableForSelection = false)
-        .withModifiers(DAMNABLE_SUMMONS.modifierId)
-        .withAttributeModifier(RegisterAttribute.SPELL_DURATION,0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-        .also { regMod.add(it) }
+
+    //val RULER_OF_THE_DAMNED = buildModifier(Identifier(IG.MOD_ID,"ruler_of_the_damned"), persistent = true, availableForSelection = false)
+    //    .withModifiers(DAMNABLE_SUMMONS.modifierId)
+    //    .withAttributeModifier(RegisterAttribute.SPELL_DURATION,0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+    //    .also { regMod.add(it) }
     val HELIOPHOBIA = buildModifier(Identifier(IG.MOD_ID,"heliophobia"), persistent = true, availableForSelection = false)
         .withOnDamaged(ModifierFunctions.HELIOPHOBIA_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
@@ -133,9 +137,9 @@ object RegisterModifier {
         .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,1.0,EntityAttributeModifier.Operation.ADDITION)
         .withAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,3.0,EntityAttributeModifier.Operation.ADDITION)
         .also { regMod.add(it) }
-    val CHAMPIONS_GRIT = buildModifier(Identifier(IG.MOD_ID,"champions_grit"), persistent = true, availableForSelection = false)
-        .withModifiers(CHAMPIONS_FAITH.modifierId)
-        .also { regMod.add(it) }
+    //val CHAMPIONS_GRIT = buildModifier(Identifier(IG.MOD_ID,"champions_grit"), persistent = true, availableForSelection = false)
+    //    .withModifiers(CHAMPIONS_FAITH.modifierId)
+    //    .also { regMod.add(it) }
     val WARRIORS_LIGHT = buildModifier(Identifier(IG.MOD_ID,"warriors_light"), persistent = true, availableForSelection = false)
         .withModifiers(RegisterModifier.SMITING.modifierId)
         .withOnDamaged(ModifierFunctions.WARRIORS_LIGHT_DAMAGE_FUNCTION)
@@ -149,10 +153,6 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val ETERNITY_SHROUDED = buildModifier(Identifier(IG.MOD_ID,"eternity_shrouded"), persistent = true, availableForSelection = false)
         .withAttributeModifier(RegisterAttribute.DAMAGE_MULTIPLICATION,-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-        .also { regMod.add(it) }
-
-    val WHISPER_OF_REGRET = EquipmentModifier(Identifier(IG.MOD_ID,"whisper_of_regret"), persistent = true, randomSelectable = false)
-        .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
         .also { regMod.add(it) }
 
     fun registerAll(){

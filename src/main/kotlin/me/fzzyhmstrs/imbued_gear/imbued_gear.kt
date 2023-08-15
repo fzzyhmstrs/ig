@@ -17,7 +17,7 @@ object IG: ModInitializer {
     const val MOD_ID = "imbued_gear"
 
     override fun onInitialize() {
-        RegisterBlock.registerAll()
+        //RegisterBlock.registerAll()
         RegisterArmor.registerAll()
         RegisterItem.registerAll()
         RegisterEntity.registerAll()

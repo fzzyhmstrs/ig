@@ -2,12 +2,8 @@ package me.fzzyhmstrs.imbued_gear.item.weapon
 
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
-import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedToolMaterial
-import me.fzzyhmstrs.fzzy_core.coding_util.AcText
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
-import me.fzzyhmstrs.fzzy_core.item_util.interfaces.Flavorful
 import me.fzzyhmstrs.imbued_gear.entity.ChampionsTridentEntity
-import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.EquipmentSlot
@@ -21,13 +17,11 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.item.ToolMaterial
 import net.minecraft.item.TridentItem
-import net.minecraft.registry.Registries
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvents
 import net.minecraft.stat.Stats
 import net.minecraft.text.MutableText
 import net.minecraft.text.Text
-import net.minecraft.util.Formatting
 import net.minecraft.util.UseAction
 import net.minecraft.util.math.MathHelper
 import net.minecraft.util.math.Vec3d

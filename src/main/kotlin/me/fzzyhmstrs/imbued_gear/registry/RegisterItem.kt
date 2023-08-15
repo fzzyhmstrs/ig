@@ -3,31 +3,25 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
-import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
-import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
-import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
-import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.imbued_gear.IG
-import me.fzzyhmstrs.imbued_gear.item.*
 import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.entity.attribute.EntityAttributeModifier
-import net.minecraft.entity.attribute.EntityAttributes
-import net.minecraft.item.*
+import net.minecraft.item.Item
+import net.minecraft.item.ItemGroup
+import net.minecraft.item.ItemStack
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.text.Text
-import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 import java.util.*
-import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier as RegisterModifier1
 
 // don't know if this is better as a class or object. as an object it allows me to call it without needing to initialize an instance of it.
 object RegisterItem {
@@ -71,10 +65,9 @@ object RegisterItem {
                 entries.addAll(regItem.stream().map { item -> ItemStack(item) }.toList())
                 entries.addAll(RegisterArmor.regArmor.stream().map { item -> ItemStack(item) }.toList())
                 entries.addAll(RegisterTool.regTool.stream().map { item -> ItemStack(item) }.toList())
-                entries.addAll(RegisterBlock.regBlock.values.stream()
+                /*entries.addAll(RegisterBlock.regBlock.values.stream()
                     .map { block -> ItemStack(block.asItem()) }
-                    .toList())
-
+                    .toList())*/
             }.build()
     }
 

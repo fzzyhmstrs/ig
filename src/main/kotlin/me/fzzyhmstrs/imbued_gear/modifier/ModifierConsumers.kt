@@ -21,8 +21,7 @@ object ModifierConsumers {
     val HEALERS_REWARD_CONSUMER = AugmentConsumer({ list: List<LivingEntity> -> healersRewardConsumer(list) }, AugmentConsumer.Type.AUTOMATIC)
     private fun healersRewardConsumer(list: List<LivingEntity>){
         list.forEach {
-            val rnd1 = it.world.random.nextInt(3)
-            if (rnd1 == 0 && it is PlayerEntity)
+            if (it is PlayerEntity)
                 it.addExperience(1)
         }
     }

@@ -2,7 +2,6 @@ package me.fzzyhmstrs.imbued_gear.modifier
 
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
-import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.registry.tag.DamageTypeTags
 

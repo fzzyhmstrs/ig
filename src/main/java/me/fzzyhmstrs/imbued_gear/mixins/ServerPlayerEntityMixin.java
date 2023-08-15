@@ -17,7 +17,7 @@ public class ServerPlayerEntityMixin {
     private void imbued_gear_checkRealityGemProgressRequestTeleport(double destX, double destY, double destZ, CallbackInfo ci) {
         ItemStack stack = ((ServerPlayerEntity)(Object)this).getOffHandStack();
         if (stack.getItem() instanceof GemOfPromiseItem) {
-            RegisterItem.INSTANCE.getREALITY_GEM().realityGemCheck(stack,((ServerPlayerEntity)(Object)this).getBlockPos(), new BlockPos(destX,destY, destZ), ((ServerPlayerEntity)(Object)this).getInventory());
+            RegisterItem.INSTANCE.getREALITY_GEM().realityGemCheck(stack,((ServerPlayerEntity)(Object)this).getBlockPos(), BlockPos.ofFloored(destX,destY, destZ), ((ServerPlayerEntity)(Object)this).getInventory());
         }
     }
 
@@ -25,7 +25,7 @@ public class ServerPlayerEntityMixin {
     private void imbued_gear_checkRealityGemProgressRequestTeleportAndDismount(double destX, double destY, double destZ, CallbackInfo ci) {
         ItemStack stack = ((ServerPlayerEntity)(Object)this).getOffHandStack();
         if (stack.getItem() instanceof GemOfPromiseItem) {
-            RegisterItem.INSTANCE.getREALITY_GEM().realityGemCheck(stack,((ServerPlayerEntity)(Object)this).getBlockPos(), new BlockPos(destX,destY, destZ), ((ServerPlayerEntity)(Object)this).getInventory());
+            RegisterItem.INSTANCE.getREALITY_GEM().realityGemCheck(stack,((ServerPlayerEntity)(Object)this).getBlockPos(), BlockPos.ofFloored(destX,destY, destZ), ((ServerPlayerEntity)(Object)this).getInventory());
         }
     }
 

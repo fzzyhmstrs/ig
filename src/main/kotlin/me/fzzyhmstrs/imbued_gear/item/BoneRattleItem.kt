@@ -1,7 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.item
 
 import me.fzzyhmstrs.amethyst_core.event.ModifySpellEvent
-import me.fzzyhmstrs.amethyst_core.item_util.AugmentScepterItem
 import me.fzzyhmstrs.amethyst_core.item_util.ScepterLike
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
@@ -24,8 +23,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.world.World
 import kotlin.math.max
 
-open class BoneRattleItem(
-    settings: Settings)
+open class BoneRattleItem(settings: Settings)
     :
     SpecialityOffhandItem(settings,listOf(),listOf()), ManaItem
 {

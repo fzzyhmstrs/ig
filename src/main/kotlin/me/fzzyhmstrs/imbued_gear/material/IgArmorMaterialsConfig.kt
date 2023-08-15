@@ -2,9 +2,9 @@ package me.fzzyhmstrs.imbued_gear.material
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterBlock
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
-import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem as RegisterAi
 import net.minecraft.recipe.Ingredient
 import net.minecraft.sound.SoundEvents
+import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem as RegisterAi
 
 object IgArmorMaterialsConfig{
     val CELESTIAL = FzzyArmorMaterial .Builder("ig_celestial",SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE)

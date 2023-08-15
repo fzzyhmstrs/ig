@@ -1,7 +1,7 @@
 package me.fzzyhmstrs.imbued_gear.entity
 
 import me.fzzyhmstrs.imbued_gear.registry.RegisterEntity
-import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
+import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
@@ -24,7 +24,7 @@ class ImbuedArrowEntity(entityType: EntityType<ImbuedArrowEntity>, world: World)
     }
 
     override fun asItemStack(): ItemStack {
-        return ItemStack(RegisterItem.IMBUED_ARROW)
+        return ItemStack(RegisterTool.IMBUED_ARROW)
     }
 
 }

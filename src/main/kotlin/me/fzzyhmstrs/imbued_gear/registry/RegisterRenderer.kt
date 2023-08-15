@@ -2,8 +2,6 @@
 
 package me.fzzyhmstrs.imbued_gear.registry
 
-import me.fzzyhmstrs.amethyst_core.nbt_util.NbtKeys
-import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.model.CelestialTridentEntityModel
 import me.fzzyhmstrs.imbued_gear.model.CelestialTridentEntityRenderer
@@ -67,12 +65,18 @@ object RegisterRenderer {
         EntityModelLayerRegistry.registerModelLayer(CHAMPIONS_TRIDENT, ChampionsTridentEntityModel::getTexturedModelData)
 
         ModelPredicateProviderRegistry.register(
+            RegisterTool.CELESTIAL_TRIDENT, Identifier("throwing")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int -> if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.CHAMPIONS_TRIDENT, Identifier("throwing")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int -> if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f }
+
+        ModelPredicateProviderRegistry.register(
             RegisterTool.CADUCEUS, Identifier("blocking")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f
         }
-        
-
 
         ModelPredicateProviderRegistry.register(
             RegisterTool.CROWN_OF_SORROWS, Identifier("active")

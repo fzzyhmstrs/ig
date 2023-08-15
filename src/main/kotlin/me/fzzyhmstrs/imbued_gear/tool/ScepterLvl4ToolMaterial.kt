@@ -3,7 +3,6 @@ package me.fzzyhmstrs.imbued_gear.tool
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterToolMaterial
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
-import net.minecraft.item.Items
 import net.minecraft.recipe.Ingredient
 
 

@@ -2,34 +2,20 @@
 
 package me.fzzyhmstrs.imbued_gear.registry
 
-import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
-import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
-import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
-import me.fzzyhmstrs.amethyst_imbuement.item.custom.CustomHoeItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
-import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.item.*
-import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem
-import me.fzzyhmstrs.imbued_gear.item.promise.RealityGemItem
-import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_gear.item.weapon.*
 import me.fzzyhmstrs.imbued_gear.tool.ScepterLvl4ToolMaterial
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
-import net.minecraft.entity.attribute.EntityAttributeModifier
-import net.minecraft.entity.attribute.EntityAttributes
-import net.minecraft.item.*
+import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import net.minecraft.text.Text
-import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
-import java.util.*
 import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier as RegisterModifier1
 
 // don't know if this is better as a class or object. as an object it allows me to call it without needing to initialize an instance of it.
@@ -67,7 +53,7 @@ object RegisterTool {
     //lich - buffs summons, chance to echo summoning spells at durability expense
     val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(100)) ,"bone_rattle")
     //saint
-    val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(450), scepterModifiers = listOf(RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
+    val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(450), scepterModifiers = listOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
     //champion
     val CROWN_OF_SORROWS = register(CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)),"crown_of_sorrows")
     //altar
@@ -75,7 +61,7 @@ object RegisterTool {
     //model tex mods
     //flame - spell cooldown, attack speed, chance to set things on fire
     val LIVING_FLAME = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) ,"living_flame")
-    //model tex mods
+    // mods
     //void - damaging has chance to reduce max health, magic resist, mana cost
     val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) ,"null_and_void")
     //scholar

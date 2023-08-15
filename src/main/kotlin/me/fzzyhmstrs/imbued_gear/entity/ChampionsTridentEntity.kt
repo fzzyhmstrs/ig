@@ -3,14 +3,12 @@ package me.fzzyhmstrs.imbued_gear.entity
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterEnchantment.CONTAMINATED
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterEnchantment.DECAYED
 import me.fzzyhmstrs.imbued_gear.registry.RegisterEntity
-import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.Entity
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LightningEntity
 import net.minecraft.entity.LivingEntity
-import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.data.DataTracker
 import net.minecraft.entity.data.TrackedDataHandlerRegistry
 import net.minecraft.entity.effect.StatusEffectInstance
