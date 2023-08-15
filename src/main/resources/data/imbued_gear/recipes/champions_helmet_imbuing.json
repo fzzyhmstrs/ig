@@ -31,7 +31,7 @@
 	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Champions Helmet",
-  "cost": 33,
+  "cost": 55,
   "resultA": "imbued_gear:champions_helmet",
   "countA": 1,
   "transferEnchant": true
