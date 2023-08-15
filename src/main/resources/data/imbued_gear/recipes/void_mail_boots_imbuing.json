@@ -1,16 +1,16 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "imbueB": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "imbueC": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "imbueD": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftD": {
 	"item": "minecraft:chain"
