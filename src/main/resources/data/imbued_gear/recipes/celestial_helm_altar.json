@@ -1,5 +1,5 @@
 {
-  "type": "imbued_gear:celestial_altar",
+  "type": "amethyst_imbuement:imbuing",
   "imbueA": {
 	"item": "amethyst_imbuement:ametrine"
   },
@@ -13,13 +13,13 @@
 	"item": "amethyst_imbuement:ametrine"
   },
   "craftA": {
-	"item": "amethyst_imbuement:charged_moonstone"
+	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftB": {
 	"item": "amethyst_imbuement:celestine"
   },
   "craftC": {
-	"item": "amethyst_imbuement:charged_moonstone"
+	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftD": {
 	"item": "imbued_gear:mystic_fragment"
@@ -31,17 +31,17 @@
 	"item": "imbued_gear:mystic_fragment"
   },
   "craftG": {
-	"item": "amethyst_imbuement:charged_moonstone"
+	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftH": {
-	"tag": "amethyst_imbuement:aspect_gems"
+	"item": "imbued_gear:mystic_fragment"
   },
   "craftI": {
-	"item": "amethyst_imbuement:charged_moonstone"
+	"item": "amethyst_imbuement:tigers_eye"
   },
   "title": "Celestial Helm",
-  "cost": 127,
-  "resultA": "imbued_gear:celestial_helm",
+  "cost": 99,
+  "resultA": "imbued_gear:celestial_helmet",
   "countA": 1,
   "transferEnchant": true
 }
