@@ -13,13 +13,13 @@
 	"item": "imbued_gear:serpentine"
   },
   "craftD": {
-	"item": "minecraft:soul_sand"
+	"item": "imbued_gear:wither_bone"
   },
   "craftE": {
-	"item": "imbued_gear:shimmering_boots"
+	"item": "amethyst_imbuement:shimmering_boots"
   },
   "craftF": {
-	"item": "minecraft:soul_sand"
+	"item": "imbued_gear:wither_bone"
   },
   "craftG": {
 	"item": "minecraft:bone_block"
@@ -31,7 +31,7 @@
 	"item": "minecraft:bone_block"
   },
   "title": "Lich Kings Helmet",
-  "cost": 29,
+  "cost": 37,
   "resultA": "imbued_gear:lich_kings_helmet",
   "countA": 1,
   "transferEnchant": true
