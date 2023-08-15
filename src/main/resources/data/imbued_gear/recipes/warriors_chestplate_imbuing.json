@@ -37,7 +37,7 @@
 	"item": "imbued_gear:puresteel"
   },
   "title": "Warriors Chestplate",
-  "cost": 35,
+  "cost": 49,
   "resultA": "imbued_gear:warriors_chestplate",
   "countA": 1,
   "transferEnchant": true
