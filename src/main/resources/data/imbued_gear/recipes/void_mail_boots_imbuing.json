@@ -1,16 +1,16 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_gear:voidsteel_ingot"
+	"item": "imbued_gear:null_powder"
   },
   "imbueB": {
-	"item": "imbued_gear:voidsteel_ingot"
+	"item": "imbued_gear:null_powder"
   },
   "imbueC": {
-	"item": "imbued_gear:voidsteel_ingot"
+	"item": "imbued_gear:null_powder"
   },
   "imbueD": {
-	"item": "imbued_gear:voidsteel_ingot"
+	"item": "imbued_gear:null_powder"
   },
   "craftD": {
 	"item": "minecraft:chain"
@@ -22,13 +22,13 @@
 	"item": "minecraft:chain"
   },
   "craftG": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftH": {
 	"item": "imbued_gear:void_gem"
   },
   "craftI": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "title": "Void Mail Boots",
   "cost": 27,
