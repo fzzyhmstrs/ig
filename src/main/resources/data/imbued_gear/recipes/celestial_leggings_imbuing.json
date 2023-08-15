@@ -22,25 +22,25 @@
 	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftD": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
 	"tag": "imbued_gear:celestial_leggings_inputs"
   },
   "craftF": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftG": {
 	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftH": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftI": {
 	"item": "amethyst_imbuement:tigers_eye"
   },
   "title": "Celestial Greaves",
-  "cost": 99,
+  "cost": 109,
   "resultA": "imbued_gear:celestial_leggings",
   "countA": 1,
   "transferEnchant": true
