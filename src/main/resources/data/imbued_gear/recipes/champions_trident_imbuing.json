@@ -22,25 +22,25 @@
 	"item": "minecraft:diamond"
   },
   "craftD": {
-	"item": "imbued_gear:sardonyx"
+	"item": "imbued_gear:pure_powder"
   },
   "craftE": {
 	"item": "amethyst_imbuement:glistering_trident"
   },
   "craftF": {
-	"item": "imbued_gear:sardonyx"
+	"item": "imbued_gear:pure_powder"
   },
   "craftG": {
 	"item": "minecraft:diamond"
   },
   "craftH": {
-	"item": "imbued_gear:sardonyx"
+	"item": "imbued_gear:pure_powder"
   },
   "craftI": {
 	"item": "minecraft:diamond"
   },
   "title": "Champions Trident",
-  "cost": 39,
+  "cost": 49,
   "resultA": "imbued_gear:champions_trident",
   "countA": 1,
   "transferEnchant": true
