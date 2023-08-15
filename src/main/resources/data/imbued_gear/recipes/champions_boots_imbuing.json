@@ -28,7 +28,7 @@
 	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Champions Boots",
-  "cost": 33,
+  "cost": 55,
   "resultA": "imbued_gear:champions_boots",
   "countA": 1,
   "transferEnchant": true
