@@ -31,7 +31,7 @@
 	"item": "imbued_gear:puresteel"
   },
   "title": "Warriors Helmet",
-  "cost": 35,
+  "cost": 49,
   "resultA": "imbued_gear:warriors_helmet",
   "countA": 1,
   "transferEnchant": true
