@@ -1,0 +1,34 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "imbueB": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "imbueC": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "imbueD": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "craftB": {
+	"item": "imbued_gear:ensouled_gem"
+  },
+  "craftD": {
+	"item": "imbued_gear:voidsteel"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:steel_ring"
+  },
+  "craftF": {
+	"item": "imbued_gear:voidsteel"
+  },
+  "craftH": {
+	"item": "imbued_gear:voidsteel"
+  },
+  "title": "RIng of Souls",
+  "cost": 19,
+  "resultA": "imbued_gear:ring_of_souls",
+  "countA": 1
+}
