@@ -1,25 +1,25 @@
 {
   "type": "imbued_gear:celestial_altar",
   "imbueA": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:pure_powder"
   },
   "imbueB": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:pure_powder"
   },
   "imbueC": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:pure_powder"
   },
   "imbueD": {
-	"item": "imbued_gear:mystic_fragment"
+	"item": "imbued_gear:pure_powder"
   },
   "craftA": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftB": {
 	"item": "amethyst_imbuement:celestine"
   },
   "craftC": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftD": {
 	"item": "amethyst_imbuement:malachite_figurine"
@@ -31,16 +31,16 @@
 	"item": "amethyst_imbuement:malachite_figurine"
   },
   "craftG": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftH": {
 	"tag": "imbued_gear:divine_reagents"
   },
   "craftI": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Divine Coronet",
-  "cost": 129,
+  "cost": 79,
   "resultA": "imbued_gear:divine_coronet",
   "countA": 1,
   "transferEnchant": true
