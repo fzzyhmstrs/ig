@@ -37,7 +37,7 @@
 	"item": "imbued_gear:puresteel"
   },
   "title": "Warriors Leggings",
-  "cost": 35,
+  "cost": 49,
   "resultA": "imbued_gear:warriors_leggings",
   "countA": 1,
   "transferEnchant": true
