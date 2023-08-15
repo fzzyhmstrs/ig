@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueB": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueC": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueD": {
+	"item": "imbued_gear:serpentine"
+  },
+  "craftA": {
+    "item": "minecraft:bone_block"
+  },
+  "craftC": {
+    "item": "minecraft:bone_block"
+  },
+  "craftD": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftE": {
+	"item": "imbued_gear:shimmering_pants"
+  },
+  "craftF": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftG": {
+	"item": "minecraft:bone_block"
+  },
+  "craftH": {
+    "item": "imbued_gear:ensouled_gem"
+  },
+  "craftI": {
+	"item": "minecraft:bone_block"
+  },
+  "title": "Lich Kings Chestplate",
+  "cost": 37,
+  "resultA": "imbued_gear:lich_kings_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}
