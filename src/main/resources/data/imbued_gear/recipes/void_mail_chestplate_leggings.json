@@ -1,22 +1,22 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueB": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueC": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueD": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "craftA": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftC": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftD": {
 	"item": "minecraft:chain"
@@ -28,13 +28,13 @@
 	"item": "minecraft:chain"
   },
   "craftG": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftH": {
 	"item": "imbued_gear:void_gem"
   },
   "craftI": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "title": "Void Mail Chestplate",
   "cost": 27,
