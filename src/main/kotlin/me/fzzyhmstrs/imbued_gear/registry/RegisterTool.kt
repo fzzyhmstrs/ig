@@ -37,7 +37,7 @@ object RegisterTool {
     val CHAMPIONS_TRIDENT = register(ChampionsTridentItem(IgConfig.materials.tools.radiant,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)),"champions_trident")
     val CRYSTALLINE_ARROW = register(CrystallineArrowItem(FabricItemSettings()),"crystalline_arrow")
     val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
-    val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
+    //val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
     val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings()),"nihil_blade")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
@@ -45,7 +45,7 @@ object RegisterTool {
         .withModifiers(listOf(RegisterModifier1.COSMIC))
         ,"cosmos")
 
-    //trinkets
+    /*//trinkets
     //model tex mods
     //warrior - increases damage against undead, reduces damage from undead
     val BLAZE_OF_LIGHT = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf()) ,"blaze_of_light")
@@ -68,7 +68,7 @@ object RegisterTool {
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)),"pendant_of_memories")
     //blade
     val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)),"ring_of_souls")
-
+    */
 
     fun registerAll() {
     }
