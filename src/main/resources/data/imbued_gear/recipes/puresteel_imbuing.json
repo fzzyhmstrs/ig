@@ -40,7 +40,7 @@
 	"item": "imbued_gear:pure_powder"
   },
   "title": "Puresteel",
-  "cost": 19,
-  "resultA": "imbued_gear:puresteel",
+  "cost": 23,
+  "resultA": "imbued_gear:puresteel_ingot",
   "countA": 2
 }
