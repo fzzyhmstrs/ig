@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueB": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueC": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueD": {
+	"item": "minecraft:blaze_powder"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:inquisitive_gem"
+  },
+  "craftC": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:glistening_ice"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet_leggings"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:glistening_ice"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "title": "Elementalists Leggings",
+  "cost": 33,
+  "resultA": "imbued_gear:elementalists_leggings",
+  "countA": 1,
+  "transferEnchant": true
+}

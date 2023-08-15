@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "craftC": {
+	"item": "minecraft:red_dye"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:shimmering_boots"
+  },
+  "craftF": {
+	"item": "minecraft:red_dye"
+  },
+  "craftG": {
+	"item": "minecraft:gold_ingot"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:inquisitive_gem"
+  },
+  "craftI": {
+	"item": "minecraft:gold_ingot"
+  },
+  "title": "Scholars Boots",
+  "cost": 27,
+  "resultA": "imbued_gear:scholars_boots",
+  "countA": 1,
+  "transferEnchant": true
+}

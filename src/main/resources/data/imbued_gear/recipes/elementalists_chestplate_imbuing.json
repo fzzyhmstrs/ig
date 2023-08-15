@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueB": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueC": {
+	"item": "minecraft:blaze_powder"
+  },
+  "imbueD": {
+	"item": "minecraft:blaze_powder"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftC": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:glistening_ice"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet_chestplate"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:glistening_ice"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:blazing_gem"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:obsidian"
+  },
+  "title": "Elementalists Chestplate",
+  "cost": 33,
+  "resultA": "imbued_gear:elementalists_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}

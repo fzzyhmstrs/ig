@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:knowledge_powder"
+  },
+  "craftA": {
+	"item": "minecraft:gold_ingot"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:inquisitive_gem"
+  },
+  "craftC": {
+	"item": "minecraft:gold_ingot"
+  },
+  "craftD": {
+	"item": "minecraft:red_dye"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:shimmering_helmet"
+  },
+  "craftF": {
+	"item": "minecraft:red_dye"
+  },
+  "title": "Scholars Helmet",
+  "cost": 27,
+  "resultA": "imbued_gear:scholars_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

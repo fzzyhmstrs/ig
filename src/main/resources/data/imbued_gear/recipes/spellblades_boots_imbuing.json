@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:redstone_block"
+  },
+  "imbueB": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueC": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueD": {
+	"item": "minecraft:redstone_block"
+  },
+  "craftC": {
+	"tag": "c:steel_ingots"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet_boots"
+  },
+  "craftF": {
+	"tag": "c:steel_ingots"
+  },
+  "craftG": {
+	"item": "minecraft:diamond"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:lethal_gem"
+  },
+  "craftI": {
+	"item": "minecraft:diamond"
+  },
+  "title": "Spellblades Boots",
+  "cost": 27,
+  "resultA": "imbued_gear:spellblades_boots",
+  "countA": 1,
+  "transferEnchant": true
+}

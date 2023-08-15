@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:redstone_block"
+  },
+  "imbueB": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueC": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueD": {
+	"item": "minecraft:redstone_block"
+  },
+  "craftA": {
+	"item": "minecraft:diamond"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:lethal_gem"
+  },
+  "craftC": {
+	"item": "minecraft:diamond"
+  },
+  "craftD": {
+	"tag": "c:steel_ingots"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet_helmet"
+  },
+  "craftF": {
+	"tag": "c:steel_ingots"
+  },
+  "title": "Spellblades Helmet",
+  "cost": 27,
+  "resultA": "imbued_gear:spellblades_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

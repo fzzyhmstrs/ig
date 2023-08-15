@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:redstone_block"
+  },
+  "imbueB": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueC": {
+	"item": "minecraft:lapis_block"
+  },
+  "imbueD": {
+	"item": "minecraft:redstone_block"
+  },
+  "craftA": {
+	"tag": "c:steel_ingots"
+  },
+  "craftC": {
+	"tag": "c:steel_ingots"
+  },
+  "craftD": {
+	"item": "minecraft_diamond"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:garnet_chestplate"
+  },
+  "craftF": {
+	"item": "minecraft:diamond"
+  },
+  "craftG": {
+	"tag": "c:steel_ingots"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:lethal_gem"
+  },
+  "craftI": {
+	"tag": "c:steel_ingots"
+  },
+  "title": "Spellblades Chestplate",
+  "cost": 27,
+  "resultA": "imbued_gear:spellblades_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}
