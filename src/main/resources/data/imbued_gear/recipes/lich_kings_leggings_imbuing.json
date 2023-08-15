@@ -22,13 +22,13 @@
     "item": "minecraft:bone_block"
   },
   "craftD": {
-	"item": "minecraft:soul_sand"
+	"item": "imbued_gear:wither_bone"
   },
   "craftE": {
 	"item": "imbued_gear:shimmering_pants"
   },
   "craftF": {
-	"item": "minecraft:soul_sand"
+	"item": "imbued_gear:wither_bone"
   },
   "craftG": {
 	"item": "minecraft:bone_block"
@@ -37,7 +37,7 @@
 	"item": "minecraft:bone_block"
   },
   "title": "Lich Kings Leggings",
-  "cost": 29,
+  "cost": 37,
   "resultA": "imbued_gear:lich_kings_leggings",
   "countA": 1,
   "transferEnchant": true
