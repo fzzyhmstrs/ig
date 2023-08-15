@@ -92,7 +92,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
         } else {
             effects.damage(level)
         }
-        val data = BankaiPersistentEffectData(world,user,entityList,stack, DamageSource.player(user),damage,level,effects)
+        val data = BankaiPersistentEffectData(world,user,entityList,stack, user.damageSources.playerAttack(user),damage,level,effects)
         PersistentEffectHelper.setPersistentTickerNeed(this,10,10,data)
     }
 

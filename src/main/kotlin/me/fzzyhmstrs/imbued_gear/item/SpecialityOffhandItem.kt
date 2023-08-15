@@ -6,6 +6,7 @@ import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
+import me.fzzyhmstrs.gear_core.interfaces.*
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
 import net.minecraft.util.Identifier
 
@@ -14,7 +15,7 @@ open class SpecialityOffhandItem(
     private val equipmentModifiers: List<Identifier> = listOf(),
     private val scepterModifiers: List<Identifier> = listOf())
     :
-    CustomFlavorItem(settings), Modifiable, Modifiable, DamageTracking, AttributeTracking, HitTracking, KillTracking, ModifierTracking
+    CustomFlavorItem(settings), Modifiable, DamageTracking, AttributeTracking, HitTracking, KillTracking, ModifierTracking
 {
     
     companion object{

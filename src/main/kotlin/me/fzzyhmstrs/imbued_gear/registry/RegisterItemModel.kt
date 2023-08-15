@@ -15,9 +15,9 @@ object RegisterItemModel {
         val celestialModelModes =
             ItemModelRegistry.ModelIdentifierPerModes(ModelIdentifier(IG.MOD_ID, "celestial_trident", "inventory"))
                 .withHeld(ModelIdentifier(AI.MOD_ID, "celestial_trident_in_hand", "inventory"), true)
-        ItemModelRegistry.registerItemModelId(RegisterItem.CELESTIAL_TRIDENT, celestialModelModes)
+        ItemModelRegistry.registerItemModelId(RegisterTool.CELESTIAL_TRIDENT, celestialModelModes)
         ItemModelRegistry.registerItemEntityModel(
-            RegisterItem.CELESTIAL_TRIDENT,
+            RegisterTool.CELESTIAL_TRIDENT,
             CelestialTridentItemEntityRenderer,
             RegisterRenderer.CELESTIAL_TRIDENT,
             CelestialTridentEntityModel::class.java
@@ -26,9 +26,9 @@ object RegisterItemModel {
         val championsModelModes =
             ItemModelRegistry.ModelIdentifierPerModes(ModelIdentifier(IG.MOD_ID, "champions_trident", "inventory"))
                 .withHeld(ModelIdentifier(AI.MOD_ID, "champions_trident_in_hand", "inventory"), true)
-        ItemModelRegistry.registerItemModelId(RegisterItem.CHAMPIONS_TRIDENT, championsModelModes)
+        ItemModelRegistry.registerItemModelId(RegisterTool.CHAMPIONS_TRIDENT, championsModelModes)
         ItemModelRegistry.registerItemEntityModel(
-            RegisterItem.CHAMPIONS_TRIDENT,
+            RegisterTool.CHAMPIONS_TRIDENT,
             ChampionsTridentItemEntityRenderer,
             RegisterRenderer.CHAMPIONS_TRIDENT,
             ChampionsTridentEntityModel::class.java

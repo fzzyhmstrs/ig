@@ -14,6 +14,7 @@ import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.tool.CracklingToolMaterial
+import me.fzzyhmstrs.imbued_gear.tool.ScepterLvl4ToolMaterial
 import net.minecraft.util.Identifier
 
 object IgConfig:
@@ -69,6 +70,8 @@ object IgConfig:
             var cracklingDamage = ValidatedFloat(CracklingToolMaterial.defaultAttackDamage(),20f,0f)
             var cracklingDurability = ValidatedInt(CracklingToolMaterial.defaultDurability(),5000,32)
             var cracklingCooldown = ValidatedLong(CracklingToolMaterial.baseCooldown(), Long.MAX_VALUE, CracklingToolMaterial.minCooldown())
+            var lvl4Durability = ValidatedInt(ScepterLvl4ToolMaterial.defaultDurability(),15000,32)
+            var lvl4Cooldown = ValidatedLong(ScepterLvl4ToolMaterial.baseCooldown(), Long.MAX_VALUE, CracklingToolMaterial.minCooldown())
         }
 
         override fun generateNewClass(): Items {

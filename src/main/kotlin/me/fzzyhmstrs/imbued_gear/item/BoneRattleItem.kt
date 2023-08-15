@@ -2,6 +2,7 @@ package me.fzzyhmstrs.imbued_gear.item
 
 import me.fzzyhmstrs.amethyst_core.event.ModifySpellEvent
 import me.fzzyhmstrs.amethyst_core.item_util.AugmentScepterItem
+import me.fzzyhmstrs.amethyst_core.item_util.ScepterLike
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterHelper
@@ -32,7 +33,7 @@ open class BoneRattleItem(
         ModifySpellEvent.EVENT.register{spell: ScepterAugment, world: World, user: LivingEntity, hand: Hand, modifiers: AbstractModifier.CompiledModifiers<AugmentModifier> ->
             for (stack in user.handItems) {
                 val item = stack.item
-                if (item is BoneRattleItem && user.getStackInHand(hand).item is AugmentScepterItem) {
+                if (item is BoneRattleItem && user.getStackInHand(hand).item is ScepterLike) {
                     if (spell is SummonEntityAugment){
                         if (world.random.nextFloat() <  IgConfig.items.boneRattle.duplicationChance.get()){
                             if (item.checkCanUse(stack,world,user,IgConfig.items.boneRattle.duplicationDamage.get(),

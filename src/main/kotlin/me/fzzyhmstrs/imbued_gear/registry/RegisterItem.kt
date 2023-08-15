@@ -16,9 +16,6 @@ import me.fzzyhmstrs.imbued_gear.item.*
 import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
-import me.fzzyhmstrs.imbued_gear.item.weapon.*
-import me.fzzyhmstrs.imbued_gear.tool.ScepterLvl4ToolMaterial
-import me.fzzyhmstrs.imbued_gear.tool.SteelToolMaterial
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.entity.attribute.EntityAttributeModifier
@@ -45,9 +42,6 @@ object RegisterItem {
         return Registry.register(Registries.ITEM, IG.identity(name), item)
     }
 
-    //raw materials
-    val SARDONYX = register(Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)),"sardonyx")
-    val NULL_ONYX = register(Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"null_onyx")
     //Make Tigers Eye??
     val SERPENTINE = register(Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)),"serpentine")
     val ENSOULED_GEM = register(EnsouledGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
@@ -57,17 +51,10 @@ object RegisterItem {
     val MYSTIC_FRAGMENT = register(SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
         EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
         AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint(),"mystic_fragment")
-    val SHIMMERING_FABRIC = register(Item(AiItemSettings()),"shimmering_fabric")
     val PURESTEEL = register(Item(AiItemSettings()),"puresteel")
     val VOIDSTEEL = register(Item(AiItemSettings()),"voidsteel")
-    //powders
-    //tex
-    val PURE_POWDER = register(Item(FabricItemSettings()),"pure_powder") //lighting bedrock on fire
-    //powders
     val NULL_POWDER = register(Item(FabricItemSettings()),"null_powder") //lighting bedrock on fire
-    //soul powder
     val SOUL_POWDER = register(Item(FabricItemSettings()),"soul_powder") //killing a mob with gem fire
-
     val WITHER_BONE = register(Item(FabricItemSettings()),"wither_bone") //killing a mob with gem fire
 
     //////////////////////////////

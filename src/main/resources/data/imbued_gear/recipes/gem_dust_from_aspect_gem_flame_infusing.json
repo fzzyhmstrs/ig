@@ -18,7 +18,7 @@
   ],
   "base": {
     "block": "amethyst_imbuement:chiseled_polished_amethyst"
-  }
+  },
   "result": {
     "item": "amethyst_imbuement:gem_dust",
     "count": 6

@@ -18,7 +18,7 @@ class CelestialTridentAvatarEntity : CelestialTridentEntity {
         parentStack
     )
 
-    override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.getAttackDamage() - 8f else 6f
+    override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage - -3f else 6f
 
     override fun asItemStack(): ItemStack {
         return ItemStack.EMPTY.copy()

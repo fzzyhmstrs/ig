@@ -67,50 +67,30 @@ object RegisterRenderer {
         EntityModelLayerRegistry.registerModelLayer(CHAMPIONS_TRIDENT, ChampionsTridentEntityModel::getTexturedModelData)
 
         ModelPredicateProviderRegistry.register(
-            RegisterItem.CADUCEUS, Identifier("blocking")
+            RegisterTool.CADUCEUS, Identifier("blocking")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f
         }
         
-        ModelPredicateProviderRegistry.register(
-            RegisterItem.STEEL_WARD, Identifier("blocking")
-        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
-            if (entity != null && entity.isUsingItem && entity.activeItem == stack) 1.0f else 0.0f
-        }
+
 
         ModelPredicateProviderRegistry.register(
-            RegisterItem.CROWN_OF_SORROWS, Identifier("active")
+            RegisterTool.CROWN_OF_SORROWS, Identifier("active")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
         }
 
         ModelPredicateProviderRegistry.register(
-            RegisterItem.PENDANT_OF_MEMORIES, Identifier("active")
+            RegisterTool.PENDANT_OF_MEMORIES, Identifier("active")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
         }
 
         ModelPredicateProviderRegistry.register(
-            RegisterItem.RING_OF_SOULS, Identifier("active")
+            RegisterTool.RING_OF_SOULS, Identifier("active")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             val nbt = stack.nbt?:return@register 0.0f
             if (entity != null && nbt.getInt("tier") > 1) 1.0f else 0.0f
-        }
-        
-        ModelPredicateProviderRegistry.register(
-            RegisterItem.BOOK_OF_LEGEND, Identifier("type")
-        ) { stack: ItemStack, _: ClientWorld?, _: LivingEntity?, _: Int ->
-            val nbt = stack.orCreateNbt
-            if (nbt.contains(NbtKeys.LORE_TYPE.str())){
-                when(nbt.getString(NbtKeys.LORE_TYPE.str())){
-                    SpellType.FURY.str() ->{ 0.3f }
-                    SpellType.GRACE.str() -> { 0.7f }
-                    SpellType.WIT.str() -> { 1.0f }
-                    else -> { 0.0f }
-                }
-            } else {
-                0.0f
-            }
         }
     }
 }

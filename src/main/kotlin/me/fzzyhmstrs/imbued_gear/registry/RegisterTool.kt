@@ -19,7 +19,6 @@ import me.fzzyhmstrs.imbued_gear.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
 import me.fzzyhmstrs.imbued_gear.item.weapon.*
 import me.fzzyhmstrs.imbued_gear.tool.ScepterLvl4ToolMaterial
-import me.fzzyhmstrs.imbued_gear.tool.SteelToolMaterial
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.entity.attribute.EntityAttributeModifier
@@ -49,16 +48,16 @@ object RegisterTool {
     //tools and weapons
     val CELESTIAL_TRIDENT = register(CelestialTridentItem(IgConfig.materials.tools.celestial,FabricItemSettings().maxDamage(2650).rarity(Rarity.EPIC)),"celestial_trident")
     //tex recipe
-    val CHAMPIONS_TRIDENT = register(ChampionsTridentItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)),"champions_trident")
+    val CHAMPIONS_TRIDENT = register(ChampionsTridentItem(IgConfig.materials.tools.radiant,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)),"champions_trident")
     val CRYSTALLINE_ARROW = register(CrystallineArrowItem(FabricItemSettings()),"crystalline_arrow")
     val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
     val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
-    val NIHIL_BLADE = register(NihilBladeItem(FabricItemSettings()),"nihil_blade")
-    val CRACKLING_SPELLBLADE = register(NihilBladeItem(FabricItemSettings()),"nihil_blade")
+    val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings()),"nihil_blade")
+    val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
     val COSMOS = register(CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
         .withModifiers(listOf(RegisterModifier1.COSMIC))
-        ,"redemption")
+        ,"cosmos")
 
     //trinkets
     //model tex mods

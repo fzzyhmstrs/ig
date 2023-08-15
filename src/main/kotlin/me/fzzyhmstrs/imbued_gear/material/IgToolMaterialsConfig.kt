@@ -18,7 +18,7 @@ object IgToolMaterialsConfig{
     val RADIANT = ValidatedToolMaterial.Builder()
         .durability(1851)
         .miningSpeedMultiplier(10.5f)
-        .attackDamage(4.5f)
+        .attackDamage(6f)
         .miningLevel(MiningLevels.NETHERITE)
         .enchantability(15)
         .repairIngredient(Ingredient.ofItems(RegisterItem.PURESTEEL))

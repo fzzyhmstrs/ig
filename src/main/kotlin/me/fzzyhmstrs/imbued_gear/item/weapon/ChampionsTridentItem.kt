@@ -51,7 +51,7 @@ class ChampionsTridentItem(internal val material: ToolMaterial,settings: Setting
             EntityAttributeModifier(
                 ATTACK_DAMAGE_MODIFIER_ID,
                 "Tool modifier",
-                13.0,
+                material.attackDamage.toDouble() + 7.0,
                 EntityAttributeModifier.Operation.ADDITION
             )
         )
