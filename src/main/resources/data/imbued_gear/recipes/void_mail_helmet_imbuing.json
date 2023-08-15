@@ -1,25 +1,25 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueB": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueC": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "imbueD": {
-	"item": "imbued_gear:null_onyx"
+	"item": "imbued_gear:null_powder"
   },
   "craftA": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftB": {
 	"item": "imbued_gear:void_gem"
   },
   "craftC": {
-	"item": "minecraft:chain"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftD": {
 	"item": "minecraft:chain"
