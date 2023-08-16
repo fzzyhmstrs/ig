@@ -56,6 +56,8 @@ object RegisterModifier {
         .withDamage(0.0f,0.0f,25f)
         .withAmplifier(2)
         .also { regMod.add(it) }
+    val KINDLED_SCEPTER = AugmentModifier(IG.identity("kindled_scepter"), cooldownModifier = -60.0)
+        .also { regMod.add(it) }
 
     //Random equipment modifiers
     //player experience
@@ -123,7 +125,9 @@ object RegisterModifier {
     val WHISPER_OF_REGRET = EquipmentModifier(IG.identity("whisper_of_regret"), persistent = true, randomSelectable = false)
         .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
         .also { regMod.add(it) }
-
+    val KINDLED = buildModifier(IG.identity("kindled"), persistent = true, availableForSelection = false)
+        .withModifiers(KINDLED_SCEPTER.modifierId)
+        .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)
     //    .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)
