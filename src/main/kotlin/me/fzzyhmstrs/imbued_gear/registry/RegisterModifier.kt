@@ -126,6 +126,8 @@ object RegisterModifier {
         .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
         .also { regMod.add(it) }
     val KINDLED = buildModifier(IG.identity("kindled"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,0.2,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+        .withAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.075,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .withModifiers(KINDLED_SCEPTER.modifierId)
         .also { regMod.add(it) }
 
