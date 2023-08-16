@@ -40,9 +40,12 @@ object IgConfig:
 
     class Items: ConfigClass(itemsHeader), OldClass<Items>{
 
+        val livingFlame: LivingFlame()
+        class LivingFlame(): ConfigSection(Header.Builder().space().add("ia.readme.items.living_flame").add("ia.readme.items.living_flame_2").build()){
+            var effectDuration = ValidatedInt(600,Int.MAX_VALUE,0)
+            var cooldown = ValidatedInt(3000,Int.MAX_VALUE,0)
+        }
         
-        var realityTravelTarget = ValidatedInt(1000,10000,1)
-
         var boneRattle = BoneRattle()
         class BoneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").add("ia.readme.items.bone_rattle_2").build()){
             var duplicationChance = ValidatedFloat(0.25f,1f,0f)
