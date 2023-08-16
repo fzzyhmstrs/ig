@@ -61,7 +61,7 @@ object RegisterTool {
     val DIVINE_CORONET = register(DivineCoronetItem(FabricItemSettings().maxDamage(480)).withGlint(),"divine_coronet")
     //model tex mods
     //flame - spell cooldown, attack speed, chance to set things on fire
-    val FIERY_SPARK = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf(RegisterModifier.INNER_FIRE.modifierId, RegisterModifier.DYNAMO.modifierId)) ,"fiery_spark")
+    val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) ,"living_flame")
     // mods
     //void - damaging has chance to reduce max health, magic resist, mana cost
     val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
