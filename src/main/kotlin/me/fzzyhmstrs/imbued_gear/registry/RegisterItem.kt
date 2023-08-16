@@ -9,7 +9,6 @@ import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem
-import me.fzzyhmstrs.imbued_gear.item.promise.RealityGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup

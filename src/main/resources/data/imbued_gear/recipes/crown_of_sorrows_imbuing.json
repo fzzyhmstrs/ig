@@ -12,14 +12,20 @@
   "imbueD": {
 	"item": "imbued_gear:soul_powder"
   },
+  "craftA": {
+    "item": "imbued_gear:voidsteel"
+  },
   "craftB": {
 	"item": "imbued_gear:ensouled_gem"
+  },
+  "craftC": {
+    "item": "imbued_gear:voidsteel"
   },
   "craftD": {
 	"item": "imbued_gear:voidsteel"
   },
   "craftE": {
-	"item": "amethyst_imbuement:steel_ring"
+	"item": "amethyst_imbuement:steel_headband"
   },
   "craftF": {
 	"item": "imbued_gear:voidsteel"
@@ -27,8 +33,8 @@
   "craftH": {
 	"item": "imbued_gear:voidsteel"
   },
-  "title": "Ring of Souls",
-  "cost": 21,
-  "resultA": "imbued_gear:ring_of_souls",
+  "title": "Crown of Sorrows",
+  "cost": 17,
+  "resultA": "imbued_gear:crown_of_sorrows",
   "countA": 1
 }

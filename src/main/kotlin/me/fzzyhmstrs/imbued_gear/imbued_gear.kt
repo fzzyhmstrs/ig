@@ -22,6 +22,7 @@ object IG: ModInitializer {
         RegisterItem.registerAll()
         RegisterEntity.registerAll()
         RegisterModifier.registerAll()
+        RegisterTag.registerAll()
     }
 
     fun igRandom(): Random{

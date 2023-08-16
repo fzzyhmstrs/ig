@@ -16,7 +16,7 @@ object IgArmorMaterialsConfig{
         .toughness(5f)
         .build()
     val CHAMPION = FzzyArmorMaterial.Builder("ig_champion",SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND)
-        .repairIngredient(Ingredient.ofItems(RegisterItem.PURESTEEL))
+        .repairIngredient(Ingredient.ofItems(RegisterItem.PURESTEEL_INGOT))
         .enchantability(18)
         .protectionAmounts(5,10,8,5)
         .durabilityMultiplier(55,200)

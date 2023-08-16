@@ -21,7 +21,7 @@ object RegisterEnchantment {
     fun registerAll(){
         for (k in regEnchant.keys){
             val enchant = regEnchant[k]
-            val id = Identifier(IG.MOD_ID, k)
+            val id = IG.identity( k)
             Registry.register(Registries.ENCHANTMENT, id, enchant)
         }
         for (enchant in regEnchant) {

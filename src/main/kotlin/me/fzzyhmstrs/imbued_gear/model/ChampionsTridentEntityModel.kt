@@ -11,7 +11,7 @@ class ChampionsTridentEntityModel(private val root: ModelPart) : TridentEntityMo
 
 
     companion object {
-        var TEXTURE: Identifier = Identifier(IG.MOD_ID,"textures/entity/champions_trident.png")
+        var TEXTURE: Identifier = IG.identity("textures/entity/champions_trident.png")
 
         fun getTexturedModelData(): TexturedModelData {
             val modelData = ModelData()

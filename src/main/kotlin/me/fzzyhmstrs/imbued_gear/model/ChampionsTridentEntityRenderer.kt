@@ -15,7 +15,7 @@ import net.minecraft.util.math.RotationAxis
 
 @Suppress("PrivatePropertyName")
 class ChampionsTridentEntityRenderer(context: EntityRendererFactory.Context) : EntityRenderer<ChampionsTridentEntity>(context) {
-    private val TEXTURE = Identifier(IG.MOD_ID,"textures/entity/champions_trident.png")
+    private val TEXTURE = IG.identity("textures/entity/champions_trident.png")
     private val model = CelestialTridentEntityModel(context.getPart(RegisterRenderer.CHAMPIONS_TRIDENT))
 
     override fun render(

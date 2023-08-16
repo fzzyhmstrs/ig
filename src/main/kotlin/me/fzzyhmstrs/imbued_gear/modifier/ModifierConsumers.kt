@@ -66,6 +66,23 @@ object ModifierConsumers {
             }
         }
 
+    val RADIANT_DEVOTION_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
+            if (user.hasStatusEffect(RegisterStatus.NIHILISM)){
+                val effect = user.getStatusEffect(RegisterStatus.NIHILISM)
+                val amp = effect?.amplifier?:0
+                val duration = effect?.duration?:0
+                if (duration > 0){
+                    val duration2 = if(duration < 100) {100} else {duration}
+                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.NIHILISM,duration2,min(amp + 1,4)))
+                }
+            } else {
+                user.addStatusEffect(
+                    StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED, 100)
+                )
+            }
+        }
+
     val MANA_VAMPIRIC_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer

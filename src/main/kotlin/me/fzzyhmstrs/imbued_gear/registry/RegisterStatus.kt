@@ -16,6 +16,6 @@ object RegisterStatus {
         .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,"bebdd92a-e5cd-11ed-a05b-0242ac120003",-4.0,EntityAttributeModifier.Operation.ADDITION)
 
     fun registerAll(){
-        Registry.register(Registries.STATUS_EFFECT, Identifier(IG.MOD_ID,"nihilism"), NIHILISM)
+        Registry.register(Registries.STATUS_EFFECT, IG.identity("nihilism"), NIHILISM)
     }
 }

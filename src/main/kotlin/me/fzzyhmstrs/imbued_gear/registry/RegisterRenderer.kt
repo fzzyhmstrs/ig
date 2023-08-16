@@ -22,8 +22,8 @@ import net.minecraft.util.Identifier
 @Environment(value = EnvType.CLIENT)
 object RegisterRenderer {
 
-    val CELESTIAL_TRIDENT: EntityModelLayer = EntityModelLayer(Identifier(IG.MOD_ID,"celestial_trident"),"celestial_trident_model")
-    val CHAMPIONS_TRIDENT: EntityModelLayer = EntityModelLayer(Identifier(IG.MOD_ID,"champions_trident"),"champions_trident_model")
+    val CELESTIAL_TRIDENT: EntityModelLayer = EntityModelLayer(IG.identity("celestial_trident"),"celestial_trident_model")
+    val CHAMPIONS_TRIDENT: EntityModelLayer = EntityModelLayer(IG.identity("champions_trident"),"champions_trident_model")
 
     fun registerAll() {
 /*      BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlock.EXPERIENCE_BUSH, RenderLayer.getCutout())

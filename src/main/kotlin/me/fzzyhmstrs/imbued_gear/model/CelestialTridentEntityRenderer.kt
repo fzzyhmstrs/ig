@@ -16,8 +16,8 @@ import net.minecraft.util.math.RotationAxis
 
 @Suppress("PrivatePropertyName")
 class CelestialTridentEntityRenderer(context: EntityRendererFactory.Context) : EntityRenderer<CelestialTridentEntity>(context) {
-    private val TEXTURE = Identifier(IG.MOD_ID,"textures/entity/celestial_trident.png")
-    private val TEXTURE_AVATAR = Identifier(IG.MOD_ID,"textures/entity/celestial_trident_avatar.png")
+    private val TEXTURE = IG.identity("textures/entity/celestial_trident.png")
+    private val TEXTURE_AVATAR = IG.identity("textures/entity/celestial_trident_avatar.png")
     private val model = CelestialTridentEntityModel(context.getPart(RegisterRenderer.CELESTIAL_TRIDENT))
 
     override fun render(

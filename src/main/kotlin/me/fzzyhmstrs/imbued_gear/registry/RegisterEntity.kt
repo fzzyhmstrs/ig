@@ -25,7 +25,7 @@ object RegisterEntity {
 
     val CELESTIAL_TRIDENT_ENTITY: EntityType<CelestialTridentEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(IG.MOD_ID, "celestial_trident"),
+        IG.identity( "celestial_trident"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<CelestialTridentEntity>, world: World ->
@@ -38,7 +38,7 @@ object RegisterEntity {
 
     val CHAMPIONS_TRIDENT_ENTITY: EntityType<ChampionsTridentEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(IG.MOD_ID, "champions_trident"),
+        IG.identity( "champions_trident"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<ChampionsTridentEntity>, world: World ->
@@ -51,7 +51,7 @@ object RegisterEntity {
 
     val CELESTIAL_TRIDENT_AVATAR_ENTITY: EntityType<CelestialTridentAvatarEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(IG.MOD_ID, "celestial_trident_avatar"),
+        IG.identity( "celestial_trident_avatar"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<CelestialTridentAvatarEntity>, world: World ->
@@ -64,7 +64,7 @@ object RegisterEntity {
 
     val IMBUED_ARROW_ENTITY: EntityType<ImbuedArrowEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(IG.MOD_ID, "imbued_arrow"),
+        IG.identity( "imbued_arrow"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<ImbuedArrowEntity>, world: World ->
@@ -77,7 +77,7 @@ object RegisterEntity {
 
     val CRYSTALLINE_ARROW_ENTITY: EntityType<CrystallineArrowEntity> = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier(IG.MOD_ID, "crystalline_arrow"),
+        IG.identity( "crystalline_arrow"),
         FabricEntityTypeBuilder.create(
             SpawnGroup.MISC
         ) { entityType: EntityType<CrystallineArrowEntity>, world: World ->

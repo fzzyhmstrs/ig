@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "imbued_gear:caduceus"
+    "imbued_gear:caduceus",
+    "imbued_gear:bone_rattle"
   ]
 }
