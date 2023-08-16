@@ -115,6 +115,7 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val NULL_SPACE = buildModifier(IG.identity("null_space"), persistent = true, availableForSelection = false)
         .withAttributeModifier(RegisterAttribute.MAGIC_RESISTANCE,0.2,EntityAttributeModifier.Operation.ADDITION)
+        .withPostHit(ModifierConsumers.NULL_SPACE_HIT_CONSUMER)
         .also { regMod.add(it) }
     val RADIANT_DEVOTION = buildModifier(IG.identity("radiant_devotion"), persistent = true, availableForSelection = false)
         .withKilledOther(ModifierConsumers.RADIANT_DEVOTION_HIT_CONSUMER)
