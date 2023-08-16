@@ -40,6 +40,7 @@ object RegisterTool {
     val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
     //val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
     val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings()),"nihil_blade")
+    val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.champion,FabricItemSettings()),"radiant_broadsword")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
     val COSMOS = register(CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
