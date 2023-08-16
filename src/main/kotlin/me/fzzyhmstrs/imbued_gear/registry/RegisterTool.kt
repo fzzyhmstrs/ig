@@ -64,7 +64,7 @@ object RegisterTool {
     val FIERY_SPARK = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf(RegisterModifier.INNER_FIRE.modifierId, RegisterModifier.DYNAMO.modifierId)) ,"fiery_spark")
     // mods
     //void - damaging has chance to reduce max health, magic resist, mana cost
-    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
+    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
     //scholar
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)),"pendant_of_memories")
     //blade
