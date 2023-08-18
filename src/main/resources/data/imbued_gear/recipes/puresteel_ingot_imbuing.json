@@ -25,7 +25,7 @@
     "item": "minecraft:netherite_scrap"
   },
   "craftE": {
-    "tag": "c:steel_ingots"
+    "item": "minecraft:netherite_ingot"
   },
   "craftF": {
     "item": "minecraft:netherite_scrap"
@@ -42,5 +42,5 @@
   "title": "Puresteel",
   "cost": 23,
   "resultA": "imbued_gear:puresteel_ingot",
-  "countA": 2
+  "countA": 1
 }

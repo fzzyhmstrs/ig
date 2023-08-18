@@ -30,6 +30,6 @@
   "title": "Soul Powder",
   "cost": 13,
   "resultA": "imbued_gear:soul_powder",
-  "countA": 8,
+  "countA": 4,
   "transferEnchant": true
 }

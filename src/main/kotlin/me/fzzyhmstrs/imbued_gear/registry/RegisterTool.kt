@@ -3,6 +3,7 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
 import me.fzzyhmstrs.amethyst_core.registry.ModifierRegistry
+import me.fzzyhmstrs.amethyst_imbuement.config.AiConfig
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
@@ -40,7 +41,7 @@ object RegisterTool {
     val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
     //val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
     val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings()),"nihil_blade")
-    val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.champion,FabricItemSettings()),"radiant_broadsword")
+    val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.radiant,FabricItemSettings()),"radiant_broadsword")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
     val COSMOS = register(CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
@@ -55,11 +56,11 @@ object RegisterTool {
     //lich - buffs summons, chance to echo summoning spells at durability expense
     val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(100)) ,"bone_rattle")
     //saint
-    val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(450), scepterModifiers = listOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
+    val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.totemOfAmethystDurability.get()), scepterModifiers = listOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
     //champion
-    val CROWN_OF_SORROWS = register(CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)),"crown_of_sorrows")
+    val CROWN_OF_SORROWS = register(CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2)),"crown_of_sorrows")
     //altar
-    val DIVINE_CORONET = register(DivineCoronetItem(FabricItemSettings().maxDamage(480)).withGlint(),"divine_coronet")
+    val DIVINE_CORONET = register(DivineCoronetItem(FabricItemSettings().maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*4)).withGlint(),"divine_coronet")
     //model tex mods
     //flame - spell cooldown, attack speed, chance to set things on fire
     val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) ,"living_flame")
@@ -69,7 +70,7 @@ object RegisterTool {
     //scholar
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)),"pendant_of_memories")
     //blade
-    val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(240)),"ring_of_souls")
+    val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2)),"ring_of_souls")
 
 
     fun registerAll() {

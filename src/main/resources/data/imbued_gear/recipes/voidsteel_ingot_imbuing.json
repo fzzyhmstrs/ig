@@ -1,0 +1,46 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:black_dye"
+  },
+  "imbueB": {
+	"item": "minecraft:black_dye"
+  },
+  "imbueC": {
+	"item": "minecraft:black_dye"
+  },
+  "imbueD": {
+	"item": "minecraft:black_dye"
+  },
+  "craftA": {
+	"item": "imbued_gear:null_powder"
+  },
+  "craftB": {
+    "item": "imbued_gear:wither_bone"
+  },
+  "craftC": {
+	"item": "imbued_gear:null_powder"
+  },
+  "craftD": {
+    "item": "imbued_gear:wither_bone"
+  },
+  "craftE": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "craftF": {
+    "item": "imbued_gear:wither_bone"
+  },
+  "craftG": {
+	"item": "imbued_gear:null_powder"
+  },
+  "craftH": {
+    "item": "imbued_gear:wither_bone"
+  },
+  "craftI": {
+	"item": "imbued_gear:null_powder"
+  },
+  "title": "Voidsteel",
+  "cost": 19,
+  "resultA": "imbued_gear:voidsteel_ingot",
+  "countA": 1
+}

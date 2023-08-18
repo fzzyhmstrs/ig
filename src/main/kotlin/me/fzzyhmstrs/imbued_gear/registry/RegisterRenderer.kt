@@ -3,10 +3,7 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
 import me.fzzyhmstrs.imbued_gear.IG
-import me.fzzyhmstrs.imbued_gear.model.CelestialTridentEntityModel
-import me.fzzyhmstrs.imbued_gear.model.CelestialTridentEntityRenderer
-import me.fzzyhmstrs.imbued_gear.model.ChampionsTridentEntityModel
-import me.fzzyhmstrs.imbued_gear.model.ChampionsTridentEntityRenderer
+import me.fzzyhmstrs.imbued_gear.model.*
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry
@@ -36,6 +33,24 @@ object RegisterRenderer {
                 context
             )
         }*/
+
+        EntityRendererRegistry.register(
+            RegisterEntity.CRYSTALLINE_ARROW_ENTITY
+        ){context: EntityRendererFactory.Context ->
+            CustomArrowEntityRenderer(
+                context,
+                IG.identity("textures/entity/crystalline_arrow.png")
+            )
+        }
+
+        EntityRendererRegistry.register(
+            RegisterEntity.IMBUED_ARROW_ENTITY
+        ){context: EntityRendererFactory.Context ->
+            CustomArrowEntityRenderer(
+                context,
+                IG.identity("textures/entity/imbued_arrow.png")
+            )
+        }
 
         EntityRendererRegistry.register(
             RegisterEntity.CELESTIAL_TRIDENT_ENTITY
@@ -95,6 +110,12 @@ object RegisterRenderer {
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             val nbt = stack.nbt?:return@register 0.0f
             if (entity != null && nbt.getInt("tier") > 1) 1.0f else 0.0f
+        }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.LIVING_FLAME, Identifier("active")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
         }
     }
 }

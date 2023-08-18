@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "imbued_gear:item/void_mail_leggings"
+    "layer0": "imbued_gear:item/puresteel_ingot"
   }
 }

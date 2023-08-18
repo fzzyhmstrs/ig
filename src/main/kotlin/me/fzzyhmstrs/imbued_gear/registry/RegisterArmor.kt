@@ -81,9 +81,9 @@ object RegisterArmor {
 
     //Elementalists Garb - elemental spells, mana cost
     val ELEMENTALISTS_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.HELMET,Item.Settings()),"elementalists_helmet")
-    val ELEMENTALISTS_CHESTPLATE = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.CHESTPLATE,Item.Settings()),"warriors_chestplate")
-    val ELEMENTALISTS_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.LEGGINGS,Item.Settings()),"warriors_leggings")
-    val ELEMENTALISTS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.BOOTS,Item.Settings()),"warriors_boots")
+    val ELEMENTALISTS_CHESTPLATE = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.CHESTPLATE,Item.Settings()),"elementalists_chestplate")
+    val ELEMENTALISTS_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.LEGGINGS,Item.Settings()),"elementalists_leggings")
+    val ELEMENTALISTS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.BOOTS,Item.Settings()),"elementalists_boots")
 
     //Eternity Shroud - health and spell duration/range, rare finds in dungeons - Tex Done
     val ETERNITY_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.HELMET,Item.Settings()),"eternity_helmet")

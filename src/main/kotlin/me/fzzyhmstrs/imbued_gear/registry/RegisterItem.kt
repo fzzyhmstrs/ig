@@ -3,6 +3,7 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
+import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagentFlavorItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
@@ -37,7 +38,7 @@ object RegisterItem {
 
     //Make Tigers Eye??
     val SERPENTINE = register(Item(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM)),"serpentine")
-    val ENSOULED_GEM = register(EnsouledGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
+    val ENSOULED_GEM = register(EnsouledGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"ensouled_gem")
     //make a spellcasters reagent that does less magic resist
     //val REALITY_GEM = register(RealityGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"reality_gem")
     val VOID_GEM = register(VoidGemItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.UNCOMMON)),"void_gem")
@@ -58,7 +59,7 @@ object RegisterItem {
     }
 
     fun registerItemGroup(): ItemGroup{
-        return FabricItemGroup.builder()
+        return Registry.register(Registries.ITEM_GROUP, IG.identity("ig_group"),FabricItemGroup.builder()
             .displayName(Text.translatable("itemGroup.imbued_gear.ig_group"))
             .icon { ItemStack(VOID_GEM.asItem()) }
             .entries { _, entries ->
@@ -68,7 +69,7 @@ object RegisterItem {
                 /*entries.addAll(RegisterBlock.regBlock.values.stream()
                     .map { block -> ItemStack(block.asItem()) }
                     .toList())*/
-            }.build()
+            }.build())
     }
 
     fun registerAll() {

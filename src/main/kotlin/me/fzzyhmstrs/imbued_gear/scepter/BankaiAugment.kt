@@ -29,13 +29,13 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
     private val tries = doubleArrayOf(0.0,-1.0,1.0)
 
     override val baseEffect: AugmentEffect
-        get() = super.baseEffect.withRange(6.75,0.25)
+        get() = super.baseEffect.withRange(12.75,1.25)
             .withDamage(9.75f,0.25f)
             .withAmplifier(16)
 
     override fun augmentStat(imbueLevel: Int): AugmentDatapoint {
-        return AugmentDatapoint(SpellType.FURY,600,80,
-            19,imbueLevel,25, LoreTier.NO_TIER, RegisterItem.SPARKING_GEM)
+        return AugmentDatapoint(SpellType.FURY,300,45,
+            19,imbueLevel,13, LoreTier.NO_TIER, RegisterItem.SPARKING_GEM)
     }
 
     override fun applyTasks(world: World, user: LivingEntity, hand: Hand, level: Int, effects: AugmentEffect): Boolean {

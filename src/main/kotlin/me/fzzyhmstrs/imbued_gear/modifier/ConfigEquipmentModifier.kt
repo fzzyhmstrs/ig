@@ -22,6 +22,6 @@ class ConfigEquipmentModifier(
 {
 
     override fun randomlySelectable(): Boolean{
-        return IgConfig.modifiers.isModifierEnabled(modifierId)
+        return IgConfig.modifiers.isModifierEnabled(modifierId) && super.randomlySelectable()
     }
 }

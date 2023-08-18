@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "imbued_gear:item/living_flame"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "active": 1.0
+      },
+      "model": "imbued_gear:item/living_flame_active"
+    }
+  ]
 }

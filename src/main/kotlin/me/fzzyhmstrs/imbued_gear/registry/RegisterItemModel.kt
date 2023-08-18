@@ -14,7 +14,7 @@ object RegisterItemModel {
     fun registerAll() {
         val celestialModelModes =
             ItemModelRegistry.ModelIdentifierPerModes(ModelIdentifier(IG.MOD_ID, "celestial_trident", "inventory"))
-                .withHeld(ModelIdentifier(AI.MOD_ID, "celestial_trident_in_hand", "inventory"), true)
+                .withHeld(ModelIdentifier(IG.MOD_ID, "celestial_trident_in_hand", "inventory"), true)
         ItemModelRegistry.registerItemModelId(RegisterTool.CELESTIAL_TRIDENT, celestialModelModes)
         ItemModelRegistry.registerItemEntityModel(
             RegisterTool.CELESTIAL_TRIDENT,
@@ -25,7 +25,7 @@ object RegisterItemModel {
 
         val championsModelModes =
             ItemModelRegistry.ModelIdentifierPerModes(ModelIdentifier(IG.MOD_ID, "champions_trident", "inventory"))
-                .withHeld(ModelIdentifier(AI.MOD_ID, "champions_trident_in_hand", "inventory"), true)
+                .withHeld(ModelIdentifier(IG.MOD_ID, "champions_trident_in_hand", "inventory"), true)
         ItemModelRegistry.registerItemModelId(RegisterTool.CHAMPIONS_TRIDENT, championsModelModes)
         ItemModelRegistry.registerItemEntityModel(
             RegisterTool.CHAMPIONS_TRIDENT,

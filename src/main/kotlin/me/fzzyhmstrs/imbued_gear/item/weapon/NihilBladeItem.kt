@@ -8,12 +8,11 @@ import net.minecraft.item.SwordItem
 import net.minecraft.item.ToolMaterial
 import net.minecraft.util.Identifier
 
-class NihilBladeItem(material: ToolMaterial,settings: Settings): SwordItem(material,3,-2.4f,settings), Modifiable {
+class NihilBladeItem(material: ToolMaterial,settings: Settings): SwordItem(material,0,-1.5f,settings), Modifiable {
 
     override fun defaultModifiers(type: ModifierHelperType): MutableList<Identifier> {
-        if (type == EquipmentModifierHelper.getType()){
+        if (type == EquipmentModifierHelper.getType())
             return mutableListOf(RegisterModifier.NOTHINGNESS.modifierId)
-        }
         return super.defaultModifiers(type)
     }
 

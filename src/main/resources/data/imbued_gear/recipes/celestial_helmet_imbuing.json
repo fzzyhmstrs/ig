@@ -25,7 +25,7 @@
 	"item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
-	"tag": "imbued_gear:celestial_helmet_inputs"
+    "item": "amethyst_imbuement:ametrine_helmet"
   },
   "craftF": {
 	"item": "imbued_gear:puresteel_ingot"

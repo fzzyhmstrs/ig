@@ -128,7 +128,9 @@ object RegisterModifier {
     val KINDLED = buildModifier(IG.identity("kindled"), persistent = true, availableForSelection = false)
         .withAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,0.2,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .withAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.075,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-        .withModifiers(KINDLED_SCEPTER.modifierId)
+        .also { regMod.add(it) }
+    val CELESTIAL = EquipmentModifier(IG.identity("celestial"), persistent = true, randomSelectable = false)
+        .withOnDamaged(ModifierFunctions.CELESTIAL_DAMAGE_FUNCTION)
         .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)

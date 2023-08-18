@@ -7,7 +7,7 @@ import me.fzzyhmstrs.imbued_gear.registry.RegisterEnchantment
 import me.fzzyhmstrs.imbued_gear.tool.CracklingToolMaterial
 import net.minecraft.util.Identifier
 
-class CracklingSpellbladeItem(settings: Settings): DefaultAugmentSwordItem(CracklingToolMaterial,3,-2.4f,settings) {
+class CracklingSpellbladeItem(settings: Settings): DefaultAugmentSwordItem(CracklingToolMaterial,4,-2.9f,settings) {
     override val fallbackId: Identifier = IG.identity("bankai")
 
     override fun canAcceptAugment(augment: ScepterAugment): Boolean {

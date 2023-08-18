@@ -25,7 +25,7 @@
 	"item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
-	"tag": "imbued_gear:celestial_chestplate_inputs"
+    "item": "amethyst_imbuement:ametrine_chestplate"
   },
   "craftF": {
 	"item": "imbued_gear:puresteel_ingot"

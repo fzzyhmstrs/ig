@@ -17,12 +17,14 @@ object IG: ModInitializer {
     const val MOD_ID = "imbued_gear"
 
     override fun onInitialize() {
-        //RegisterBlock.registerAll()
         RegisterArmor.registerAll()
+        RegisterTool.registerAll()
         RegisterItem.registerAll()
         RegisterEntity.registerAll()
         RegisterModifier.registerAll()
         RegisterTag.registerAll()
+        RegisterStatus.registerAll()
+        RegisterEnchantment.registerAll()
     }
 
     fun igRandom(): Random{

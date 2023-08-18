@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "imbued_gear:item/strange_map"
+    "layer0": "imbued_gear:item/living_flame_active"
   }
 }
