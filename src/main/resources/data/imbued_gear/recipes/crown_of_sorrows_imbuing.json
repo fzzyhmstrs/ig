@@ -13,25 +13,22 @@
 	"item": "imbued_gear:soul_powder"
   },
   "craftA": {
-    "item": "imbued_gear:voidsteel"
+    "item": "imbued_gear:voidsteel_ingot"
   },
   "craftB": {
 	"item": "imbued_gear:ensouled_gem"
   },
   "craftC": {
-    "item": "imbued_gear:voidsteel"
+    "item": "imbued_gear:voidsteel_ingot"
   },
   "craftD": {
-	"item": "imbued_gear:voidsteel"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftE": {
 	"item": "amethyst_imbuement:steel_headband"
   },
   "craftF": {
-	"item": "imbued_gear:voidsteel"
-  },
-  "craftH": {
-	"item": "imbued_gear:voidsteel"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "title": "Crown of Sorrows",
   "cost": 17,

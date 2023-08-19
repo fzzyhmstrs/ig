@@ -25,6 +25,7 @@ object IG: ModInitializer {
         RegisterTag.registerAll()
         RegisterStatus.registerAll()
         RegisterEnchantment.registerAll()
+        RegisterLoot.registerAll()
     }
 
     fun igRandom(): Random{

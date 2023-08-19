@@ -1,6 +1,7 @@
 package me.fzzyhmstrs.imbued_gear.material
 
 
+import me.fzzyhmstrs.amethyst_imbuement.material.ScepterToolMaterial
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedToolMaterial
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import net.fabricmc.yarn.constants.MiningLevels
@@ -29,6 +30,16 @@ object IgToolMaterialsConfig{
         .attackDamage(9f)
         .miningLevel(MiningLevels.NETHERITE)
         .enchantability(45)
+        .repairIngredient(Ingredient.ofItems(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem.CELESTINE))
+        .build()
+    val SCEPTER_TIER_4 = ScepterToolMaterial.Builder(4)
+        .attackSpeed(-3.0)
+        .healCooldown(50L)
+        .durability(3550,15000)
+        .miningSpeedMultiplier(1f)
+        .attackDamage(0f)
+        .miningLevel(1)
+        .enchantability(25)
         .repairIngredient(Ingredient.ofItems(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem.CELESTINE))
         .build()
 }

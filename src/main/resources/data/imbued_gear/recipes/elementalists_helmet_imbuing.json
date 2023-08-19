@@ -13,13 +13,13 @@
 	"item": "minecraft:blaze_powder"
   },
   "craftA": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftB": {
 	"item": "amethyst_imbuement:inquisitive_gem"
   },
   "craftC": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftD": {
 	"item": "amethyst_imbuement:glistening_ice"

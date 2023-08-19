@@ -22,13 +22,13 @@
 	"item": "amethyst_imbuement:glistening_ice"
   },
   "craftG": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftH": {
 	"item": "amethyst_imbuement:blazing_gem"
   },
   "craftI": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "title": "Elementalists Boots",
   "cost": 33,

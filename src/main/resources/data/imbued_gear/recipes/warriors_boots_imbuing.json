@@ -16,19 +16,19 @@
 	"item": "amethyst_imbuement:beryl_copper_ingot"
   },
   "craftE": {
-	"item": "imbued_gear:glowing_boots"
+	"item": "amethyst_imbuement:glowing_boots"
   },
   "craftF": {
 	"item": "amethyst_imbuement:beryl_copper_ingot"
   },
   "craftG": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftH": {
 	"item": "amethyst_imbuement:brutal_gem"
   },
   "craftI": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Warriors Boots",
   "cost": 49,

@@ -60,7 +60,7 @@ object IgConfig:
         
         var ringOfSouls = RingOfSouls()
         class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").add("ia.readme.items.ring_of_souls_2").build()){
-            var maxTier = ValidatedInt(10, Int.MAX_VALUE,1)
+            var maxTier = ValidatedInt(10, 25,1)
             var baseKillsPerTier = ValidatedInt(250, Int.MAX_VALUE,1)
             var killTierMultiplier = ValidatedFloat(2f, Float.MAX_VALUE,1f)
         }
@@ -106,12 +106,13 @@ object IgConfig:
             var warrior = IgArmorMaterialsConfig.WARRIOR
         }
 
-        val tools = Tools()
+        var tools = Tools()
 
         class Tools: ConfigSection(Header.Builder().space().add("ia.readme.materials.tools_1").build()) {
             var nihil = IgToolMaterialsConfig.NIHIL
             var radiant = IgToolMaterialsConfig.RADIANT
             var celestial = IgToolMaterialsConfig.CELESTIAL
+            var scepterTier4 = IgToolMaterialsConfig.SCEPTER_TIER_4
         }
         
         

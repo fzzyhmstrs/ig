@@ -56,6 +56,7 @@ object IgArmorMaterialsConfig{
         .enchantability(10)
         .protectionAmounts(4,9,7,4)
         .durabilityMultiplier(33)
+        .knockbackResistance(0.05f)
         .toughness(2.0f)
         .build()
     val VOID_MAIL = FzzyArmorMaterial.Builder("ig_void_mail",SoundEvents.ITEM_ARMOR_EQUIP_CHAIN)

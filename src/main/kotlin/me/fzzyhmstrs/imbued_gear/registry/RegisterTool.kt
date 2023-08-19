@@ -44,7 +44,7 @@ object RegisterTool {
     val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.radiant,FabricItemSettings()),"radiant_broadsword")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
-    val COSMOS = register(CosmicScepterItem(ScepterLvl4ToolMaterial,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
+    val COSMOS = register(CosmicScepterItem(IgConfig.materials.tools.scepterTier4,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
         .withModifiers(listOf(RegisterModifier1.COSMIC))
         ,"cosmos")
 
@@ -56,7 +56,7 @@ object RegisterTool {
     //lich - buffs summons, chance to echo summoning spells at durability expense
     val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(100)) ,"bone_rattle")
     //saint
-    val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.totemOfAmethystDurability.get()), scepterModifiers = listOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
+    val CADUCEUS = register(CaduceusItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.totemOfAmethystDurability.get())) ,"caduceus")
     //flame - spell cooldown, attack speed, chance to set things on fire
     val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) ,"living_flame")
     //void - damaging has chance to reduce max health, magic resist, mana cost
@@ -69,6 +69,8 @@ object RegisterTool {
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)),"pendant_of_memories")
     //blade
     val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2)),"ring_of_souls")
+    //blade 2
+    val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get())),"energetic_band")
 
 
     fun registerAll() {

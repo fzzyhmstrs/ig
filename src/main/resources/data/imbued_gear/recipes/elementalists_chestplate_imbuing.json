@@ -13,10 +13,10 @@
 	"item": "minecraft:blaze_powder"
   },
   "craftA": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftC": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftD": {
 	"item": "amethyst_imbuement:glistening_ice"
@@ -28,13 +28,13 @@
 	"item": "amethyst_imbuement:glistening_ice"
   },
   "craftG": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "craftH": {
 	"item": "amethyst_imbuement:blazing_gem"
   },
   "craftI": {
-	"item": "amethyst_imbuement:obsidian"
+	"item": "minecraft:obsidian"
   },
   "title": "Elementalists Chestplate",
   "cost": 33,

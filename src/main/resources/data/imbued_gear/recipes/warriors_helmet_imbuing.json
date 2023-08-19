@@ -22,13 +22,13 @@
     "item": "amethyst_imbuement:beryl_copper_ingot"
   },
   "craftD": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
-	"item": "imbued_gear:glowing_helmet"
+	"item": "amethyst_imbuement:glowing_helmet"
   },
   "craftF": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Warriors Helmet",
   "cost": 49,

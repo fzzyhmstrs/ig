@@ -38,7 +38,7 @@
   },
   "title": "Void Mail Leggings",
   "cost": 27,
-  "resultA": "imbued_gear:void_mail_leggings",
+  "resultA": "imbued_gear:spellblades_leggings",
   "countA": 1,
   "transferEnchant": true
 }

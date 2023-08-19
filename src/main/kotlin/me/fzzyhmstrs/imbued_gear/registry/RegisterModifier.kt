@@ -160,6 +160,10 @@ object RegisterModifier {
         .withTick(ModifierConsumers.HORDE_MASTER_TICK_CONSUMER)
         .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
         .also { regMod.add(it) }
+    val LUST_FOR_COMBAT = EquipmentModifier(IG.identity("lust_for_combat"), persistent = true, randomSelectable = false)
+        .withKilledOther(ModifierConsumers.LUST_FOR_COMBAT_KILL_CONSUMER)
+        .withCustomFormatting(Formatting.RED, Formatting.ITALIC)
+        .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)
     //    .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)

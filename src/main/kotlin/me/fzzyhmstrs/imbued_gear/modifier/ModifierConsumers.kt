@@ -147,6 +147,36 @@ object ModifierConsumers {
                 entity.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BONE_ARMOR,100,1))
             }
         }
+
+    val LUST_FOR_COMBAT_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (user.hasStatusEffect(RegisterStatus.SPELL_RAGE)){
+                val effect = user.getStatusEffect(RegisterStatus.SPELL_RAGE)
+                val amp = effect?.amplifier?:0
+                val duration = effect?.duration?:0
+                if (duration > 0){
+                    val duration2 = if(duration < 160) {160} else {duration}
+                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_RAGE,duration2,min(amp + 1,4)))
+                }
+            } else {
+                user.addStatusEffect(
+                    StatusEffectInstance(RegisterStatus.SPELL_RAGE, 160)
+                )
+            }
+            if (user.hasStatusEffect(RegisterStatus.BLADE_RAGE)){
+                val effect = user.getStatusEffect(RegisterStatus.BLADE_RAGE)
+                val amp = effect?.amplifier?:0
+                val duration = effect?.duration?:0
+                if (duration > 0){
+                    val duration2 = if(duration < 160) {160} else {duration}
+                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.BLADE_RAGE,duration2,min(amp + 1,4)))
+                }
+            } else {
+                user.addStatusEffect(
+                    StatusEffectInstance(RegisterStatus.BLADE_RAGE, 160)
+                )
+            }
+        }
         
     /////////////////////////////
     

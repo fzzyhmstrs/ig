@@ -16,16 +16,16 @@
 	"item": "imbued_gear:void_gem"
   },
   "craftD": {
-	"item": "imbued_gear:voidsteel"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftE": {
 	"item": "amethyst_imbuement:glowing_blade"
   },
   "craftF": {
-	"item": "imbued_gear:voidsteel"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "craftH": {
-	"item": "imbued_gear:voidsteel"
+	"item": "imbued_gear:voidsteel_ingot"
   },
   "title": "Nihil Blade",
   "cost": 29,

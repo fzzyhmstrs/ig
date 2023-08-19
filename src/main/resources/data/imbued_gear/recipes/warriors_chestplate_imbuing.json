@@ -22,19 +22,19 @@
 	"item": "minecraft:sea_lantern"
   },
   "craftE": {
-	"item": "imbued_gear:glowing_chestplate"
+	"item": "amethyst_imbuement:glowing_chestplate"
   },
   "craftF": {
 	"item": "minecraft:sea_lantern"
   },
   "craftG": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftH": {
 	"item": "amethyst_imbuement:brutal_gem"
   },
   "craftI": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Warriors Chestplate",
   "cost": 49,

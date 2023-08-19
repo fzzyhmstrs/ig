@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "imbued_gear:ring_of_souls"
+    "imbued_gear:ring_of_souls",
+    "imbued_gear:energetic_band"
   ]
 }

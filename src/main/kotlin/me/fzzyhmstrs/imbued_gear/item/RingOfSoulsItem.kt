@@ -32,14 +32,16 @@ class RingOfSoulsItem(settings: Settings): AbstractAugmentJewelryItem(settings),
         if (nbt.contains("tier") && nbt.contains("amount")){
             val tier = nbt.getInt("tier")
             if (tier == IgConfig.items.ringOfSouls.maxTier.get()){
-                tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier_max",IgConfig.items.ringOfSouls.maxTier.get()).formatted(Formatting.GOLD))
+                tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier_max",IgConfig.items.ringOfSouls.maxTier.get()).formatted(Formatting.GOLD, Formatting.BOLD))
             } else {
                 val amount = nbt.getInt("amount")
                 val kills = getKillCount(stack)
-                tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier",tier,kills,amount).formatted(Formatting.GOLD))
+                tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier",tier).formatted(Formatting.GOLD, Formatting.BOLD))
+                tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.kills",kills,amount).formatted(Formatting.GOLD))
             }
         } else {
-            tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier","1","0",IgConfig.items.ringOfSouls.baseKillsPerTier.get()).formatted(Formatting.GOLD))
+            tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.tier","1").formatted(Formatting.GOLD, Formatting.BOLD))
+            tooltip.add(AcText.translatable("item.imbued_gear.ring_of_souls.kills","0",IgConfig.items.ringOfSouls.baseKillsPerTier.get()).formatted(Formatting.GOLD))
         }
     }
 

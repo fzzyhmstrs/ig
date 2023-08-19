@@ -50,6 +50,9 @@
 	"item.imbued_gear.pendant_of_memories": "Pendant of Memories",
 	"item.imbued_gear.pendant_of_memories.flavor": "This strange locket is fueled by the memories of your past atrocities.",
 	"item.imbued_gear.ring_of_souls": "Ring of Souls",
+	"item.imbued_gear.ring_of_souls.tier": "Tier: %s",
+	"item.imbued_gear.ring_of_souls.tier_max": "Maximum Tier",
+	"item.imbued_gear.ring_of_souls.kills": "Kills: %1$s, To Next Tier: %2$s",
 	"item.imbued_gear.ring_of_souls.flavor": "Do you hear them crying out?",
 
 	"item.imbued_gear.celestial_helmet": "Celestial Helm",
@@ -94,6 +97,8 @@
 	"enchantment.imbued_gear.bankai.desc": "Slash enemies in front of you so quickly you appear to teleport past them.",
 	
 	"effect.imbued_gear.nihilism": "Nihilism",
+	"effect.imbued_gear.blade_rage": "Blade Rage",
+	"effect.imbued_gear.spell_rage": "Spell Rage",
 
 	"itemGroup.imbued_gear.ig_group": "Imbued Gear",
 
@@ -155,6 +160,27 @@
 	"equipment.modifier.imbued_gear:fiery.desc": "Attacks set enemies on fire. Take 20% less damage from on-fire mobs.",
 	"equipment.modifier.imbued_gear:master_of_elements.desc": "50% damage taken from elemental damage sources.",
 	"equipment.modifier.imbued_gear:horde_master.desc": "Nearby summons and pets are granted Bone Armor",
+
+	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_1.desc": "+0.5 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_2": "Soulfire II",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_2.desc": "+1.0 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_3": "Soulfire III",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_3.desc": "+1.5 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_4": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_4.desc": "+2.0 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_5": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_5.desc": "+2.5 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_6": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_6.desc": "+3.0 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_7": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_7.desc": "+3.5 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_8": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_8.desc": "+4.0 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_9": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_9.desc": "+4.5 Spell Damage",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_10": "Soulfire I",
+	"equipment.modifier.imbued_gear:souls_modifier_tier_10.desc": "+5.0 Spell Damage",
 
 	"ia.readme.main_header.title": "README - Imbued Gear"
 	

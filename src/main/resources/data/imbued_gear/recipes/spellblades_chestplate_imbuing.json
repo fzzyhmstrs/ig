@@ -19,7 +19,7 @@
 	"tag": "c:steel_ingots"
   },
   "craftD": {
-	"item": "minecraft_diamond"
+	"item": "minecraft:diamond"
   },
   "craftE": {
 	"item": "amethyst_imbuement:garnet_chestplate"

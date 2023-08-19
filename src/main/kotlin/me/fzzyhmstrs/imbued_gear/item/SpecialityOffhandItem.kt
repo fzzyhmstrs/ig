@@ -15,7 +15,7 @@ open class SpecialityOffhandItem(
     private val equipmentModifiers: List<Identifier> = listOf(),
     private val scepterModifiers: List<Identifier> = listOf())
     :
-    CustomFlavorItem(settings), Modifiable, DamageTracking, AttributeTracking, HitTracking, KillTracking, ModifierTracking
+    CustomFlavorItem(settings), Modifiable, DamageTracking, AttributeTracking, HitTracking, TickTracking, KillTracking, ModifierTracking
 {
     
     companion object{
@@ -33,7 +33,9 @@ open class SpecialityOffhandItem(
     }
 
     override fun defaultModifiers(type: ModifierHelperType?): MutableList<Identifier> {
-        if (type == EquipmentModifierHelper.getType()) return equipmentMods().toMutableList()
+        if (type == EquipmentModifierHelper.getType()) {
+            return equipmentMods().toMutableList()
+        }
         if (type == ModifierHelper.getType()) return scepterMods().toMutableList()
         return super.defaultModifiers(type)
     }

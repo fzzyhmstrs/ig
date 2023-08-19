@@ -1,9 +1,9 @@
 package me.fzzyhmstrs.imbued_gear.item
 
 import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
-import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterToolMaterial
 import me.fzzyhmstrs.amethyst_imbuement.item.scepter.CustomScepterItem
 import me.fzzyhmstrs.amethyst_imbuement.item.scepter.ScepterItem
+import me.fzzyhmstrs.amethyst_imbuement.material.ScepterToolMaterial
 import me.fzzyhmstrs.amethyst_imbuement.util.ImbuingRecipe
 import me.fzzyhmstrs.fzzy_core.coding_util.PlayerParticlesV2.scepterParticlePos
 import net.fabricmc.api.EnvType

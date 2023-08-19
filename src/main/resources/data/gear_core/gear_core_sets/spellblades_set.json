@@ -1,0 +1,27 @@
+{
+  "name": "set.imbued_gear.spellblades",
+  "active_formatting": [
+    "BLUE",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:spellblades_gear"
+  },
+  "bonuses": {
+    "4": {
+        "name":"spellblades_damage",
+        "attribute": "amethyst_core:spell_damage",
+        "amount": "0.2",
+        "operation": "MULTIPLY_TOTAL"
+    },
+    "6": [
+      {
+        "name":"spellblades_movement",
+        "attribute": "minecraft:generic.attack_speed",
+        "amount": "0.1",
+        "operation": "MULTIPLY_TOTAL"
+      },
+      "imbued_gear:lust_for_combat"
+    ]
+  }
+}

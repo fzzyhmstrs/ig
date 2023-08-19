@@ -25,16 +25,16 @@
 	"item": "minecraft:sea_lantern"
   },
   "craftE": {
-	"item": "imbued_gear:glowing_leggings"
+	"item": "amethyst_imbuement:glowing_leggings"
   },
   "craftF": {
 	"item": "minecraft:sea_lantern"
   },
   "craftG": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftI": {
-	"item": "imbued_gear:puresteel"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "title": "Warriors Leggings",
   "cost": 49,
