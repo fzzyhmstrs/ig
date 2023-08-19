@@ -8,6 +8,7 @@ import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus
 import net.minecraft.entity.LivingEntity
+import net.minecraft.entity.Tameable
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.entity.player.PlayerEntity
@@ -129,6 +130,22 @@ object ModifierConsumers {
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
             manaDamageItems(user,IgConfig.modifiers.gear.manaDrainingKillAmount.get())
+        }
+
+    val FIERY_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
+            if (target == null) return@ToolConsumer
+            target.setOnFireFor(5)
+        }
+
+    val HORDE_MASTER_TICK_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
+            if (user.world.time % 60 != 0L) return@ToolConsumer
+            val box = user.boundingBox.expand(8.0)
+            val entities = user.world.getOtherEntities(user,box){e -> e is LivingEntity && e is Tameable && e.owner == user}.map { it as LivingEntity }
+            for (entity in entities){
+                entity.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BONE_ARMOR,100,1))
+            }
         }
         
     /////////////////////////////

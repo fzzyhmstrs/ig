@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:spellblades_helmet",
+    "imbued_gear:spellblades_chestplate",
+    "imbued_gear:spellblades_leggings",
+    "imbued_gear:spellblades_boots",
+    "imbued_gear:lethality",
+    "imbued_gear:crackling_spellblade"
+  ]
+}

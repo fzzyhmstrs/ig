@@ -16,6 +16,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.loot.provider.number.UniformLootNumberProvider
+import net.minecraft.util.Formatting
 import net.minecraft.util.Identifier
 
 object RegisterModifier {
@@ -112,12 +113,21 @@ object RegisterModifier {
     /////////////////////////////////////////////////
         
     //Set and Special equipment modifiers
+    val SCHOLARLY = buildModifier(IG.identity("scholarly"), persistent = true, availableForSelection = false)
+        .withAttributeModifier(
+            RegisterAttribute.PLAYER_EXPERIENCE,1.0, EntityAttributeModifier.Operation.ADDITION)
+        .also { regMod.add(it) }
+    val PROTECTION_FROM_EVIL = buildModifier(IG.identity("protection_from_evil"), persistent = true, availableForSelection = false)
+        .withOnDamaged(ModifierFunctions.PROTECTION_FROM_EVIL_DAMAGE_FUNCTION)
+        .also { regMod.add(it) }
     val NOTHINGNESS = buildModifier(IG.identity("nothingness"), persistent = true, availableForSelection = false)
         .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
+        .withCustomFormatting(Formatting.DARK_BLUE)
         .also { regMod.add(it) }
     val NULL_SPACE = buildModifier(IG.identity("null_space"), persistent = true, availableForSelection = false)
         .withAttributeModifier(RegisterAttribute.MAGIC_RESISTANCE,0.2,EntityAttributeModifier.Operation.ADDITION)
         .withPostHit(ModifierConsumers.NULL_SPACE_HIT_CONSUMER)
+        .withCustomFormatting(Formatting.DARK_BLUE)
         .also { regMod.add(it) }
     val RADIANT_DEVOTION = buildModifier(IG.identity("radiant_devotion"), persistent = true, availableForSelection = false)
         .withKilledOther(ModifierConsumers.RADIANT_DEVOTION_HIT_CONSUMER)
@@ -131,6 +141,24 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val CELESTIAL = EquipmentModifier(IG.identity("celestial"), persistent = true, randomSelectable = false)
         .withOnDamaged(ModifierFunctions.CELESTIAL_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.AQUA, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val DIVINE = EquipmentModifier(IG.identity("divine"), persistent = true, randomSelectable = false)
+        .withOnDamaged(ModifierFunctions.DIVINE_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.AQUA, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val FIERY = EquipmentModifier(IG.identity("fiery"), persistent = true, randomSelectable = false)
+        .withPostHit(ModifierConsumers.FIERY_HIT_CONSUMER)
+        .withOnDamaged(ModifierFunctions.FIERY_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.RED, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val MASTER_OF_ELEMENTS = EquipmentModifier(IG.identity("master_of_elements"), persistent = true, randomSelectable = false)
+        .withOnDamaged(ModifierFunctions.MASTER_OF_ELEMENTS_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.RED, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val HORDE_MASTER = EquipmentModifier(IG.identity("horde_master"), persistent = true, randomSelectable = false)
+        .withTick(ModifierConsumers.HORDE_MASTER_TICK_CONSUMER)
+        .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
         .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)

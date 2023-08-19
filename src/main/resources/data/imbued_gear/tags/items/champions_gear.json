@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:champions_helmet",
+    "imbued_gear:champions_chestplate",
+    "imbued_gear:champions_leggings",
+    "imbued_gear:champions_boots",
+    "imbued_gear:champions_trident",
+    "imbued_gear:radiant_broadsword",
+    "amethyst_imbuement:aegis"
+  ]
+}

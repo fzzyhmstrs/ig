@@ -1,0 +1,33 @@
+{
+  "name": "set.imbued_gear.celestial",
+  "active_formatting": [
+    "AQUA",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:celestial_gear"
+  },
+  "bonuses": {
+    "3": {
+      "name": "celestial_swiftness",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": "0.075",
+      "operation": "MULTIPLY_TOTAL"
+    },
+    "5": [
+      {
+        "name":"celestial_spell_level",
+        "attribute": "amethyst_core:spell_level",
+        "amount": "0.25",
+        "operation": "MULTIPLY_TOTAL"
+      },
+      {
+        "name":"celestial_toughness",
+        "attribute": "minecraft:generic.armor_toughness",
+        "amount": "4.0",
+        "operation": "ADDITION"
+      }
+    ],
+    "6": "imbued_gear:divine"
+  }
+}

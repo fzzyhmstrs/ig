@@ -1,0 +1,27 @@
+{
+  "name": "set.imbued_gear.champions",
+  "active_formatting": [
+    "GOLD",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:champions_gear"
+  },
+  "bonuses": {
+    "4": [
+      {
+        "name":"champions_knockback",
+        "attribute": "minecraft:generic.knockback_resistance",
+        "amount": "0.25",
+        "operation": "ADDITION"
+      },
+      "imbued_gear:radiant_devotion"
+    ],
+    "6": {
+      "name":"champions_damage",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": "2.0",
+      "operation": "ADDITION"
+    }
+  }
+}

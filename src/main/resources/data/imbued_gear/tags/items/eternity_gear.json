@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:eternity_helmet",
+    "imbued_gear:eternity_chestplate",
+    "imbued_gear:eternity_leggings",
+    "imbued_gear:eternity_boots",
+    "imbued_gear:caduceus",
+    "amethyst_imbuement:redemption"
+  ]
+}

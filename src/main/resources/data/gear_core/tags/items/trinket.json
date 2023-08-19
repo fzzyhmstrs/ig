@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "imbued_gear:caduceus",
-    "imbued_gear:bone_rattle"
+    "imbued_gear:bone_rattle",
+    "imbued_gear:living_flame",
+    "imbued_gear:null_and_void",
+    "imbued_gear:bone_rattle",
+    "imbued_gear:blaze_of_light"
   ]
 }

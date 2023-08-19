@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:scholars_helmet",
+    "imbued_gear:scholars_chestplate",
+    "imbued_gear:scholars_leggings",
+    "imbued_gear:scholars_boots",
+    "imbued_gear:book_of_secrets",
+    "imbued_gear:pendant_of_memories",
+    "amethyst_imbuement:resonance"
+  ]
+}

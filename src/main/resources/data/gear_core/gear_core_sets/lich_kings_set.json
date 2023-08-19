@@ -1,0 +1,27 @@
+{
+  "name": "set.imbued_gear.lich_kings",
+  "active_formatting": [
+    "GREEN",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:lich_kings_gear"
+  },
+  "bonuses": {
+    "2": {
+        "name":"lich_kings_amplifier",
+        "attribute": "amethyst_core:spell_amplifier",
+        "amount": "2.0",
+        "operation": "ADDITION"
+    },
+    "5": [
+      "imbued_gear:horde_master",
+      {
+        "name":"lich_kings_duration",
+        "attribute": "amethyst_core:spell_duration",
+        "amount": "0.1",
+        "operation": "MULTIPLY_TOTAL"
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "imbued_gear:crown_of_sorrows",
+    "imbued_gear:divine_coronet"
   ]
 }

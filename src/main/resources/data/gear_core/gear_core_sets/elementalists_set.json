@@ -1,0 +1,22 @@
+{
+  "name": "set.imbued_gear.elementalists",
+  "active_formatting": [
+    "LIGHT_PURPLE",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:elementalists_gear"
+  },
+  "bonuses": {
+    "3": [
+      "imbued_gear:fiery",
+      {
+        "name":"elemental_range",
+        "attribute": "amethyst_core:spell_range",
+        "amount": "0.15",
+        "operation": "MULTIPLY_TOTAL"
+      }
+    ],
+    "5": "imbued_gear:master_of_elements"
+  }
+}

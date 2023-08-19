@@ -1,0 +1,33 @@
+{
+  "name": "set.imbued_gear.scholars",
+  "active_formatting": [
+    "DARK_GREEN",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:scholars_gear"
+  },
+  "bonuses": {
+    "2": {
+        "name":"scholars_xp_1",
+        "attribute": "amethyst_core:player_experience",
+        "amount": "1.0",
+        "operation": "ADDITION"
+    },
+    "5": [
+      {
+        "name":"scholars_xp_2",
+        "attribute": "amethyst_core:spell_experience",
+        "amount": "0.25",
+        "operation": "MULTIPLY_TOTAL"
+      },
+      {
+        "name":"scholars_xp_2",
+        "attribute": "amethyst_core:player_experience",
+        "amount": "1.5",
+        "operation": "ADDITION"
+      }
+    ],
+    "6": "imbued_gear:wisened"
+  }
+}

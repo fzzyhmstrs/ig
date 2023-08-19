@@ -34,11 +34,11 @@ object RegisterTool {
     }
 
     //tools and weapons
+    val CRYSTALLINE_ARROW = register(CrystallineArrowItem(FabricItemSettings()),"crystalline_arrow")
+    val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
     val CELESTIAL_TRIDENT = register(CelestialTridentItem(IgConfig.materials.tools.celestial,FabricItemSettings().maxDamage(2650).rarity(Rarity.EPIC)),"celestial_trident")
     //tex recipe
     val CHAMPIONS_TRIDENT = register(ChampionsTridentItem(IgConfig.materials.tools.radiant,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)),"champions_trident")
-    val CRYSTALLINE_ARROW = register(CrystallineArrowItem(FabricItemSettings()),"crystalline_arrow")
-    val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
     //val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
     val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings()),"nihil_blade")
     val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.radiant,FabricItemSettings()),"radiant_broadsword")
@@ -49,24 +49,22 @@ object RegisterTool {
         ,"cosmos")
 
     //trinkets
-    //model tex mods
     //warrior - increases damage against undead, reduces damage from undead
-    val BLAZE_OF_LIGHT = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(), scepterModifiers = listOf(RegisterModifier.SMITING.modifierId)) ,"blaze_of_light")
-    //model tex mods
+    val BLAZE_OF_LIGHT = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.PROTECTION_FROM_EVIL.modifierId), scepterModifiers = listOf(RegisterModifier.SMITING.modifierId)) ,"blaze_of_light")
+    //scholars
+    val BOOK_OF_SECRETS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.SCHOLARLY.modifierId), scepterModifiers = listOf(RegisterModifier.SAVANT_ASPECT.modifierId)) ,"book_of_secrets")
     //lich - buffs summons, chance to echo summoning spells at durability expense
     val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(100)) ,"bone_rattle")
     //saint
     val CADUCEUS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.totemOfAmethystDurability.get()), scepterModifiers = listOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, RegisterModifier1.HEALERS_REWARD.modifierId)) ,"caduceus")
+    //flame - spell cooldown, attack speed, chance to set things on fire
+    val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) ,"living_flame")
+    //void - damaging has chance to reduce max health, magic resist, mana cost
+    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
     //champion
     val CROWN_OF_SORROWS = register(CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2)),"crown_of_sorrows")
     //altar
     val DIVINE_CORONET = register(DivineCoronetItem(FabricItemSettings().maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*4)).withGlint(),"divine_coronet")
-    //model tex mods
-    //flame - spell cooldown, attack speed, chance to set things on fire
-    val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1)) ,"living_flame")
-    // mods
-    //void - damaging has chance to reduce max health, magic resist, mana cost
-    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1), equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
     //scholar
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250)),"pendant_of_memories")
     //blade

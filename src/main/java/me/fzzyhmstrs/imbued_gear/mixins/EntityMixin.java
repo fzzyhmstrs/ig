@@ -20,11 +20,10 @@ public abstract class EntityMixin {
         if (((Entity)(Object)this) instanceof ItemEntity itemEntity){
             Entity chk = itemEntity.getOwner();
             if (chk instanceof PlayerEntity entity) {
-                    ItemStack stack = itemEntity.getStack();
-                    if (stack.getItem() instanceof GemOfPromiseItem){
-                        RegisterItem.INSTANCE.getVOID_GEM().voidGemCheck(stack,entity.getInventory());
-                    }
-
+                ItemStack stack = itemEntity.getStack();
+                if (stack.getItem() instanceof GemOfPromiseItem){
+                    RegisterItem.INSTANCE.getVOID_GEM().voidGemCheck(stack,entity.getInventory());
+                }
             }
         }
     }

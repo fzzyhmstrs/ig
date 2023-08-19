@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:warriors_helmet",
+    "imbued_gear:warriors_chestplate",
+    "imbued_gear:warriors_leggings",
+    "imbued_gear:warriors_boots",
+    "amethyst_imbuement:aegis",
+    "imbued_gear:blaze_of_light"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:elementalists_helmet",
+    "imbued_gear:elementalists_chestplate",
+    "imbued_gear:elementalists_leggings",
+    "imbued_gear:elementalists_boots",
+    "amethyst_imbuement:equinox",
+    "imbued_gear:living_flame"
+  ]
+}

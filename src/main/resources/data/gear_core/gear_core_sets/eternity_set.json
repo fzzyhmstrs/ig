@@ -1,0 +1,24 @@
+{
+  "name": "set.imbued_gear.eternity",
+  "active_formatting": [
+    "LIGHT_PURPLE",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:eternity_gear"
+  },
+  "bonuses": {
+    "2": {
+        "name":"eternity_health_1",
+        "attribute": "minecraft:generic.max_health",
+        "amount": "4.0",
+        "operation": "ADDITION"
+    },
+    "5": {
+      "name":"eternity_health_2",
+      "attribute": "minecraft:generic.max_health",
+      "amount": "6.0",
+      "operation": "ADDITION"
+    }
+  }
+}

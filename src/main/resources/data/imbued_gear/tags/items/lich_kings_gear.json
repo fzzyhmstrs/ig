@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:lich_kings_helmet",
+    "imbued_gear:lich_kings_chestplate",
+    "imbued_gear:lich_kings_leggings",
+    "imbued_gear:lich_kings_boots",
+    "amethyst_imbuement:scepter_of_summoning",
+    "imbued_gear:bone_rattle"
+  ]
+}

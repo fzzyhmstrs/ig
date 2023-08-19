@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:celestial_helmet",
+    "imbued_gear:celestial_chestplate",
+    "imbued_gear:celestial_leggings",
+    "imbued_gear:celestial_boots",
+    "imbued_gear:divine_coronet",
+    "imbued_gear:cosmos",
+    "imbued_gear:celestial_trident"
+  ]
+}

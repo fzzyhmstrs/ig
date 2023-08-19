@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:void_mail_helmet",
+    "imbued_gear:void_mail_chestplate",
+    "imbued_gear:void_mail_leggings",
+    "imbued_gear:void_mail_boots",
+    "imbued_gear:nihil_blade",
+    "imbued_gear:null_and_void"
+  ]
+}
