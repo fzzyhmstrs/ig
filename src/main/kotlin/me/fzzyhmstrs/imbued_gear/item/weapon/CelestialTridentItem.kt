@@ -137,7 +137,7 @@ class CelestialTridentItem(internal val material: ToolMaterial, settings: Settin
             if (j == 0) {
                 if (avatars > 0) {
                     val data = CelestialTridentData(world, user, stack.copy())
-                    PersistentEffectHelper.setPersistentTickerNeed(this, 10, 10 * avatars,data)
+                    PersistentEffectHelper.setPersistentTickerNeed(this, 11, 11 * avatars,data)
                 }
 
                 val cte = CelestialTridentEntity(world, user as LivingEntity, stack)

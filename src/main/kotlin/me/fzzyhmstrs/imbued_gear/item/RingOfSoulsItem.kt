@@ -70,13 +70,15 @@ class RingOfSoulsItem(settings: Settings): AbstractAugmentJewelryItem(settings),
 
     companion object{
         private val SOULS_MODIFIER = EquipmentModifier(IG.identity("souls_modifier_tier_1"), persistent = true, randomSelectable = false)
-            .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.5,EntityAttributeModifier.Operation.ADDITION)
+            .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+            .withCustomFormatting(Formatting.DARK_RED, Formatting.BOLD)
             .also { ModifierRegistry.register(it) }
         init{
             if (IgConfig.items.ringOfSouls.maxTier.get() > 1){
                 for (i in 2..IgConfig.items.ringOfSouls.maxTier.get()){
                     val soulModifierTierX = EquipmentModifier(IG.identity("souls_modifier_tier_$i"), persistent = true, randomSelectable = false)
-                        .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.5*i,EntityAttributeModifier.Operation.ADDITION)
+                        .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05*i,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                        .withCustomFormatting(Formatting.DARK_RED, Formatting.BOLD)
                     ModifierRegistry.register(soulModifierTierX)
                 }
             }

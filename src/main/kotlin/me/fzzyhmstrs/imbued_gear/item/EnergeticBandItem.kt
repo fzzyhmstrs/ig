@@ -1,4 +1,4 @@
-package me.fzzyhmstrs.imbued_gear.item.weapon
+package me.fzzyhmstrs.imbued_gear.item
 
 import com.google.common.collect.Multimap
 import dev.emi.trinkets.api.SlotReference
@@ -53,7 +53,7 @@ open class EnergeticBandItem(settings: Settings) : TrinketItem(settings) {
         )
         modifiers.put(
             RegisterAttribute.SPELL_COOLDOWN,
-            EntityAttributeModifier(uuid, "energetic_spell_speed", -0.1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+            EntityAttributeModifier(uuid, "energetic_spell_speed", 0.1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         )
         return modifiers
     }

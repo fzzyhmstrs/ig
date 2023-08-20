@@ -3,7 +3,8 @@
   "package": "me.fzzyhmstrs.imbued_gear.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "EntityMixin"
+    "EntityMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
   ],

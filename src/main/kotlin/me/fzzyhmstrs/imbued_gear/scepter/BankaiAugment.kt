@@ -12,6 +12,7 @@ import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
 import me.fzzyhmstrs.fzzy_core.raycaster_util.RaycasterUtil
 import net.minecraft.entity.Entity
 import net.minecraft.entity.LivingEntity
+import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
@@ -31,7 +32,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
     override val baseEffect: AugmentEffect
         get() = super.baseEffect.withRange(12.75,1.25)
             .withDamage(9.75f,0.25f)
-            .withAmplifier(16)
+            .withAmplifier(15,1)
 
     override fun augmentStat(imbueLevel: Int): AugmentDatapoint {
         return AugmentDatapoint(SpellType.FURY,300,45,
@@ -88,7 +89,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
         val stack = user.getStackInHand(hand)
         val item = stack.item
         val damage = if (item is ToolItem){
-            item.material.attackDamage * (effects.amplifier(level).toFloat() / 10f)
+            user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE).toFloat() * (effects.amplifier(level).toFloat() / 12f)
         } else {
             effects.damage(level)
         }

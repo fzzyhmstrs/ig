@@ -1,0 +1,7 @@
+{
+  "type": "emi:info",
+  "stacks": [
+    "item:imbued_gear:void_gem"
+  ],
+  "text": "item.imbued_gear.void_gem.recipe"
+}

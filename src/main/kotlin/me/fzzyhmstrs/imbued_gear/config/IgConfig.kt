@@ -14,8 +14,6 @@ import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
-import me.fzzyhmstrs.imbued_gear.tool.CracklingToolMaterial
-import me.fzzyhmstrs.imbued_gear.tool.ScepterLvl4ToolMaterial
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener
 import net.minecraft.resource.ResourceManager
@@ -45,6 +43,8 @@ object IgConfig:
 
     class Items: ConfigClass(itemsHeader), OldClass<Items>{
 
+        var ensouledTarget = ValidatedInt(32,Int.MAX_VALUE,0)
+
         val livingFlame = LivingFlame()
         class LivingFlame(): ConfigSection(Header.Builder().space().add("ia.readme.items.living_flame").add("ia.readme.items.living_flame_2").build()){
             var effectDuration = ValidatedInt(600,Int.MAX_VALUE,0)
@@ -70,16 +70,6 @@ object IgConfig:
             var activeDuration = ValidatedInt(80, Int.MAX_VALUE,1)
             var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
             var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
-        }
-
-        var scepters = Scepters()
-        class Scepters: ConfigSection(Header.Builder().space().add("ia.readme.items.scepters").add("ia.readme.items.scepters_2").build()){
-            @ReadMeText("ia.readme.items.scepters.cracklingDamage")
-            var cracklingDamage = ValidatedFloat(CracklingToolMaterial.defaultAttackDamage(),20f,0f)
-            var cracklingDurability = ValidatedInt(CracklingToolMaterial.defaultDurability(),5000,32)
-            var cracklingCooldown = ValidatedLong(CracklingToolMaterial.baseCooldown(), Long.MAX_VALUE, CracklingToolMaterial.minCooldown())
-            var lvl4Durability = ValidatedInt(ScepterLvl4ToolMaterial.defaultDurability(),15000,32)
-            var lvl4Cooldown = ValidatedLong(ScepterLvl4ToolMaterial.baseCooldown(), Long.MAX_VALUE, CracklingToolMaterial.minCooldown())
         }
 
         override fun generateNewClass(): Items {
@@ -113,7 +103,7 @@ object IgConfig:
             var radiant = IgToolMaterialsConfig.RADIANT
             var celestial = IgToolMaterialsConfig.CELESTIAL
             var scepterTier4 = IgToolMaterialsConfig.SCEPTER_TIER_4
-        }
+            var crackling = IgToolMaterialsConfig.CRACKLING        }
         
         
         override fun generateNewClass(): Materials {
@@ -139,6 +129,9 @@ object IgConfig:
         @ReadMeText("ia.readme.modifiers.voidShroudedMultiplier")
         var nihilBladeNothingnessChance = ValidatedFloat(0.15f,1.0f)
         var nullAndVoidHitChance = ValidatedFloat(0.15f,1.0f)
+        var voidStrikeHitChance = ValidatedFloat(0.15f,1.0f)
+        var voidStrikeDamageMultiplier = ValidatedFloat(3f,8f)
+        var trueSmiteDamageMultiplier = ValidatedFloat(4f,12f)
 
         var gear = GearSection()
         class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){

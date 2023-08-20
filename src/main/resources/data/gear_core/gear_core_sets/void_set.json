@@ -1,0 +1,33 @@
+{
+  "name": "set.imbued_gear.void",
+  "active_formatting": [
+    "DARK_BLUE",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:void_gear"
+  },
+  "bonuses": {
+    "2": {
+        "name":"void_resist",
+        "attribute": "amethyst_core:magic_resistance",
+        "amount": "0.15",
+        "operation": "ADDITION"
+    },
+    "4": {
+      "name":"void_resist_3",
+      "attribute": "amethyst_core:magic_resistance",
+      "amount": "0.35",
+      "operation": "ADDITION"
+    },
+    "6": [
+      {
+        "name":"void_resist_2",
+        "attribute": "amethyst_core:magic_resistance",
+        "amount": "0.15",
+        "operation": "ADDITION"
+      },
+      "imbued_gear:void_strike"
+    ]
+  }
+}

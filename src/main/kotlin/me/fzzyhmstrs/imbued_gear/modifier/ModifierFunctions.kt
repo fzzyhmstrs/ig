@@ -2,6 +2,7 @@ package me.fzzyhmstrs.imbued_gear.modifier
 
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
+import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
 import net.minecraft.entity.EntityGroup
 import net.minecraft.entity.effect.StatusEffectInstance
@@ -27,6 +28,27 @@ object ModifierFunctions {
         EquipmentModifier.DamageFunction { _, _, attacker, _, amount ->
             if (attacker?.isOnFire == true)
                 return@DamageFunction amount * 0.8f
+            amount
+        }
+
+    //attacker is the victim in this case
+    val VOID_STRIKE_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, user, attacker, _, amount ->
+            if (attacker?.hasStatusEffect(RegisterStatus.NIHILISM) == true ||
+                attacker?.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED) == true) {
+                val rnd = user.world.random.nextFloat()
+                if (rnd < IgConfig.modifiers.voidStrikeHitChance.get()) {
+                    return@DamageFunction (amount * IgConfig.modifiers.voidStrikeDamageMultiplier.get())
+                }
+            }
+            amount
+        }
+
+    val TRUE_SMITE_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, _, attacker, _, amount ->
+            if (attacker == null) return@DamageFunction amount
+            if (attacker.group == EntityGroup.UNDEAD && (attacker.health <= (attacker.maxHealth * 0.5f)))
+                return@DamageFunction amount * IgConfig.modifiers.trueSmiteDamageMultiplier.get()
             amount
         }
 

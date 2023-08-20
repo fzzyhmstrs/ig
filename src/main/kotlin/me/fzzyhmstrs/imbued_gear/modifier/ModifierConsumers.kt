@@ -50,40 +50,37 @@ object ModifierConsumers {
     val NOTHINGNESS_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
-            if (user.world.random.nextFloat() < IgConfig.modifiers.nihilBladeNothingnessChance.get()){
+            val rnd = user.world.random.nextFloat()
+            if (rnd < IgConfig.modifiers.nihilBladeNothingnessChance.get()){
                 val health = target.health
-                val maxHealth = target.maxHealth
-                if (health > maxHealth - 4f){
-                    if (health - 4f < 0f){
-                        target.health = 0.1f
-                        target.removeStatusEffect(StatusEffects.STRENGTH)
-                        target.addStatusEffect(
-                                StatusEffectInstance(StatusEffects.WEAKNESS, 400, 4)
-                            )
-                        target.addStatusEffect(
-                                StatusEffectInstance(StatusEffects.SLOWNESS, 400, 2)
-                            )
-                        target.removeStatusEffect(StatusEffects.JUMP_BOOST)
-                        target.addStatusEffect(
-                                StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, -3)
-                            )
-                    } else {
-                        target.health = health - 4f
-                        if (target.hasStatusEffect(RegisterStatus.NIHILISM)){
-                            val effect = target.getStatusEffect(RegisterStatus.NIHILISM)
-                            val amp = effect?.amplifier?:0
-                            val duration = effect?.duration?:0
-                            if (duration > 0){
-                                val duration2 = if(duration < 400) {400} else {duration}
-                                target.addStatusEffect(StatusEffectInstance(RegisterStatus.NIHILISM,duration2,amp + 1))
-                            }
-                        } else {
-                            target.addStatusEffect(
-                                StatusEffectInstance(RegisterStatus.NIHILISM, 400)
-                            )
+                if (health - 4f < 0f){
+                    target.removeStatusEffect(StatusEffects.STRENGTH)
+                    target.addStatusEffect(
+                            StatusEffectInstance(StatusEffects.WEAKNESS, 400, 4)
+                        )
+                    target.addStatusEffect(
+                            StatusEffectInstance(StatusEffects.SLOWNESS, 400, 2)
+                        )
+                    target.removeStatusEffect(StatusEffects.JUMP_BOOST)
+                    target.addStatusEffect(
+                            StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, -3)
+                        )
+                } else {
+                    target.health = health - 4f
+                    if (target.hasStatusEffect(RegisterStatus.NIHILISM)){
+                        val effect = target.getStatusEffect(RegisterStatus.NIHILISM)
+                        val amp = effect?.amplifier?:0
+                        val duration = effect?.duration?:0
+                        if (duration > 0){
+                            val duration2 = if(duration < 400) {400} else {duration}
+                            target.addStatusEffect(StatusEffectInstance(RegisterStatus.NIHILISM,duration2,amp + 1))
                         }
+                    } else {
+                        target.addStatusEffect(
+                            StatusEffectInstance(RegisterStatus.NIHILISM, 400)
+                        )
                     }
-                }  
+                }
             }
         }
 

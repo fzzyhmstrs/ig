@@ -45,8 +45,8 @@ object RegisterItem {
     //val MYSTIC_FRAGMENT = register(SpellcastersReagentFlavorItem(RegisterAttribute.DAMAGE_MULTIPLICATION,
     //    EntityAttributeModifier(UUID.fromString("f2a00170-d1c6-11ed-afa1-0242ac120002"),"mystic_modifier",-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL),
     //    AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.GEM).rarity(Rarity.EPIC)).withGlint(),"mystic_fragment")
-    val PURESTEEL_INGOT = register(Item(AiItemSettings()),"puresteel_ingot")
-    val VOIDSTEEL_INGOT = register(Item(AiItemSettings()),"voidsteel_ingot")
+    val PURESTEEL_INGOT = register(Item(AiItemSettings().rarity(Rarity.UNCOMMON)),"puresteel_ingot")
+    val VOIDSTEEL_INGOT = register(Item(AiItemSettings().rarity(Rarity.UNCOMMON)),"voidsteel_ingot")
     val NULL_POWDER = register(Item(FabricItemSettings()),"null_powder") //lighting bedrock on fire
     val PURE_POWDER = register(Item(FabricItemSettings()),"pure_powder") //killing a mob with gem fire
     val SOUL_POWDER = register(Item(FabricItemSettings()),"soul_powder") //killing a mob with gem fire

@@ -8,8 +8,10 @@
 	
 	"item.imbued_gear.serpentine": "Serpentine",
 	"item.imbued_gear.ensouled_gem": "Ensouled Gem",
+	"item.imbued_gear.ensouled_gem.recipe": "Hold a Gem of Promise in your off hand and breed a lot of animals.",
 	"item.amethyst_imbuement.gem_of_promise.ensouled": "Ensouled progress: %1$s%%",
 	"item.imbued_gear.void_gem": "Void Gem",
+	"item.imbued_gear.void_gem.recipe": "Toss a Gem of Promise into the void.",
 	"item.imbued_gear.puresteel_ingot": "Puresteel Ingot",
 	"item.imbued_gear.voidsteel_ingot": "Voidsteel Ingot",
 	"item.imbued_gear.pure_powder": "Pure Powder",
@@ -54,6 +56,8 @@
 	"item.imbued_gear.ring_of_souls.tier_max": "Maximum Tier",
 	"item.imbued_gear.ring_of_souls.kills": "Kills: %1$s, To Next Tier: %2$s",
 	"item.imbued_gear.ring_of_souls.flavor": "Do you hear them crying out?",
+	"item.imbued_gear.energetic_band": "Energetic Band",
+	"item.imbued_gear.energetic_band.desc": "You crackle with energy while wearing it.",
 
 	"item.imbued_gear.celestial_helmet": "Celestial Helm",
 	"item.imbued_gear.celestial_chestplate": "Celestial Plate",
@@ -93,7 +97,6 @@
 	"item.imbued_gear.eternity_boots": "Eternity Boots",
 	
 	"enchantment.imbued_gear.bankai": "Bankai",
-	
 	"enchantment.imbued_gear.bankai.desc": "Slash enemies in front of you so quickly you appear to teleport past them.",
 	
 	"effect.imbued_gear.nihilism": "Nihilism",
@@ -110,7 +113,7 @@
 	"set.imbued_gear.scholars": "Arcane Wisdom",
 	"set.imbued_gear.spellblades": "Crackling Dominance",
 	"set.imbued_gear.void": "Call of the Void",
-	"set.imbued_gear.warriors": "Holy Vengeance",
+	"set.imbued_gear.warriors": "Almighty Vengeance",
 
 	"scepter.modifier.imbued_gear:healers_reward": "Healers Reward",
 	"scepter.modifier.imbued_gear:cosmic": "Cosmic",
@@ -136,6 +139,9 @@
 	"equipment.modifier.imbued_gear:fiery": "Fiery",
 	"equipment.modifier.imbued_gear:master_of_elements": "Master of Elements",
 	"equipment.modifier.imbued_gear:horde_master": "Horde Master",
+	"equipment.modifier.imbued_gear:lust_for_combat": "Lust for Combat",
+	"equipment.modifier.imbued_gear:void_strike": "Void Strike",
+	"equipment.modifier.imbued_gear:true_smite": "True Smite",
 	"scepter.modifier.imbued_gear:healers_reward.desc": "Gain 1 experience for every healing spell cast.",
 	"scepter.modifier.imbued_gear:cosmic.desc": "Spell level increased by 1, cooldown and mana cost decreased by 25%, damage increased by 2, spell effect duration increased by 25%.",
 	"scepter.modifier.imbued_gear:whisper_of_regret_scepter.desc": "Damage increased by 25%, and spell amplification increased by 2 levels.",
@@ -151,7 +157,7 @@
 	"equipment.modifier.imbued_gear:scholarly.desc": "Adds 1 experience whenever a player gains xp",
 	"equipment.modifier.imbued_gear:protection_from_evil.desc": "Reduces damage taken from undead by 20%",
 	"equipment.modifier.imbued_gear:nothingness.desc": "Attacks have a chance to reduce the targets maximum health temporarily",
-	"equipment.modifier.imbued_gear:null_space.desc": "+20% magic resistance, and hitting mobs has a chance of applying stacks of Cursed to the target.",
+	"equipment.modifier.imbued_gear:null_space.desc": "+10% magic resistance, and hitting mobs has a chance of applying stacks of Cursed to the target.",
 	"equipment.modifier.imbued_gear:radiant_devotion.desc": "Killing enemies stacks levels of Blessed on the wearer.",
 	"equipment.modifier.imbued_gear:whisper_of_regret.desc": "Adds the Murmur of Regret modifier to scepters wielded by the wearer.",
 	"equipment.modifier.imbued_gear:kindled.desc": "+20% attack speed, +7.5% movement speed, adds the Stoked modifier to scepter wielded by the wearer.",
@@ -160,6 +166,9 @@
 	"equipment.modifier.imbued_gear:fiery.desc": "Attacks set enemies on fire. Take 20% less damage from on-fire mobs.",
 	"equipment.modifier.imbued_gear:master_of_elements.desc": "50% damage taken from elemental damage sources.",
 	"equipment.modifier.imbued_gear:horde_master.desc": "Nearby summons and pets are granted Bone Armor",
+	"equipment.modifier.imbued_gear:lust_for_combat.desc": "Kills grant stacks of Spell Rage and Blade Rage",
+	"equipment.modifier.imbued_gear:void_strike.desc": "Has a chance to deal massive damage to Cursed or Nihilistic opponents.",
+	"equipment.modifier.imbued_gear:true_smite.desc": "Massively increases damage to wounded undead.",
 
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1.desc": "+0.5 Spell Damage",

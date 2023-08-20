@@ -125,7 +125,7 @@ object RegisterModifier {
         .withCustomFormatting(Formatting.DARK_BLUE)
         .also { regMod.add(it) }
     val NULL_SPACE = buildModifier(IG.identity("null_space"), persistent = true, availableForSelection = false)
-        .withAttributeModifier(RegisterAttribute.MAGIC_RESISTANCE,0.2,EntityAttributeModifier.Operation.ADDITION)
+        .withAttributeModifier(RegisterAttribute.MAGIC_RESISTANCE,0.1,EntityAttributeModifier.Operation.ADDITION)
         .withPostHit(ModifierConsumers.NULL_SPACE_HIT_CONSUMER)
         .withCustomFormatting(Formatting.DARK_BLUE)
         .also { regMod.add(it) }
@@ -163,6 +163,14 @@ object RegisterModifier {
     val LUST_FOR_COMBAT = EquipmentModifier(IG.identity("lust_for_combat"), persistent = true, randomSelectable = false)
         .withKilledOther(ModifierConsumers.LUST_FOR_COMBAT_KILL_CONSUMER)
         .withCustomFormatting(Formatting.RED, Formatting.ITALIC)
+        .also { regMod.add(it) }
+    val VOID_STRIKE = EquipmentModifier(IG.identity("void_strike"), persistent = true, randomSelectable = false)
+        .withOnAttack(ModifierFunctions.VOID_STRIKE_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.DARK_BLUE, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val TRUE_SMITE = EquipmentModifier(IG.identity("true_smite"), persistent = true, randomSelectable = false)
+        .withOnAttack(ModifierFunctions.TRUE_SMITE_ATTACK_FUNCTION)
+        .withCustomFormatting(Formatting.GOLD, Formatting.BOLD)
         .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)
