@@ -3,6 +3,7 @@
 package me.fzzyhmstrs.imbued_gear
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap
+import me.fzzyhmstrs.imbued_gear.item.BoneRattleItem
 import me.fzzyhmstrs.imbued_gear.registry.*
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.EnvType
@@ -26,6 +27,8 @@ object IG: ModInitializer {
         RegisterStatus.registerAll()
         RegisterEnchantment.registerAll()
         RegisterLoot.registerAll()
+        BoneRattleItem.registerServer()
+        RegisterSound.registerAll()
     }
 
     fun igRandom(): Random{

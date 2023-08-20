@@ -55,7 +55,7 @@ object IgConfig:
         class BoneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").add("ia.readme.items.bone_rattle_2").build()){
             var duplicationChance = ValidatedFloat(0.25f,1f,0f)
             var duplicationDamage = ValidatedInt(20,100,0)
-            var repairTime = ValidatedInt(300,Int.MAX_VALUE,0)
+            var repairTime = ValidatedInt(200,Int.MAX_VALUE,0)
         }
         
         var ringOfSouls = RingOfSouls()

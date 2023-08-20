@@ -1,0 +1,10 @@
+{
+  "bone_rattle": {
+    "subtitle": "subtitles.imbued_gear.bone_rattle",
+    "sounds": [
+      "imbued_gear:rattle_1",
+      "imbued_gear:rattle_2"
+    ]
+  }
+}
+

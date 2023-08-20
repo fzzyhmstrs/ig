@@ -39,6 +39,16 @@
 	"item.imbued_gear.book_of_secrets.flavor": "Sought after by many mages for the arcane knowledge inscribed within.",
 	"item.imbued_gear.bone_rattle": "Bone Rattle",
 	"item.imbued_gear.bone_rattle.flavor": "Grants the power to command indomitable armies.",
+	"item.imbued_gear.bone_rattle.flavor.desc": "Shift-scroll to select power, right click on summon to use.",
+	"item.imbued_gear.bone_rattle.bone_ability": "Bone Ability: %s",
+	"item.imbued_gear.bone_rattle.bone_power": "Power",
+	"item.imbued_gear.bone_rattle.bone_healing": "Healing",
+	"item.imbued_gear.bone_rattle.bone_armor": "Armor",
+	"item.imbued_gear.bone_rattle.bone_haste": "Speed",
+	"item.imbued_gear.bone_rattle.bone_power.desc": "Grants bonus damage to the target, and less bonus damage to nearby summons.",
+	"item.imbued_gear.bone_rattle.bone_healing.desc": "Heals the target by 50%, and heal nearby summons by 20%.",
+	"item.imbued_gear.bone_rattle.bone_armor.desc": "Adds bone armor to the target, and less bone armor to nearby summons. Stacks with other bone armor.",
+	"item.imbued_gear.bone_rattle.bone_haste.desc": "Grants speed to the target, and less speed to nearby summons.",
 	"item.imbued_gear.caduceus": "Caduceus",
 	"item.imbued_gear.caduceus.flavor": "Often thought to be a symbol of healing, this symbol of commerce nonetheless protects the bearer from harm.",
 	"item.imbued_gear.crown_of_sorrows": "Crown of Sorrows",
@@ -104,6 +114,8 @@
 	"effect.imbued_gear.spell_rage": "Spell Rage",
 
 	"itemGroup.imbued_gear.ig_group": "Imbued Gear",
+
+	"subtitles.imbued_gear.bone_rattle": "Bone Rattle Rattling",
 
 	"set.imbued_gear.celestial": "Celestial Light",
 	"set.imbued_gear.champions": "Champions Grit",

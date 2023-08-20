@@ -53,7 +53,7 @@ object RegisterTool {
     //scholars
     val BOOK_OF_SECRETS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE), equipmentModifiers = listOf(RegisterModifier1.SCHOLARLY.modifierId), scepterModifiers = listOf(RegisterModifier.SAVANT_ASPECT.modifierId)) ,"book_of_secrets")
     //lich - buffs summons, chance to echo summoning spells at durability expense
-    val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()).rarity(Rarity.RARE)) ,"bone_rattle")
+    val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)) ,"bone_rattle")
     //saint
     val CADUCEUS = register(CaduceusItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.totemOfAmethystDurability.get()).rarity(Rarity.RARE)) ,"caduceus")
     //flame - spell cooldown, attack speed, chance to set things on fire
