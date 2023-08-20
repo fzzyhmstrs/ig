@@ -41,6 +41,7 @@ object RegisterTool {
     //val GEM_AND_STEEL = register(GemAndSteelItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(32)),"gem_and_steel")
     val NIHIL_BLADE = register(NihilBladeItem(IgConfig.materials.tools.nihil,FabricItemSettings().rarity(Rarity.RARE)),"nihil_blade")
     val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.radiant,FabricItemSettings().rarity(Rarity.RARE)),"radiant_broadsword")
+    val WARRIORS_AXE = register(WarriorsAxeItem(IgConfig.materials.tools.radiant,FabricItemSettings().rarity(Rarity.RARE)),"warriors_axe")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     //item model tex lang modifier
     val COSMOS = register(CosmicScepterItem(IgConfig.materials.tools.scepterTier4,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
@@ -69,7 +70,8 @@ object RegisterTool {
     //blade
     val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)),"ring_of_souls")
     //blade 2
-    val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()).rarity(Rarity.RARE)),"energetic_band")
+    val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"energetic_band")
+    val STRANGE_TIMEPIECE = register(StrangeTimepieceItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()).rarity(Rarity.RARE)),"strange_timepiece")
 
 
     fun registerAll() {

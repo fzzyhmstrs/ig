@@ -14,6 +14,8 @@ object RegisterTag {
 
     val TIER_4_SPELL_SCEPTERS: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, Identifier(AC.MOD_ID,"tier_four_spell_scepters"))
     val FOUR = ScepterTier(TIER_4_SPELL_SCEPTERS,4)
+    val COSMOS_SCEPTERS: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("cosmos_scepters"))
+
     val CELESTIAL_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("celestial_gear"))
     val CHAMPIONS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("champions_gear"))
     val ELEMENTALISTS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("elementalists_gear"))

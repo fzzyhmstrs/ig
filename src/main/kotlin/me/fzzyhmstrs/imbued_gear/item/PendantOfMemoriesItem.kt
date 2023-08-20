@@ -6,15 +6,29 @@ import me.fzzyhmstrs.fzzy_core.mana_util.ManaItem
 import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil
 import me.fzzyhmstrs.gear_core.interfaces.KillTracking
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
+import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
+import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.server.world.ServerWorld
+import net.minecraft.sound.SoundCategory
+import net.minecraft.sound.SoundEvents
+import net.minecraft.text.Text
+import net.minecraft.util.Formatting
+import net.minecraft.world.World
 
 class PendantOfMemoriesItem(settings: Settings): AbstractAugmentJewelryItem(settings), ManaItem, KillTracking {
 
+    override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
+        super.appendTooltip(stack, world, tooltip, context)
+        val desc = AcText.translatable("item.imbued_gear.pendant_of_memories.innate.desc").formatted(Formatting.ITALIC)
+        tooltip.add(AcText.translatable("item.imbued_gear.pendant_of_memories.innate", desc).formatted(Formatting.DARK_PURPLE))
+        val desc2 = AcText.translatable("item.imbued_gear.pendant_of_memories.innate2.desc").formatted(Formatting.ITALIC)
+        tooltip.add(AcText.translatable("item.imbued_gear.pendant_of_memories.innate2", desc).formatted(Formatting.DARK_PURPLE))
+    }
+
     override fun intermittentTick(stack: ItemStack, entity: LivingEntity) {
-        println("pendant ticking")
         if (entity.world.random.nextFloat() < 0.1 && stack.isDamaged){
             heal(stack)
         } else if (!stack.isDamaged){
@@ -61,6 +75,9 @@ class PendantOfMemoriesItem(settings: Settings): AbstractAugmentJewelryItem(sett
 
     override fun onWearerKilledOther(stack: ItemStack, wearer: LivingEntity, victim: LivingEntity, world: ServerWorld) {
         heal(stack)
+        if (stack.isDamaged) {
+            heal(stack)
+        }
         super.onWearerKilledOther(stack, wearer, victim, world)
     }
 
@@ -79,6 +96,47 @@ class PendantOfMemoriesItem(settings: Settings): AbstractAugmentJewelryItem(sett
 
     override fun getRepairTime(): Int {
         return 0
+    }
+
+    override fun manaDamage(
+        stack: ItemStack,
+        world: World,
+        entity: LivingEntity,
+        amount: Int,
+        message: Text,
+        unbreakingFlag: Boolean): Boolean {
+        val currentDmg = stack.damage
+        val maxDmg = stack.maxDamage
+        var newCurrentDmg = currentDmg
+        if (currentDmg == (maxDmg - 1)) return true
+        for (i in 1..amount) {
+            newCurrentDmg++
+            if (newCurrentDmg == (maxDmg - 1)) {
+                if (!unbreakingFlag) {
+                    stack.damage = newCurrentDmg
+                } else {
+                    unbreakingDamage(stack,entity,newCurrentDmg - currentDmg)
+                }
+                return true
+            }
+        }
+        if (!unbreakingFlag) {
+            stack.damage = newCurrentDmg
+        } else {
+            unbreakingDamage(stack,entity,newCurrentDmg - currentDmg)
+        }
+        return false
+    }
+
+    private fun unbreakingDamage(stack: ItemStack,entity: LivingEntity, amount: Int){
+        val player = if(entity is ServerPlayerEntity){
+            entity
+        } else {
+            null
+        }
+        for (i in 1..amount){
+            stack.damage(1,entity.random, player)
+        }
     }
 
 }

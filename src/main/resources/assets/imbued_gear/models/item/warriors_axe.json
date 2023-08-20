@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "imbued_gear:item/warriors_axe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "charged": 1
+      },
+      "model": "imbued_gear:item/warriors_axe_charged"
+    }
+  ]
+}

@@ -28,7 +28,7 @@
 	"item": "imbued_gear:voidsteel_ingot"
   },
   "title": "Ring of Souls",
-  "cost": 21,
+  "cost": 27,
   "resultA": "imbued_gear:ring_of_souls",
   "countA": 1
 }

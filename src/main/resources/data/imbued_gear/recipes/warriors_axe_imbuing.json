@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:glowing_fragment"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:beryl_copper_ingot"
+  },
+  "craftB": {
+    "item": "imbued_gear:puresteel_ingot"
+  },
+  "craftC": {
+    "item": "minecraft:sea_lantern"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:glowing_axe"
+  },
+  "craftF": {
+    "item": "imbued_gear:puresteel_ingot"
+  },
+  "craftG": {
+	"item": "minecraft:stick"
+  },
+  "title": "Warriors Axe",
+  "cost": 39,
+  "resultA": "imbued_gear:warriors_axe",
+  "countA": 1,
+  "transferEnchant": true
+}

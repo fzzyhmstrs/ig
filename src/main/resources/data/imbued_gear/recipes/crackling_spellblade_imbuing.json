@@ -12,20 +12,20 @@
   "imbueD": {
 	"item": "minecraft:redstone_block"
   },
-  "craftB": {
-    "tag": "c:steel_ingots"
-  },
-  "craftD": {
+  "craftA": {
     "item": "minecraft:diamond"
+  },
+  "craftC": {
+    "item": "amethyst_imbuement:lethal_gem"
   },
   "craftE": {
 	"item": "amethyst_imbuement:garnet_sword"
   },
-  "craftF": {
-    "item": "minecraft:diamond"
+  "craftG": {
+    "tag": "c:steel_ingots"
   },
-  "craftH": {
-	"item": "amethyst_imbuement:lethal_gem"
+  "craftI": {
+    "item": "minecraft:diamond"
   },
   "title": "Crackling Spellblade",
   "cost": 17,

@@ -116,9 +116,11 @@ object RegisterModifier {
     val SCHOLARLY = buildModifier(IG.identity("scholarly"), persistent = true, availableForSelection = false)
         .withAttributeModifier(
             RegisterAttribute.PLAYER_EXPERIENCE,1.0, EntityAttributeModifier.Operation.ADDITION)
+        .withCustomFormatting(Formatting.BLUE)
         .also { regMod.add(it) }
     val PROTECTION_FROM_EVIL = buildModifier(IG.identity("protection_from_evil"), persistent = true, availableForSelection = false)
         .withOnDamaged(ModifierFunctions.PROTECTION_FROM_EVIL_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.GOLD)
         .also { regMod.add(it) }
     val NOTHINGNESS = buildModifier(IG.identity("nothingness"), persistent = true, availableForSelection = false)
         .withPostHit(ModifierConsumers.NOTHINGNESS_HIT_CONSUMER)
@@ -131,13 +133,20 @@ object RegisterModifier {
         .also { regMod.add(it) }
     val RADIANT_DEVOTION = buildModifier(IG.identity("radiant_devotion"), persistent = true, availableForSelection = false)
         .withKilledOther(ModifierConsumers.RADIANT_DEVOTION_HIT_CONSUMER)
+        .withCustomFormatting(Formatting.GOLD)
+        .also { regMod.add(it) }
+    val FLESH_RENDING = buildModifier(IG.identity("flesh_rending"), persistent = true, availableForSelection = false)
+        .withOnAttack(ModifierFunctions.FLESH_RENDING_ATTACK_FUNCTION)
+        .withCustomFormatting(Formatting.GOLD)
         .also { regMod.add(it) }
     val WHISPER_OF_REGRET = EquipmentModifier(IG.identity("whisper_of_regret"), persistent = true, randomSelectable = false)
         .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
+        .withCustomFormatting(Formatting.DARK_PURPLE)
         .also { regMod.add(it) }
     val KINDLED = buildModifier(IG.identity("kindled"), persistent = true, availableForSelection = false)
         .withAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,0.2,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         .withAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.075,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+        .withCustomFormatting(Formatting.RED)
         .also { regMod.add(it) }
     val CELESTIAL = EquipmentModifier(IG.identity("celestial"), persistent = true, randomSelectable = false)
         .withOnDamaged(ModifierFunctions.CELESTIAL_DAMAGE_FUNCTION)
@@ -153,6 +162,7 @@ object RegisterModifier {
         .withCustomFormatting(Formatting.RED, Formatting.BOLD)
         .also { regMod.add(it) }
     val MASTER_OF_ELEMENTS = EquipmentModifier(IG.identity("master_of_elements"), persistent = true, randomSelectable = false)
+        .withOnAttack(ModifierFunctions.MASTER_OF_ELEMENTS_ATTACK_FUNCTION)
         .withOnDamaged(ModifierFunctions.MASTER_OF_ELEMENTS_DAMAGE_FUNCTION)
         .withCustomFormatting(Formatting.RED, Formatting.BOLD)
         .also { regMod.add(it) }

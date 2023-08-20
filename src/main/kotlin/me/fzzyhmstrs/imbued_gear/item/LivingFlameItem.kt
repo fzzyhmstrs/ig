@@ -41,27 +41,23 @@ open class LivingFlameItem(settings: Settings)
         val nbt = stack.orCreateNbt
         if (nbt.contains("active")) return TypedActionResult.fail(stack)
         nbt.putBoolean("active",true)
-        nbt.putInt("active_time",IgConfig.items.livingFlame.effectDuration.get())
+        nbt.putLong("active_time",world.time)
         EquipmentModifierHelper.addModifier(RegisterModifier.KINDLED.modifierId,stack)
         ModifierHelper.addModifier(RegisterModifier.KINDLED_SCEPTER.modifierId,stack)
         user.itemCooldownManager.set(stack.item, IgConfig.items.livingFlame.cooldown.get())
         return TypedActionResult.success(stack)
     }
 
+
+
     override fun inventoryTick(stack: ItemStack, world: World, entity: Entity, slot: Int, selected: Boolean) {
         if (world.isClient) return
         val nbt = stack.nbt?:return
-        if (nbt.contains("active_time")){
-            val ticks = nbt.getInt("active_time")
-            val newTicks = ticks - 1
-            if (newTicks <= 0){
-                EquipmentModifierHelper.removeModifier(RegisterModifier.KINDLED.modifierId,stack)
-                ModifierHelper.removeModifier(stack,RegisterModifier.KINDLED_SCEPTER.modifierId)
-                nbt.remove("active_time")
-                nbt.remove("active")
-            } else {
-                nbt.putInt("active_time",newTicks)
-            }
+        if (world.time - (stack.nbt?.getLong("active_time") ?: 0L) > IgConfig.items.livingFlame.effectDuration.get()){
+            nbt.remove("active_time")
+            nbt.remove("active")
+            EquipmentModifierHelper.removeModifier(RegisterModifier.KINDLED.modifierId,stack)
+            ModifierHelper.removeModifier(stack,RegisterModifier.KINDLED_SCEPTER.modifierId)
         }
     }
     

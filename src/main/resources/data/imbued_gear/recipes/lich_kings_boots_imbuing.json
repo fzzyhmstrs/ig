@@ -32,7 +32,7 @@
   },
   "title": "Lich Kings Helmet",
   "cost": 37,
-  "resultA": "imbued_gear:lich_kings_helmet",
+  "resultA": "imbued_gear:lich_kings_boots",
   "countA": 1,
   "transferEnchant": true
 }

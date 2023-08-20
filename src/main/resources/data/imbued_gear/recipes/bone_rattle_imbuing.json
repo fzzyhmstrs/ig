@@ -1,0 +1,47 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:pyrite"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:pyrite"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:pyrite"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:pyrite"
+  },
+  "craftA": {
+    "item": "imbued_gear:soul_powder"
+  },
+  "craftB": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "craftC": {
+    "item": "imbued_gear:soul_powder"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:opal"
+  },
+  "craftE": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:opal"
+  },
+  "craftG": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "craftH": {
+    "item": "imbued_gear:wither_bone"
+  },
+  "craftI": {
+	"item": "imbued_gear:soul_powder"
+  },
+  "title": "Bone Rattle",
+  "cost": 23,
+  "resultA": "imbued_gear:bone_rattle",
+  "countA": 1,
+  "transferEnchant": true
+}

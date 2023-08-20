@@ -117,6 +117,12 @@ object RegisterRenderer {
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && stack.nbt?.getBoolean("active") == true) 1.0f else 0.0f
         }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.WARRIORS_AXE, Identifier("charged")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && stack.nbt?.getBoolean("charged") == true) 1.0f else 0.0f
+        }
     }
 }
 

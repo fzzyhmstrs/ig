@@ -41,7 +41,7 @@
   },
   "title": "Celestial Treads",
   "cost": 99,
-  "resultA": "imbued_gear:celestial_treads",
+  "resultA": "imbued_gear:celestial_boots",
   "countA": 1,
   "transferEnchant": true
 }

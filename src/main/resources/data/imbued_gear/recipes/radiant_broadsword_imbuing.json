@@ -1,0 +1,41 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:moonstone"
+  },
+  "craftB": {
+    "item": "imbued_gear:puresteel_ingot"
+  },
+  "craftC": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "craftD": {
+    "tag": "c:steel_ingots"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:glowing_blade"
+  },
+  "craftF": {
+    "tag": "c:steel_ingots"
+  },
+  "craftG": {
+    "item": "minecraft:stick"
+  },
+  "craftH": {
+    "item": "imbued_gear:puresteel_ingot"
+  },
+  "title": "Radiant Broadsword",
+  "cost": 39,
+  "resultA": "imbued_gear:radiant_broadsword",
+  "countA": 1,
+  "transferEnchant": true
+}

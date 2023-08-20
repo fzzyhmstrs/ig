@@ -1,0 +1,46 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:sunflower"
+  },
+  "imbueB": {
+	"item": "minecraft:sunflower"
+  },
+  "imbueC": {
+	"item": "minecraft:sunflower"
+  },
+  "imbueD": {
+	"item": "minecraft:sunflower"
+  },
+  "craftA": {
+	"item": "imbued_gear:pure_powder"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:brilliant_diamond"
+  },
+  "craftC": {
+	"item": "imbued_gear:pure_powder"
+  },
+  "craftD": {
+    "tag": "amethyst_imbuement:shine_lights"
+  },
+  "craftE": {
+    "item": "minecraft:lantern"
+  },
+  "craftF": {
+    "tag": "amethyst_imbuement:shine_lights"
+  },
+  "craftG": {
+	"item": "imbued_gear:pure_powder"
+  },
+  "craftH": {
+    "tag": "amethyst_imbuement:shine_lights"
+  },
+  "craftI": {
+	"item": "imbued_gear:pure_powder"
+  },
+  "title": "Blaze of Light",
+  "cost": 23,
+  "resultA": "imbued_gear:blaze_of_light",
+  "countA": 1
+}

@@ -23,10 +23,11 @@ object IgLoot: AbstractModLoot() {
         when (id) {
             Identifier("amethyst_imbuement","chests/crystal_workshop") -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.05f))
+                    .conditionally(RandomChanceLootCondition.builder(.025f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_LEGGINGS).weight(1))
@@ -45,7 +46,7 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.NETHER_BRIDGE_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.1f))
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
@@ -54,15 +55,23 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.BASTION_TREASURE_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.1f))
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
                 table.pool(poolBuilder)
                 return true
             }
+            LootTables.BASTION_BRIDGE_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
             LootTables.RUINED_PORTAL_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.1f))
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
                 table.pool(poolBuilder)
@@ -70,11 +79,12 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.STRONGHOLD_CORRIDOR_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.2f))
+                    .conditionally(RandomChanceLootCondition.builder(.075f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_LEGGINGS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_CHESTPLATE).weight(1))
@@ -84,7 +94,7 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.STRONGHOLD_CROSSING_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.25f))
+                    .conditionally(RandomChanceLootCondition.builder(.1f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.LIVING_FLAME).weight(1))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
@@ -95,9 +105,17 @@ object IgLoot: AbstractModLoot() {
                 table.pool(poolBuilder)
                 return true
             }
+            LootTables.STRONGHOLD_LIBRARY_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
             LootTables.SIMPLE_DUNGEON_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.1f))
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
@@ -109,10 +127,11 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.END_CITY_TREASURE_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.33333f))
+                    .conditionally(RandomChanceLootCondition.builder(.15f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_LEGGINGS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_CHESTPLATE).weight(1))
@@ -122,7 +141,7 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.ANCIENT_CITY_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.25f))
+                    .conditionally(RandomChanceLootCondition.builder(.15f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
                     .with(ItemEntry.builder(RegisterTool.NULL_AND_VOID).weight(1))
@@ -135,7 +154,7 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.VILLAGE_TEMPLE_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.01f))
+                    .conditionally(RandomChanceLootCondition.builder(.005f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_LEGGINGS).weight(1))
@@ -146,7 +165,7 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.VILLAGE_ARMORER_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.025f))
+                    .conditionally(RandomChanceLootCondition.builder(.01f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_BOOTS).weight(1))
                     .with(ItemEntry.builder(RegisterArmor.ETERNITY_LEGGINGS).weight(1))
@@ -170,9 +189,42 @@ object IgLoot: AbstractModLoot() {
             }
             LootTables.JUNGLE_TEMPLE_CHEST -> {
                 val poolBuilder = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(.1f))
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.ENERGETIC_BAND).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
+            LootTables.PILLAGER_OUTPOST_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.025f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
+            LootTables.SHIPWRECK_TREASURE_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.025f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
+            LootTables.SHIPWRECK_MAP_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.05f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.STRANGE_TIMEPIECE).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
+            LootTables.IGLOO_CHEST_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.15f))
+                    .rolls(ConstantLootNumberProvider.create(1.0F))
+                    .with(ItemEntry.builder(RegisterTool.STRANGE_TIMEPIECE).weight(1))
                 table.pool(poolBuilder)
                 return true
             }

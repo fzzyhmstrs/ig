@@ -1,0 +1,47 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "imbueB": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "imbueC": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "imbueD": {
+	"item": "imbued_gear:puresteel_ingot"
+  },
+  "craftA": {
+	"item": "amethyst_imbuement:mystical_gem"
+  },
+  "craftB": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "craftC": {
+	"item": "amethyst_imbuement:celestine"
+  },
+  "craftD": {
+	"item": "amethyst_imbuement:tigers_eye"
+  },
+  "craftE": {
+    "tag": "imbued_gear:cosmos_scepters"
+  },
+  "craftF": {
+	"item": "amethyst_imbuement:tigers_eye"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:lethal_gem"
+  },
+  "craftH": {
+	"item": "amethyst_imbuement:ametrine"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:garnet_sword"
+  },
+  "title": "Lethality",
+  "cost": 45,
+  "resultA": "amethyst_imbuement:lethality",
+  "countA": 1,
+  "transferEnchant": true
+}

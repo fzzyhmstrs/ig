@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.registry.tag.DamageTypeTags
+import net.minecraft.registry.tag.EntityTypeTags
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvents
 import java.util.UUID
@@ -31,6 +32,22 @@ object ModifierFunctions {
             amount
         }
 
+    val FLESH_RENDING_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { stack, user, _, _, amount ->
+            val charged = stack.nbt?.getBoolean("charged") == true
+            if (user.world.random.nextFloat() < IgConfig.modifiers.fleshRendingCriticalChance.get() || charged) {
+                user.world.playSound(null,user.blockPos,SoundEvents.ENTITY_PLAYER_ATTACK_CRIT,SoundCategory.PLAYERS,0.7f,1.2f)
+                return@DamageFunction amount * if (charged) {
+                    stack.orCreateNbt.putBoolean("charged",false)
+                    stack.orCreateNbt.remove("charged_time")
+                    2.0f
+                } else {
+                    1.5f
+                }
+            }
+            amount
+        }
+
     //attacker is the victim in this case
     val VOID_STRIKE_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, user, attacker, _, amount ->
@@ -45,9 +62,9 @@ object ModifierFunctions {
         }
 
     val TRUE_SMITE_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
-        EquipmentModifier.DamageFunction { _, _, attacker, _, amount ->
-            if (attacker == null) return@DamageFunction amount
-            if (attacker.group == EntityGroup.UNDEAD && (attacker.health <= (attacker.maxHealth * 0.5f)))
+        EquipmentModifier.DamageFunction { _, _, target, _, amount ->
+            if (target == null) return@DamageFunction amount
+            if (target.group == EntityGroup.UNDEAD && (target.health <= (target.maxHealth * 0.5f)))
                 return@DamageFunction amount * IgConfig.modifiers.trueSmiteDamageMultiplier.get()
             amount
         }
@@ -56,6 +73,13 @@ object ModifierFunctions {
         EquipmentModifier.DamageFunction { _, _, _, source, amount ->
             if (source.isIn(RegisterTag.ELEMENTAL))
                 return@DamageFunction amount * 0.5f
+            amount
+        }
+
+    val MASTER_OF_ELEMENTS_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, _, target, _, amount ->
+            if (target?.isOnFire == true || target?.isFrozen == true || target?.isFireImmune == true || target != null && target.type.isIn(EntityTypeTags.FREEZE_IMMUNE_ENTITY_TYPES))
+                return@DamageFunction 1.25f * amount
             amount
         }
 

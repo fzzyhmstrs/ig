@@ -47,7 +47,7 @@ object IgConfig:
 
         val livingFlame = LivingFlame()
         class LivingFlame(): ConfigSection(Header.Builder().space().add("ia.readme.items.living_flame").add("ia.readme.items.living_flame_2").build()){
-            var effectDuration = ValidatedInt(600,Int.MAX_VALUE,0)
+            var effectDuration = ValidatedLong(600L, Long.MAX_VALUE,0L)
             var cooldown = ValidatedInt(3000,Int.MAX_VALUE,0)
         }
         
@@ -132,6 +132,7 @@ object IgConfig:
         var voidStrikeHitChance = ValidatedFloat(0.15f,1.0f)
         var voidStrikeDamageMultiplier = ValidatedFloat(3f,8f)
         var trueSmiteDamageMultiplier = ValidatedFloat(4f,12f)
+        var fleshRendingCriticalChance = ValidatedFloat(0.2f,1f)
 
         var gear = GearSection()
         class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){

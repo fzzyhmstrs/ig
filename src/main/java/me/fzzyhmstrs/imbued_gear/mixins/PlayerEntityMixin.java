@@ -1,10 +1,13 @@
 package me.fzzyhmstrs.imbued_gear.mixins;
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem;
+import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil;
+import me.fzzyhmstrs.imbued_gear.item.PendantOfMemoriesItem;
 import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Identifier;
@@ -15,12 +18,24 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.List;
+
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
 
     @Shadow
     @Final
     private PlayerInventory inventory;
+
+    @Inject(method = "addExperience", at = @At("HEAD"))
+    private void imbued_gear_pendantOfMemoriesInnateAbility(int experience, CallbackInfo ci){
+        List<ItemStack> stacks = TrinketUtil.INSTANCE.getTrinketStacks((LivingEntity) (Object) this);
+        for (ItemStack stack: stacks){
+            if (stack.getItem() instanceof PendantOfMemoriesItem){
+                ((LivingEntity)(Object) this).heal(0.25f);
+            }
+        }
+    }
 
     @Inject(method = "incrementStat(Lnet/minecraft/util/Identifier;)V", at = @At("HEAD"))
     private void imbued_gear_ensouledGemCheck(Identifier stat, CallbackInfo ci){
