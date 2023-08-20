@@ -1,7 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.item.weapon
 
 import me.fzzyhmstrs.imbued_gear.entity.CrystallineArrowEntity
-import me.fzzyhmstrs.imbued_gear.entity.ImbuedArrowEntity
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.projectile.PersistentProjectileEntity
 import net.minecraft.item.ArrowItem

@@ -7,12 +7,11 @@ import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
 import net.minecraft.entity.EntityGroup
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
-import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.registry.tag.DamageTypeTags
 import net.minecraft.registry.tag.EntityTypeTags
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvents
-import java.util.UUID
+import java.util.*
 
 object ModifierFunctions {
 

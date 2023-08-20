@@ -5,7 +5,6 @@ import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterCriteria
 import me.fzzyhmstrs.fzzy_core.coding_util.AcText
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
-import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.item.ItemStack

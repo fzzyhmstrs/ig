@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.item.armor
 
-import me.fzzyhmstrs.amethyst_imbuement.item.Reagent
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper

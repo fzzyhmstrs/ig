@@ -13,7 +13,6 @@ import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
-import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener
 import net.minecraft.resource.ResourceManager

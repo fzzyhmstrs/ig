@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
-import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.fzzy_core.registry.ItemModelRegistry
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.model.CelestialTridentEntityModel

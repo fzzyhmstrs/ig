@@ -1,7 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.mixins;
 
-import me.fzzyhmstrs.amethyst_core.item_util.ScepterLike;
-import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterHelper;
 import me.fzzyhmstrs.imbued_gear.item.BoneRattleItem;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;

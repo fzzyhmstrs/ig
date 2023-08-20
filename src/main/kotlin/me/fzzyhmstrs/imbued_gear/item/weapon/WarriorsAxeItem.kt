@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.item.weapon
 
-import me.fzzyhmstrs.amethyst_imbuement.item.scepter.LethalityScepterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.PlayerParticlesV2
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
@@ -10,7 +9,6 @@ import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
 import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.item.TooltipContext
-import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.Entity
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
@@ -28,7 +26,6 @@ import net.minecraft.util.TypedActionResult
 import net.minecraft.util.UseAction
 import net.minecraft.util.math.Vec3d
 import net.minecraft.world.World
-import org.joml.Vector3f
 
 class WarriorsAxeItem(material: ToolMaterial, settings: Settings): AxeItem(material,5f,-3f,settings), Modifiable, DamageTracking {
 

@@ -1,12 +1,10 @@
 package me.fzzyhmstrs.imbued_gear.loot
 
 
-import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterLoot
 import me.fzzyhmstrs.fzzy_core.item_util.AbstractModLoot
 import me.fzzyhmstrs.imbued_gear.registry.RegisterArmor
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
-import net.minecraft.item.Items
 import net.minecraft.loot.LootPool
 import net.minecraft.loot.LootTable
 import net.minecraft.loot.LootTables
