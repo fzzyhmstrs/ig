@@ -66,7 +66,7 @@ object IgConfig:
 
         var crownOfSorrows = CrownOfSorrows()
         class CrownOfSorrows: ConfigSection(Header.Builder().space().add("ia.readme.items.crown_of_sorrows").add("ia.readme.items.crown_of_sorrows_2").build()){
-            var activeDuration = ValidatedInt(80, Int.MAX_VALUE,1)
+            var activeDuration = ValidatedLong(400, Long.MAX_VALUE,1)
             var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
             var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
         }

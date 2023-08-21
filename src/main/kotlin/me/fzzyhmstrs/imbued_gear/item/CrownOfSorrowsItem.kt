@@ -1,6 +1,10 @@
 package me.fzzyhmstrs.imbued_gear.item
 
+import me.fzzyhmstrs.amethyst_core.event.ModifyModifiersEvent
 import me.fzzyhmstrs.amethyst_core.item_util.AbstractAugmentJewelryItem
+import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
+import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
+import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil
 import me.fzzyhmstrs.gear_core.interfaces.AugmentTracking
 import me.fzzyhmstrs.gear_core.interfaces.DamageTracking
 import me.fzzyhmstrs.gear_core.interfaces.KillTracking
@@ -16,10 +20,23 @@ import net.minecraft.util.math.MathHelper
 import net.minecraft.world.World
 import kotlin.math.atan
 
-class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(settings), DamageTracking,KillTracking, AugmentTracking {
+class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(settings), DamageTracking, KillTracking, AugmentTracking {
 
     companion object{
         private const val twoOverPi = 2 / MathHelper.PI
+
+        init{
+
+            ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
+                for (stack in TrinketUtil.getTrinketStacks(user)) {
+                    if (stack.item is CrownOfSorrowsItem) {
+                        val focusMods = ModifierHelper.getActiveModifiers(stack)
+                        return@register modifiers.combineWith(focusMods, AugmentModifier())
+                    }
+                }
+                modifiers
+            }
+        }
     }
 
     override fun inventoryTick(stack: ItemStack, world: World, entity: Entity, slot: Int, selected: Boolean) {
@@ -31,14 +48,13 @@ class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(setting
             }
         }
         if (nbt.contains("active_timer")){
-            val timeNext = nbt.getInt("active_timer") - 1
-            if (timeNext <= 0){
+            if (world.time - (stack.nbt?.getLong("active_timer") ?: 0L) > IgConfig.items.crownOfSorrows.activeDuration.get()){
                 nbt.putBoolean("active",false)
                 nbt.putInt("active_timer",0)
                 EquipmentModifierHelper.removeModifier(RegisterModifier.WHISPER_OF_REGRET.modifierId,stack)
+                ModifierHelper.removeModifier(stack, RegisterModifier.WHISPER_OF_REGRET_SCEPTER.modifierId)
                 return
             }
-            nbt.putInt("active_timer",timeNext)
         }
     }
 
@@ -59,12 +75,9 @@ class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(setting
         if (rnd < getSorrowChance(stack,IgConfig.items.crownOfSorrows.defense50Percent.get())){
             val nbt2 = stack.orCreateNbt
             nbt2.putBoolean("active", true)
-            nbt2.putInt("active_timer",IgConfig.items.crownOfSorrows.activeDuration.get())
-            if (rnd < getSorrowChance(stack,IgConfig.items.crownOfSorrows.regret50Percent.get())){
-                EquipmentModifierHelper.addModifier(RegisterModifier.WHISPER_OF_REGRET.modifierId,stack)
-            } else {
-                EquipmentModifierHelper.removeModifier(RegisterModifier.WHISPER_OF_REGRET.modifierId,stack)
-            }
+            nbt2.putLong("active_timer",wearer.world.time)
+            EquipmentModifierHelper.addModifier(RegisterModifier.WHISPER_OF_REGRET.modifierId,stack)
+            ModifierHelper.addModifier(RegisterModifier.WHISPER_OF_REGRET_SCEPTER.modifierId, stack)
         }
         return super.onWearerDamaged(stack, wearer, attacker, source, amount)
     }

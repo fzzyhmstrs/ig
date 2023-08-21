@@ -1,5 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.item
 
+import dev.emi.trinkets.api.TrinketItem
 import me.fzzyhmstrs.amethyst_core.item_util.AbstractAugmentJewelryItem
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.fzzy_core.coding_util.AcText
@@ -22,7 +23,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.world.World
 import kotlin.math.min
 
-class RingOfSoulsItem(settings: Settings): AbstractAugmentJewelryItem(settings), KillTracking, Modifiable {
+class RingOfSoulsItem(settings: Settings): TrinketItem(settings), KillTracking, Modifiable {
 
     private val tierLeveler = TierLeveler(IgConfig.items.ringOfSouls.killTierMultiplier.get(),IgConfig.items.ringOfSouls.baseKillsPerTier.get())
 

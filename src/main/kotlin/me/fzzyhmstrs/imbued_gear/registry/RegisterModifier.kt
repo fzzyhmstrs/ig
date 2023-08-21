@@ -147,7 +147,8 @@ object RegisterModifier {
         .withCustomFormatting(Formatting.GOLD)
         .also { regMod.add(it) }
     val WHISPER_OF_REGRET = EquipmentModifier(IG.identity("whisper_of_regret"), persistent = true, randomSelectable = false)
-        .withModifiers(WHISPER_OF_REGRET_SCEPTER.modifierId)
+        .withAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,3.0,EntityAttributeModifier.Operation.ADDITION)
+        .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,3.0,EntityAttributeModifier.Operation.ADDITION)
         .withCustomFormatting(Formatting.DARK_PURPLE)
         .also { regMod.add(it) }
     val KINDLED = buildModifier(IG.identity("kindled"), persistent = true, availableForSelection = false)

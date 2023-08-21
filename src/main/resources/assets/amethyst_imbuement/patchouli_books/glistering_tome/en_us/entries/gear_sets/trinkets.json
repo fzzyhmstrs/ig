@@ -1,0 +1,35 @@
+{    
+"name": "Trinkets",
+"icon": "imbued_gear:energized_band",
+"category": "amethyst_imbuement:gear_sets",
+"pages": [
+{
+	"type": "patchouli:text",            
+	"text": "Imbued Gear adds a variety of powerful trinkets that can be found or crafted. Some can be used as pieces of a Gear Set."
+},
+	{
+		"type": "patchouli:spotlight",
+		"item": "tag:imbued_gear:scholars_gear",
+		"text": "$(li)2: +20% Spell XP Multiplier$(li)4: +20% Spell XP Multiplier$(li)4: +0.5 Bonus Experience$(li)6: +1 Bonus Experience."
+	},
+{
+"type": "amethyst_imbuement:imbuing_recipe",
+"title": "Crown of Sorrows",
+"imbue_a_item": "imbued_gear:soul_powder",
+"imbue_b_item": "imbued_gear:soul_powder",
+"imbue_c_item": "imbued_gear:soul_powder",
+"imbue_d_item": "imbued_gear:soul_powder",
+"craft_a_item": "imbued_gear:voidsteel_ingot",
+"craft_b_item": "imbued_gear:ensouled_gem",
+"craft_c_item": "imbued_gear:voidsteel_ingot",
+"craft_d_item": "imbued_gear:voidsteel_ingot",
+"craft_e_item": "amethyst_imbuement:steel_headband",
+"craft_f_item": "imbued_gear:voidsteel_ingot",
+"craft_g_item": "minecraft:air",
+"craft_h_item": "minecraft:air",
+"craft_i_item": "minecraft:air",
+"result_item": "imbued_gear:crown_of_sorrows",
+"cost_text": "$(l)Level Cost: $(2)27$()"
+}
+]
+}

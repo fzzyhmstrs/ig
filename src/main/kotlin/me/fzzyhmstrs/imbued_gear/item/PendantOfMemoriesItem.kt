@@ -23,7 +23,7 @@ class PendantOfMemoriesItem(settings: Settings): AbstractAugmentJewelryItem(sett
         val desc = AcText.translatable("item.imbued_gear.pendant_of_memories.innate.desc").formatted(Formatting.ITALIC)
         tooltip.add(AcText.translatable("item.imbued_gear.pendant_of_memories.innate", desc).formatted(Formatting.DARK_PURPLE))
         val desc2 = AcText.translatable("item.imbued_gear.pendant_of_memories.innate2.desc").formatted(Formatting.ITALIC)
-        tooltip.add(AcText.translatable("item.imbued_gear.pendant_of_memories.innate2", desc).formatted(Formatting.DARK_PURPLE))
+        tooltip.add(AcText.translatable("item.imbued_gear.pendant_of_memories.innate2", desc2).formatted(Formatting.DARK_PURPLE))
     }
 
     override fun intermittentTick(stack: ItemStack, entity: LivingEntity) {
