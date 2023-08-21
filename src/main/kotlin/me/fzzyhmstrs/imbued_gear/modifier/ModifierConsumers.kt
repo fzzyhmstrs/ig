@@ -168,7 +168,7 @@ object ModifierConsumers {
                 val duration = effect?.duration?:0
                 if (duration > 0){
                     val duration2 = if(duration < 160) {160} else {duration}
-                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_RAGE,duration2,min(amp + 1,4)))
+                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_RAGE,duration2,min(amp + 1,5)))
                 }
             } else {
                 user.addStatusEffect(
@@ -181,7 +181,7 @@ object ModifierConsumers {
                 val duration = effect?.duration?:0
                 if (duration > 0){
                     val duration2 = if(duration < 160) {160} else {duration}
-                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.BLADE_RAGE,duration2,min(amp + 1,4)))
+                    user.addStatusEffect(StatusEffectInstance(RegisterStatus.BLADE_RAGE,duration2,min(amp + 1,5)))
                 }
             } else {
                 user.addStatusEffect(

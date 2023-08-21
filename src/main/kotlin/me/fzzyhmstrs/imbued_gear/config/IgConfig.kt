@@ -43,6 +43,7 @@ object IgConfig:
     class Items: ConfigClass(itemsHeader), OldClass<Items>{
 
         var ensouledTarget = ValidatedInt(32,Int.MAX_VALUE,0)
+        var lootChanceMultiplier = ValidatedFloat(1f,10f,0f)
 
         val livingFlame = LivingFlame()
         class LivingFlame(): ConfigSection(Header.Builder().space().add("ia.readme.items.living_flame").add("ia.readme.items.living_flame_2").build()){

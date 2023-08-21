@@ -1,0 +1,121 @@
+{    
+"name": "Crackling Dominance",
+"icon": "imbued_gear:spellblades_helmet",
+"category": "amethyst_imbuement:gear_sets",
+"pages": [
+{
+	"type": "patchouli:text",            
+	"text": "The Crackling Dominance set is about rushing into the fray, jumping from group to group defeating enemies as you go. Damage and attack speed are the name of the game with this set. The powerful Crackling Spellblade offers mobility on the battlefield with its powerful Bankai spell."
+},
+	{
+		"type": "patchouli:spotlight",
+		"item": "tag:imbued_gear:spellblades_gear",
+		"text": "$(li)3: +5% Movement Speed$(li)4: +20% Spell Damage Multiplier$(li)6: +10% Attack Speed$(li)6: Lust for Combat - Kills grant stacks of Spell Rage and Blade Rage, increasing your physical and magical damage output."
+	},
+{
+"type": "amethyst_imbuement:imbuing_recipe",
+"title": "Spellblades Helmet",
+"imbue_a_item": "minecraft:redstone_block",
+"imbue_b_item": "minecraft:lapis_block",
+"imbue_c_item": "minecraft:lapis_block",
+"imbue_d_item": "minecraft:redstone_block",
+"craft_a_item": "minecraft:diamond",
+"craft_b_item": "amethyst_imbuement:lethal_gem",
+"craft_c_item": "minecraft:diamond",
+"craft_d_item": "tag:c:steel_ingots",
+"craft_e_item": "amethyst_imbuement:garnet_helmet",
+"craft_f_item": "tag:c:steel_ingots",
+"craft_g_item": "minecraft:air",
+"craft_h_item": "minecraft:air",
+"craft_i_item": "minecraft:air",
+"result_item": "imbued_gear:spellblades_helmet",
+"cost_text": "$(l)Level Cost: $(2)33$()"
+},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Spellblades Chestplate",
+		"imbue_a_item": "minecraft:redstone_block",
+		"imbue_b_item": "minecraft:lapis_block",
+		"imbue_c_item": "minecraft:lapis_block",
+		"imbue_d_item": "minecraft:redstone_block",
+		"craft_a_item": "minecraft:diamond",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "minecraft:diamond",
+		"craft_d_item": "tag:c:steel_ingots",
+		"craft_e_item": "amethyst_imbuement:garnet_chestplate",
+		"craft_f_item": "tag:c:steel_ingots",
+		"craft_g_item": "minecraft:diamond",
+		"craft_h_item": "amethyst_imbuement:lethal_gem",
+		"craft_i_item": "minecraft:diamond",
+		"result_item": "imbued_gear:spellblades_chestplate",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Spellblades Leggings",
+		"imbue_a_item": "minecraft:redstone_block",
+		"imbue_b_item": "minecraft:lapis_block",
+		"imbue_c_item": "minecraft:lapis_block",
+		"imbue_d_item": "minecraft:redstone_block",
+		"craft_a_item": "minecraft:diamond",
+		"craft_b_item": "amethyst_imbuement:lethal_gem",
+		"craft_c_item": "minecraft:diamond",
+		"craft_d_item": "tag:c:steel_ingots",
+		"craft_e_item": "amethyst_imbuement:garnet_leggings",
+		"craft_f_item": "tag:c:steel_ingots",
+		"craft_g_item": "minecraft:diamond",
+		"craft_h_item": "minecraft:air",
+		"craft_i_item": "minecraft:diamond",
+		"result_item": "imbued_gear:spellblades_leggings",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Spellblades Boots",
+		"imbue_a_item": "minecraft:redstone_block",
+		"imbue_b_item": "minecraft:lapis_block",
+		"imbue_c_item": "minecraft:lapis_block",
+		"imbue_d_item": "minecraft:redstone_block",
+		"craft_a_item": "minecraft:air",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "minecraft:air",
+		"craft_d_item": "minecraft:diamond",
+		"craft_e_item": "amethyst_imbuement:garnet_boots",
+		"craft_f_item": "minecraft:diamond",
+		"craft_g_item": "tag:c:steel_ingots",
+		"craft_h_item": "amethyst_imbuement:lethal_gem",
+		"craft_i_item": "tag:c:steel_ingots",
+		"result_item": "imbued_gear:spellblades_boots",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:crackling_spellblade",
+		"text": "This powerful katana grants you the ability to jump across the battlefield from your just-defeated enemies to new victims.$(br2)Backed by it's powerful physical attack, it's built in Bankai teleports you to the furthest nearby target, damaging every enemy in your path. It has a chance to refresh it's cooldown if you kill a mob with the Bankai."
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Crackling Spellblade",
+		"imbue_a_item": "minecraft:redstone_block",
+		"imbue_b_item": "minecraft:lapis_block",
+		"imbue_c_item": "minecraft:lapis_block",
+		"imbue_d_item": "minecraft:redstone_block",
+		"craft_a_item": "minecraft:diamond",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "amethyst_imbuement:lethal_gem",
+		"craft_d_item": "minecraft:air",
+		"craft_e_item": "amethyst_imbuement:garnet_sword",
+		"craft_f_item": "minecraft:air",
+		"craft_g_item": "tag:c:steel_ingots",
+		"craft_h_item": "minecraft:air",
+		"craft_i_item": "minecraft:diamond",
+		"result_item": "imbued_gear:crackling_spellblade",
+		"cost_text": "$(l)Level Cost: $(2)23$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:energetic_band",
+		"text": "This smooth, steely ring provides an innate bonus to attack speed and spell cooldown. Find in various loot chests."
+	}
+]
+}

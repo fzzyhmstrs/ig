@@ -2,6 +2,7 @@ package me.fzzyhmstrs.imbued_gear.scepter
 
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentEffect
 import me.fzzyhmstrs.amethyst_core.scepter_util.LoreTier
+import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterHelper
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterTier
 import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentDatapoint
@@ -10,7 +11,9 @@ import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.PerLvlI
 import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
 import me.fzzyhmstrs.fzzy_core.raycaster_util.RaycasterUtil
+import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.Entity
+import net.minecraft.entity.EntityGroup
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.damage.DamageSource
@@ -35,7 +38,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
             .withAmplifier(15,1)
 
     override fun augmentStat(imbueLevel: Int): AugmentDatapoint {
-        return AugmentDatapoint(SpellType.FURY,300,45,
+        return AugmentDatapoint(SpellType.FURY,300,50,
             19,imbueLevel,13, LoreTier.NO_TIER, RegisterItem.SPARKING_GEM)
     }
 
@@ -107,10 +110,25 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
     override fun persistentEffect(data: PersistentEffectHelper.PersistentEffectData) {
         if (data !is BankaiPersistentEffectData) return
         val entities = data.entityList
+        var kills = 0
+        val user = data.user
         for (entity in entities){
-            entity.damage(data.source,data.damage)
+            val g = if(entity is LivingEntity) EnchantmentHelper.getAttackDamage(data.stack,entity.group) else EnchantmentHelper.getAttackDamage(data.stack, EntityGroup.DEFAULT)
+            entity.damage(data.source,data.damage + g)
+            entity.applyDamageEffects(user,entity)
+            if (!entity.isAlive || entity is LivingEntity && entity.isDead) kills++
+            if (user is PlayerEntity && entity is LivingEntity){
+                data.stack.postHit(entity, user)
+            }
         }
-        data.world.playSound(null, data.user.blockPos, soundEvent(), SoundCategory.PLAYERS, 2.0F, 1.4F)
+        if (kills > 0 && data.world.random.nextFloat() < (0.15f + 0.025f * data.level)){
+            if (user is PlayerEntity){
+                user.itemCooldownManager.remove(data.stack.item)
+            }
+            data.world.playSound(null,user.blockPos,SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE,SoundCategory.PLAYERS,0.35f,1.2f)
+            ScepterHelper.resetCooldown(data.world,data.stack,user,this.id?.toString()?:"minecraft:curse_of_vanishing",data.level)
+        }
+        data.world.playSound(null, user.blockPos, soundEvent(), SoundCategory.PLAYERS, 2.0F, 1.4F)
 
     }
 

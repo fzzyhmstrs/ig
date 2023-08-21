@@ -89,6 +89,11 @@
 		"cost_text": "$(l)Level Cost: $(2)27$()"
 	},
 	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:pendant_of_memories",
+		"text": "Find this curious locket in various loot chests around the world. It provides several innate bonuses.$(li)Soul Attuned - Gain a bit of health whenever you pick up XP.$(li)Soul Fire - Kills recharge this pendant. When fully charged, it will use it's durability to repair mana items or grant the player a slow stream of XP."
+	},
+	{
 		"type": "amethyst_imbuement:imbuing_recipe",
 		"title": "Book of Secrets",
 		"imbue_a_item": "amethyst_imbuement:knowledge_powder",

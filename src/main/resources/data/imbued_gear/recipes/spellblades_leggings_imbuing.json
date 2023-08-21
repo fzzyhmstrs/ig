@@ -37,7 +37,7 @@
 	"item": "minecraft:diamond"
   },
   "title": "Void Mail Leggings",
-  "cost": 27,
+  "cost": 33,
   "resultA": "imbued_gear:spellblades_leggings",
   "countA": 1,
   "transferEnchant": true

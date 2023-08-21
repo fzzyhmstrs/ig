@@ -30,6 +30,6 @@
   "title": "Null Powder",
   "cost": 13,
   "resultA": "imbued_gear:null_powder",
-  "countA": 4,
+  "countA": 8,
   "transferEnchant": true
 }

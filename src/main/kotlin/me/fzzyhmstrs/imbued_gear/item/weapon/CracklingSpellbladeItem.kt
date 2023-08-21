@@ -13,22 +13,4 @@ import net.minecraft.world.World
 
 class CracklingSpellbladeItem(settings: Settings): DefaultAugmentSwordItem(IgConfig.materials.tools.crackling.compatMaterial(),4,-2.9f,settings) {
     override val fallbackId: Identifier = IG.identity("bankai")
-
-    private val flavorText: MutableText by lazy{
-        FlavorHelper.makeFlavorText(this)
-    }
-
-    private val flavorTextDesc: MutableText by lazy{
-        FlavorHelper.makeFlavorTextDesc(this)
-    }
-
-    override fun appendTooltip(
-        stack: ItemStack,
-        world: World?,
-        tooltip: MutableList<Text>,
-        context: TooltipContext
-    ) {
-        super.appendTooltip(stack, world, tooltip, context)
-        FlavorHelper.addFlavorText(tooltip, context, flavorText, flavorTextDesc)
-    }
 }

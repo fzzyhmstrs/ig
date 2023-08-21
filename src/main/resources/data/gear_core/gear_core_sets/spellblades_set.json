@@ -8,6 +8,12 @@
     "tag": "imbued_gear:spellblades_gear"
   },
   "bonuses": {
+    "3": {
+      "name":"spellblades_movement",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": "0.05",
+      "operation": "MULTIPLY_TOTAL"
+    },
     "4": {
         "name":"spellblades_damage",
         "attribute": "amethyst_core:spell_damage",

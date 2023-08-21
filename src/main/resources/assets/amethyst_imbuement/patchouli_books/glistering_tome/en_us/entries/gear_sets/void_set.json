@@ -1,0 +1,121 @@
+{    
+"name": "Call of the Void",
+"icon": "imbued_gear:void_mail_helmet",
+"category": "amethyst_imbuement:gear_sets",
+"pages": [
+{
+	"type": "patchouli:text",            
+	"text": "Heed the Call of the Void to wither your enemies away while protecting yourself from magical energies. Voidsteel, the primary ingredient, absorbs energy, innately protecting you from magical attacks, and bleeding the life force of those it hits.."
+},
+	{
+		"type": "patchouli:spotlight",
+		"item": "tag:imbued_gear:void_gear",
+		"text": "$(li)2: +15% Magic Resistance$(li)4: +35% Magic Resistance$(li)6: + 15% Magic Resistance$(li)6: Void Strike - Chance to deal massively increased damage to targets afflicted with Cursed or Nihilism."
+	},
+{
+"type": "amethyst_imbuement:imbuing_recipe",
+"title": "Void Mail Helmet",
+"imbue_a_item": "imbued_gear:null_powder",
+"imbue_b_item": "imbued_gear:null_powder",
+"imbue_c_item": "imbued_gear:null_powder",
+"imbue_d_item": "imbued_gear:null_powder",
+"craft_a_item": "imbued_gear:voidsteel_ingot",
+"craft_b_item": "imbued_gear:void_gem",
+"craft_c_item": "imbued_gear:voidsteel_ingot",
+"craft_d_item": "minecraft:chain",
+"craft_e_item": "amethyst_imbuement:steel_helmet",
+"craft_f_item": "minecraft:chain",
+"craft_g_item": "minecraft:air",
+"craft_h_item": "minecraft:air",
+"craft_i_item": "minecraft:air",
+"result_item": "imbued_gear:void_mail_helmet",
+"cost_text": "$(l)Level Cost: $(2)27$()"
+},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Void Mail Chestplate",
+		"imbue_a_item": "imbued_gear:null_powder",
+		"imbue_b_item": "imbued_gear:null_powder",
+		"imbue_c_item": "imbued_gear:null_powder",
+		"imbue_d_item": "imbued_gear:null_powder",
+		"craft_a_item": "imbued_gear:voidsteel_ingot",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "imbued_gear:voidsteel_ingot",
+		"craft_d_item": "minecraft:chain",
+		"craft_e_item": "amethyst_imbuement:steel_chestplate",
+		"craft_f_item": "minecraft:chain",
+		"craft_g_item": "imbued_gear:voidsteel_ingot",
+		"craft_h_item": "imbued_gear:void_gem",
+		"craft_i_item": "imbued_gear:voidsteel_ingot",
+		"result_item": "imbued_gear:void_mail_chestplate",
+		"cost_text": "$(l)Level Cost: $(2)27$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Void Mail Leggings",
+		"imbue_a_item": "imbued_gear:null_powder",
+		"imbue_b_item": "imbued_gear:null_powder",
+		"imbue_c_item": "imbued_gear:null_powder",
+		"imbue_d_item": "imbued_gear:null_powder",
+		"craft_a_item": "imbued_gear:voidsteel_ingot",
+		"craft_b_item": "imbued_gear:void_gem",
+		"craft_c_item": "imbued_gear:voidsteel_ingot",
+		"craft_d_item": "minecraft:chain",
+		"craft_e_item": "amethyst_imbuement:steel_leggings",
+		"craft_f_item": "minecraft:chain",
+		"craft_g_item": "imbued_gear:voidsteel_ingot",
+		"craft_h_item": "minecraft:air",
+		"craft_i_item": "imbued_gear:voidsteel_ingot",
+		"result_item": "imbued_gear:void_mail_leggings",
+		"cost_text": "$(l)Level Cost: $(2)27$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Void Mail Boots",
+		"imbue_a_item": "imbued_gear:null_powder",
+		"imbue_b_item": "imbued_gear:null_powder",
+		"imbue_c_item": "imbued_gear:null_powder",
+		"imbue_d_item": "imbued_gear:null_powder",
+		"craft_a_item": "minecraft:air",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "minecraft:air",
+		"craft_d_item": "imbued_gear:voidsteel_ingot",
+		"craft_e_item": "amethyst_imbuement:steel_boots",
+		"craft_f_item": "imbued_gear:voidsteel_ingot",
+		"craft_g_item": "minecraft:chain",
+		"craft_h_item": "imbued_gear:void_gem",
+		"craft_i_item": "minecraft:chain",
+		"result_item": "imbued_gear:void_mail_boots",
+		"cost_text": "$(l)Level Cost: $(2)27$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:nihil_blade",
+		"text": "This wicked dagger saps the very life from your opponent. Striking a target has a chance to reduce their maximum health temporarily."
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Nihil Blade",
+		"imbue_a_item": "imbued_gear:null_powder",
+		"imbue_b_item": "imbued_gear:null_powder",
+		"imbue_c_item": "imbued_gear:null_powder",
+		"imbue_d_item": "imbued_gear:null_powder",
+		"craft_a_item": "minecraft:air",
+		"craft_b_item": "imbued_gear:void_gem",
+		"craft_c_item": "minecraft:air",
+		"craft_d_item": "imbued_gear:voidsteel_ingot",
+		"craft_e_item": "amethyst_imbuement:steel_sword",
+		"craft_f_item": "imbued_gear:voidsteel_ingot",
+		"craft_g_item": "minecraft:air",
+		"craft_h_item": "imbued_gear:voidsteel_ingot",
+		"craft_i_item": "minecraft:air",
+		"result_item": "imbued_gear:nihil_blade",
+		"cost_text": "$(l)Level Cost: $(2)29$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:null_and_void",
+		"text": "Find in various loot chests. This inky black orb pulses with withering power. It greatly reduces the mana cost of your spells, and hitting an enemy has a chance to apply Cursed."
+	}
+]
+}

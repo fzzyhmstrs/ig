@@ -190,7 +190,7 @@
 	"equipment.modifier.imbued_gear:celestial.desc": "Reduces damage taken by 15%",
 	"equipment.modifier.imbued_gear:divine.desc": "Once per 5 minutes, resist death; instead gain Absorption, Strength, and Attack Speed.",
 	"equipment.modifier.imbued_gear:fiery.desc": "Attacks set enemies on fire. Take 20% less damage from on-fire mobs.",
-	"equipment.modifier.imbued_gear:master_of_elements.desc": "50% damage taken from elemental damage sources. Increased damage against on-fire or freezing enemies.",
+	"equipment.modifier.imbued_gear:master_of_elements.desc": "50% damage taken from elemental damage. On-fire or freezing enemies take more damage.",
 	"equipment.modifier.imbued_gear:horde_master.desc": "Nearby summons and pets are granted Bone Armor",
 	"equipment.modifier.imbued_gear:lust_for_combat.desc": "Kills grant stacks of Spell Rage and Blade Rage",
 	"equipment.modifier.imbued_gear:void_strike.desc": "Has a chance to deal massive damage to Cursed or Nihilistic opponents.",

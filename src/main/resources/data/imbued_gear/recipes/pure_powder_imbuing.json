@@ -30,6 +30,6 @@
   "title": "Pure Powder",
   "cost": 19,
   "resultA": "imbued_gear:pure_powder",
-  "countA": 2,
+  "countA": 4,
   "transferEnchant": true
 }

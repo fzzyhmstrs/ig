@@ -13,31 +13,31 @@
 	"item": "minecraft:redstone_block"
   },
   "craftA": {
-	"tag": "c:steel_ingots"
+    "item": "minecraft:diamond"
   },
   "craftC": {
-	"tag": "c:steel_ingots"
+    "item": "minecraft:diamond"
   },
   "craftD": {
-	"item": "minecraft:diamond"
+    "tag": "c:steel_ingots"
   },
   "craftE": {
 	"item": "amethyst_imbuement:garnet_chestplate"
   },
   "craftF": {
-	"item": "minecraft:diamond"
+    "tag": "c:steel_ingots"
   },
   "craftG": {
-	"tag": "c:steel_ingots"
+    "item": "minecraft:diamond"
   },
   "craftH": {
 	"item": "amethyst_imbuement:lethal_gem"
   },
   "craftI": {
-	"tag": "c:steel_ingots"
+    "item": "minecraft:diamond"
   },
   "title": "Spellblades Chestplate",
-  "cost": 27,
+  "cost": 33,
   "resultA": "imbued_gear:spellblades_chestplate",
   "countA": 1,
   "transferEnchant": true

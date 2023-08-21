@@ -1,17 +1,12 @@
 {    
 "name": "Trinkets",
-"icon": "imbued_gear:energized_band",
+"icon": "imbued_gear:ring_of_souls",
 "category": "amethyst_imbuement:gear_sets",
 "pages": [
 {
 	"type": "patchouli:text",            
-	"text": "Imbued Gear adds a variety of powerful trinkets that can be found or crafted. Some can be used as pieces of a Gear Set."
+	"text": "Imbued Gear adds a variety of powerful trinkets that can be found or crafted, that aren't part of the gear sets, but may still prove themselves useful.$(br2)First is the Crown of Sorrows. This crown is fueled by the mobs you kill, each mob providing a higher chance that the crown will ignite on taking damage, providing temporary major buffs to attacks and spellcasting."
 },
-	{
-		"type": "patchouli:spotlight",
-		"item": "tag:imbued_gear:scholars_gear",
-		"text": "$(li)2: +20% Spell XP Multiplier$(li)4: +20% Spell XP Multiplier$(li)4: +0.5 Bonus Experience$(li)6: +1 Bonus Experience."
-	},
 {
 "type": "amethyst_imbuement:imbuing_recipe",
 "title": "Crown of Sorrows",
@@ -29,7 +24,36 @@
 "craft_h_item": "minecraft:air",
 "craft_i_item": "minecraft:air",
 "result_item": "imbued_gear:crown_of_sorrows",
-"cost_text": "$(l)Level Cost: $(2)27$()"
-}
+"cost_text": "$(l)Level Cost: $(2)17$()"
+},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:ring_of_souls",
+		"text": "This cold ring is fueled by your kills. As you kill more and more, it levels up, providing ever increasing spell damage bonuses."
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Ring of Souls",
+		"imbue_a_item": "imbued_gear:soul_powder",
+		"imbue_b_item": "imbued_gear:soul_powder",
+		"imbue_c_item": "imbued_gear:soul_powder",
+		"imbue_d_item": "imbued_gear:soul_powder",
+		"craft_a_item": "minecraft:air",
+		"craft_b_item": "imbued_gear:ensouled_gem",
+		"craft_c_item": "minecraft:air",
+		"craft_d_item": "imbued_gear:voidsteel_ingot",
+		"craft_e_item": "amethyst_imbuement:steel_headband",
+		"craft_f_item": "imbued_gear:voidsteel_ingot",
+		"craft_g_item": "minecraft:air",
+		"craft_h_item": "imbued_gear:voidsteel_ingot",
+		"craft_i_item": "minecraft:air",
+		"result_item": "imbued_gear:ring_of_souls",
+		"cost_text": "$(l)Level Cost: $(2)27$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:strange_timepiece",
+		"text": "A small hourglass on a chain. Wearing it around your neck causes time to move strangely... 35% boost to spell effect durations. Find in various loot chests."
+	}
 ]
 }
