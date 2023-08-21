@@ -20,8 +20,8 @@ open class StrangeTimepieceItem(settings: Settings) : AbstractAugmentJewelryItem
     ): Multimap<EntityAttribute, EntityAttributeModifier> {
         val modifiers = super.getModifiers(stack, slot, entity, uuid)
         modifiers.put(
-            RegisterAttribute.SPELL_COOLDOWN,
-            EntityAttributeModifier(uuid, "timepiece_attack_speed", 0.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+            RegisterAttribute.SPELL_DURATION,
+            EntityAttributeModifier(uuid, "timepiece_duration", 0.35, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
         )
         return modifiers
     }

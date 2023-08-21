@@ -13,13 +13,13 @@
 	"item": "amethyst_imbuement:moonstone"
   },
   "craftD": {
-	"item": "amethyst_imbuement:steel_ingot"
+	"tag": "c:steel_ingots"
   },
   "craftE": {
 	"item": "amethyst_imbuement:ametrine_boots"
   },
   "craftF": {
-	"item": "amethyst_imbuement:steel_ingot"
+	"tag": "c:steel_ingots"
   },
   "craftG": {
 	"item": "imbued_gear:puresteel_ingot"

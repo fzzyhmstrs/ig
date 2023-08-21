@@ -34,7 +34,7 @@
     "item": "imbued_gear:puresteel_ingot"
   },
   "title": "Radiant Broadsword",
-  "cost": 39,
+  "cost": 35,
   "resultA": "imbued_gear:radiant_broadsword",
   "countA": 1,
   "transferEnchant": true

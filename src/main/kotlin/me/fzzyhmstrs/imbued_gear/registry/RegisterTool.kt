@@ -67,11 +67,11 @@ object RegisterTool {
     val DIVINE_CORONET = register(DivineCoronetItem(FabricItemSettings().maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*4).rarity(Rarity.EPIC)).withGlint(),"divine_coronet")
     //scholar
     val PENDANT_OF_MEMORIES = register(PendantOfMemoriesItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(250).rarity(Rarity.RARE)),"pendant_of_memories")
+    val STRANGE_TIMEPIECE = register(StrangeTimepieceItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()).rarity(Rarity.RARE)),"strange_timepiece")
     //blade
     val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)),"ring_of_souls")
     //blade 2
     val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"energetic_band")
-    val STRANGE_TIMEPIECE = register(StrangeTimepieceItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()).rarity(Rarity.RARE)),"strange_timepiece")
 
 
     fun registerAll() {

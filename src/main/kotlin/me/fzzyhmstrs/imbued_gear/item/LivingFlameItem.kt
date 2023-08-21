@@ -8,6 +8,8 @@ import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.minecraft.entity.Entity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
+import net.minecraft.sound.SoundCategory
+import net.minecraft.sound.SoundEvents
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
@@ -26,6 +28,7 @@ open class LivingFlameItem(settings: Settings)
         nbt.putLong("active_time",world.time)
         EquipmentModifierHelper.addModifier(RegisterModifier.KINDLED.modifierId,stack)
         ModifierHelper.addModifier(RegisterModifier.KINDLED_SCEPTER.modifierId,stack)
+        world.playSound(null,user.blockPos,SoundEvents.BLOCK_FIRE_AMBIENT,SoundCategory.PLAYERS,0.5f,1f)
         user.itemCooldownManager.set(stack.item, IgConfig.items.livingFlame.cooldown.get())
         return TypedActionResult.success(stack)
     }

@@ -17,11 +17,14 @@
       },
       "imbued_gear:radiant_devotion"
     ],
-    "6": {
-      "name":"champions_damage",
-      "attribute": "minecraft:generic.attack_damage",
-      "amount": "2.0",
-      "operation": "ADDITION"
-    }
+    "6": [
+      {
+        "name":"champions_damage",
+        "attribute": "minecraft:generic.armor",
+        "amount": "4.0",
+        "operation": "ADDITION"
+      },
+      "imbued_gear:radiant_absolution"
+    ]
   }
 }

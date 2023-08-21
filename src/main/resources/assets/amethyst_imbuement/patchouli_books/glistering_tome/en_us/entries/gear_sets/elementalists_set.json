@@ -1,0 +1,97 @@
+{    
+"name": "Elemental Might",
+"icon": "imbued_gear:elementalists_helmet",
+"category": "amethyst_imbuement:gear_sets",
+"pages": [
+{
+	"type": "patchouli:text",            
+	"text": "The Elemental Might Set grants you mastery over various elemental magics. Protect yourself from the elements, as well as wield them against your foes."
+},
+	{
+		"type": "patchouli:spotlight",
+		"item": "tag:imbued_gear:elementalists_gear",
+		"text": "$(li)3: +15% Spell Range Multiplier$(li)3: Fiery - Attacks set enemies on fire. Take 20% less damage from on-fire mobs.$(li)5: Master of Elements - Take 50% damage from elemental sources. Deal increased damage to on-fire or freezing enemies."
+	},
+{
+"type": "amethyst_imbuement:imbuing_recipe",
+"title": "Elementalists Helmet",
+"imbue_a_item": "minecraft:blaze_powder",
+"imbue_b_item": "minecraft:blaze_powder",
+"imbue_c_item": "minecraft:blaze_powder",
+"imbue_d_item": "minecraft:blaze_powder",
+"craft_a_item": "minecraft:obsidian",
+"craft_b_item": "amethyst_imbuement:sparking_gem",
+"craft_c_item": "minecraft:obsidian",
+"craft_d_item": "amethyst_imbuement:glistening_ice",
+"craft_e_item": "amethyst_imbuement:garnet_helmet",
+"craft_f_item": "amethyst_imbuement:glistening_ice",
+"craft_g_item": "minecraft:air",
+"craft_h_item": "minecraft:air",
+"craft_i_item": "minecraft:air",
+"result_item": "imbued_gear:elementalists_helmet",
+"cost_text": "$(l)Level Cost: $(2)33$()"
+},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Elementalists Chestplate",
+		"imbue_a_item": "minecraft:blaze_powder",
+		"imbue_b_item": "minecraft:blaze_powder",
+		"imbue_c_item": "minecraft:blaze_powder",
+		"imbue_d_item": "minecraft:blaze_powder",
+		"craft_a_item": "minecraft:obsidian",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "minecraft:obsidian",
+		"craft_d_item": "amethyst_imbuement:glistening_ice",
+		"craft_e_item": "amethyst_imbuement:garnet_chestplate",
+		"craft_f_item": "amethyst_imbuement:glistening_ice",
+		"craft_g_item": "minecraft:obsidian",
+		"craft_h_item": "amethyst_imbuement:blazing_gem",
+		"craft_i_item": "minecraft:obsidian",
+		"result_item": "imbued_gear:elementalists_chestplate",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Elementalists Leggings",
+		"imbue_a_item": "minecraft:blaze_powder",
+		"imbue_b_item": "minecraft:blaze_powder",
+		"imbue_c_item": "minecraft:blaze_powder",
+		"imbue_d_item": "minecraft:blaze_powder",
+		"craft_a_item": "minecraft:obsidian",
+		"craft_b_item": "amethyst_imbuement:sparking_gem",
+		"craft_c_item": "minecraft:obsidian",
+		"craft_d_item": "amethyst_imbuement:glistening_ice",
+		"craft_e_item": "amethyst_imbuement:garnet_leggings",
+		"craft_f_item": "amethyst_imbuement:glistening_ice",
+		"craft_g_item": "minecraft:obsidian",
+		"craft_h_item": "minecraft:air",
+		"craft_i_item": "minecraft:obsidian",
+		"result_item": "imbued_gear:elementalists_leggings",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "amethyst_imbuement:imbuing_recipe",
+		"title": "Elementalists Boots",
+		"imbue_a_item": "minecraft:blaze_powder",
+		"imbue_b_item": "minecraft:blaze_powder",
+		"imbue_c_item": "minecraft:blaze_powder",
+		"imbue_d_item": "minecraft:blaze_powder",
+		"craft_a_item": "minecraft:air",
+		"craft_b_item": "minecraft:air",
+		"craft_c_item": "minecraft:air",
+		"craft_d_item": "minecraft:obsidian",
+		"craft_e_item": "amethyst_imbuement:garnet_boots",
+		"craft_f_item": "minecraft:obsidian",
+		"craft_g_item": "amethyst_imbuement:glistening_ice",
+		"craft_h_item": "amethyst_imbuement:blazing_gem",
+		"craft_i_item": "amethyst_imbuement:glistening_ice",
+		"result_item": "imbued_gear:elementalists_boots",
+		"cost_text": "$(l)Level Cost: $(2)33$()"
+	},
+	{
+		"type": "patchouli:spotlight",
+		"item": "imbued_gear:living_flame",
+		"text": "This smooth glassy sphere can be found in various loot chests. Activate it (right click by default) to temporarily gain a massive cooldown boost to spellcasting. Innately provides a bonus to elemental spells."
+	}
+]
+}

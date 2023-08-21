@@ -1,16 +1,16 @@
 {
   "type": "amethyst_imbuement:imbuing",
   "imbueA": {
-	"item": "imbued_gear:puresteel_ingot"
+	"item": "imbued_gear:pure_powder"
   },
   "imbueB": {
 	"item": "amethyst_imbuement:ametrine"
   },
   "imbueC": {
-	"item": "imbued_gear:puresteel_ingot"
+	"item": "imbued_gear:pure_powder"
   },
   "imbueD": {
-	"item": "imbued_gear:puresteel_ingot"
+	"item": "imbued_gear:pure_powder"
   },
   "craftA": {
 	"item": "minecraft:diamond"
@@ -22,25 +22,25 @@
 	"item": "minecraft:diamond"
   },
   "craftD": {
-	"item": "imbued_gear:pure_powder"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
 	"item": "amethyst_imbuement:glistering_trident"
   },
   "craftF": {
-	"item": "imbued_gear:pure_powder"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftG": {
 	"item": "minecraft:diamond"
   },
   "craftH": {
-	"item": "imbued_gear:pure_powder"
+	"item": "imbued_gear:puresteel_ingot"
   },
   "craftI": {
 	"item": "minecraft:diamond"
   },
   "title": "Champions Trident",
-  "cost": 49,
+  "cost": 45,
   "resultA": "imbued_gear:champions_trident",
   "countA": 1,
   "transferEnchant": true

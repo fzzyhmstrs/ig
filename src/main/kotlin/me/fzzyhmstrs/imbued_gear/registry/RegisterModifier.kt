@@ -130,8 +130,16 @@ object RegisterModifier {
         .withPostHit(ModifierConsumers.NULL_SPACE_HIT_CONSUMER)
         .withCustomFormatting(Formatting.DARK_BLUE)
         .also { regMod.add(it) }
+    val RADIANT_BASTION = buildModifier(IG.identity("radiant_bastion"), persistent = true, availableForSelection = false)
+        .withKilledOther(ModifierConsumers.RADIANT_BASTION_KILL_CONSUMER)
+        .withCustomFormatting(Formatting.GOLD)
+        .also { regMod.add(it) }
     val RADIANT_DEVOTION = buildModifier(IG.identity("radiant_devotion"), persistent = true, availableForSelection = false)
-        .withKilledOther(ModifierConsumers.RADIANT_DEVOTION_HIT_CONSUMER)
+        .withKilledOther(ModifierConsumers.RADIANT_DEVOTION_KILL_CONSUMER)
+        .withCustomFormatting(Formatting.GOLD)
+        .also { regMod.add(it) }
+    val RADIANT_ABSOLUTION = buildModifier(IG.identity("radiant_absolution"), persistent = true, availableForSelection = false)
+        .withKilledOther(ModifierConsumers.RADIANT_ABSOLUTION_KILL_CONSUMER)
         .withCustomFormatting(Formatting.GOLD)
         .also { regMod.add(it) }
     val FLESH_RENDING = buildModifier(IG.identity("flesh_rending"), persistent = true, availableForSelection = false)

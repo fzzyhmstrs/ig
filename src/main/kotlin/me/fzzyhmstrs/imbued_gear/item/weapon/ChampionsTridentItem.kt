@@ -2,8 +2,12 @@ package me.fzzyhmstrs.imbued_gear.item.weapon
 
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
+import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
+import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
+import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
 import me.fzzyhmstrs.imbued_gear.entity.ChampionsTridentEntity
+import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.EquipmentSlot
@@ -22,13 +26,20 @@ import net.minecraft.sound.SoundEvents
 import net.minecraft.stat.Stats
 import net.minecraft.text.MutableText
 import net.minecraft.text.Text
+import net.minecraft.util.Identifier
 import net.minecraft.util.UseAction
 import net.minecraft.util.math.MathHelper
 import net.minecraft.util.math.Vec3d
 import net.minecraft.world.World
 
-class ChampionsTridentItem(internal val material: ToolMaterial,settings: Settings) : TridentItem(settings) {
+class ChampionsTridentItem(internal val material: ToolMaterial,settings: Settings) : TridentItem(settings), Modifiable {
  private var attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier>
+
+    override fun defaultModifiers(type: ModifierHelperType?): MutableList<Identifier> {
+        if (type == EquipmentModifierHelper.getType())
+            return mutableListOf(RegisterModifier.RADIANT_BASTION.modifierId)
+        return super.defaultModifiers(type)
+    }
 
     private val flavorText: MutableText by lazy{
         FlavorHelper.makeFlavorText(this)

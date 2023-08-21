@@ -31,17 +31,17 @@
 	"item": "amethyst_imbuement:tigers_eye"
   },
   "craftG": {
-	"item": "amethyst_imbuement:lethal_gem"
+	"item": "amethyst_imbuement:mystical_gem"
   },
   "craftH": {
 	"item": "amethyst_imbuement:ametrine"
   },
   "craftI": {
-	"item": "amethyst_imbuement:garnet_sword"
+	"item": "amethyst_imbuement:mystical_gem"
   },
-  "title": "Lethality",
-  "cost": 45,
-  "resultA": "amethyst_imbuement:lethality",
+  "title": "Cosmos",
+  "cost": 79,
+  "resultA": "imbued_gear:cosmos",
   "countA": 1,
   "transferEnchant": true
 }

@@ -132,6 +132,7 @@ object IgConfig:
         var voidStrikeDamageMultiplier = ValidatedFloat(3f,8f)
         var trueSmiteDamageMultiplier = ValidatedFloat(4f,12f)
         var fleshRendingCriticalChance = ValidatedFloat(0.2f,1f)
+        var radiantBastionShieldChance = ValidatedFloat(0.333333f,1f)
 
         var gear = GearSection()
         class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){

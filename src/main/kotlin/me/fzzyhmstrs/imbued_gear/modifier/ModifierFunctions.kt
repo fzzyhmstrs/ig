@@ -91,13 +91,13 @@ object ModifierFunctions {
         EquipmentModifier.DamageFunction { _, user, _, _, amount ->
             if (amount > user.health){
                 val time = user.world.time
-                if (divinityMap.computeIfAbsent(user.uuid){time - 1220L} + 1200L < time){
+                if (divinityMap.computeIfAbsent(user.uuid){time - 6020L} + 6000L < time){
                     divinityMap[user.uuid] = time
                     user.addStatusEffect(StatusEffectInstance(StatusEffects.ABSORPTION,200,4))
                     user.addStatusEffect(StatusEffectInstance(StatusEffects.STRENGTH,200,4))
                     user.addStatusEffect(StatusEffectInstance(StatusEffects.HASTE,200,1))
                     user.world.playSound(null,user.blockPos,SoundEvents.BLOCK_RESPAWN_ANCHOR_DEPLETE.value(),SoundCategory.PLAYERS,1f,1f)
-                    return@DamageFunction 0f
+                    return@DamageFunction user.health - 0.5f
                 }
             }
             amount

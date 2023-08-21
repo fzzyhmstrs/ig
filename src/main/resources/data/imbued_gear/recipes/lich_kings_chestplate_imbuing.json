@@ -13,10 +13,10 @@
 	"item": "imbued_gear:serpentine"
   },
   "craftA": {
-    "item": "minecraft:bone_block"
+    "item": "minecraft:skeleton_skull"
   },
   "craftC": {
-    "item": "minecraft:bone_block"
+    "item": "minecraft:skeleton_skull"
   },
   "craftD": {
 	"item": "imbued_gear:wither_bone"
@@ -31,7 +31,7 @@
 	"item": "minecraft:bone_block"
   },
   "craftH": {
-    "item": "imbued_gear:ensouled_gem"
+    "item": "minecraft:netherite_ingot"
   },
   "craftI": {
 	"item": "minecraft:bone_block"

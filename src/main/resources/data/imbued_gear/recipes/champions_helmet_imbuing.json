@@ -13,13 +13,13 @@
 	"item": "amethyst_imbuement:moonstone"
   },
   "craftA": {
-	"item": "amethyst_imbuement:steel_ingot"
+    "tag": "c:steel_ingots"
   },
   "craftB": {
-	"item": "minecraft:obsidian"
+	"item": "imbued_gear:ensouled_gem"
   },
   "craftC": {
-	"item": "amethyst_imbuement:steel_ingot"
+    "tag": "c:steel_ingots"
   },
   "craftD": {
 	"item": "imbued_gear:puresteel_ingot"

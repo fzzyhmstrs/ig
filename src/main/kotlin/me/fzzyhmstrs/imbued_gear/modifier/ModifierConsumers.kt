@@ -7,6 +7,8 @@ import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus
+import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
+import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.Tameable
 import net.minecraft.entity.effect.StatusEffectInstance
@@ -84,21 +86,34 @@ object ModifierConsumers {
             }
         }
 
-    val RADIANT_DEVOTION_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
+    val RADIANT_BASTION_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
+            if (user.world.random.nextFloat() < IgConfig.modifiers.radiantBastionShieldChance.get())
+                user.addStatusEffect(StatusEffectInstance(StatusEffects.ABSORPTION,300))
+        }
+
+    val RADIANT_DEVOTION_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { stack: ItemStack, user: LivingEntity, _: LivingEntity? ->
             if (user.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED)){
                 val effect = user.getStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED)
                 val amp = effect?.amplifier?:0
                 val duration = effect?.duration?:0
                 if (duration > 0){
                     val duration2 = if(duration < 100) {100} else {duration}
-                    user.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED,duration2,min(amp + 1,4)))
+                    val max = if(stack.isIn(RegisterTag.CHAMPIONS_GEAR)) 7 else 4
+                    user.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED,duration2,min(amp + 1,max)))
                 }
             } else {
                 user.addStatusEffect(
                     StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED, 100)
                 )
             }
+        }
+
+    val RADIANT_ABSOLUTION_KILL_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
+            val amp = user.getStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.BLESSED)?.amplifier ?: -1
+            user.heal(0.125f * (amp + 1).toFloat())
         }
 
     val MANA_VAMPIRIC_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
