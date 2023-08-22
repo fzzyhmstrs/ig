@@ -95,7 +95,7 @@
 		"craft_g_item": "minecraft:air",
 		"craft_h_item": "minecraft:soul_sand",
 		"craft_i_item": "minecraft:air",
-		"result_item": "imbued_gear:pure_powder#8",
+		"result_item": "imbued_gear:soul_powder#8",
 		"cost_text": "$(l)Level Cost: $(2)13$()"
 	},
 	{
