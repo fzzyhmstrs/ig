@@ -48,7 +48,7 @@ object ModifierFunctions {
         }
 
     //attacker is the victim in this case
-    val VOID_STRIKE_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
+    val VOIDS_ECHO_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, user, attacker, _, amount ->
             if (attacker?.hasStatusEffect(RegisterStatus.NIHILISM) == true ||
                 attacker?.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED) == true) {
