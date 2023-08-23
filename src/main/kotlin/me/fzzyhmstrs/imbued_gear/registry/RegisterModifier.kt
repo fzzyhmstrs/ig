@@ -182,7 +182,7 @@ object RegisterModifier {
         .withKilledOther(ModifierConsumers.LUST_FOR_COMBAT_KILL_CONSUMER)
         .withCustomFormatting(Formatting.RED, Formatting.ITALIC)
         .also { regMod.add(it) }
-    val VOID_STRIKE = EquipmentModifier(IG.identity("void_strike"), persistent = true, randomSelectable = false)
+    val VOIDS_ECHO = EquipmentModifier(IG.identity("voids_echo"), persistent = true, randomSelectable = false)
         .withOnAttack(ModifierFunctions.VOID_STRIKE_DAMAGE_FUNCTION)
         .withCustomFormatting(Formatting.DARK_BLUE, Formatting.BOLD)
         .also { regMod.add(it) }

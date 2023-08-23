@@ -163,7 +163,7 @@
 	"equipment.modifier.imbued_gear:master_of_elements": "Master of Elements",
 	"equipment.modifier.imbued_gear:horde_master": "Horde Master",
 	"equipment.modifier.imbued_gear:lust_for_combat": "Lust for Combat",
-	"equipment.modifier.imbued_gear:void_strike": "Void Strike",
+	"equipment.modifier.imbued_gear:voids_echo": "Void Strike",
 	"equipment.modifier.imbued_gear:true_smite": "True Smite",
 	"scepter.modifier.imbued_gear:healers_reward.desc": "Gain 1 experience for every healing spell cast.",
 	"scepter.modifier.imbued_gear:cosmic.desc": "Spell level increased by 1, cooldown and mana cost decreased by 25%, damage increased by 2, spell effect duration increased by 25%.",
@@ -193,7 +193,7 @@
 	"equipment.modifier.imbued_gear:master_of_elements.desc": "50% damage taken from elemental damage. On-fire or freezing enemies take more damage.",
 	"equipment.modifier.imbued_gear:horde_master.desc": "Nearby summons and pets are granted Bone Armor",
 	"equipment.modifier.imbued_gear:lust_for_combat.desc": "Kills grant stacks of Spell Rage and Blade Rage",
-	"equipment.modifier.imbued_gear:void_strike.desc": "Has a chance to deal massive damage to Cursed or Nihilistic opponents.",
+	"equipment.modifier.imbued_gear:voids_echo.desc": "Has a chance to deal massive damage to Cursed or Nihilistic opponents.",
 	"equipment.modifier.imbued_gear:true_smite.desc": "Massively increases damage to wounded undead.",
 
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
