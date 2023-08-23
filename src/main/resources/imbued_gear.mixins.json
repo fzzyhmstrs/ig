@@ -4,10 +4,10 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "EntityMixin",
-    "PlayerEntityMixin",
-    "PlayerInventoryMixin"
+    "PlayerEntityMixin"
   ],
   "client": [
+  "PlayerInventoryMixin"
   ],
   "server": [
   ],
