@@ -13,7 +13,7 @@
       {
         "name":"elemental_range",
         "attribute": "amethyst_core:spell_range",
-        "amount": "0.15",
+        "amount": "0.25",
         "operation": "MULTIPLY_TOTAL"
       }
     ],

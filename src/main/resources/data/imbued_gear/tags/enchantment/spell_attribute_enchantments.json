@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"amethyst_imbuement:spell_rage",
+		"amethyst_imbuement:spell_thrift",
+		"amethyst_imbuement:spell_magnitude",
+		"amethyst_imbuement:spell_stability",
+		"amethyst_imbuement:spell_extent",
+		"amethyst_imbuement:spell_alacrity"
+	]
+}

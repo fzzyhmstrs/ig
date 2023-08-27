@@ -116,7 +116,19 @@
 	
 	"enchantment.imbued_gear.bankai": "Bankai",
 	"enchantment.imbued_gear.bankai.desc": "Slash enemies in front of you so quickly you appear to teleport past them.",
-	
+	"enchantment.imbued_gear.spell_rage": "Spell Rage",
+	"enchantment.imbued_gear.spell_rage.desc": "Increases spell damage.",
+	"enchantment.imbued_gear.spell_thrift": "Spell Thrift",
+	"enchantment.imbued_gear.spell_thrift.desc": "Reduces spell mana cost.",
+	"enchantment.imbued_gear.spell_magnitude": "Spell Rage",
+	"enchantment.imbued_gear.spell_magnitude.desc": "Increases spell effect amplification.",
+	"enchantment.imbued_gear.spell_stability": "Spell Stability",
+	"enchantment.imbued_gear.spell_stability.desc": "Increases spell effect duration.",
+	"enchantment.imbued_gear.spell_extent": "Spell Extent",
+	"enchantment.imbued_gear.spell_extent.desc": "Increases spell range and area of effect.",
+	"enchantment.imbued_gear.spell_alacrity": "Spell Alacrity",
+	"enchantment.imbued_gear.spell_alacrity.desc": "Reduces spell cooldown.",
+
 	"effect.imbued_gear.nihilism": "Nihilism",
 	"effect.imbued_gear.blade_rage": "Blade Rage",
 	"effect.imbued_gear.spell_rage": "Spell Rage",

@@ -44,6 +44,15 @@ object IgLoot: AbstractModLoot() {
                 table.pool(poolBuilder)
                 return true
             }
+            LootTables.VILLAGE_FLETCHER_CHEST -> {
+                val poolBuilder = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.05f * mult))
+                    .rolls(UniformLootNumberProvider.create(1.0F, 16.0f))
+                    .with(ItemEntry.builder(RegisterTool.IMBUED_ARROW).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.CRYSTALLINE_ARROW).weight(1))
+                table.pool(poolBuilder)
+                return true
+            }
             LootTables.NETHER_BRIDGE_CHEST -> {
                 val poolBuilder = LootPool.builder()
                     .conditionally(RandomChanceLootCondition.builder(.05f * mult))
@@ -196,12 +205,27 @@ object IgLoot: AbstractModLoot() {
                 table.pool(poolBuilder)
                 return true
             }
+            LootTables.WOODLAND_MANSION_CHEST -> {
+                val poolBuilder2 = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.075f * mult))
+                    .rolls(UniformLootNumberProvider.create(4.0f,16.0f))
+                    .with(ItemEntry.builder(RegisterTool.IMBUED_ARROW).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.CRYSTALLINE_ARROW).weight(1))
+                table.pool(poolBuilder2)
+                return true
+            }
             LootTables.PILLAGER_OUTPOST_CHEST -> {
                 val poolBuilder = LootPool.builder()
                     .conditionally(RandomChanceLootCondition.builder(.025f * mult))
                     .rolls(ConstantLootNumberProvider.create(1.0F))
                     .with(ItemEntry.builder(RegisterTool.PENDANT_OF_MEMORIES).weight(1))
                 table.pool(poolBuilder)
+                val poolBuilder2 = LootPool.builder()
+                    .conditionally(RandomChanceLootCondition.builder(.075f * mult))
+                    .rolls(UniformLootNumberProvider.create(4.0f,16.0f))
+                    .with(ItemEntry.builder(RegisterTool.IMBUED_ARROW).weight(1))
+                    .with(ItemEntry.builder(RegisterTool.CRYSTALLINE_ARROW).weight(1))
+                table.pool(poolBuilder2)
                 return true
             }
             LootTables.SHIPWRECK_TREASURE_CHEST -> {

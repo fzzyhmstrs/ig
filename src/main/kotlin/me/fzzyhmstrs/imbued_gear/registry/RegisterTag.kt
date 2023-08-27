@@ -3,6 +3,7 @@ package me.fzzyhmstrs.imbued_gear.registry
 import me.fzzyhmstrs.amethyst_core.AC
 import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterTier
 import me.fzzyhmstrs.imbued_gear.IG
+import net.minecraft.enchantment.Enchantment
 import net.minecraft.entity.damage.DamageType
 import net.minecraft.item.Item
 import net.minecraft.registry.RegistryKeys
@@ -27,5 +28,7 @@ object RegisterTag {
     val WARRIORS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("warriors_gear"))
 
     val ELEMENTAL: TagKey<DamageType> = TagKey.of(RegistryKeys.DAMAGE_TYPE, IG.identity("elemental"))
+
+    val SPELL_ATTRIBUTE_ENCHANTS: TagKey<Enchantment> = TagKey.of(RegistryKeys.ENCHANTMENT, IG.identity("spell_attribute_enchantments"))
     fun registerAll(){}
 }

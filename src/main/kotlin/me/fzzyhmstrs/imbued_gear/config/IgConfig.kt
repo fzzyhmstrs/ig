@@ -1,5 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.config
 
+import me.fzzyhmstrs.amethyst_imbuement.config.AiConfigDefaults
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
@@ -10,11 +11,15 @@ import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedFloat
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedLong
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
+import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringIntMap
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener
+import net.minecraft.enchantment.Enchantment
+import net.minecraft.enchantment.Enchantments
+import net.minecraft.registry.Registries
 import net.minecraft.resource.ResourceManager
 import net.minecraft.resource.ResourceType
 import net.minecraft.util.Identifier
@@ -152,12 +157,54 @@ object IgConfig:
 
     }
 
+    private val enchantsHeader = buildSectionHeader("enchants")
+
+    class Enchants: ConfigClass(enchantsHeader), OldClass<Enchants>{
+
+        fun isEnchantEnabled(enchantment: Enchantment): Boolean{
+            val id = (Registries.ENCHANTMENT.getId(enchantment) ?: return true).toString()
+            return enabledEnchants[id] ?: true
+        }
+
+        fun getMaxLevel(enchantment: Enchantment, fallback: Int): Int{
+            val id = (Registries.ENCHANTMENT.getId(enchantment) ?: return fallback).toString()
+            return enchantMaxLevels[id]?:fallback
+        }
+
+        @ReadMeText("ig.readme.enchants.enabledEnchants")
+        var enabledEnchants = ValidatedStringBoolMap(mapOf(
+            "amethyst_imbuement:spell_rage" to true,
+            "amethyst_imbuement:spell_thrift" to true,
+            "amethyst_imbuement:spell_magnitude" to true,
+            "amethyst_imbuement:spell_stability" to true,
+            "amethyst_imbuement:spell_extent" to true,
+            "amethyst_imbuement:spell_alacrity" to true),
+            { id, _ -> Identifier.tryParse(id) != null},
+            "Needs a valid registered enchantment identifier.")
+
+        @ReadMeText("readme.enchants.aiEnchantMaxLevels")
+        var enchantMaxLevels = ValidatedStringIntMap(mapOf(
+            "amethyst_imbuement:spell_rage" to 3,
+            "amethyst_imbuement:spell_thrift" to 3,
+            "amethyst_imbuement:spell_magnitude" to 1,
+            "amethyst_imbuement:spell_stability" to 3,
+            "amethyst_imbuement:spell_extent" to 3,
+            "amethyst_imbuement:spell_alacrity" to 3),
+            { id, i -> Identifier.tryParse(id) != null && i > 0},
+            "Needs a valid registered enchantment identifier and a level greater than 0.")
+        override fun generateNewClass(): Enchants {
+            return this
+        }
+
+    }
+
     var items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
     var materials = readOrCreateAndValidate("materials_v0.json", base = IG.MOD_ID) {Materials()}
     var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
+    var enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
 
     private fun buildSectionHeader(name:String): Header{
-        return Header.Builder().space().underoverscore("ia.readme.header.$name").add("ia.readme.header.$name.desc").space().build()
+        return Header.Builder().space().underoverscore("ig.readme.header.$name").add("ig.readme.header.$name.desc").space().build()
     }
 
     override fun initConfig() {
@@ -169,6 +216,7 @@ object IgConfig:
         items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
         materials = readOrCreateAndValidate("materials_v0.json", base = IG.MOD_ID) {Materials()}
         modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
+        enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
     }
 
     override fun getFabricId(): Identifier {

@@ -17,7 +17,7 @@
     "4": {
         "name":"spellblades_damage",
         "attribute": "amethyst_core:spell_damage",
-        "amount": "0.2",
+        "amount": "0.25",
         "operation": "MULTIPLY_TOTAL"
     },
     "6": [
