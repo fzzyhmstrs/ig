@@ -33,17 +33,16 @@ object ModifierConsumers {
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? -> 
             if (target == null) return@ToolConsumer
             if (user.world.random.nextFloat() < IgConfig.modifiers.nullAndVoidHitChance.get()){
-                if (user.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)){
-                    val effect = user.getStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)
+                if (target.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)){
+                    val effect = target.getStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)
                     val amp = effect?.amplifier?:0
                     val duration = effect?.duration?:0
                     if (duration > 0){
                         val duration2 = if(duration < 200) {200} else {duration}
-                        user.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED,duration2,min(amp + 1,4)))
+                        target.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED,duration2,min(amp + 1,4)))
                     }
                 } else {
-                    user.addStatusEffect(
-                        StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED, 100)
+                    target.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED, 100)
                     )
                 }
             }
