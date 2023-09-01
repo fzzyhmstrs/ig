@@ -11,12 +11,14 @@ import net.fabricmc.api.Environment
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint
 import net.minecraft.util.Identifier
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import kotlin.random.Random
 
 
 object IG: ModInitializer {
     const val MOD_ID = "imbued_gear"
-
+    val LOGGER: Logger = LoggerFactory.getLogger("imbued_gear")
     override fun onInitialize() {
         RegisterArmor.registerAll()
         RegisterTool.registerAll()

@@ -1,0 +1,13 @@
+{
+  "textures": {
+    "ig_celestial": "imbued_gear:textures/entity/hamster/armor/ig_celestial.png",
+    "ig_champion": "imbued_gear:textures/entity/hamster/armor/ig_champion.png",
+    "ig_elementalist": "imbued_gear:textures/entity/hamster/armor/ig_elementalist.png",
+    "ig_eternity": "imbued_gear:textures/entity/hamster/armor/ig_eternity.png",
+    "ig_lich_king": "imbued_gear:textures/entity/hamster/armor/ig_lich_king.png",
+    "ig_scholars": "imbued_gear:textures/entity/hamster/armor/ig_scholars.png",
+    "ig_spellblades": "imbued_gear:textures/entity/hamster/armor/ig_spellblades.png",
+    "ig_void_mail": "imbued_gear:textures/entity/hamster/armor/ig_void_mail.png",
+    "ig_warrior": "imbued_gear:textures/entity/hamster/armor/ig_warrior.png"
+  }
+}

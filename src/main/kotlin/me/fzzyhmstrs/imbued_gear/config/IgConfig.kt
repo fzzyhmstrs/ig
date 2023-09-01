@@ -173,23 +173,23 @@ object IgConfig:
 
         @ReadMeText("ig.readme.enchants.enabledEnchants")
         var enabledEnchants = ValidatedStringBoolMap(mapOf(
-            "amethyst_imbuement:spell_rage" to true,
-            "amethyst_imbuement:spell_thrift" to true,
-            "amethyst_imbuement:spell_magnitude" to true,
-            "amethyst_imbuement:spell_stability" to true,
-            "amethyst_imbuement:spell_extent" to true,
-            "amethyst_imbuement:spell_alacrity" to true),
+            "imbued_gear:spell_rage" to true,
+            "imbued_gear:spell_thrift" to true,
+            "imbued_gear:spell_magnitude" to true,
+            "imbued_gear:spell_stability" to true,
+            "imbued_gear:spell_extent" to true,
+            "imbued_gear:spell_alacrity" to true),
             { id, _ -> Identifier.tryParse(id) != null},
             "Needs a valid registered enchantment identifier.")
 
         @ReadMeText("readme.enchants.aiEnchantMaxLevels")
         var enchantMaxLevels = ValidatedStringIntMap(mapOf(
-            "amethyst_imbuement:spell_rage" to 3,
-            "amethyst_imbuement:spell_thrift" to 3,
-            "amethyst_imbuement:spell_magnitude" to 1,
-            "amethyst_imbuement:spell_stability" to 3,
-            "amethyst_imbuement:spell_extent" to 3,
-            "amethyst_imbuement:spell_alacrity" to 3),
+            "imbued_gear:spell_rage" to 3,
+            "imbued_gear:spell_thrift" to 3,
+            "imbued_gear:spell_magnitude" to 1,
+            "imbued_gear:spell_stability" to 3,
+            "imbued_gear:spell_extent" to 3,
+            "imbued_gear:spell_alacrity" to 3),
             { id, i -> Identifier.tryParse(id) != null && i > 0},
             "Needs a valid registered enchantment identifier and a level greater than 0.")
         override fun generateNewClass(): Enchants {

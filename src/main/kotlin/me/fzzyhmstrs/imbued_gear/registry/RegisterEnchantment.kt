@@ -3,8 +3,6 @@ package me.fzzyhmstrs.imbued_gear.registry
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentHelper
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
-import me.fzzyhmstrs.amethyst_imbuement.AI
-import me.fzzyhmstrs.amethyst_imbuement.LOGGER
 import me.fzzyhmstrs.fzzy_core.coding_util.AbstractConfigDisableEnchantment
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.enchantment.SpellAttributeEnchantment
@@ -14,7 +12,6 @@ import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import net.minecraft.util.Identifier
 import java.util.*
 
 object RegisterEnchantment {
@@ -24,12 +21,12 @@ object RegisterEnchantment {
         val e1 = Registry.register(Registries.ENCHANTMENT,id, this)
         if (e1 is AbstractConfigDisableEnchantment){
             if (!e1.isEnabled()){
-                LOGGER.info("Augment $id is set as disabled in the configs!")
+                IG.LOGGER.info("Augment $id is set as disabled in the configs!")
             }
         }
         if (e1 is ScepterAugment){
             if (!AugmentHelper.getAugmentEnabled(e1)) {
-                LOGGER.info("Augment $id is set as disabled in the configs!")
+                IG.LOGGER.info("Augment $id is set as disabled in the configs!")
             }
         }
         return e1

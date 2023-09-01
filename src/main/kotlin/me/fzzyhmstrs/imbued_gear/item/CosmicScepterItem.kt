@@ -20,19 +20,6 @@ import net.minecraft.world.World
 
 class CosmicScepterItem(material: ScepterToolMaterial, settings: Settings): CustomScepterItem(material, settings) {
 
-    override fun react(stack: ItemStack, reagents: List<ItemStack>, player: PlayerEntity?, type: RecipeType<*>?) {
-        if (type != ImbuingRecipe.Type) return
-        for (reagent in reagents){
-            if (reagent.item is ScepterItem){
-                val mods = ModifierHelper.getModifiers(reagent)
-                for (mod in mods){
-                    ModifierHelper.addModifier(mod,stack)
-                }
-                return
-            }
-        }
-    }
-  
     @Environment(EnvType.CLIENT)
     override fun emitParticles(world: World, client: MinecraftClient, user: LivingEntity) {
         val particlePos = scepterParticlePos(client, user)
