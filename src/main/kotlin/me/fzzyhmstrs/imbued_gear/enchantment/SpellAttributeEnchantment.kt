@@ -23,8 +23,8 @@ class SpellAttributeEnchantment(
     private val uuids: EnumMap<EquipmentSlot, UUID>,
     vararg slot: EquipmentSlot)
     :
-    AbstractConfigDisableEnchantment(weight, EnchantmentTarget.ARMOR,*slot),
-    AttributeProviding
+    AbstractConfigDisableEnchantment(weight, EnchantmentTarget.ARMOR,*slot)//,
+    //AttributeProviding
 {
 
     /*private val uuids: EnumMap<EquipmentSlot, UUID> = EnumMap(mapOf(
@@ -58,7 +58,7 @@ class SpellAttributeEnchantment(
         return IgConfig.enchants.isEnchantEnabled(this)
     }
 
-    override fun modifyAttributeMap(
+    /*override fun modifyAttributeMap(
         map: Multimap<EntityAttribute, EntityAttributeModifier>,
         slot: EquipmentSlot,
         level: Int
@@ -69,6 +69,6 @@ class SpellAttributeEnchantment(
             attribute,
             attributeModifier.apply(uuid,name, level)
         )
-    }
+    }*/
 
 }
