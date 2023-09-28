@@ -2,8 +2,8 @@ package me.fzzyhmstrs.imbued_gear.enchantment
 
 import com.google.common.collect.Multimap
 import me.fzzyhmstrs.amethyst_core.AC.isIn
-import me.fzzyhmstrs.amethyst_imbuement.augment.base_augments.AttributeProviding
 import me.fzzyhmstrs.fzzy_core.coding_util.AbstractConfigDisableEnchantment
+import me.fzzyhmstrs.fzzy_core.enchantment_util.AttributeProviding
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
 import net.minecraft.enchantment.Enchantment
@@ -23,8 +23,8 @@ class SpellAttributeEnchantment(
     private val uuids: EnumMap<EquipmentSlot, UUID>,
     vararg slot: EquipmentSlot)
     :
-    AbstractConfigDisableEnchantment(weight, EnchantmentTarget.ARMOR,*slot)//,
-    //AttributeProviding
+    AbstractConfigDisableEnchantment(weight, EnchantmentTarget.ARMOR,*slot),
+    AttributeProviding
 {
 
     /*private val uuids: EnumMap<EquipmentSlot, UUID> = EnumMap(mapOf(
@@ -58,7 +58,7 @@ class SpellAttributeEnchantment(
         return IgConfig.enchants.isEnchantEnabled(this)
     }
 
-    /*override fun modifyAttributeMap(
+    override fun modifyAttributeMap(
         map: Multimap<EntityAttribute, EntityAttributeModifier>,
         slot: EquipmentSlot,
         level: Int
@@ -69,6 +69,6 @@ class SpellAttributeEnchantment(
             attribute,
             attributeModifier.apply(uuid,name, level)
         )
-    }*/
+    }
 
 }

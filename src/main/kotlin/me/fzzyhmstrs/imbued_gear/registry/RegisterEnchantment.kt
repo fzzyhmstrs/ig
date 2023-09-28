@@ -34,7 +34,7 @@ object RegisterEnchantment {
 
     val BANKAI = BankaiAugment().register("bankai")
 
-    /*val SPELL_RAGE = SpellAttributeEnchantment(
+    val SPELL_RAGE = SpellAttributeEnchantment(
         Enchantment.Rarity.RARE,
         RegisterAttribute.SPELL_DAMAGE,
         {uuid, name, level -> EntityAttributeModifier(uuid, name, level * 0.03, EntityAttributeModifier.Operation.MULTIPLY_BASE) },
@@ -99,7 +99,7 @@ object RegisterEnchantment {
             EquipmentSlot.LEGS to UUID.fromString("376f72ce-44e3-11ee-be56-0242ac120002"),
             EquipmentSlot.FEET to UUID.fromString("376f7418-44e3-11ee-be56-0242ac120002")
         ))
-    ).register("spell_alacrity")*/
+    ).register("spell_alacrity")
 
     fun registerAll(){}
 }
