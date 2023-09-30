@@ -43,6 +43,7 @@ object RegisterTool {
     val RADIANT_BROADSWORD = register(RadiantBroadswordItem(IgConfig.materials.tools.radiant,FabricItemSettings().rarity(Rarity.RARE)),"radiant_broadsword")
     val WARRIORS_AXE = register(WarriorsAxeItem(IgConfig.materials.tools.radiant,FabricItemSettings().rarity(Rarity.RARE)),"warriors_axe")
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
+    val HUNTERS_ARBALEST = register(HuntersArbalestItem(FabricItemSettings().rarity(Rarity.RARE).maxDamage(1250)), "hunters_arbalest")
     //item model tex lang modifier
     val COSMOS = register(CosmicScepterItem(IgConfig.materials.tools.scepterTier4,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
         .withModifiers(listOf(RegisterModifier1.COSMIC))

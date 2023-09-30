@@ -4,6 +4,7 @@ package me.fzzyhmstrs.imbued_gear
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap
 import me.fzzyhmstrs.imbued_gear.item.BoneRattleItem
+import me.fzzyhmstrs.imbued_gear.item.TwoLayerDyeable
 import me.fzzyhmstrs.imbued_gear.registry.*
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.EnvType
@@ -48,6 +49,7 @@ object IGClient: ClientModInitializer{
     override fun onInitializeClient() {
         RegisterRenderer.registerAll()
         RegisterItemModel.registerAll()
+        TwoLayerDyeable.registerClient()
     }
 
     fun iaRandom(): Random{
