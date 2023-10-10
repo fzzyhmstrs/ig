@@ -1,7 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.item.weapon
 
-import me.fzzyhmstrs.amethyst_imbuement.item.SniperBowItem
-import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterTool
+import me.fzzyhmstrs.amethyst_imbuement.item.weapon.SniperBowItem
 import me.fzzyhmstrs.imbued_gear.item.TwoLayerDyeable
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import net.minecraft.item.ItemStack
