@@ -64,7 +64,7 @@ class RingOfSoulsItem(settings: Settings): TrinketItem(settings), KillTracking, 
         EquipmentModifierHelper.addModifier(IG.identity("souls_modifier_tier_$newTier"),stack)
     }
 
-    override fun defaultModifiers(type: ModifierHelperType?): MutableList<Identifier> {
+    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType()) return mutableListOf(SOULS_MODIFIER.modifierId)
         return super.defaultModifiers(type)
     }

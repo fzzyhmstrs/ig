@@ -20,7 +20,7 @@ open class SpecialityOffhandItem(
     
     companion object{
         init{
-            ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
+            /*ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
                 for (stack in user.handItems) {
                     if (stack.item is SpecialityOffhandItem) {
                         val focusMods = ModifierHelper.getActiveModifiers(stack)
@@ -28,11 +28,11 @@ open class SpecialityOffhandItem(
                     }
                 }
                 modifiers
-            }
+            }*/
         }
     }
 
-    override fun defaultModifiers(type: ModifierHelperType?): MutableList<Identifier> {
+    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType()) {
             return equipmentMods().toMutableList()
         }

@@ -27,7 +27,7 @@ class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(setting
 
         init{
 
-            ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
+            /*ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
                 for (stack in TrinketUtil.getTrinketStacks(user)) {
                     if (stack.item is CrownOfSorrowsItem) {
                         val focusMods = ModifierHelper.getActiveModifiers(stack)
@@ -35,7 +35,7 @@ class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(setting
                     }
                 }
                 modifiers
-            }
+            }*/
         }
     }
 

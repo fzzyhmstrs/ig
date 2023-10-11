@@ -57,7 +57,7 @@ class WarriorsAxeItem(material: ToolMaterial, settings: Settings): AxeItem(mater
         world.addParticle(SMALL_DUST,particlePos.x + rnd1, particlePos.y + rnd2, particlePos.z + rnd2, 0.0, 0.0, 0.0)
     }
 
-    override fun defaultModifiers(type: ModifierHelperType): MutableList<Identifier> {
+    override fun defaultModifiers(type: ModifierHelperType<*>): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType())
             return mutableListOf(RegisterModifier.FLESH_RENDING.modifierId)
         return super.defaultModifiers(type)

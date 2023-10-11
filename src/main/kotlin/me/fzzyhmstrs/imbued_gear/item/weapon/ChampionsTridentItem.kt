@@ -35,7 +35,7 @@ import net.minecraft.world.World
 class ChampionsTridentItem(internal val material: ToolMaterial,settings: Settings) : TridentItem(settings), Modifiable {
  private var attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier>
 
-    override fun defaultModifiers(type: ModifierHelperType?): MutableList<Identifier> {
+    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType())
             return mutableListOf(RegisterModifier.RADIANT_BASTION.modifierId)
         return super.defaultModifiers(type)

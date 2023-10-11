@@ -16,7 +16,7 @@ import net.minecraft.world.World
 
 class RadiantBroadswordItem(material: ToolMaterial, settings: Settings): SwordItem(material,3,-2.4f,settings), Modifiable {
 
-    override fun defaultModifiers(type: ModifierHelperType): MutableList<Identifier> {
+    override fun defaultModifiers(type: ModifierHelperType<*>): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType())
             return mutableListOf(RegisterModifier.RADIANT_DEVOTION.modifierId)
         return super.defaultModifiers(type)
