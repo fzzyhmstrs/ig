@@ -4,7 +4,7 @@
     "item": "imbued_gear:soul_powder"
   },
   "base": {
-    "tag": "minecraft:prismarine_crystals"
+    "item": "minecraft:prismarine_crystals"
   },
   "addition": {
     "item": "minecraft:glowstone"
