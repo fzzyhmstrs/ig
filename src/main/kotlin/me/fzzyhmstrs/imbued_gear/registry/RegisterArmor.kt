@@ -91,6 +91,12 @@ object RegisterArmor {
     val ETERNITY_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.LEGGINGS,Item.Settings()),"eternity_leggings")
     val ETERNITY_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.BOOTS,Item.Settings()),"eternity_boots")
 
+    //Hunters Garb - Ranged damage and "get-away quick"
+    val HUNTERS_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.hunter,ArmorItem.Type.HELMET,Item.Settings()),"hunters_helmet")
+    val HUNTERS_CHESTPLATE = register(ModifiableArmorItem(IgConfig.materials.armor.hunter,ArmorItem.Type.CHESTPLATE,Item.Settings()),"hunters_chestplate")
+    val HUNTERS_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.hunter,ArmorItem.Type.LEGGINGS,Item.Settings()),"hunters_leggings")
+    val HUNTERS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.hunter,ArmorItem.Type.BOOTS,Item.Settings()),"hunters_boots")
+
     fun registerAll() {
     }
 }

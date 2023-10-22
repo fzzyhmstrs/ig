@@ -1,0 +1,14 @@
+{
+  "name": "set.imbued_gear.hunters",
+  "active_formatting": [
+    "DARK_GREEN",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:hunters_gear"
+  },
+  "bonuses": {
+    "2": "imbued_gear:hunters_precision",
+    "5": "imbued_gear:hunters_swiftness"
+  }
+}

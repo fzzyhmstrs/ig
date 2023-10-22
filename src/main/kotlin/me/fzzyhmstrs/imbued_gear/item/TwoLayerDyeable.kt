@@ -9,7 +9,7 @@ interface TwoLayerDyeable {
     companion object{
 
         fun registerClient(){
-            ColorProviderRegistry.ITEM.register({stack, layer -> if (layer == 0){(stack.item as TwoLayerDyeable).getColor(stack, 0)} else if (layer == 1){(stack.item as TwoLayerDyeable).getColor(stack, 1)} else -1 }, RegisterTool.HUNTERS_ARBALEST, )
+            //ColorProviderRegistry.ITEM.register({stack, layer -> if (layer == 0){(stack.item as TwoLayerDyeable).getColor(stack, 0)} else if (layer == 1){(stack.item as TwoLayerDyeable).getColor(stack, 1)} else -1 }, RegisterTool.HUNTERS_ARBALEST, )
         }
 
         private val DYE = "dye_colors"

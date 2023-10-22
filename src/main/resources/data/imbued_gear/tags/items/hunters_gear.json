@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:hunters_helmet",
+    "imbued_gear:hunters_chestplate",
+    "imbued_gear:hunters_leggings",
+    "imbued_gear:hunters_boots",
+    "imbued_gear:hunters_arbalest"
+  ]
+}

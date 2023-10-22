@@ -7,11 +7,13 @@ import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
 import net.minecraft.entity.EntityGroup
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
+import net.minecraft.entity.projectile.PersistentProjectileEntity
 import net.minecraft.registry.tag.DamageTypeTags
 import net.minecraft.registry.tag.EntityTypeTags
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvents
 import java.util.*
+import kotlin.math.max
 
 object ModifierFunctions {
 
@@ -57,6 +59,21 @@ object ModifierFunctions {
                     return@DamageFunction (amount * IgConfig.modifiers.voidStrikeDamageMultiplier.get())
                 }
             }
+            amount
+        }
+
+    val HUNTERS_PRECISION_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, _, _, source, amount ->
+            if(source.source is PersistentProjectileEntity)
+                 amount * 1.25f
+            else
+                amount
+        }
+
+    val HUNTERS_SWIFTNESS_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, user, _, _, amount ->
+            user.addStatusEffect(StatusEffectInstance(StatusEffects.SPEED,100, max(2,user.getStatusEffect(StatusEffects.SPEED)?.amplifier?.plus(1) ?: 0)))
+            user.addStatusEffect(StatusEffectInstance(StatusEffects.JUMP_BOOST,100, max(1,user.getStatusEffect(StatusEffects.JUMP_BOOST)?.amplifier?.plus(1) ?: 0)))
             amount
         }
 

@@ -2,6 +2,7 @@ package me.fzzyhmstrs.imbued_gear.entity
 
 import me.fzzyhmstrs.imbued_gear.item.weapon.CelestialTridentItem
 import me.fzzyhmstrs.imbued_gear.registry.RegisterEntity
+import net.minecraft.entity.Entity
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
@@ -18,8 +19,11 @@ class CelestialTridentAvatarEntity : CelestialTridentEntity {
         parentStack
     )
 
-    override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage - -3f else 6f
+    init{
+        this.pickupType = PickupPermission.DISALLOWED
+    }
 
+    override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage - -3f else 6f
     override fun asItemStack(): ItemStack {
         return ItemStack.EMPTY.copy()
     }
@@ -27,8 +31,13 @@ class CelestialTridentAvatarEntity : CelestialTridentEntity {
     override fun tickTrident() {
     }
 
-    override fun tryPickup(player: PlayerEntity): Boolean {
+    /*override fun tryPickup(player: PlayerEntity): Boolean {
         return false
+    }*/
+
+    override fun setOwner(entity: Entity?) {
+        super.setOwner(entity)
+        pickupType = PickupPermission.DISALLOWED
     }
 
     override fun onPlayerCollision(player: PlayerEntity) {

@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueB": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueC": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueD": {
+	"item": "imbued_gear:serpentine"
+  },
+  "craftA": {
+    "tag": "minecraft:leaves"
+  },
+  "craftC": {
+    "tag": "minecraft:leaves"
+  },
+  "craftD": {
+	"item": "imbued_gear:imbued_arrow"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:steel_chestplate"
+  },
+  "craftF": {
+	"item": "imbued_gear:imbued_arrow"
+  },
+  "craftG": {
+	"item": "minecraft:rabbit_hide"
+  },
+  "craftH": {
+    "item": "amethyst_imbuement:opal"
+  },
+  "craftI": {
+	"item": "minecraft:rabbit_hide"
+  },
+  "title": "Hunters Chestplate",
+  "cost": 31,
+  "resultA": "imbued_gear:hunters_chestplate",
+  "countA": 1,
+  "transferEnchant": true
+}

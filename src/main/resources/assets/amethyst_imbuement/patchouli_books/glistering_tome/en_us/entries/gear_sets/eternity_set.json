@@ -11,25 +11,6 @@
 		"type": "patchouli:spotlight",
 		"item": "tag:imbued_gear:eternity_gear",
 		"text": "$(li)2: +4 Max Health$(li)5: +6 Max Health"
-	},
-{
-"type": "amethyst_imbuement:imbuing_recipe",
-"title": "Caduceus",
-"imbue_a_item": "imbued_gear:serpentine",
-"imbue_b_item": "imbued_gear:serpentine",
-"imbue_c_item": "imbued_gear:serpentine",
-"imbue_d_item": "imbued_gear:serpentine",
-"craft_a_item": "imbued_gear:soul_powder",
-"craft_b_item": "imbued_gear:ensouled_gem",
-"craft_c_item": "imbued_gear:soul_powder",
-"craft_d_item": "minecraft:golden_apple",
-"craft_e_item": "amethyst_imbuement:imbued_ward",
-"craft_f_item": "minecraft:golden_apple",
-"craft_g_item": "imbued_gear:soul_powder",
-"craft_h_item": "minecraft:golden_apple",
-"craft_i_item": "imbued_gear:soul_powder",
-"result_item": "imbued_gear:caduceus",
-"cost_text": "$(l)Level Cost: $(2)25$()"
-}
+	}
 ]
 }

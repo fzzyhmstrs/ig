@@ -5,6 +5,7 @@ import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAndValidate
+import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateUpdatedAndValidate
 import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
 import me.fzzyhmstrs.fzzy_config.interfaces.OldClass
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedFloat
@@ -34,7 +35,8 @@ object IgConfig:
             .space()
             .add("ia.readme.main_header.changelog")
             .literal()
-            .add("1.19.3-01: Initial release of Imbued Ascendancy.")
+            .add("0.1.0+1.20.1: Initial release of Imbued Gear.")
+            .add("0.2.2+1.20.1: Added hunters gear in materials_v1.")
             .space()
             .translate()
             .add("ia.readme.main_header.note")
@@ -94,6 +96,7 @@ object IgConfig:
             var champion = IgArmorMaterialsConfig.CHAMPION
             var elementalist = IgArmorMaterialsConfig.ELEMENTALIST
             var eternity = IgArmorMaterialsConfig.ETERNITY
+            var hunter = IgArmorMaterialsConfig.HUNTER
             var lich_king = IgArmorMaterialsConfig.LICH_KING
             var scholar = IgArmorMaterialsConfig.SCHOLAR
             var spellblade = IgArmorMaterialsConfig.SPELLBLADE
@@ -199,7 +202,7 @@ object IgConfig:
     }
 
     var items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-    var materials = readOrCreateAndValidate("materials_v0.json", base = IG.MOD_ID) {Materials()}
+    var materials = readOrCreateUpdatedAndValidate("materials_v1.json","materials_v0.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
     var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
     var enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
 
@@ -214,7 +217,7 @@ object IgConfig:
 
     override fun reload(manager: ResourceManager?) {
         items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-        materials = readOrCreateAndValidate("materials_v0.json", base = IG.MOD_ID) {Materials()}
+        materials = readOrCreateUpdatedAndValidate("materials_v1.json","materials_v0.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
         modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
         enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
     }

@@ -13,7 +13,9 @@ import net.minecraft.client.render.entity.EntityRendererFactory
 import net.minecraft.client.render.entity.model.EntityModelLayer
 import net.minecraft.client.world.ClientWorld
 import net.minecraft.entity.LivingEntity
+import net.minecraft.item.CrossbowItem
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.util.Identifier
 
 @Environment(value = EnvType.CLIENT)
@@ -122,6 +124,42 @@ object RegisterRenderer {
             RegisterTool.WARRIORS_AXE, Identifier("charged")
         ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
             if (entity != null && stack.nbt?.getBoolean("charged") == true) 1.0f else 0.0f
+        }
+
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.HUNTERS_ARBALEST, Identifier("pulling")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && entity.isUsingItem && entity.activeItem == stack && !CrossbowItem.isCharged(
+                    stack
+                )
+            ) 1.0f else 0.0f
+        }
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.HUNTERS_ARBALEST, Identifier("charged")
+        ) { stack: ItemStack?, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && CrossbowItem.isCharged(
+                    stack
+                )
+            ) 1.0f else 0.0f
+        }
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.HUNTERS_ARBALEST, Identifier("firework")
+        ) { stack: ItemStack?, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity != null && CrossbowItem.isCharged(
+                    stack
+                ) && CrossbowItem.hasProjectile(stack, Items.FIREWORK_ROCKET)
+            ) 1.0f else 0.0f
+        }
+        ModelPredicateProviderRegistry.register(
+            RegisterTool.HUNTERS_ARBALEST, Identifier("pull")
+        ) { stack: ItemStack, _: ClientWorld?, entity: LivingEntity?, _: Int ->
+            if (entity == null) {
+                return@register 0.0f
+            }
+            if (CrossbowItem.isCharged(stack)) {
+                return@register 0.0f
+            }
+            (stack.maxUseTime - entity.itemUseTimeLeft).toFloat() / CrossbowItem.getPullTime(stack).toFloat()
         }
     }
 }

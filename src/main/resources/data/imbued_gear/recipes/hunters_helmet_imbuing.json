@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueB": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueC": {
+	"item": "imbued_gear:serpentine"
+  },
+  "imbueD": {
+	"item": "imbued_gear:serpentine"
+  },
+  "craftA": {
+    "tag": "minecraft:leaves"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:opal"
+  },
+  "craftC": {
+    "tag": "minecraft:leaves"
+  },
+  "craftD": {
+	"item": "minecraft:rabbit_hide"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:steel_helmet"
+  },
+  "craftF": {
+	"item": "minecraft:rabbit_hide"
+  },
+  "title": "Hunters Helmet",
+  "cost": 31,
+  "resultA": "imbued_gear:hunters_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

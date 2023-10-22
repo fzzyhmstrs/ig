@@ -33,6 +33,8 @@
 	"item.imbued_gear.warriors_axe.flavor": "Monsters shudder at the thought of the hefty blade rending them asunder.",
 	"item.imbued_gear.crackling_spellblade": "Crackling Spellblade",
 	"item.imbued_gear.crackling_spellblade.flavor": "Tales say it's bearer can move faster than the eye can see.",
+	"item.imbued_gear.hunters_arbalest": "Hunters Arbalest",
+	"item.imbued_gear.hunters_arbalest.flavor": "Crafted with precision and care to ensure long-range kill shots.",
 	"item.imbued_gear.cosmos": "Cosmos",
 
 	"item.imbued_gear.blaze_of_light": "Blaze of Light",
@@ -113,6 +115,10 @@
 	"item.imbued_gear.eternity_chestplate": "Eternity Chestplate",
 	"item.imbued_gear.eternity_leggings": "Eternity Leggings",
 	"item.imbued_gear.eternity_boots": "Eternity Boots",
+	"item.imbued_gear.hunters_helmet": "Hunters Helmet",
+	"item.imbued_gear.hunters_chestplate": "Hunters Chestplate",
+	"item.imbued_gear.hunters_leggings": "Hunters Leggings",
+	"item.imbued_gear.hunters_boots": "Hunters Boots",
 	
 	"enchantment.imbued_gear.bankai": "Bankai",
 	"enchantment.imbued_gear.bankai.desc": "Slash enemies in front of you so quickly you appear to teleport past them.",
@@ -146,6 +152,7 @@
 	"set.imbued_gear.spellblades": "Crackling Dominance",
 	"set.imbued_gear.void": "Call of the Void",
 	"set.imbued_gear.warriors": "Almighty Vengeance",
+	"set.imbued_gear.hunters": "Hunters Prowess",
 
 	"scepter.modifier.imbued_gear:healers_reward": "Healers Reward",
 	"scepter.modifier.imbued_gear:cosmic": "Cosmic",
@@ -177,6 +184,9 @@
 	"equipment.modifier.imbued_gear:lust_for_combat": "Lust for Combat",
 	"equipment.modifier.imbued_gear:voids_echo": "Voids Echo",
 	"equipment.modifier.imbued_gear:true_smite": "True Smite",
+	"equipment.modifier.imbued_gear:hunters_precision": "Hunters Precision",
+	"equipment.modifier.imbued_gear:hunters_swiftness": "Hunters Swiftness",
+
 	"scepter.modifier.imbued_gear:healers_reward.desc": "Gain 1 experience for every healing spell cast.",
 	"scepter.modifier.imbued_gear:cosmic.desc": "Spell level increased by 1, cooldown and mana cost decreased by 25%, damage increased by 2, spell effect duration increased by 25%.",
 	"scepter.modifier.imbued_gear:whisper_of_regret_scepter.desc": "Damage increased by 25%, Spell level increased by 1, and spell amplification increased by 2 levels.",
@@ -207,6 +217,8 @@
 	"equipment.modifier.imbued_gear:lust_for_combat.desc": "Kills grant stacks of Spell Rage and Blade Rage",
 	"equipment.modifier.imbued_gear:voids_echo.desc": "Has a chance to deal massive damage to Cursed or Nihilistic opponents.",
 	"equipment.modifier.imbued_gear:true_smite.desc": "Massively increases damage to wounded undead.",
+	"equipment.modifier.imbued_gear:hunters_precision.desc": "Increases damage from ranged projectile attacks by 25%. Reduces visibility from enemies, stacking with more pieces.",
+	"equipment.modifier.imbued_gear:hunters_swiftness.desc": "Taking damage grants temporary speed and jump boost, stacking on hit.",
 
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1.desc": "+5%% Spell Damage",

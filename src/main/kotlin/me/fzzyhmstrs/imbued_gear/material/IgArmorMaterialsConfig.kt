@@ -2,6 +2,8 @@ package me.fzzyhmstrs.imbued_gear.material
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterBlock
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
+import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
+import net.minecraft.item.Items
 import net.minecraft.recipe.Ingredient
 import net.minecraft.sound.SoundEvents
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem as RegisterAi
@@ -38,11 +40,11 @@ object IgArmorMaterialsConfig{
         .knockbackResistance(0.1f)
         .build()
     val HUNTER = FzzyArmorMaterial.Builder("ig_hunter",SoundEvents.ITEM_ARMOR_EQUIP_LEATHER)
-        .repairIngredient(Ingredient.ofItems(RegisterItem.VOID_GEM))
+        .repairIngredient(Ingredient.ofItems(Items.RABBIT_HIDE))
         .enchantability(20)
-        .protectionAmounts(3,8,6,3)
-        .durabilityMultiplier(21)
-        .toughness(3.0f)
+        .protectionAmounts(2,7,6,2)
+        .durabilityMultiplier(19)
+        .toughness(2.0f)
         .build()
     val LICH_KING = FzzyArmorMaterial.Builder("ig_lich_king",SoundEvents.ITEM_ARMOR_EQUIP_LEATHER)
         .repairIngredient(Ingredient.ofItems(RegisterItem.WITHER_BONE))

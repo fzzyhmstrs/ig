@@ -13,26 +13,26 @@
 	"item": "imbued_gear:serpentine"
   },
   "craftD": {
-	"item": "imbued_gear:wither_bone"
+	"tag": "minecraft:leaves"
   },
   "craftE": {
-	"item": "amethyst_imbuement:shimmering_boots"
+	"item": "amethyst_imbuement:steel_boots"
   },
   "craftF": {
-	"item": "imbued_gear:wither_bone"
+    "tag": "minecraft:leaves"
   },
   "craftG": {
-	"item": "minecraft:bone_block"
+	"item": "minecraft:rabbit_hide"
   },
   "craftH": {
-	"item": "minecraft:netherite_ingot"
+	"item": "amethyst_imbuement:opal"
   },
   "craftI": {
-	"item": "minecraft:bone_block"
+	"item": "minecraft:rabbit_hide"
   },
-  "title": "Lich Kings Boots",
-  "cost": 37,
-  "resultA": "imbued_gear:lich_kings_boots",
+  "title": "Hunters Boots",
+  "cost": 31,
+  "resultA": "imbued_gear:hunters_boots",
   "countA": 1,
   "transferEnchant": true
 }

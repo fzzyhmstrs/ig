@@ -190,6 +190,14 @@ object RegisterModifier {
         .withOnAttack(ModifierFunctions.TRUE_SMITE_ATTACK_FUNCTION)
         .withCustomFormatting(Formatting.GOLD, Formatting.BOLD)
         .also { regMod.add(it) }
+    val HUNTERS_PRECISION = EquipmentModifier(IG.identity("hunters_precision"), persistent = true, randomSelectable = false)
+        .withOnAttack(ModifierFunctions.HUNTERS_PRECISION_ATTACK_FUNCTION)
+        .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
+        .also { regMod.add(it) }
+    val HUNTERS_SWIFTNESS = EquipmentModifier(IG.identity("hunters_swiftness"), persistent = true, randomSelectable = false)
+        .withOnDamaged(ModifierFunctions.HUNTERS_SWIFTNESS_DAMAGE_FUNCTION)
+        .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
+        .also { regMod.add(it) }
 
     //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)
     //    .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)

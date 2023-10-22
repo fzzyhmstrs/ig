@@ -21,6 +21,7 @@ object RegisterTag {
     val CHAMPIONS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("champions_gear"))
     val ELEMENTALISTS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("elementalists_gear"))
     val ETERNITY_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("eternity_gear"))
+    val HUNTERS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("hunters_gear"))
     val LICH_KINGS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("lich_kings_gear"))
     val SCHOLARS_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("scholars_gear"))
     val SPELLBLADES_GEAR: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, IG.identity("spellblades_gear"))
