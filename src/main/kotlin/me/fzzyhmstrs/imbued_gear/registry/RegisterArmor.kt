@@ -74,10 +74,10 @@ object RegisterArmor {
     val WARRIORS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.warrior,ArmorItem.Type.BOOTS,Item.Settings()),"warriors_boots")
 
     //Scholars Vestments - Player XP and spell XP
-    val SCHOLARS_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.HELMET,Item.Settings()),"scholars_helmet")
-    val SCHOLARS_CHESTPLATE = register(ModifiableArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.CHESTPLATE,Item.Settings()),"scholars_chestplate")
-    val SCHOLARS_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.LEGGINGS,Item.Settings()),"scholars_leggings")
-    val SCHOLARS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.BOOTS,Item.Settings()),"scholars_boots")
+    val SCHOLARS_HELMET = register(ScholarsArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.HELMET,Item.Settings()),"scholars_helmet")
+    val SCHOLARS_CHESTPLATE = register(ScholarsArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.CHESTPLATE,Item.Settings()),"scholars_chestplate")
+    val SCHOLARS_LEGGINGS = register(ScholarsArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.LEGGINGS,Item.Settings()),"scholars_leggings")
+    val SCHOLARS_BOOTS = register(ScholarsArmorItem(IgConfig.materials.armor.scholar,ArmorItem.Type.BOOTS,Item.Settings()),"scholars_boots")
 
     //Elementalists Garb - elemental spells, mana cost
     val ELEMENTALISTS_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.HELMET,Item.Settings()),"elementalists_helmet")
