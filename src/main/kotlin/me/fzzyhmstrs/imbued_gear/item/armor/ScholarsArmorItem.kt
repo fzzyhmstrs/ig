@@ -14,7 +14,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import net.minecraft.world.World
 
-class SoulwovenArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
+class ScholarsArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
 
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
