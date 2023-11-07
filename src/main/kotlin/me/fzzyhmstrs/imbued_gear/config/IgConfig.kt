@@ -37,6 +37,7 @@ object IgConfig:
             .literal()
             .add("0.1.0+1.20.1: Initial release of Imbued Gear.")
             .add("0.2.2+1.20.1: Added hunters gear in materials_v1.")
+            .add("0.3.1+1.20.1: Added Archons set and new compat sets into materials_v2.")
             .space()
             .translate()
             .add("ia.readme.main_header.note")
@@ -92,6 +93,7 @@ object IgConfig:
         var armor = Armor()
 
         class Armor: ConfigSection(Header.Builder().space().add("ia.readme.materials.armor_1").build()) {
+            var archon = IgArmorMaterialsConfig.ARCHON
             var celestial = IgArmorMaterialsConfig.CELESTIAL
             var champion = IgArmorMaterialsConfig.CHAMPION
             var elementalist = IgArmorMaterialsConfig.ELEMENTALIST
@@ -202,7 +204,7 @@ object IgConfig:
     }
 
     var items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-    var materials = readOrCreateUpdatedAndValidate("materials_v1.json","materials_v0.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
+    var materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
     var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
     var enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
 
@@ -217,7 +219,7 @@ object IgConfig:
 
     override fun reload(manager: ResourceManager?) {
         items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-        materials = readOrCreateUpdatedAndValidate("materials_v1.json","materials_v0.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
+        materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
         modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
         enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
     }
