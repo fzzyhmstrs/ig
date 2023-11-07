@@ -19,17 +19,11 @@ class EternityArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: S
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
         map.putAll(super.getAttributeModifiers(type.equipmentSlot))
-        if (SpChecker.spellPowerLoaded) {
-            val attribute = Registries.ATTRIBUTE.get(Identifier("spell_power","healing"))
-            if (attribute != null) {
-                val uUID = when(type) {
-                    Type.BOOTS -> UUID.fromString("8533bb28-7d91-11ee-b962-0242ac120002")
-                    Type.LEGGINGS -> UUID.fromString("8533bd9e-7d91-11ee-b962-0242ac120002")
-                    Type.CHESTPLATE -> UUID.fromString("8533be98-7d91-11ee-b962-0242ac120002")
-                    Type.HELMET -> UUID.fromString("8533c28a-7d91-11ee-b962-0242ac120002")
-                }
-                map.put(attribute, EntityAttributeModifier(uUID,"healing_power", 1.0, EntityAttributeModifier.Operation.ADDITION))
-            }
+        when(type) {
+            Type.BOOTS -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533bb28-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533bd9e-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533be98-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.HELMET -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533c28a-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
         }
         map
     }
