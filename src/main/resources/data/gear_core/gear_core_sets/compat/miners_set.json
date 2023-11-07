@@ -13,7 +13,7 @@
     "BOLD"
   ],
   "items": {
-    "tag": "imbued_gear:miners_gear"
+    "tag": "imbued_gear:compat/miners_gear"
   },
   "bonuses": {
     "2": {
@@ -22,7 +22,7 @@
       "amount": "0.05",
       "operation": "MULTIPLY_TOTAL"
     },
-    "4": "imbued_gear:miners_luck",
-    "5": "imbued_gear:miners_durability"
+    "4": "imbued_gear:compat/miners_luck",
+    "5": "imbued_gear:compat/miners_durability"
   }
 }
