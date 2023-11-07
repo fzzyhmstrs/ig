@@ -20,10 +20,10 @@ class EternityArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: S
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
         map.putAll(super.getAttributeModifiers(type.equipmentSlot))
         when(type) {
-            Type.BOOTS -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533bb28-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533bd9e-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533be98-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.HELMET -> SpChecker.addSpellPowerAttribute("spell_power:healing","8533c28a-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.BOOTS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.HEALING,"8533bb28-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.HEALING,"8533bd9e-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute(SpChecker.Power.HEALING,"8533be98-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.HELMET -> SpChecker.addSpellPowerAttribute(SpChecker.Power.HEALING,"8533c28a-7d91-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
         }
         map
     }
