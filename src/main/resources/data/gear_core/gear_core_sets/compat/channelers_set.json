@@ -29,7 +29,7 @@
         "amount": "0.1",
         "operation": "MULTIPLY_TOTAL"
       }
-    ]
+    ],
     "4": [
       {
         "name":"stormyx_resist_2",
