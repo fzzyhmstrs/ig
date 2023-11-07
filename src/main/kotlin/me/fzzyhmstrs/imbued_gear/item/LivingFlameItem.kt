@@ -18,6 +18,13 @@ open class LivingFlameItem(settings: Settings)
     :
     SpecialityOffhandItem(settings,listOf(),listOf(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier.ELEMENTAL.modifierId)), Modifiable
 {
+    private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
+        val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
+        map.putAll(super.getAttributeModifiers(EquipmentSlot.OFFHAND))
+        SpChecker.addSpellPowerAttribute("spell_power:fire","51531500-7d92-11ee-b962-0242ac120002",2.0, EntityAttributeModifier.Operation.ADDITION, map)
+        map
+    }
+
 
     override fun use(world: World, user: PlayerEntity, hand: Hand): TypedActionResult<ItemStack> {
         val stack = user.getStackInHand(hand)
@@ -31,6 +38,12 @@ open class LivingFlameItem(settings: Settings)
         world.playSound(null,user.blockPos,SoundEvents.BLOCK_FIRE_AMBIENT,SoundCategory.PLAYERS,0.5f,1f)
         user.itemCooldownManager.set(stack.item, IgConfig.items.livingFlame.cooldown.get())
         return TypedActionResult.success(stack)
+    }
+
+    override getAttributeModifiers(slot: EquipmentSlot): Multimap<EntityAttribute, EntityAttributeModifier>{
+        if (slot == EquipmentSlot.OFFHAND)
+            return attributeModifiers
+        return super.getAttributeModifiers(slot)
     }
 
     override fun inventoryTick(stack: ItemStack, world: World, entity: Entity, slot: Int, selected: Boolean) {
