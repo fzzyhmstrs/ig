@@ -11,7 +11,7 @@
     "3": {
       "name":"spellblades_movement",
       "attribute": "minecraft:generic.movement_speed",
-      "amount": "0.05",
+      "amount": "0.075",
       "operation": "MULTIPLY_TOTAL"
     },
     "4": {
