@@ -1,0 +1,49 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "spell_power"
+      ]
+    }
+  ],
+  "name": "set.imbued_gear.spell_power.sunrise",
+  "active_formatting": [
+    "YELLOW",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:compat/sunrise_gear"
+  },
+  "bonuses": {
+    "2": [
+      {
+        "name":"sunrise_fire_power",
+        "attribute": "spell_power:fire",
+        "amount": "1.0",
+        "operation": "ADDITION"
+      },
+      {
+        "name":"sunrise_arcane_power",
+        "attribute": "spell_power:arcane",
+        "amount": "1.0",
+        "operation": "ADDITION"
+      }
+    ],
+    "4": [
+      {
+        "name":"sunrise_fire_power2",
+        "attribute": "spell_power:fire",
+        "amount": "2.0",
+        "operation": "ADDITION"
+      },
+      {
+        "name":"sunrise_arcane_power2",
+        "attribute": "spell_power:arcane",
+        "amount": "2.0",
+        "operation": "ADDITION"
+      }
+    ],
+    "5": "imbued_gear:compat/sunrise"
+  }
+}
