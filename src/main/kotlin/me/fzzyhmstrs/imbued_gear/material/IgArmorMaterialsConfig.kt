@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvents
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem as RegisterAi
 
 object IgArmorMaterialsConfig{
-    val ARCHONS = FzzyArmorMaterial.Builder("ig_archons",SoundEvents.ITEM_ARMOR_EQUIP_LEATHER)
+    val ARCHON = FzzyArmorMaterial.Builder("ig_archons",SoundEvents.ITEM_ARMOR_EQUIP_LEATHER)
         .repairIngredient(Ingredient.ofItems(RegisterAi.SARDONYX))
         .enchantability(40)
         .protectionAmounts(1,1,1,1)
