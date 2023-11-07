@@ -1,0 +1,33 @@
+{
+  "name": "set.imbued_gear.archons",
+  "active_formatting": [
+    "PURPLE",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:archons_gear"
+  },
+  "bonuses": {
+    "2": "imbued_gear:spell_shield",
+    "3": {
+        "name":"archons_damage",
+        "attribute": "amethyst_core:spell_damage",
+        "amount": "0.50",
+        "operation": "MULTIPLY_TOTAL"
+      },
+    "6": [
+      {
+        "name":"archons_damage2",
+        "attribute": "amethyst_core:spell_damage",
+        "amount": "1.0",
+        "operation": "MULTIPLY_TOTAL"
+      },
+      {
+        "name":"archons_crit_damage",
+        "attribute": "amethyst_core:spell_critical_multiplier",
+        "amount": "0.50",
+        "operation": "ADDITION"
+      }
+    ]
+  }
+}
