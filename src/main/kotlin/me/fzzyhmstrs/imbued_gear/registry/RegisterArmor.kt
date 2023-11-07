@@ -86,10 +86,10 @@ object RegisterArmor {
     val ELEMENTALISTS_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.elementalist,ArmorItem.Type.BOOTS,Item.Settings()),"elementalists_boots")
 
     //Eternity Shroud - health and spell duration/range, rare finds in dungeons - Tex Done
-    val ETERNITY_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.HELMET,Item.Settings()),"eternity_helmet")
-    val ETERNITY_CHESTPLATE = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.CHESTPLATE,Item.Settings()),"eternity_chestplate")
-    val ETERNITY_LEGGINGS = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.LEGGINGS,Item.Settings()),"eternity_leggings")
-    val ETERNITY_BOOTS = register(ModifiableArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.BOOTS,Item.Settings()),"eternity_boots")
+    val ETERNITY_HELMET = register(EternityArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.HELMET,Item.Settings()),"eternity_helmet")
+    val ETERNITY_CHESTPLATE = register(EternityArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.CHESTPLATE,Item.Settings()),"eternity_chestplate")
+    val ETERNITY_LEGGINGS = register(EternityArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.LEGGINGS,Item.Settings()),"eternity_leggings")
+    val ETERNITY_BOOTS = register(EternityArmorItem(IgConfig.materials.armor.eternity,ArmorItem.Type.BOOTS,Item.Settings()),"eternity_boots")
 
     //Hunters Garb - Ranged damage and "get-away quick"
     val HUNTERS_HELMET = register(ModifiableArmorItem(IgConfig.materials.armor.hunter,ArmorItem.Type.HELMET,Item.Settings()),"hunters_helmet")
