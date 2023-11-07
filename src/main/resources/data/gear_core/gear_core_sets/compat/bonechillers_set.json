@@ -1,0 +1,49 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "spell_power"
+      ]
+    }
+  ],
+  "name": "set.imbued_gear.spell_power.sunrise",
+  "active_formatting": [
+    "GRAY",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:compat/bonechillers_gear"
+  },
+  "bonuses": {
+    "2": [
+      {
+        "name":"bonechiller_frost_power",
+        "attribute": "spell_power:frost",
+        "amount": "1.0",
+        "operation": "ADDITION"
+      },
+      {
+        "name":"bonechiller_soul_power",
+        "attribute": "spell_power:soul",
+        "amount": "1.0",
+        "operation": "ADDITION"
+      }
+    ],
+    "2": [
+      {
+        "name":"bonechiller_frost_power",
+        "attribute": "spell_power:frost",
+        "amount": "2.0",
+        "operation": "ADDITION"
+      },
+      {
+        "name":"bonechiller_soul_power",
+        "attribute": "spell_power:soul",
+        "amount": "2.0",
+        "operation": "ADDITION"
+      }
+    ],
+    "5": "imbued_gear:compat/pierce_the_veil"
+  }
+}
