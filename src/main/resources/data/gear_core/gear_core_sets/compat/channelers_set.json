@@ -13,7 +13,7 @@
     "BOLD"
   ],
   "items": {
-    "tag": "imbued_gear:channelers_gear"
+    "tag": "imbued_gear:compat/channelers_gear"
   },
   "bonuses": {
     "2": [
@@ -44,6 +44,6 @@
         "operation": "MULTIPLY_TOTAL"
       }
     ],
-    "5": "imbued_gear:manadrinker"
+    "5": "imbued_gear:compat/manadrinker"
   }
 }
