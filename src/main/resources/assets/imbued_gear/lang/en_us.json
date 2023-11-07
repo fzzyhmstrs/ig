@@ -213,6 +213,7 @@
 	"equipment.modifier.imbued_gear:true_smite": "True Smite",
 	"equipment.modifier.imbued_gear:hunters_precision": "Hunters Precision",
 	"equipment.modifier.imbued_gear:hunters_swiftness": "Hunters Swiftness",
+	"equipment.modifier.imbued_gear:spell_shield": "Spell Shield",
 
 	"scepter.modifier.imbued_gear:healers_reward.desc": "Gain 1 experience for every healing spell cast.",
 	"scepter.modifier.imbued_gear:cosmic.desc": "Spell level increased by 1, cooldown and mana cost decreased by 25%, damage increased by 2, spell effect duration increased by 25%.",
@@ -246,6 +247,7 @@
 	"equipment.modifier.imbued_gear:true_smite.desc": "Massively increases damage to wounded undead.",
 	"equipment.modifier.imbued_gear:hunters_precision.desc": "Increases damage from ranged projectile attacks by 25%. Reduces visibility from enemies, stacking with more pieces.",
 	"equipment.modifier.imbued_gear:hunters_swiftness.desc": "Taking damage grants temporary speed and jump boost, stacking on hit.",
+	"equipment.modifier.imbued_gear:spell_shield.desc": "Stacks of Spell Shield generate over time. Completely negates damage if shield stacks exist, removing a stack.",
 
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1.desc": "+5%% Spell Damage",
@@ -268,6 +270,18 @@
 	"equipment.modifier.imbued_gear:souls_modifier_tier_10": "Soulfire X",
 	"equipment.modifier.imbued_gear:souls_modifier_tier_10.desc": "+50%% Spell Damage",
 
+	"equipment.modifier.imbued_gear:compat/pierce_the_veil": "Pierce the Veil",
+	"equipment.modifier.imbued_gear:compat/manadrinker": "Manadrinker",
+	"equipment.modifier.imbued_gear:compat/miners_luck": "Miners Luck",
+	"equipment.modifier.imbued_gear:compat/miners_durability": "Miners Durability",
+	"equipment.modifier.imbued_gear:compat/sunrise": "Sunrise",
+
+	"equipment.modifier.imbued_gear:compat/pierce_the_veil.desc": "Todo",
+	"equipment.modifier.imbued_gear:compat/manadrinker.desc": "Spell mana cost greatly increased. Casting spells grants Absorption. Taking magic damage repairs mana items.",
+	"equipment.modifier.imbued_gear:compat/miners_luck.desc": "Increases quality and quantity of loot drop from mining.",
+	"equipment.modifier.imbued_gear:compat/miners_durability.desc": "Grants resistance when deep underground.",
+	"equipment.modifier.imbued_gear:compat/sunrise.desc": "Todo",
+	
 	"ia.readme.main_header.title": "README - Imbued Gear"
 	
 }
