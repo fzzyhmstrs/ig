@@ -20,10 +20,10 @@ class ScholarsArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: S
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
         map.putAll(super.getAttributeModifiers(type.equipmentSlot))
         when(type) {
-            Type.BOOTS -> SpChecker.addSpellPowerAttribute("spell_power:arcane","8f6bee96-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute("spell_power:arcane","8f6bfb52-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute("spell_power:arcane","8f6bfcb0-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.HELMET -> SpChecker.addSpellPowerAttribute("spell_power:arcane","8f6bfdc8-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.BOOTS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bee96-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfb52-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfcb0-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.HELMET -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfdc8-7d8f-11ee-b962-0242ac120002", 1.0, EntityAttributeModifier.Operation.ADDITION, map)
         }
         map
     }
