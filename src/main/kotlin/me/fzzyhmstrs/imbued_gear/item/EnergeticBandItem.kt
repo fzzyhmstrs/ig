@@ -3,8 +3,10 @@ package me.fzzyhmstrs.imbued_gear.item
 import com.google.common.collect.Multimap
 import dev.emi.trinkets.api.SlotReference
 import dev.emi.trinkets.api.TrinketItem
+import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
+import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.attribute.EntityAttribute
@@ -47,10 +49,9 @@ open class EnergeticBandItem(settings: Settings) : TrinketItem(settings) {
             EntityAttributes.GENERIC_ATTACK_SPEED,
             EntityAttributeModifier(uuid, "energetic_attack_speed", 0.1, EntityAttributeModifier.Operation.ADDITION)
         )
-        modifiers.put(
-            RegisterAttribute.SPELL_COOLDOWN,
-            EntityAttributeModifier(uuid, "energetic_spell_speed", 0.1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-        )
+
+        val spellCooldown = SpChecker.getSpellCooldownModifier(10,uuid,"energetic_spell_speed")
+        modifiers.put(spellCooldown.first, spellCooldown.second)
         return modifiers
     }
 }

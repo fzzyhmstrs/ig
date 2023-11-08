@@ -4,41 +4,44 @@
 	"item": "imbued_gear:serpentine"
   },
   "imbueB": {
-	"item": "imbued_gear:serpentine"
+	"item": "amethyst_imbuement:garnet"
   },
   "imbueC": {
-	"item": "imbued_gear:serpentine"
+	"item": "amethyst_imbuement:garnet"
   },
   "imbueD": {
 	"item": "imbued_gear:serpentine"
   },
   "craftA": {
-    "tag": "minecraft:leaves"
+	"tag": "minecraft:leaves"
   },
   "craftB": {
-    "item": "amethyst_imbuement:opal"
+    "item": "minecraft:rabbit_hide"
   },
   "craftC": {
     "tag": "minecraft:leaves"
   },
   "craftD": {
-	"item": "imbued_gear:imbued_arrow"
+    "item": "imbued_gear:puresteel_ingot"
   },
   "craftE": {
-	"item": "amethyst_imbuement:steel_leggings"
+	"item": "amethyst_imbuement:sniper_bow"
   },
   "craftF": {
-	"item": "imbued_gear:imbued_arrow"
+    "item": "imbued_gear:puresteel_ingot"
   },
   "craftG": {
+    "tag": "minecraft:leaves"
+  },
+  "craftH": {
 	"item": "minecraft:rabbit_hide"
   },
   "craftI": {
-	"item": "minecraft:rabbit_hide"
+    "tag": "minecraft:leaves"
   },
-  "title": "Hunters Leggings",
-  "cost": 31,
-  "resultA": "imbued_gear:hunters_leggings",
+  "title": "Hunters Boots",
+  "cost": 33,
+  "resultA": "imbued_gear:hunters_arbalest",
   "countA": 1,
   "transferEnchant": true
 }

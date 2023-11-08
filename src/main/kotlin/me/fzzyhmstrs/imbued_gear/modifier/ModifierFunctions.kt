@@ -19,6 +19,14 @@ object ModifierFunctions {
 
     private val divinityMap: MutableMap<UUID,Long> = mutableMapOf()
 
+    val COWARDLY_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
+        EquipmentModifier.DamageFunction { _, user, _, _, amount ->
+            if (user.health == user.maxHealth)
+                amount * 1.5f
+            else
+                amount
+        }
+
     val PROTECTION_FROM_EVIL_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, _, attacker, _, amount ->
             if (attacker?.group == EntityGroup.UNDEAD)
@@ -122,11 +130,12 @@ object ModifierFunctions {
 
     val MANA_REACTIVE_DAMAGE_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, user, _, damage, amount ->
-            if (damage.isIn(DamageTypeTags.BYPASSES_ARMOR)){
-                ModifierConsumers.manaHealItems(user,IgConfig.modifiers.gear.manaReactiveAmount.get() * 2)
-            } else {
-                ModifierConsumers.manaHealItems(user,IgConfig.modifiers.gear.manaReactiveAmount.get())
-            }
+            if (damage.attacker != null)
+                if (damage.isIn(DamageTypeTags.BYPASSES_ARMOR)){
+                    ModifierConsumers.manaHealItems(user,IgConfig.modifiers.gear.manaReactiveAmount.get() * 2)
+                } else {
+                    ModifierConsumers.manaHealItems(user,IgConfig.modifiers.gear.manaReactiveAmount.get())
+                }
             amount
         }
 }

@@ -8,6 +8,7 @@ import me.fzzyhmstrs.fzzy_core.item_util.CustomFlavorItem
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
 import me.fzzyhmstrs.gear_core.interfaces.*
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
+import net.minecraft.entity.EquipmentSlot
 import net.minecraft.util.Identifier
 
 open class SpecialityOffhandItem(
@@ -46,6 +47,10 @@ open class SpecialityOffhandItem(
 
     open fun scepterMods(): List<Identifier>{
         return scepterModifiers
+    }
+
+    override fun fzzy_core_getCorrectSlot(): EquipmentSlot? {
+        return EquipmentSlot.OFFHAND
     }
 
 }

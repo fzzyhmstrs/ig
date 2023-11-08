@@ -109,6 +109,12 @@ object RegisterModifier {
         .withToll(EXPENSIVE_TOLL)
         .also { regMod.add(it) }
 
+    ////
+    val COWARDLY = buildModifier(IG.identity("cowardly"), EquipmentModifier.EquipmentModifierTarget.WEAPON, 1, EquipmentModifier.Rarity.EPIC)
+        .withOnAttack(ModifierFunctions.COWARDLY_ATTACK_FUNCTION)
+        .withToll(VERY_EXPENSIVE_TOLL)
+        .also { regMod.add(it) }
+
     /////////////////////////////////////////////////
         
     //Set and Special equipment modifiers
@@ -199,43 +205,10 @@ object RegisterModifier {
         .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
         .also { regMod.add(it) }
 
-    //val VOID_SHROUDED = buildModifier(IG.identity("void_shrouded"), persistent = true, availableForSelection = false)
-    //    .withOnDamaged(ModifierFunctions.VOID_SHROUDED_DAMAGE_FUNCTION)
-    //    .also { regMod.add(it) }
-    //val MANA_KINDLED = buildModifier(IG.identity("mana_kindled"), persistent = true, availableForSelection = false)
-    //    .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-    //    .withAttributeModifier(RegisterAttribute.SPELL_COOLDOWN,-0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-    //    .also { regMod.add(it) }
-    //val RULER_OF_THE_DAMNED = buildModifier(IG.identity("ruler_of_the_damned"), persistent = true, availableForSelection = false)
-    //    .withModifiers(DAMNABLE_SUMMONS.modifierId)
-    //    .withAttributeModifier(RegisterAttribute.SPELL_DURATION,0.0625,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-    //    .also { regMod.add(it) }
-    //val HELIOPHOBIA = buildModifier(IG.identity("heliophobia"), persistent = true, availableForSelection = false)
-    //    .withOnDamaged(ModifierFunctions.HELIOPHOBIA_DAMAGE_FUNCTION)
-    //    .also { regMod.add(it) }
-    //val CHAMPIONS_RESOLVE = buildModifier(IG.identity("champions_resolve"), persistent = true, availableForSelection = false)
-    //    .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,1.0,EntityAttributeModifier.Operation.ADDITION)
-    //    .withAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,3.0,EntityAttributeModifier.Operation.ADDITION)
-    //    .also { regMod.add(it) }
-    //val CHAMPIONS_GRIT = buildModifier(IG.identity("champions_grit"), persistent = true, availableForSelection = false)
-    //    .withModifiers(CHAMPIONS_FAITH.modifierId)
-    //    .also { regMod.add(it) }
-    //val WARRIORS_LIGHT = buildModifier(IG.identity("warriors_light"), persistent = true, availableForSelection = false)
-    //    .withModifiers(RegisterModifier.SMITING.modifierId)
-    //    .withOnDamaged(ModifierFunctions.WARRIORS_LIGHT_DAMAGE_FUNCTION)
-    //    .also { regMod.add(it) }
-    //val WARRIORS_PATH = buildModifier(IG.identity("warriors_path"), persistent = true, availableForSelection = false)
-    //    .withAttributeModifier(EntityAttributes.GENERIC_ARMOR,1.5,EntityAttributeModifier.Operation.ADDITION)
-    //    .withAttributeModifier(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,0.05,EntityAttributeModifier.Operation.ADDITION)
-    //    .also { regMod.add(it) }
-    //val ETERNAL = buildModifier(IG.identity("eternal"), persistent = true, availableForSelection = false)
-    //    .withAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,2.0,EntityAttributeModifier.Operation.ADDITION)
-    //    .also { regMod.add(it) }
-    //val ETERNITY_SHROUDED = buildModifier(IG.identity("eternity_shrouded"), persistent = true, availableForSelection = false)
-    //    .withAttributeModifier(RegisterAttribute.DAMAGE_MULTIPLICATION,-0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-    //    .also { regMod.add(it) }
+
 
     fun registerAll(){
+
         regMod.forEach {
             val id = it.modifierId
             defaultEnabledMap[id.toString()] = true
