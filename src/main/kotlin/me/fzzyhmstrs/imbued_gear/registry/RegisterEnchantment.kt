@@ -103,7 +103,7 @@ object RegisterEnchantment {
     val SPELL_LUCK = SpellAttributeEnchantment(
         Enchantment.Rarity.RARE,
         RegisterAttribute.SPELL_CRITICAL_CHANCE,
-        {uuid, name, level -> EntityAttributeModifier(uuid, name, level * 0.005, EntityAttributeModifier.Operation.ADDITION) },
+        {uuid, name, level -> EntityAttributeModifier(uuid, name, level * 0.01, EntityAttributeModifier.Operation.ADDITION) },
         EnumMap(mapOf(
             EquipmentSlot.HEAD to UUID.fromString("bc55ab9a-80b9-11ee-b962-0242ac120002"),
             EquipmentSlot.CHEST to UUID.fromString("bc55b2de-80b9-11ee-b962-0242ac120002"),
@@ -111,6 +111,17 @@ object RegisterEnchantment {
             EquipmentSlot.FEET to UUID.fromString("bc55b5fe-80b9-11ee-b962-0242ac120002")
         ))
     ).register("spell_luck")
+    val SPELL_BARBS = SpellAttributeEnchantment(
+        Enchantment.Rarity.RARE,
+        RegisterAttribute.SPELL_CRITICAL_MULTIPLIER,
+        {uuid, name, level -> EntityAttributeModifier(uuid, name, level * 0.05, EntityAttributeModifier.Operation.ADDITION) },
+        EnumMap(mapOf(
+            EquipmentSlot.HEAD to UUID.fromString("fc31896a-8167-11ee-b962-0242ac120002"),
+            EquipmentSlot.CHEST to UUID.fromString("fc318c58-8167-11ee-b962-0242ac120002"),
+            EquipmentSlot.LEGS to UUID.fromString("fc318d8e-8167-11ee-b962-0242ac120002"),
+            EquipmentSlot.FEET to UUID.fromString("fc319324-8167-11ee-b962-0242ac120002")
+        ))
+    ).register("spell_barbs")
 
     fun registerAll(){}
 }

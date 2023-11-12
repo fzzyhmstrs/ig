@@ -46,9 +46,9 @@
     "minecraft": ">=1.20.1",
     "java": ">=17",
 	"amethyst_imbuement": "*",
-    "fzzy_core": ">=0.3.0+1.20.1",
-    "amethyst_core": ">=1.4.0+1.20.1",
-    "gear_core": ">=0.3.4+1.20.1",
+    "fzzy_core": ">=0.3.1+1.20.1",
+    "amethyst_core": ">=1.4.2+1.20.1",
+    "gear_core": ">=0.3.6+1.20.1",
     "trinkets": ">=3.7.0"
   }
 }
