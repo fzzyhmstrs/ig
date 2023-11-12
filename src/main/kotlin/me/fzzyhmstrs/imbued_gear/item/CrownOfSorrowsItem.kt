@@ -24,19 +24,6 @@ class CrownOfSorrowsItem(settings: Settings): AbstractAugmentJewelryItem(setting
 
     companion object{
         private const val twoOverPi = 2 / MathHelper.PI
-
-        init{
-
-            /*ModifyModifiersEvent.EVENT.register{ _, user, _, modifiers ->
-                for (stack in TrinketUtil.getTrinketStacks(user)) {
-                    if (stack.item is CrownOfSorrowsItem) {
-                        val focusMods = ModifierHelper.getActiveModifiers(stack)
-                        return@register modifiers.combineWith(focusMods, AugmentModifier())
-                    }
-                }
-                modifiers
-            }*/
-        }
     }
 
     override fun inventoryTick(stack: ItemStack, world: World, entity: Entity, slot: Int, selected: Boolean) {

@@ -8,16 +8,16 @@ import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
 
-class ScholarsArmorItem(fzzyMaterial: FzzyArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
+class VoidMailArmorItem(fzzyMaterial: FzzyArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
 
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
         map.putAll(super.getAttributeModifiers(type.equipmentSlot))
         when(type) {
-            Type.BOOTS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bee96-7d8f-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfb52-7d8f-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfcb0-7d8f-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
-            Type.HELMET -> SpChecker.addSpellPowerAttribute(SpChecker.Power.ARCANE,"8f6bfdc8-7d8f-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.BOOTS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.FROST,"b264c518-80ef-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.LEGGINGS -> SpChecker.addSpellPowerAttribute(SpChecker.Power.FROST,"b264c7de-80ef-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.CHESTPLATE -> SpChecker.addSpellPowerAttribute(SpChecker.Power.FROST,"b264c932-80ef-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
+            Type.HELMET -> SpChecker.addSpellPowerAttribute(SpChecker.Power.FROST,"b264ca5e-80ef-11ee-b962-0242ac120002", 1.5, EntityAttributeModifier.Operation.ADDITION, map)
         }
         map
     }

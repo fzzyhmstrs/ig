@@ -1,11 +1,17 @@
 package me.fzzyhmstrs.imbued_gear.item
 
+import com.google.common.collect.ArrayListMultimap
+import com.google.common.collect.Multimap
+import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
 import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifierHelper
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier
 import net.minecraft.entity.Entity
+import net.minecraft.entity.EquipmentSlot
+import net.minecraft.entity.attribute.EntityAttribute
+import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.sound.SoundCategory
@@ -21,7 +27,7 @@ open class LivingFlameItem(settings: Settings)
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
         map.putAll(super.getAttributeModifiers(EquipmentSlot.OFFHAND))
-        SpChecker.addSpellPowerAttribute("spell_power:fire","51531500-7d92-11ee-b962-0242ac120002",2.0, EntityAttributeModifier.Operation.ADDITION, map)
+        SpChecker.addSpellPowerAttribute(SpChecker.Power.FIRE,"51531500-7d92-11ee-b962-0242ac120002",2.0, EntityAttributeModifier.Operation.ADDITION, map)
         map
     }
 
@@ -40,7 +46,7 @@ open class LivingFlameItem(settings: Settings)
         return TypedActionResult.success(stack)
     }
 
-    override getAttributeModifiers(slot: EquipmentSlot): Multimap<EntityAttribute, EntityAttributeModifier>{
+    override fun getAttributeModifiers(slot: EquipmentSlot): Multimap<EntityAttribute, EntityAttributeModifier>{
         if (slot == EquipmentSlot.OFFHAND)
             return attributeModifiers
         return super.getAttributeModifiers(slot)

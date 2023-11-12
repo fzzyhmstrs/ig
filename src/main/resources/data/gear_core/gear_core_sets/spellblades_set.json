@@ -14,15 +14,23 @@
       "amount": "0.075",
       "operation": "MULTIPLY_TOTAL"
     },
-    "4": {
+    "4": [
+      {
         "name":"spellblades_damage",
         "attribute": "amethyst_core:spell_damage",
-        "amount": "0.25",
+        "amount": "0.15",
         "operation": "MULTIPLY_TOTAL"
-    },
+      },
+      {
+        "name":"spellblades_damage2",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": "0.1",
+        "operation": "MULTIPLY_BASE"
+      }
+    ],
     "6": [
       {
-        "name":"spellblades_movement",
+        "name":"spellblades_movement2",
         "attribute": "minecraft:generic.attack_speed",
         "amount": "0.1",
         "operation": "MULTIPLY_TOTAL"

@@ -49,9 +49,13 @@ open class EnergeticBandItem(settings: Settings) : TrinketItem(settings) {
             EntityAttributes.GENERIC_ATTACK_SPEED,
             EntityAttributeModifier(uuid, "energetic_attack_speed", 0.1, EntityAttributeModifier.Operation.ADDITION)
         )
+        modifiers.put(
+            RegisterAttribute.SPELL_COOLDOWN,
+            EntityAttributeModifier(uuid, "energetic_spell_speed", 0.1, EntityAttributeModifier.Operation.ADDITION)
+        )
 
-        val spellCooldown = SpChecker.getSpellCooldownModifier(10,uuid,"energetic_spell_speed")
-        modifiers.put(spellCooldown.first, spellCooldown.second)
+        /*val spellCooldown = SpChecker.getSpellCooldownModifier(10,uuid,"energetic_spell_speed")
+        modifiers.put(spellCooldown.first, spellCooldown.second)*/
         return modifiers
     }
 }

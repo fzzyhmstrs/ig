@@ -10,7 +10,7 @@
 	{
 		"type": "patchouli:spotlight",
 		"item": "tag:imbued_gear:spellblades_gear",
-		"text": "$(li)3: +5% Movement Speed$(li)4: +20% Spell Damage Multiplier$(li)6: +10% Attack Speed$(li)6: Lust for Combat - Kills grant stacks of Spell Rage and Blade Rage, increasing your physical and magical damage output."
+		"text": "$(li)3: +5% Movement Speed$(li)4: +15% Spell Damage Multiplier$(li)4: +10% Base Attack Damage$(li)6: +10% Attack Speed$(li)6: Lust for Combat - Kills grant stacks of Spell Rage and Blade Rage, increasing your physical and magical damage output."
 	},
 {
 "type": "amethyst_imbuement:imbuing_recipe",

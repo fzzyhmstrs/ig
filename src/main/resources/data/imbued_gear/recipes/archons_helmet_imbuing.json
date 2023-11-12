@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueB": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueC": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueD": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "craftA": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "craftB": {
+    "item": "amethyst_imbuement:mystical_gem"
+  },
+  "craftC": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "craftD": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:shimmering_helmet"
+  },
+  "craftF": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "title": "Archons Helmet",
+  "cost": 37,
+  "resultA": "imbued_gear:archons_helmet",
+  "countA": 1,
+  "transferEnchant": true
+}

@@ -12,7 +12,7 @@ class CrystallineArrowItem(settings: Settings): ArrowItem(settings) {
     override fun createArrow(world: World, stack: ItemStack, shooter: LivingEntity): PersistentProjectileEntity {
         val arrowEntity = CrystallineArrowEntity(world, shooter)
         arrowEntity.initFromStack(stack)
-        arrowEntity.damage = 2.5
+        arrowEntity.damage = 2.4
         return arrowEntity
     }
 

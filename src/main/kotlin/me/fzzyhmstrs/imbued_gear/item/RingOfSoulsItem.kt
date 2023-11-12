@@ -1,6 +1,9 @@
 package me.fzzyhmstrs.imbued_gear.item
 
+import com.google.common.collect.Multimap
+import dev.emi.trinkets.api.SlotReference
 import dev.emi.trinkets.api.TrinketItem
+import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
 import me.fzzyhmstrs.amethyst_core.item_util.AbstractAugmentJewelryItem
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.fzzy_core.coding_util.AcText
@@ -14,6 +17,7 @@ import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
+import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.item.ItemStack
 import net.minecraft.server.world.ServerWorld
@@ -21,11 +25,23 @@ import net.minecraft.text.Text
 import net.minecraft.util.Formatting
 import net.minecraft.util.Identifier
 import net.minecraft.world.World
+import java.util.*
 import kotlin.math.min
 
 class RingOfSoulsItem(settings: Settings): TrinketItem(settings), KillTracking, Modifiable {
 
     private val tierLeveler = TierLeveler(IgConfig.items.ringOfSouls.killTierMultiplier.get(),IgConfig.items.ringOfSouls.baseKillsPerTier.get())
+
+    override fun getModifiers(
+        stack: ItemStack,
+        slot: SlotReference,
+        entity: LivingEntity,
+        uuid: UUID
+    ): Multimap<EntityAttribute, EntityAttributeModifier> {
+        val modifiers = super.getModifiers(stack, slot, entity, uuid)
+        SpChecker.addSpellPowerAttribute(SpChecker.Power.SOUL,"cdd88c8e-80d7-11ee-b962-0242ac120002",1.0,EntityAttributeModifier.Operation.ADDITION,modifiers)
+        return modifiers
+    }
 
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
         super.appendTooltip(stack, world, tooltip, context)

@@ -5,18 +5,33 @@ import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import me.fzzyhmstrs.gear_core.interfaces.ActiveGearSetsTracking;
 import me.fzzyhmstrs.gear_core.set.GearSet;
 import me.fzzyhmstrs.gear_core.set.GearSets;
+import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus;
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.HashMap;
 
 @Mixin(LivingEntity.class)
-public class LivingEntityMixin {
+public abstract class LivingEntityMixin {
+
+    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
+
+    @Shadow public abstract boolean removeStatusEffect(StatusEffect type);
 
     @Unique
     private final Identifier huntersGearSet = new Identifier("gear_core:gear_core_sets/hunters_set.json");
@@ -32,6 +47,16 @@ public class LivingEntityMixin {
         Integer level = sets.get(GearSets.INSTANCE.getGearSet(huntersGearSet));
         if (level != null && level > 1) return true;
         return operation.call(instance);
+    }
+
+    @Inject(method = "damage", at = @At("HEAD"))
+    private void imbued_gear_spellShieldEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
+        if (this.hasStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD())){
+            if (!source.isIn(DamageTypeTags.BYPASSES_INVULNERABILITY)){
+                this.removeStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD());
+                cir.setReturnValue(false);
+            }
+        }
     }
 
 }

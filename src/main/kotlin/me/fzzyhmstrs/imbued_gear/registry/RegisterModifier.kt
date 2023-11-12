@@ -1,11 +1,16 @@
 package me.fzzyhmstrs.imbued_gear.registry
 
+import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
+import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpCompat
+import me.fzzyhmstrs.amethyst_core.event.AfterSpellEvent
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.modifier.ModifierPredicates
 import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
 import me.fzzyhmstrs.fzzy_core.registry.ModifierRegistry
+import me.fzzyhmstrs.gear_core.interfaces.ActiveGearSetsTracking
 import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
+import me.fzzyhmstrs.gear_core.set.GearSets
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.modifier.ConfigEquipmentModifier
@@ -13,10 +18,13 @@ import me.fzzyhmstrs.imbued_gear.modifier.ModifierConsumers
 import me.fzzyhmstrs.imbued_gear.modifier.ModifierFunctions
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
+import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.loot.provider.number.UniformLootNumberProvider
+import net.minecraft.registry.Registries
 import net.minecraft.util.Formatting
 import net.minecraft.util.Identifier
+import kotlin.math.max
 
 object RegisterModifier {
 
@@ -204,8 +212,15 @@ object RegisterModifier {
         .withOnDamaged(ModifierFunctions.HUNTERS_SWIFTNESS_DAMAGE_FUNCTION)
         .withCustomFormatting(Formatting.DARK_GREEN, Formatting.BOLD)
         .also { regMod.add(it) }
+    val MANA_CASCADE = EquipmentModifier(IG.identity("mana_cascade"), persistent = true, randomSelectable = false)
+        .withCustomFormatting(Formatting.LIGHT_PURPLE)
+        .also { regMod.add(it) }
+    val SPELL_SHIELD = EquipmentModifier(IG.identity("spell_shield"), persistent = true, randomSelectable = false)
+        .withTick(ModifierConsumers.SPELL_SHIELD_TICK_CONSUMER)
+        .withCustomFormatting(Formatting.LIGHT_PURPLE)
+        .also { regMod.add(it) }
 
-
+    private val archonsGearSet = Identifier("gear_core:gear_core_sets/archons_set.json")
 
     fun registerAll(){
 
@@ -213,6 +228,42 @@ object RegisterModifier {
             val id = it.modifierId
             defaultEnabledMap[id.toString()] = true
             ModifierRegistry.register(it)
+        }
+        AfterSpellEvent.EVENT.register{ _, user, _, _ ->
+            val sets = (user as ActiveGearSetsTracking).gear_core_getActiveSets()
+            val level = sets[GearSets.getGearSet(archonsGearSet)] ?: 0
+            if (!SpChecker.spellPowerLoaded && level >= 4) {
+                val rage = user.getStatusEffect(RegisterStatus.SPELL_RAGE)
+                val amp = rage?.amplifier?.plus(1) ?: 0
+                val dur = 100
+                user.addStatusEffect(StatusEffectInstance(RegisterStatus.BLADE_RAGE, dur, max(amp, 9)))
+            }
+        }
+        SpCompat.AFTER_CAST.register{_, user, _, _, _ ->
+            val sets = (user as ActiveGearSetsTracking).gear_core_getActiveSets()
+            val level = sets[GearSets.getGearSet(archonsGearSet)] ?: 0
+            if (level < 4) return@register
+            val fireEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:fire"))
+            if (fireEffect != null) {
+                val fire = user.getStatusEffect(fireEffect)
+                val amp = fire?.amplifier?.plus(1) ?: 0
+                val dur = 100
+                user.addStatusEffect(StatusEffectInstance(fireEffect, dur, max(amp,9)))
+            }
+            val lightningEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:lightning"))
+            if (lightningEffect != null) {
+                val lightning = user.getStatusEffect(lightningEffect)
+                val amp = lightning?.amplifier?.plus(1) ?: 0
+                val dur = 100
+                user.addStatusEffect(StatusEffectInstance(lightningEffect, dur, max(amp,9)))
+            }
+            val frostEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:frost"))
+            if (frostEffect != null) {
+                val frost = user.getStatusEffect(frostEffect)
+                val amp = frost?.amplifier?.plus(1) ?: 0
+                val dur = 100
+                user.addStatusEffect(StatusEffectInstance(frostEffect, dur, max(amp,9)))
+            }
         }
     }
 

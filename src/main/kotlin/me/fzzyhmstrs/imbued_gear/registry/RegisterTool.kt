@@ -74,6 +74,8 @@ object RegisterTool {
     //blade 2
     val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"energetic_band")
 
+    val DEVASTATING_FOCUS = register(DevastatingFocusItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"devastating_focus")
+
 
     fun registerAll() {
     }

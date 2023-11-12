@@ -194,10 +194,21 @@ object IgConfig:
             "imbued_gear:spell_magnitude" to 1,
             "imbued_gear:spell_stability" to 3,
             "imbued_gear:spell_extent" to 3,
-            "imbued_gear:spell_alacrity" to 3),
+            "imbued_gear:spell_alacrity" to 3,
+            "imbued_gear:spell_luck" to 3,
+            "imbued_gear:spell_barbs" to 3),
             { id, i -> Identifier.tryParse(id) != null && i > 0},
             "Needs a valid registered enchantment identifier and a level greater than 0.")
         override fun generateNewClass(): Enchants {
+            enchantMaxLevels.validateAndSet(mapOf(
+                "imbued_gear:spell_rage" to 3,
+                "imbued_gear:spell_thrift" to 3,
+                "imbued_gear:spell_magnitude" to 1,
+                "imbued_gear:spell_stability" to 3,
+                "imbued_gear:spell_extent" to 3,
+                "imbued_gear:spell_alacrity" to 3,
+                "imbued_gear:spell_luck" to 3,
+                "imbued_gear:spell_barbs" to 3))
             return this
         }
 
@@ -206,7 +217,7 @@ object IgConfig:
     var items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
     var materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
     var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
-    var enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
+    var enchants = readOrCreateUpdatedAndValidate("enchants_v1.json","enchants_v0.json", base = IG.MOD_ID, configClass =  {Enchants()}, previousClass = {Enchants()})
 
     private fun buildSectionHeader(name:String): Header{
         return Header.Builder().space().underoverscore("ig.readme.header.$name").add("ig.readme.header.$name.desc").space().build()
@@ -221,7 +232,7 @@ object IgConfig:
         items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
         materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
         modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
-        enchants = readOrCreateAndValidate("enchants_v0.json", base = IG.MOD_ID) {Enchants()}
+        enchants = readOrCreateUpdatedAndValidate("enchants_v1.json","enchants_v0.json", base = IG.MOD_ID, configClass =  {Enchants()}, previousClass = {Enchants()})
     }
 
     override fun getFabricId(): Identifier {

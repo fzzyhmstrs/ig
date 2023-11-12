@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "imbued_gear:archons_helmet",
+    "imbued_gear:archons_chestplate",
+    "imbued_gear:archons_leggings",
+    "imbued_gear:archons_boots",
+    "imbued_gear:devastating_focus",
+    "amethyst_imbuement:lethality"
+  ]
+}

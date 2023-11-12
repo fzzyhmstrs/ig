@@ -6,6 +6,8 @@
 		"imbued_gear:spell_magnitude",
 		"imbued_gear:spell_stability",
 		"imbued_gear:spell_extent",
-		"imbued_gear:spell_alacrity"
+		"imbued_gear:spell_alacrity",
+		"imbued_gear:spell_luck",
+		"imbued_gear:spell_barbs"
 	]
 }

@@ -188,6 +188,12 @@ object ModifierConsumers {
                 )
             }
         }
+
+    val SPELL_SHIELD_TICK_CONSUMER: EquipmentModifier.ToolConsumer =
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
+            if (user.world.time % 2400L == 0L)
+                user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_SHIELD,-1))
+        }
         
     /////////////////////////////
     

@@ -100,6 +100,17 @@ object RegisterEnchantment {
             EquipmentSlot.FEET to UUID.fromString("376f7418-44e3-11ee-be56-0242ac120002")
         ))
     ).register("spell_alacrity")
+    val SPELL_LUCK = SpellAttributeEnchantment(
+        Enchantment.Rarity.RARE,
+        RegisterAttribute.SPELL_CRITICAL_CHANCE,
+        {uuid, name, level -> EntityAttributeModifier(uuid, name, level * 0.005, EntityAttributeModifier.Operation.ADDITION) },
+        EnumMap(mapOf(
+            EquipmentSlot.HEAD to UUID.fromString("bc55ab9a-80b9-11ee-b962-0242ac120002"),
+            EquipmentSlot.CHEST to UUID.fromString("bc55b2de-80b9-11ee-b962-0242ac120002"),
+            EquipmentSlot.LEGS to UUID.fromString("bc55b4b4-80b9-11ee-b962-0242ac120002"),
+            EquipmentSlot.FEET to UUID.fromString("bc55b5fe-80b9-11ee-b962-0242ac120002")
+        ))
+    ).register("spell_luck")
 
     fun registerAll(){}
 }

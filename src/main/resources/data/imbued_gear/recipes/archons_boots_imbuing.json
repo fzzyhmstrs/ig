@@ -1,0 +1,38 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueB": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueC": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueD": {
+    "item": "amethyst_imbuement:sardonyx"
+  },
+  "craftD": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:shimmering_boots"
+  },
+  "craftF": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:garnet"
+  },
+  "craftH": {
+	"item": "imbued_gear:voidsteel_ingot"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:garnet"
+  },
+  "title": "Archons Boots",
+  "cost": 37,
+  "resultA": "imbued_gear:archons_boots",
+  "countA": 1,
+  "transferEnchant": true
+}

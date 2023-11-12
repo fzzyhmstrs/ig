@@ -18,10 +18,12 @@ object RegisterStatus {
         .addAttributeModifier(RegisterAttribute.SPELL_DAMAGE,"a34f1f40-3e98-11ee-be56-0242ac120002",0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
     val BLADE_RAGE: StatusEffect = CustomStatusEffect(StatusEffectCategory.BENEFICIAL,0x0275D3)
         .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,"a34f1f40-3e98-11ee-be56-0242ac120002",0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+    val SPELL_SHIELD: StatusEffect = CustomStatusEffect(StatusEffectCategory.BENEFICIAL,0x7400B7)
 
     fun registerAll(){
         Registry.register(Registries.STATUS_EFFECT, IG.identity("nihilism"), NIHILISM)
         Registry.register(Registries.STATUS_EFFECT, IG.identity("spell_rage"), SPELL_RAGE)
         Registry.register(Registries.STATUS_EFFECT, IG.identity("blade_rage"), BLADE_RAGE)
+        Registry.register(Registries.STATUS_EFFECT, IG.identity("spell_shield"), SPELL_SHIELD)
     }
 }

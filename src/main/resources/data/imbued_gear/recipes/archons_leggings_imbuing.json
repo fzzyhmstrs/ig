@@ -1,0 +1,44 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueB": {
+	"item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueC": {
+	"item": "amethyst_imbuement:sardonyx"
+  },
+  "imbueD": {
+	"item": "amethyst_imbuement:sardonyx"
+  },
+  "craftA": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "craftB": {
+    "item": "imbued_gear:voidsteel_ingot"
+  },
+  "craftC": {
+    "item": "amethyst_imbuement:garnet"
+  },
+  "craftD": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftE": {
+	"item": "amethyst_imbuement:shimmering_leggings"
+  },
+  "craftF": {
+	"item": "imbued_gear:wither_bone"
+  },
+  "craftG": {
+	"item": "amethyst_imbuement:shimmering_fabric"
+  },
+  "craftI": {
+	"item": "amethyst_imbuement:shimmering_fabric"
+  },
+  "title": "Archons Leggings",
+  "cost": 39,
+  "resultA": "imbued_gear:archons_leggings",
+  "countA": 1,
+  "transferEnchant": true
+}
