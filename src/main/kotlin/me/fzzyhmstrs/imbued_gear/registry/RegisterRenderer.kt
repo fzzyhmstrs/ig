@@ -55,6 +55,15 @@ object RegisterRenderer {
         }
 
         EntityRendererRegistry.register(
+            RegisterEntity.BAITING_ARROW_ENTITY
+        ){context: EntityRendererFactory.Context ->
+            CustomArrowEntityRenderer(
+                context,
+                IG.identity("textures/entity/baiting_arrow.png")
+            )
+        }
+
+        EntityRendererRegistry.register(
             RegisterEntity.CELESTIAL_TRIDENT_ENTITY
         ){context: EntityRendererFactory.Context ->
             CelestialTridentEntityRenderer(

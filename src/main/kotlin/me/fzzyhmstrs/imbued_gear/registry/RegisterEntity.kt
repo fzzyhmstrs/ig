@@ -87,6 +87,19 @@ object RegisterEntity {
         }.dimensions(EntityDimensions.fixed(0.5f, 0.5f)).trackRangeChunks(4).trackedUpdateRate(20).build()
     )
 
+    val BAITING_ARROW_ENTITY: EntityType<BaitingArrowEntity> = Registry.register(
+        Registries.ENTITY_TYPE,
+        IG.identity( "baiting_arrow"),
+        FabricEntityTypeBuilder.create(
+            SpawnGroup.MISC
+        ) { entityType: EntityType<BaitingArrowEntity>, world: World ->
+            BaitingArrowEntity(
+                entityType,
+                world
+            )
+        }.dimensions(EntityDimensions.fixed(0.5f, 0.5f)).trackRangeChunks(4).trackedUpdateRate(20).build()
+    )
+
 
     fun registerAll(){
     }

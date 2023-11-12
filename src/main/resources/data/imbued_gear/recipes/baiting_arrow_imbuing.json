@@ -1,0 +1,46 @@
+{
+  "type": "amethyst_imbuement:imbuing",
+  "imbueA": {
+	"item": "minecraft:emerald"
+  },
+  "imbueB": {
+	"item": "minecraft:emerald"
+  },
+  "imbueC": {
+	"item": "minecraft:emerald"
+  },
+  "imbueD": {
+	"item": "minecraft:emerald"
+  },
+  "craftA": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftB": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftC": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftD": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftE": {
+	"item": "minecraft:salmon"
+  },
+  "craftF": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftG": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftH": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "craftI": {
+	"item": "minecraft:spectral_arrow"
+  },
+  "title": "Baiting Arrow",
+  "cost": 7,
+  "resultA": "imbued_gear:baiting_arrow",
+  "countA": 16
+}

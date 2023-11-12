@@ -35,6 +35,7 @@ object RegisterTool {
     //tools and weapons
     val CRYSTALLINE_ARROW = register(CrystallineArrowItem(FabricItemSettings()),"crystalline_arrow")
     val IMBUED_ARROW = register(ImbuedArrowItem(FabricItemSettings()),"imbued_arrow")
+    val BAITING_ARROW = register(BaitingArrowItem(FabricItemSettings()),"baiting_arrow")
     val CELESTIAL_TRIDENT = register(CelestialTridentItem(IgConfig.materials.tools.celestial,FabricItemSettings().maxDamage(2650).rarity(Rarity.EPIC)),"celestial_trident")
     //tex recipe
     val CHAMPIONS_TRIDENT = register(ChampionsTridentItem(IgConfig.materials.tools.radiant,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(1250).rarity(Rarity.RARE)),"champions_trident")
