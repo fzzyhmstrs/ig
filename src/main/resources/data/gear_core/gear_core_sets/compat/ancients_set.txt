@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tridents_n_stuff"
+      ]
+    }
+  ],
+  "name": "set.imbued_gear.tridents_n_stuff.ancients",
+  "active_formatting": [
+    "GOLD",
+    "BOLD"
+  ],
+  "items": {
+    "tag": "imbued_gear:compat/ancients_gear"
+  },
+  "bonuses": {
+    "2": [
+      {
+        "name":"ancients_attack_speed",
+        "attribute": "minecraft:generic.attack_speed",
+        "amount": "0.1",
+        "operation": "MULTIPLY_TOTAL"
+      }
+    ],
+    "4": "imbued_gear:compat/anger_of_the_ancients"
+    "6": "imbued_gear:compat/power_of_the_ancients"
+  }
+}
