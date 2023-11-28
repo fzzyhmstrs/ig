@@ -45,6 +45,12 @@ open class CelestialTridentEntity : PersistentProjectileEntity {
     private var dealtDamage = false
     private var returnTimer = 0
 
+    private var isOffhand = false
+
+    fun setOffhand(){
+        isOffhand = true
+    }
+
     open val damage = if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage + 5f else 14f
 
     private val isOwnerAlive: Boolean
@@ -161,9 +167,50 @@ open class CelestialTridentEntity : PersistentProjectileEntity {
     }
 
     override fun tryPickup(player: PlayerEntity): Boolean {
-        return super.tryPickup(player) || this.isNoClip && isOwner(player) && player.inventory.insertStack(
-            asItemStack()
-        )
+        return when (this.pickupType){
+            PickupPermission.ALLOWED -> {
+                if(isOffhand)
+                    if (insertOffhand(asItemStack(),player))
+                        true
+                    else
+                        player.inventory.insertStack(asItemStack())
+                else
+                    player.inventory.insertStack(asItemStack())
+            }
+            PickupPermission.CREATIVE_ONLY -> player.abilities.creativeMode
+            else -> {
+                this.isNoClip && isOwner(player) &&
+                        if(isOffhand)
+                            if (insertOffhand(asItemStack(),player))
+                                true
+                            else
+                                player.inventory.insertStack(asItemStack())
+                        else
+                            player.inventory.insertStack(asItemStack())
+            }
+        }
+
+
+        /*return super.tryPickup(player) ||
+                this.isNoClip && isOwner(player) &&
+                if(isOffhand)
+                    if (player.inventory.insertStack(PlayerInventory.OFF_HAND_SLOT,asItemStack()))
+                        true
+                    else
+                        player.inventory.insertStack(asItemStack())
+                else
+                    player.inventory.insertStack(asItemStack())*/
+    }
+
+    private fun insertOffhand(stack: ItemStack, player: PlayerEntity): Boolean{
+        if (stack.isEmpty) {
+            return false
+        }
+        if (!player.inventory.offHand[0].isEmpty)
+            return false
+        player.inventory.offHand[0] = stack.copyAndEmpty()
+        player.inventory.offHand[0].bobbingAnimationTime = 5
+        return true
     }
 
     override fun getHitSound(): SoundEvent {
