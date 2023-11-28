@@ -8,12 +8,15 @@ import me.fzzyhmstrs.gear_core.set.GearSets;
 import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus;
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.DamageTypeTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
@@ -33,6 +36,14 @@ public abstract class LivingEntityMixin {
 
     @Shadow public abstract boolean removeStatusEffect(StatusEffect type);
 
+    @Shadow protected double serverX;
+
+    @Shadow public abstract @Nullable StatusEffectInstance getStatusEffect(StatusEffect effect);
+
+    @Shadow protected abstract void initDataTracker();
+
+    @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
+
     @Unique
     private final Identifier huntersGearSet = new Identifier("gear_core:gear_core_sets/hunters_set.json");
 
@@ -49,11 +60,22 @@ public abstract class LivingEntityMixin {
         return operation.call(instance);
     }
 
-    @Inject(method = "damage", at = @At("HEAD"))
+    @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
     private void imbued_gear_spellShieldEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
         if (this.hasStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD())){
-            if (!source.isIn(DamageTypeTags.BYPASSES_INVULNERABILITY)){
-                this.removeStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD());
+            if (!source.isIn(DamageTypeTags.BYPASSES_INVULNERABILITY) && !source.isIn(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterTag.INSTANCE.getGUARDIAN_IGNORES_DAMAGE_TAG())){
+                ((Entity) (Object) this).getWorld().playSound(null,((Entity) (Object) this).getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS,0.5f,1.0f);
+                ((Entity) (Object) this).getWorld().playSound(null,((Entity) (Object) this).getBlockPos(), SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS,0.5f,1.0f);
+                StatusEffectInstance instance = this.getStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD());
+                if (instance != null){
+                    int amplifier = instance.getAmplifier();
+                    this.removeStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD());
+                    if (amplifier > 0) {
+                        this.addStatusEffect(new StatusEffectInstance(RegisterStatus.INSTANCE.getSPELL_SHIELD(), instance.getDuration(), amplifier - 1));
+                    }
+                } else {
+                    this.removeStatusEffect(RegisterStatus.INSTANCE.getSPELL_SHIELD());
+                }
                 cir.setReturnValue(false);
             }
         }

@@ -32,8 +32,8 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
 
     private val tries = doubleArrayOf(0.0,-1.0,1.0)
 
-    override val baseEffect: AugmentEffect
-        get() = super.baseEffect.withRange(12.75,1.25)
+    override val baseEffect: AugmentEffect = super.baseEffect
+            .withRange(12.75,1.25)
             .withDamage(9.75f,0.25f)
             .withAmplifier(15,1)
 

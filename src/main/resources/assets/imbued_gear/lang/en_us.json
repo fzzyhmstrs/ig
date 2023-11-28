@@ -275,7 +275,7 @@
 	"equipment.modifier.imbued_gear:hunters_precision.desc": "Increases damage from ranged projectile attacks by 25%. Reduces visibility from enemies, stacking with more pieces.",
 	"equipment.modifier.imbued_gear:hunters_swiftness.desc": "Taking damage grants temporary speed and jump boost, stacking on hit.",
 	"equipment.modifier.imbued_gear:mana_cascade.desc": "Casting spells stacks Spell Rage.",
-	"equipment.modifier.imbued_gear:spell_shield.desc": "Periodically gain a magical shield that nullifies the next damage taken.",
+	"equipment.modifier.imbued_gear:spell_shield.desc": "Periodically gain stacks of a magical shield that nullifies the next hostile damage taken.",
 
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1": "Soulfire I",
 	"equipment.modifier.imbued_gear:souls_modifier_tier_1.desc": "+5%% Spell Damage",

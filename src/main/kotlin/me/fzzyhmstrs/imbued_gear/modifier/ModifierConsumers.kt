@@ -15,6 +15,8 @@ import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
+import net.minecraft.sound.SoundCategory
+import net.minecraft.sound.SoundEvents
 import net.minecraft.world.World
 import kotlin.math.max
 import kotlin.math.min
@@ -191,8 +193,15 @@ object ModifierConsumers {
 
     val SPELL_SHIELD_TICK_CONSUMER: EquipmentModifier.ToolConsumer =
         EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, _: LivingEntity? ->
-            if (user.world.time % 2400L == 0L)
-                user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_SHIELD,-1))
+            if (user.world.time % 1800L == 0L) {
+                val status = user.getStatusEffect(RegisterStatus.SPELL_SHIELD)
+                if ((status?.amplifier ?: 0) < 2){
+                    user.world.playSound(null,user.blockPos,SoundEvents.BLOCK_BEACON_ACTIVATE,SoundCategory.PLAYERS,0.5f,1f)
+                }
+                val amp = min(status?.amplifier?.plus(1) ?: 0,2)
+                user.removeStatusEffect(RegisterStatus.SPELL_SHIELD)
+                user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_SHIELD, 2000,amp))
+            }
         }
         
     /////////////////////////////
