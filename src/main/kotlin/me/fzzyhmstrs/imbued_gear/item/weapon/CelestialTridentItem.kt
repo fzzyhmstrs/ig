@@ -152,6 +152,9 @@ class CelestialTridentItem(internal val material: ToolMaterial, settings: Settin
                 if (user.abilities.creativeMode) {
                     cte.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY
                 }
+                if(ItemStack.areEqual(user.offHandStack, stack)) {
+                    cte.setOffhand()
+                }
                 world.spawnEntity(cte)
                 world.playSoundFromEntity(
                     null,

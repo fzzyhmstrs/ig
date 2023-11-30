@@ -136,6 +136,9 @@ class ChampionsTridentItem(internal val material: ToolMaterial,settings: Setting
                 if (user.abilities.creativeMode) {
                     championsTridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY
                 }
+                if(ItemStack.areEqual(user.offHandStack, stack)) {
+                    championsTridentEntity.setOffhand()
+                }
                 world.spawnEntity(championsTridentEntity)
                 world.playSoundFromEntity(
                     null,

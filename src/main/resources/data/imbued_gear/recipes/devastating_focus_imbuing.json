@@ -16,7 +16,7 @@
 	"item": "imbued_gear:wither_bone"
   },
   "craftB": {
-	"item": "amethyst_imbuement:sardonyx"
+	"item": "amethyst_imbuement:accursed_figurine"
   },
   "craftC": {
 	"item": "imbued_gear:wither_bone"
@@ -32,9 +32,6 @@
   },
   "craftG": {
 	"item": "imbued_gear:wither_bone"
-  },
-  "craftH": {
-	"item": "amethyst_imbuement:accursed_figurine"
   },
   "craftI": {
 	"item": "imbued_gear:wither_bone"
