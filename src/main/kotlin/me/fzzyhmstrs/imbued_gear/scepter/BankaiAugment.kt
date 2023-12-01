@@ -7,6 +7,7 @@ import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterTier
 import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentDatapoint
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
+import me.fzzyhmstrs.amethyst_imbuement.config.AiConfig
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.PerLvlI
 import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
@@ -57,7 +58,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
                 perpendicularVector,
                 effects.range(level),
                 0.8,
-                0.8)
+                0.8).filter { AiConfig.entities.shouldItHitBase(user,it,this) }.toMutableList()
         if (entityList.isEmpty()) return false
         val map: MutableMap<Float,Entity> = mutableMapOf()
         entityList.forEach {
