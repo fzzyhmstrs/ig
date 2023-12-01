@@ -73,9 +73,9 @@ object RegisterTool {
     //blade
     val RING_OF_SOULS = register(RingOfSoulsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)),"ring_of_souls")
     //blade 2
-    val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"energetic_band")
+    val ENERGETIC_BAND = register(EnergeticBandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE).maxCount(1)),"energetic_band")
 
-    val DEVASTATING_FOCUS = register(DevastatingFocusItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE)),"devastating_focus")
+    val DEVASTATING_FOCUS = register(DevastatingFocusItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).rarity(Rarity.RARE).maxCount(1)),"devastating_focus")
 
 
     fun registerAll() {
