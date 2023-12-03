@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "imbued_gear:null_and_void"
+    }
+  ],
+  "result": {
+    "item": "imbued_gear:null_powder",
+    "count": 2
+  }
+}
