@@ -22,7 +22,7 @@ object ModifierFunctions {
     val COWARDLY_ATTACK_FUNCTION: EquipmentModifier.DamageFunction =
         EquipmentModifier.DamageFunction { _, user, _, _, amount ->
             if (user.health == user.maxHealth)
-                amount * 1.5f
+                amount * 1.25f
             else
                 amount
         }

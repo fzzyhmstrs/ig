@@ -253,7 +253,7 @@
 	"equipment.modifier.imbued_gear:mana_vampiric.desc": "Repairs mana items in your inventory when attacking opponents",
 	"equipment.modifier.imbued_gear:mana_draining.desc": "Mana items lose mana when attacking opponents",
 	"equipment.modifier.imbued_gear:mana_reactive.desc": "Repairs mana items on taking damage",
-	"equipment.modifier.imbued_gear:cowardly.desc": "Deals 50% increased damage if wielder is at max health",
+	"equipment.modifier.imbued_gear:cowardly.desc": "Deals 25% increased damage if wielder is at max health",
 	"equipment.modifier.imbued_gear:scholarly.desc": "Adds 1 experience whenever a player gains xp",
 	"equipment.modifier.imbued_gear:protection_from_evil.desc": "Reduces damage taken from undead by 20%",
 	"equipment.modifier.imbued_gear:nothingness.desc": "Attacks have a chance to reduce the targets maximum health temporarily",
