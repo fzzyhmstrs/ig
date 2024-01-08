@@ -4,6 +4,8 @@ import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
 import me.fzzyhmstrs.fzzy_core.coding_util.PerLvlI
 import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
+import me.fzzyhmstrs.fzzy_core.entity_util.BasicCustomTridentEntity
+import me.fzzyhmstrs.fzzy_core.item_util.BasicCustomTridentItem
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
 import me.fzzyhmstrs.imbued_gear.entity.CelestialTridentAvatarEntity
 import me.fzzyhmstrs.imbued_gear.entity.CelestialTridentEntity
@@ -30,50 +32,16 @@ import net.minecraft.util.math.MathHelper
 import net.minecraft.util.math.Vec3d
 import net.minecraft.world.World
 
-class CelestialTridentItem(internal val material: ToolMaterial, settings: Settings) : TridentItem(settings.maxDamageIfAbsent(material.durability)), PersistentEffectHelper.PersistentEffect {
-    private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier>
-
-    private val flavorText: MutableText by lazy{
-        FlavorHelper.makeFlavorText(this)
-    }
-
-    private val flavorTextDesc: MutableText by lazy{
-        FlavorHelper.makeFlavorTextDesc(this)
-    }
+class CelestialTridentItem(material: ToolMaterial, settings: Settings) : BasicCustomTridentItem<BasicCustomTridentEntity>(material,7.0,-2.9,settings.maxDamageIfAbsent(material.durability)), PersistentEffectHelper.PersistentEffect {
 
     override val delay = PerLvlI(10)
 
-    init {
-        val builder = ImmutableMultimap.builder<EntityAttribute, EntityAttributeModifier>()
-        builder.put(
-            EntityAttributes.GENERIC_ATTACK_DAMAGE,
-            EntityAttributeModifier(
-                ATTACK_DAMAGE_MODIFIER_ID,
-                "Tool modifier",
-                material.attackDamage.toDouble() + 7.0,
-                EntityAttributeModifier.Operation.ADDITION
-            )
-        )
-        builder.put(
-            EntityAttributes.GENERIC_ATTACK_SPEED,
-            EntityAttributeModifier(
-                ATTACK_SPEED_MODIFIER_ID,
-                "Tool modifier",
-                -2.9,
-                EntityAttributeModifier.Operation.ADDITION
-            )
-        )
-        this.attributeModifiers = builder.build()
+    override fun getEnchantability(): Int {
+        return 15
     }
 
-    override fun appendTooltip(
-        stack: ItemStack,
-        world: World?,
-        tooltip: MutableList<Text>,
-        context: TooltipContext
-    ) {
-        super.appendTooltip(stack, world, tooltip, context)
-        FlavorHelper.addFlavorText(tooltip, context, flavorText, flavorTextDesc)
+    override fun isFireproof(): Boolean {
+        return true
     }
 
     override fun usageTick(world: World, user: LivingEntity, stack: ItemStack, remainingUseTicks: Int) {
@@ -140,7 +108,7 @@ class CelestialTridentItem(internal val material: ToolMaterial, settings: Settin
                     PersistentEffectHelper.setPersistentTickerNeed(this, 11, 11 * avatars,data)
                 }
 
-                val cte = CelestialTridentEntity(world, user as LivingEntity, stack)
+                val cte = makeTridentEntity(getMaterial(),world, user as LivingEntity, stack)
                 cte.setVelocity(
                     user,
                     user.pitch,
@@ -197,28 +165,19 @@ class CelestialTridentItem(internal val material: ToolMaterial, settings: Settin
         }
     }
 
-
-    override fun canRepair(stack: ItemStack, ingredient: ItemStack): Boolean {
-        return material.repairIngredient.test(ingredient) || super.canRepair(stack, ingredient)
-    }
-
-    override fun getEnchantability(): Int {
-        return material.enchantability
-    }
-
-    override fun getUseAction(stack: ItemStack): UseAction {
-        return UseAction.SPEAR
-    }
-
-    override fun getAttributeModifiers(slot: EquipmentSlot): Multimap<EntityAttribute, EntityAttributeModifier> {
-        return if (slot == EquipmentSlot.MAINHAND) {
-            this.attributeModifiers
-        } else super.getAttributeModifiers(slot)
+    override fun makeTridentEntity(
+        material: ToolMaterial,
+        world: World,
+        livingEntity: LivingEntity,
+        stack: ItemStack
+    ): BasicCustomTridentEntity {
+        return CelestialTridentEntity(world, livingEntity, stack).also{ it.damage = material.attackDamage + 5.0 }
     }
 
     override fun persistentEffect(data: PersistentEffectHelper.PersistentEffectData) {
         if (data !is CelestialTridentData) return
         val cte = CelestialTridentAvatarEntity(data.world, data.user, data.stack)
+        cte.damage = getMaterial().attackDamage + 3.0
         cte.setVelocity(
             data.user,
             data.user.pitch,

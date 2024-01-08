@@ -11,7 +11,7 @@ import net.minecraft.world.World
 
 class CelestialTridentAvatarEntity : CelestialTridentEntity {
 
-    constructor(entityType: EntityType<out CelestialTridentEntity?>?, world: World?) : super(entityType, world)
+    constructor(entityType: EntityType<out CelestialTridentEntity>, world: World) : super(entityType, world)
     constructor(world: World, owner: LivingEntity, parentStack: ItemStack) : super(
         RegisterEntity.CELESTIAL_TRIDENT_AVATAR_ENTITY,
         world,
@@ -21,28 +21,30 @@ class CelestialTridentAvatarEntity : CelestialTridentEntity {
 
     init{
         this.pickupType = PickupPermission.DISALLOWED
+        this.damage = 13.0
     }
 
-    override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage - -3f else 6f
+    //override val damage =  if (tridentStack.item is CelestialTridentItem) (tridentStack.item as CelestialTridentItem).material.attackDamage - -3f else 6f
     override fun asItemStack(): ItemStack {
         return ItemStack.EMPTY.copy()
     }
 
-    override fun tickTrident() {
-    }
-
-    /*override fun tryPickup(player: PlayerEntity): Boolean {
+    override fun tryPickup(player: PlayerEntity): Boolean {
         return false
-    }*/
+    }
 
     override fun setOwner(entity: Entity?) {
         super.setOwner(entity)
         pickupType = PickupPermission.DISALLOWED
     }
 
-    override fun onPlayerCollision(player: PlayerEntity) {
-        if (isOwner(player) || owner == null) {
-            super.onPlayerCollision(player)
-        }
+    override fun getOwner(): Entity? {
+        if (hasDealtDamage())
+            return null
+        return super.getOwner()
+    }
+
+    override fun isNoClip(): Boolean {
+        return false
     }
 }

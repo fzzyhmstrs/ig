@@ -2,6 +2,7 @@ package me.fzzyhmstrs.imbued_gear.item.weapon
 
 import me.fzzyhmstrs.amethyst_core.item_util.DefaultAugmentSwordItem
 import me.fzzyhmstrs.amethyst_core.registry.RegisterTag
+import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
 import me.fzzyhmstrs.fzzy_core.item_util.FlavorHelper
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
 import me.fzzyhmstrs.imbued_gear.IG
