@@ -2,7 +2,6 @@ package me.fzzyhmstrs.imbued_gear.material
 
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterBlock
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
-import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
 import net.minecraft.item.Items
 import net.minecraft.recipe.Ingredient
 import net.minecraft.sound.SoundEvents

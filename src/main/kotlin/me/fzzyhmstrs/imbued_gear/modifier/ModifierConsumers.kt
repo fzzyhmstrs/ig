@@ -8,7 +8,6 @@ import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterStatus
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
-import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.Tameable
 import net.minecraft.entity.effect.StatusEffectInstance

@@ -1,5 +1,6 @@
 package me.fzzyhmstrs.imbued_gear.model
 
+import me.fzzyhmstrs.fzzy_core.coding_util.compat.FzzyRotation
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.entity.CelestialTridentAvatarEntity
 import me.fzzyhmstrs.imbued_gear.entity.CelestialTridentEntity
@@ -12,7 +13,6 @@ import net.minecraft.client.render.item.ItemRenderer
 import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.util.Identifier
 import net.minecraft.util.math.MathHelper
-import net.minecraft.util.math.RotationAxis
 
 @Suppress("PrivatePropertyName")
 class CelestialTridentEntityRenderer(context: EntityRendererFactory.Context) : EntityRenderer<CelestialTridentEntity>(context) {
@@ -30,7 +30,7 @@ class CelestialTridentEntityRenderer(context: EntityRendererFactory.Context) : E
     ) {
         matrixStack.push()
         matrixStack.multiply(
-            RotationAxis.POSITIVE_Y.rotationDegrees(
+            FzzyRotation.POSITIVE_Y.degrees(
                 MathHelper.lerp(
                     g,
                     glisteringTridentEntity.prevYaw,
@@ -39,7 +39,7 @@ class CelestialTridentEntityRenderer(context: EntityRendererFactory.Context) : E
             )
         )
         matrixStack.multiply(
-            RotationAxis.POSITIVE_Z.rotationDegrees(
+            FzzyRotation.POSITIVE_Z.degrees(
                 MathHelper.lerp(
                     g,
                     glisteringTridentEntity.prevPitch,

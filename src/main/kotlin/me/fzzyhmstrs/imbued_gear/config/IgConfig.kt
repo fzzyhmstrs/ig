@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.config
 
-import me.fzzyhmstrs.amethyst_imbuement.config.AiConfigDefaults
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
 import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
 import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
@@ -13,14 +12,13 @@ import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
 import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedLong
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
 import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringIntMap
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener
 import net.minecraft.enchantment.Enchantment
-import net.minecraft.enchantment.Enchantments
-import net.minecraft.registry.Registries
 import net.minecraft.resource.ResourceManager
 import net.minecraft.resource.ResourceType
 import net.minecraft.util.Identifier
@@ -167,12 +165,12 @@ object IgConfig:
     class Enchants: ConfigClass(enchantsHeader), OldClass<Enchants>{
 
         fun isEnchantEnabled(enchantment: Enchantment): Boolean{
-            val id = (Registries.ENCHANTMENT.getId(enchantment) ?: return true).toString()
+            val id = (FzzyPort.ENCHANTMENT.getId(enchantment) ?: return true).toString()
             return enabledEnchants[id] ?: true
         }
 
         fun getMaxLevel(enchantment: Enchantment, fallback: Int): Int{
-            val id = (Registries.ENCHANTMENT.getId(enchantment) ?: return fallback).toString()
+            val id = (FzzyPort.ENCHANTMENT.getId(enchantment) ?: return fallback).toString()
             return enchantMaxLevels[id]?:fallback
         }
 

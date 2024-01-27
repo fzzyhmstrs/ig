@@ -3,6 +3,7 @@ package me.fzzyhmstrs.imbued_gear.item
 import me.fzzyhmstrs.amethyst_core.item_util.AbstractAugmentJewelryItem
 import me.fzzyhmstrs.amethyst_imbuement.item.Reactant
 import me.fzzyhmstrs.amethyst_imbuement.item.SpellcastersReagent
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.fzzy_core.interfaces.Modifiable
 import me.fzzyhmstrs.fzzy_core.mana_util.ManaItem
 import me.fzzyhmstrs.fzzy_core.modifier_util.ModifierHelperType
@@ -15,7 +16,6 @@ import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.nbt.NbtList
 import net.minecraft.recipe.RecipeType
-import net.minecraft.registry.Registries
 import net.minecraft.util.Identifier
 import java.util.*
 
@@ -61,7 +61,7 @@ class DivineCoronetItem(settings: Settings): AbstractAugmentJewelryItem(settings
         nbtCompound.putDouble("Amount", attribute.second.value * 2.5)
         nbtCompound.putInt("Operation", attribute.second.operation.id)
         nbtCompound.putUuid("UUID", UUID.randomUUID())
-        nbtCompound.putString("AttributeName", Registries.ATTRIBUTE.getId(attribute.first).toString())
+        nbtCompound.putString("AttributeName", FzzyPort.ATTRIBUTE.getId(attribute.first).toString())
         return nbtCompound
     }
 

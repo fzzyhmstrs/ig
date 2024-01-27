@@ -1,6 +1,5 @@
 package me.fzzyhmstrs.imbued_gear.entity
 
-import me.fzzyhmstrs.imbued_gear.item.weapon.CelestialTridentItem
 import me.fzzyhmstrs.imbued_gear.registry.RegisterEntity
 import net.minecraft.entity.Entity
 import net.minecraft.entity.EntityType

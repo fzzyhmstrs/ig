@@ -1,8 +1,8 @@
 package me.fzzyhmstrs.imbued_gear.enchantment
 
 import com.google.common.collect.Multimap
-import me.fzzyhmstrs.amethyst_core.AC.isIn
 import me.fzzyhmstrs.fzzy_core.coding_util.AbstractConfigDisableEnchantment
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.fzzy_core.enchantment_util.AttributeProviding
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.registry.RegisterTag
@@ -51,7 +51,7 @@ class SpellAttributeEnchantment(
     }
 
     override fun canAccept(other: Enchantment): Boolean {
-        return !other.isIn(RegisterTag.SPELL_ATTRIBUTE_ENCHANTS)
+        return !FzzyPort.ENCHANTMENT.isInTag(other,RegisterTag.SPELL_ATTRIBUTE_ENCHANTS)
     }
 
     override fun checkEnabled(): Boolean {

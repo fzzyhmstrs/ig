@@ -1,7 +1,7 @@
+@file:Suppress("unused")
+
 package me.fzzyhmstrs.imbued_gear.item
 
-import me.fzzyhmstrs.imbued_gear.registry.RegisterTool
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry
 import net.minecraft.item.DyeItem
 import net.minecraft.item.ItemStack
 

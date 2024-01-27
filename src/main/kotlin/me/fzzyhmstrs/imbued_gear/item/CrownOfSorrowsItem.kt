@@ -1,10 +1,7 @@
 package me.fzzyhmstrs.imbued_gear.item
 
-import me.fzzyhmstrs.amethyst_core.event.ModifyModifiersEvent
 import me.fzzyhmstrs.amethyst_core.item_util.AbstractAugmentJewelryItem
-import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.modifier_util.ModifierHelper
-import me.fzzyhmstrs.fzzy_core.trinket_util.TrinketUtil
 import me.fzzyhmstrs.gear_core.interfaces.AugmentTracking
 import me.fzzyhmstrs.gear_core.interfaces.DamageTracking
 import me.fzzyhmstrs.gear_core.interfaces.KillTracking

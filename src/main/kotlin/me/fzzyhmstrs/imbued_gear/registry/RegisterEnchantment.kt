@@ -4,27 +4,28 @@ import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentHelper
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
 import me.fzzyhmstrs.fzzy_core.coding_util.AbstractConfigDisableEnchantment
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.enchantment.SpellAttributeEnchantment
 import me.fzzyhmstrs.imbued_gear.scepter.BankaiAugment
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttributeModifier
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import java.util.*
 
+@Suppress("unused")
 object RegisterEnchantment {
 
     private fun <T: Enchantment> T.register(name: String): T{
         val id = IG.identity(name)
-        val e1 = Registry.register(Registries.ENCHANTMENT,id, this)
+        val e1 = FzzyPort.ENCHANTMENT.register(id, this)
         if (e1 is AbstractConfigDisableEnchantment){
             if (!e1.isEnabled()){
                 IG.LOGGER.info("Augment $id is set as disabled in the configs!")
             }
         }
         if (e1 is ScepterAugment){
+            @Suppress("DEPRECATION")
             if (!AugmentHelper.getAugmentEnabled(id.toString())) {
                 IG.LOGGER.info("Augment $id is set as disabled in the configs!")
             }

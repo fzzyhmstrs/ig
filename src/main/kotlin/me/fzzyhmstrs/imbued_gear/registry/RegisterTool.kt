@@ -8,14 +8,13 @@ import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.item.*
 import me.fzzyhmstrs.imbued_gear.item.weapon.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import net.minecraft.util.Rarity
 import me.fzzyhmstrs.imbued_gear.registry.RegisterModifier as RegisterModifier1
 
@@ -29,7 +28,7 @@ object RegisterTool {
             GemOfPromiseItem.register(item)
         }
         regTool.add(item)
-        return Registry.register(Registries.ITEM, IG.identity(name), item)
+        return FzzyPort.ITEM.register(IG.identity(name), item)
     }
 
     //tools and weapons

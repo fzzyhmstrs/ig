@@ -2,15 +2,15 @@
 
 package me.fzzyhmstrs.imbued_gear.registry
 
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.item.armor.*
 import net.minecraft.item.ArmorItem
 import net.minecraft.item.Item
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import net.minecraft.util.Rarity
 
+@Suppress("unused")
 object RegisterArmor {
 
     internal val regArmor: MutableList<Item> = mutableListOf()
@@ -34,7 +34,7 @@ object RegisterArmor {
 
     private fun <T: ArmorItem> register(item: T, name: String): T{
         regArmor.add(item)
-        return Registry.register(Registries.ITEM, IG.identity(name), item)
+        return FzzyPort.ITEM.register(IG.identity(name), item)
     }
 
     //Celestial Armor -tex done

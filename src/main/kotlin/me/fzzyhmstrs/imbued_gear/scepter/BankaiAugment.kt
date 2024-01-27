@@ -1,16 +1,14 @@
 package me.fzzyhmstrs.imbued_gear.scepter
 
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentEffect
-import me.fzzyhmstrs.amethyst_core.scepter_util.LoreTier
-import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterHelper
-import me.fzzyhmstrs.amethyst_core.scepter_util.ScepterTier
-import me.fzzyhmstrs.amethyst_core.scepter_util.SpellType
+import me.fzzyhmstrs.amethyst_core.scepter_util.*
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.AugmentDatapoint
 import me.fzzyhmstrs.amethyst_core.scepter_util.augments.ScepterAugment
 import me.fzzyhmstrs.amethyst_imbuement.config.AiConfig
 import me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem
 import me.fzzyhmstrs.fzzy_core.coding_util.PerLvlI
 import me.fzzyhmstrs.fzzy_core.coding_util.PersistentEffectHelper
+import me.fzzyhmstrs.fzzy_core.coding_util.compat.FzzyDamage
 import me.fzzyhmstrs.fzzy_core.raycaster_util.RaycasterUtil
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.Entity
@@ -97,7 +95,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
         } else {
             effects.damage(level)
         }
-        val data = BankaiPersistentEffectData(world,user,entityList,stack, user.damageSources.playerAttack(user),damage,level,effects)
+        val data = BankaiPersistentEffectData(world,user,entityList,stack, SpellDamageSource(FzzyDamage.playerAttack(user),this),damage,level,effects)
         PersistentEffectHelper.setPersistentTickerNeed(this,10,10,data)
     }
 
@@ -127,7 +125,7 @@ class BankaiAugment: ScepterAugment(ScepterTier.TWO,9), PersistentEffectHelper.P
                 user.itemCooldownManager.remove(data.stack.item)
             }
             data.world.playSound(null,user.blockPos,SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE,SoundCategory.PLAYERS,0.35f,1.2f)
-            ScepterHelper.resetCooldown(data.world,data.stack,user,this.id?.toString()?:"minecraft:curse_of_vanishing",data.level)
+            ScepterHelper.resetCooldown(data.world,data.stack,user,this.id.toString(),data.level)
         }
         data.world.playSound(null, user.blockPos, soundEvent(), SoundCategory.PLAYERS, 2.0F, 1.4F)
 

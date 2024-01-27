@@ -6,6 +6,7 @@ import me.fzzyhmstrs.amethyst_core.event.AfterSpellEvent
 import me.fzzyhmstrs.amethyst_core.modifier_util.AugmentModifier
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
 import me.fzzyhmstrs.amethyst_imbuement.modifier.ModifierPredicates
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.fzzy_core.modifier_util.AbstractModifier
 import me.fzzyhmstrs.fzzy_core.registry.ModifierRegistry
 import me.fzzyhmstrs.gear_core.interfaces.ActiveGearSetsTracking
@@ -21,11 +22,11 @@ import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.loot.provider.number.UniformLootNumberProvider
-import net.minecraft.registry.Registries
 import net.minecraft.util.Formatting
 import net.minecraft.util.Identifier
 import kotlin.math.max
 
+@Suppress("unused", "MemberVisibilityCanBePrivate")
 object RegisterModifier {
 
     private val regMod: MutableList<AbstractModifier<*>> = mutableListOf()
@@ -243,21 +244,21 @@ object RegisterModifier {
             val sets = (user as ActiveGearSetsTracking).gear_core_getActiveSets()
             val level = sets[GearSets.getGearSet(archonsGearSet)] ?: 0
             if (level < 4) return@register
-            val fireEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:fire"))
+            val fireEffect = FzzyPort.STATUS_EFFECT.get(Identifier("spell_power:fire"))
             if (fireEffect != null) {
                 val fire = user.getStatusEffect(fireEffect)
                 val amp = fire?.amplifier?.plus(1) ?: 0
                 val dur = 100
                 user.addStatusEffect(StatusEffectInstance(fireEffect, dur, max(amp,9)))
             }
-            val lightningEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:lightning"))
+            val lightningEffect = FzzyPort.STATUS_EFFECT.get(Identifier("spell_power:lightning"))
             if (lightningEffect != null) {
                 val lightning = user.getStatusEffect(lightningEffect)
                 val amp = lightning?.amplifier?.plus(1) ?: 0
                 val dur = 100
                 user.addStatusEffect(StatusEffectInstance(lightningEffect, dur, max(amp,9)))
             }
-            val frostEffect = Registries.STATUS_EFFECT.get(Identifier("spell_power:frost"))
+            val frostEffect = FzzyPort.STATUS_EFFECT.get(Identifier("spell_power:frost"))
             if (frostEffect != null) {
                 val frost = user.getStatusEffect(frostEffect)
                 val amp = frost?.amplifier?.plus(1) ?: 0

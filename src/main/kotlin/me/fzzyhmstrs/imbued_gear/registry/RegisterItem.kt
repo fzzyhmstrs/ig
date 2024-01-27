@@ -5,30 +5,26 @@ package me.fzzyhmstrs.imbued_gear.registry
 import me.fzzyhmstrs.amethyst_imbuement.item.AiItemSettings
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.GemOfPromiseItem
 import me.fzzyhmstrs.amethyst_imbuement.item.promise.IgnitedGemItem
+import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.item.promise.EnsouledGemItem
 import me.fzzyhmstrs.imbued_gear.item.promise.VoidGemItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
-import net.minecraft.item.ItemStack
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
-import net.minecraft.text.Text
 import net.minecraft.util.Rarity
 
 // don't know if this is better as a class or object. as an object it allows me to call it without needing to initialize an instance of it.
 object RegisterItem {
 
-    private val regItem: MutableList<Item> = mutableListOf()
+    internal val regItem: MutableList<Item> = mutableListOf()
 
     private fun <T: Item> register(item: T, name: String): T{
         if (item is IgnitedGemItem){
             GemOfPromiseItem.register(item)
         }
         regItem.add(item)
-        return Registry.register(Registries.ITEM, IG.identity(name), item)
+        return FzzyPort.ITEM.register(IG.identity(name), item)
     }
 
     //Make Tigers Eye??
@@ -50,24 +46,12 @@ object RegisterItem {
     //////////////////////////////
 
     val IG_GROUP: ItemGroup by lazy{
-        registerItemGroup()
+        RegisterItemGroup.registerItemGroup()
     }
 
-    fun registerItemGroup(): ItemGroup{
-        return Registry.register(Registries.ITEM_GROUP, IG.identity("ig_group"),FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.imbued_gear.ig_group"))
-            .icon { ItemStack(VOID_GEM.asItem()) }
-            .entries { _, entries ->
-                entries.addAll(regItem.stream().map { item -> ItemStack(item) }.toList())
-                entries.addAll(RegisterArmor.regArmor.stream().map { item -> ItemStack(item) }.toList())
-                entries.addAll(RegisterTool.regTool.stream().map { item -> ItemStack(item) }.toList())
-                /*entries.addAll(RegisterBlock.regBlock.values.stream()
-                    .map { block -> ItemStack(block.asItem()) }
-                    .toList())*/
-            }.build())
-    }
+
 
     fun registerAll() {
-        val group = IG_GROUP
+        @Suppress("UNUSED_VARIABLE") val group = IG_GROUP
     }
 }
