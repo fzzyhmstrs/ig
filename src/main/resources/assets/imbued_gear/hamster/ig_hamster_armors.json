@@ -8,6 +8,7 @@
     "ig_scholars": "imbued_gear:textures/entity/hamster/armor/ig_scholars.png",
     "ig_spellblades": "imbued_gear:textures/entity/hamster/armor/ig_spellblades.png",
     "ig_void_mail": "imbued_gear:textures/entity/hamster/armor/ig_void_mail.png",
-    "ig_warrior": "imbued_gear:textures/entity/hamster/armor/ig_warrior.png"
+    "ig_warrior": "imbued_gear:textures/entity/hamster/armor/ig_warrior.png",
+    "ig_archons": "imbued_gear:textures/entity/hamster/armor/ig_archons.png"
   }
 }
