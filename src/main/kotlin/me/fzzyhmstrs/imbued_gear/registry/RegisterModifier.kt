@@ -14,6 +14,7 @@ import me.fzzyhmstrs.gear_core.modifier_util.EquipmentModifier
 import me.fzzyhmstrs.gear_core.set.GearSets
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.config.IgConfig
+import me.fzzyhmstrs.imbued_gear.item.RingOfSoulsItem
 import me.fzzyhmstrs.imbued_gear.modifier.ConfigEquipmentModifier
 import me.fzzyhmstrs.imbued_gear.modifier.ModifierConsumers
 import me.fzzyhmstrs.imbued_gear.modifier.ModifierFunctions
@@ -101,7 +102,7 @@ object RegisterModifier {
         .withDescendant(INEXPERIENCED)
         .withToll(VERY_EXPENSIVE_TOLL)
         .also { regMod.add(it) }
-    
+
     //mana gaining modifier (repairing scepters and totems etc)
     val MANA_VAMPIRIC = buildModifier(IG.identity("mana_vampiric"), EquipmentModifier.EquipmentModifierTarget.WEAPON, 5, EquipmentModifier.Rarity.RARE)
         .withPostHit(ModifierConsumers.MANA_VAMPIRIC_HIT_CONSUMER)
@@ -125,7 +126,7 @@ object RegisterModifier {
         .also { regMod.add(it) }
 
     /////////////////////////////////////////////////
-        
+
     //Set and Special equipment modifiers
     val SCHOLARLY = buildModifier(IG.identity("scholarly"), persistent = true, availableForSelection = false)
         .withAttributeModifier(
@@ -224,6 +225,8 @@ object RegisterModifier {
     private val archonsGearSet = Identifier("gear_core:gear_core_sets/archons_set.json")
 
     fun registerAll(){
+
+        RingOfSoulsItem.registerAll()
 
         regMod.forEach {
             val id = it.modifierId

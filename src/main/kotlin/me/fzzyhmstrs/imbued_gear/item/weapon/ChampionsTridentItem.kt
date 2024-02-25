@@ -14,11 +14,6 @@ import net.minecraft.util.Identifier
 import net.minecraft.world.World
 
 class ChampionsTridentItem(material: ToolMaterial,settings: Settings) : BasicCustomTridentItem<BasicCustomTridentEntity>(material,7.0,-2.9,settings), Modifiable {
-    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
-        if (type == EquipmentModifierHelper.getType())
-            return mutableListOf(RegisterModifier.RADIANT_BASTION.modifierId)
-        return super<BasicCustomTridentItem>.defaultModifiers(type)
-    }
 
     override fun isFireproof(): Boolean {
         return true

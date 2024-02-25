@@ -17,13 +17,13 @@ open class SpecialityOffhandItem(
     CustomFlavorItem(settings), Modifiable, DamageTracking, AttributeTracking, HitTracking, TickTracking, KillTracking, ModifierTracking
 {
 
-    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
+    /*override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType()) {
             return equipmentMods().toMutableList()
         }
         if (type == ModifierHelper.getType()) return scepterMods().toMutableList()
         return super.defaultModifiers(type)
-    }
+    }*/
 
     open fun equipmentMods(): List<Identifier>{
         return equipmentModifiers

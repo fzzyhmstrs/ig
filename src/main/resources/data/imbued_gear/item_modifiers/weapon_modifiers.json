@@ -1,0 +1,17 @@
+{
+  "imbued_gear:radiant_broadsword": {
+    "gear_core:gear_modifier_helper": "imbued_gear:radiant_devotion"
+  },
+  "imbued_gear:champions_trident": {
+    "gear_core:gear_modifier_helper": "imbued_gear:radiant_bastion"
+  },
+  "imbued_gear:nihil_blade": {
+    "gear_core:gear_modifier_helper": "imbued_gear:nothingness"
+  },
+  "imbued_gear:warriors_axe": {
+    "gear_core:gear_modifier_helper": "imbued_gear:flesh_rending"
+  },
+  "imbued_gear:cosmos": {
+    "amethyst_core:amethyst_core_helper": "imbued_gear:cosmic"
+  }
+}

@@ -21,11 +21,11 @@ import java.util.*
 
 class DivineCoronetItem(settings: Settings): AbstractAugmentJewelryItem(settings), Reactant, ManaItem, Modifiable {
 
-    override fun defaultModifiers(type: ModifierHelperType<*>): MutableList<Identifier> {
+    /*override fun defaultModifiers(type: ModifierHelperType<*>): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType())
             return mutableListOf(RegisterModifier.CELESTIAL.modifierId)
         return super.defaultModifiers(type)
-    }
+    }*/
 
     override fun canReact(
         stack: ItemStack,

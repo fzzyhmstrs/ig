@@ -21,7 +21,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.world.World
 
 class CaduceusItem(settings: Settings)
-    : 
+    :
     ShieldItem(settings), Modifiable, DamageTracking, AttributeTracking, HitTracking, KillTracking, ModifierTracking
 {
 
@@ -38,10 +38,10 @@ class CaduceusItem(settings: Settings)
         return super.getAttributeModifiers(slot)
     }
 
-    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
+    /*override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == ModifierHelper.getType()) return mutableListOf(RegisterModifier.HEALERS_GRACE.modifierId, RegisterModifier.HEALING.modifierId, me.fzzyhmstrs.imbued_gear.registry.RegisterModifier.HEALERS_REWARD.modifierId)
         return super.defaultModifiers(type)
-    }
+    }*/
 
     private val flavorText: MutableText by lazy{
         FlavorHelper.makeFlavorText(this)

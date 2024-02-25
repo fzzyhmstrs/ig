@@ -16,12 +16,6 @@ import net.minecraft.world.World
 
 class NihilBladeItem(material: ToolMaterial,settings: Settings): SwordItem(material,0,-1.5f,settings), Modifiable {
 
-    override fun defaultModifiers(type: ModifierHelperType<*>): MutableList<Identifier> {
-        if (type == EquipmentModifierHelper.getType())
-            return mutableListOf(RegisterModifier.NOTHINGNESS.modifierId)
-        return super.defaultModifiers(type)
-    }
-
     private val flavorText: MutableText by lazy{
         FlavorHelper.makeFlavorText(this)
     }

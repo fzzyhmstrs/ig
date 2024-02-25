@@ -27,7 +27,7 @@ import net.minecraft.world.World
 
 open class BoneRattleItem(settings: Settings)
     :
-    SpecialityOffhandItem(settings,listOf(),listOf(RegisterModifier.SUMMONERS_ASPECT.modifierId))
+    SpecialityOffhandItem(settings,listOf(),listOf(/*RegisterModifier.SUMMONERS_ASPECT.modifierId*/))
 {
 
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
@@ -162,5 +162,5 @@ open class BoneRattleItem(settings: Settings)
         }
 
     }
-    
+
 }

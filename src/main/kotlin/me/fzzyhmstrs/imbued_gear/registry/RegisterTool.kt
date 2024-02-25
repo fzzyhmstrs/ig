@@ -45,15 +45,13 @@ object RegisterTool {
     val CRACKLING_SPELLBLADE = register(CracklingSpellbladeItem(FabricItemSettings()),"crackling_spellblade")
     val HUNTERS_ARBALEST = register(HuntersArbalestItem(FabricItemSettings().rarity(Rarity.RARE).maxDamage(1250)), "hunters_arbalest")
     //item model tex lang modifier
-    val COSMOS = register(CosmicScepterItem(IgConfig.materials.tools.scepterTier4,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC))
-        .withModifiers(listOf(RegisterModifier1.COSMIC))
-        ,"cosmos")
+    val COSMOS = register(CosmicScepterItem(IgConfig.materials.tools.scepterTier4,AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.SCEPTER).rarity(Rarity.EPIC)),"cosmos")
 
     //trinkets
     //warrior - increases damage against undead, reduces damage from undead
-    val BLAZE_OF_LIGHT = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE), equipmentModifiers = listOf(RegisterModifier1.PROTECTION_FROM_EVIL.modifierId), scepterModifiers = listOf(RegisterModifier.SMITING.modifierId)) ,"blaze_of_light")
+    val BLAZE_OF_LIGHT = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE)/*, equipmentModifiers = listOf(RegisterModifier1.PROTECTION_FROM_EVIL.modifierId), scepterModifiers = listOf(RegisterModifier.SMITING.modifierId)*/) ,"blaze_of_light")
     //scholars
-    val BOOK_OF_SECRETS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE), equipmentModifiers = listOf(RegisterModifier1.SCHOLARLY.modifierId), scepterModifiers = listOf(RegisterModifier.SAVANT_ASPECT.modifierId)) ,"book_of_secrets")
+    val BOOK_OF_SECRETS = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE)/*, equipmentModifiers = listOf(RegisterModifier1.SCHOLARLY.modifierId), scepterModifiers = listOf(RegisterModifier.SAVANT_ASPECT.modifierId)*/) ,"book_of_secrets")
     //lich - buffs summons, chance to echo summoning spells at durability expense
     val BONE_RATTLE = register(BoneRattleItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)) ,"bone_rattle")
     //saint
@@ -61,7 +59,7 @@ object RegisterTool {
     //flame - spell cooldown, attack speed, chance to set things on fire
     val LIVING_FLAME = register(LivingFlameItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE)) ,"living_flame")
     //void - damaging has chance to reduce max health, magic resist, mana cost
-    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE), equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)) ,"null_and_void")
+    val NULL_AND_VOID = register(SpecialityOffhandItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxCount(1).rarity(Rarity.RARE)/*, equipmentModifiers = listOf(RegisterModifier1.NULL_SPACE.modifierId), scepterModifiers = listOf(ModifierRegistry.GREATER_THRIFTY.modifierId)*/) ,"null_and_void")
     //champion
     val CROWN_OF_SORROWS = register(CrownOfSorrowsItem(AiItemSettings().aiGroup(AiItemSettings.AiItemGroup.EQUIPMENT).maxDamage(AiConfig.items.manaItems.imbuedJewelryDurability.get()*2).rarity(Rarity.RARE)),"crown_of_sorrows")
     //altar

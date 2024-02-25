@@ -1,0 +1,33 @@
+{
+  "imbued_gear:blaze_of_light": {
+    "gear_core:gear_modifier_helper": "imbued_gear:protection_from_evil",
+    "amethyst_core:amethyst_core_helper": "amethyst_imbuement:smiting"
+  },
+  "imbued_gear:book_of_secrets": {
+    "gear_core:gear_modifier_helper": "imbued_gear:scholarly",
+    "amethyst_core:amethyst_core_helper": "amethyst_imbuement:savant_aspect"
+  },
+  "imbued_gear:bone_rattle": {
+    "amethyst_core:amethyst_core_helper": "amethyst_imbuement:summoners_aspect"
+  },
+  "imbued_gear:caduceus": {
+    "amethyst_core:amethyst_core_helper": [
+      "amethyst_imbuement:healers_grace",
+      "amethyst_imbuement:healing",
+      "imbued_gear:healers_reward"
+    ]
+  },
+  "imbued_gear:living_flame": {
+    "amethyst_core:amethyst_core_helper": "amethyst_imbuement:elemental"
+  },
+  "imbued_gear:null_and_void": {
+    "gear_core:gear_modifier_helper": "imbued_gear:null_space",
+    "amethyst_core:amethyst_core_helper": "amethyst_core:greater_thrifty"
+  },
+  "imbued_gear:divine_coronet": {
+    "gear_core:gear_modifier_helper": "imbued_gear:celestial"
+  },
+  "imbued_gear:ring_of_souls": {
+    "gear_core:gear_modifier_helper": "imbued_gear:souls_modifier_tier_1"
+  }
+}

@@ -22,7 +22,7 @@ import net.minecraft.world.World
 
 open class LivingFlameItem(settings: Settings)
     :
-    SpecialityOffhandItem(settings,listOf(),listOf(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier.ELEMENTAL.modifierId)), Modifiable
+    SpecialityOffhandItem(settings,listOf(),listOf(/*me.fzzyhmstrs.amethyst_imbuement.registry.RegisterModifier.ELEMENTAL.modifierId*/)), Modifiable
 {
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()
@@ -62,5 +62,5 @@ open class LivingFlameItem(settings: Settings)
             ModifierHelper.removeModifier(stack,RegisterModifier.KINDLED_SCEPTER.modifierId)
         }
     }
-    
+
 }

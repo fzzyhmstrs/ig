@@ -79,17 +79,20 @@ class RingOfSoulsItem(settings: Settings): TrinketItem(settings), KillTracking, 
         EquipmentModifierHelper.addModifier(IG.identity("souls_modifier_tier_$newTier"),stack)
     }
 
-    override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
+    /*override fun defaultModifiers(type: ModifierHelperType<*>?): MutableList<Identifier> {
         if (type == EquipmentModifierHelper.getType()) return mutableListOf(SOULS_MODIFIER.modifierId)
         return super.defaultModifiers(type)
-    }
+    }*/
 
     companion object{
-        private val SOULS_MODIFIER = EquipmentModifier(IG.identity("souls_modifier_tier_1"), persistent = true, randomSelectable = false)
-            .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-            .withCustomFormatting(Formatting.DARK_RED, Formatting.BOLD)
-            .also { ModifierRegistry.register(it) }
+
+        fun registerAll(){}
         init{
+
+            ModifierRegistry.register(EquipmentModifier(IG.identity("souls_modifier_tier_1"), persistent = true, randomSelectable = false)
+                .withAttributeModifier(RegisterAttribute.SPELL_DAMAGE,0.05,EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                .withCustomFormatting(Formatting.DARK_RED, Formatting.BOLD))
+
             if (IgConfig.items.ringOfSouls.maxTier.get() > 1){
                 for (i in 2..IgConfig.items.ringOfSouls.maxTier.get()){
                     val soulModifierTierX = EquipmentModifier(IG.identity("souls_modifier_tier_$i"), persistent = true, randomSelectable = false)
