@@ -62,6 +62,8 @@ object RegisterModifier {
     val HEALERS_REWARD = AugmentModifier(IG.identity("healers_reward")).withConsumer(ModifierConsumers.HEALERS_REWARD_CONSUMER).withSpellToAffect(ModifierPredicates.HEALERS_PREDICATE).also { regMod.add(it) }
     val COSMIC = AugmentModifier(IG.identity("cosmic"), levelModifier = 1, cooldownModifier = -25.0, manaCostModifier = -25.0).withDamage(2f).withDuration(0,0,20).also { regMod.add(it) }
 
+    val CALL_OF_THE_VOID = AugmentModifier(IG.identity("call_of_the_void"),cooldownModifier = -10.0, manaCostModifier = 10.0).withConsumer(ModifierConsumers.CALL_OF_THE_VOID_CONSUMER).also { regMod.add(it) }
+
     val WHISPER_OF_REGRET_SCEPTER = AugmentModifier(IG.identity("whisper_of_regret_scepter"),1)
         .withDamage(0.0f,0.0f,25f)
         .withAmplifier(2)

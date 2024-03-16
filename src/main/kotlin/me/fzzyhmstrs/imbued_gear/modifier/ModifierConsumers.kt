@@ -30,8 +30,28 @@ object ModifierConsumers {
         }
     }
 
+    val CALL_OF_THE_VOID_CONSUMER = AugmentConsumer({ list: List<LivingEntity> -> callOfTheVoidConsumer(list) }, AugmentConsumer.Type.HARMFUL)
+    private fun callOfTheVoidConsumer(list: List<LivingEntity>){
+        list.forEach { target ->
+            if (target.world.random.nextFloat() < IgConfig.modifiers.nullAndVoidHitChance.get()){
+                if (target.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)){
+                    val effect = target.getStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)
+                    val amp = effect?.amplifier?:0
+                    val duration = effect?.duration?:0
+                    if (duration > 0){
+                        val duration2 = if(duration < 200) {200} else {duration}
+                        target.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED,duration2,min(amp + 1,4)))
+                    }
+                } else {
+                    target.addStatusEffect(StatusEffectInstance(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED, 100)
+                    )
+                }
+            }
+        }
+    }
+
     val NULL_SPACE_HIT_CONSUMER: EquipmentModifier.ToolConsumer =
-        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? -> 
+        EquipmentModifier.ToolConsumer { _: ItemStack, user: LivingEntity, target: LivingEntity? ->
             if (target == null) return@ToolConsumer
             if (user.world.random.nextFloat() < IgConfig.modifiers.nullAndVoidHitChance.get()){
                 if (target.hasStatusEffect(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterStatus.CURSED)){
@@ -202,15 +222,15 @@ object ModifierConsumers {
                 user.addStatusEffect(StatusEffectInstance(RegisterStatus.SPELL_SHIELD, 2000,amp))
             }
         }
-        
+
     /////////////////////////////
-    
+
     private fun manaDamageItems(user: LivingEntity, damageAmount: Int){
         if (user !is PlayerEntity) return
         val stacks = getManaStacks(user)
         manaDamageItems(stacks,user,damageAmount)
     }
-    
+
     private fun manaDamageItems(list: MutableList<ItemStack>, user: PlayerEntity, damageLeft: Int): Int{
         var hl = damageLeft
         if (hl <= 0 || list.isEmpty()) return max(0,hl)
@@ -224,13 +244,13 @@ object ModifierConsumers {
         }
         return manaDamageItems(list,user,hl)
     }
-        
+
     internal fun manaHealItems(user: LivingEntity, healAmount: Int){
         if (user !is PlayerEntity) return
         val stacks = getManaStacks(user)
         manaHealItems(stacks,user.world,healAmount)
     }
-    
+
     private fun manaHealItems(list: MutableList<ItemStack>, world: World, healLeft: Int): Int{
         var hl = healLeft
         if (hl <= 0 || list.isEmpty()) return max(0,hl)
@@ -244,7 +264,7 @@ object ModifierConsumers {
         }
         return manaHealItems(list,world,hl)
     }
-    
+
     internal fun getManaStacks(user: PlayerEntity): MutableList<ItemStack>{
         val stacks: MutableList<ItemStack> = mutableListOf()
         for (stack2 in user.inventory.main){

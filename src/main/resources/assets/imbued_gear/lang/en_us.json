@@ -5,10 +5,10 @@
 	"entity.imbued_gear.imbued_arrow": "Imbued Arrow",
 	"entity.imbued_gear.crystalline_arrow": "Crystalline Arrow",
 	"entity.imbued_gear.baiting_arrow": "Baiting Arrow",
-	
+
 	"imbued_gear.advancement.crystalline_beginnings": "Imbued Ascendancy",
 	"imbued_gear.advancement.crystalline_beginnings.desc": "tbd",
-	
+
 	"item.imbued_gear.serpentine": "Serpentine",
 	"item.imbued_gear.ensouled_gem": "Ensouled Gem",
 	"item.imbued_gear.ensouled_gem.recipe": "Hold a Gem of Promise in your off hand and breed a lot of animals.",
@@ -21,7 +21,7 @@
 	"item.imbued_gear.null_powder": "Null Powder",
 	"item.imbued_gear.soul_powder": "Soul Powder",
 	"item.imbued_gear.wither_bone": "Wither Bone",
-	
+
 	"item.imbued_gear.celestial_trident": "Celestial Trident",
 	"item.imbued_gear.celestial_trident.flavor": "It blazes with the power of the Cosmos.",
 	"item.imbued_gear.champions_trident": "Champions Trident",
@@ -149,7 +149,7 @@
 	"item.imbued_gear.compat/channelers_chestplate": "Channelers Chestplate",
 	"item.imbued_gear.compat/channelers_leggings": "Channelers Leggings",
 	"item.imbued_gear.compat/channelers_boots": "Channelers Boots",
-	
+
 	"enchantment.imbued_gear.bankai": "Bankai",
 	"enchantment.imbued_gear.bankai.desc": "Slash enemies in front of you so quickly you appear to teleport past them.",
 	"enchantment.imbued_gear.spell_rage": "Spell Rage",
@@ -197,6 +197,7 @@
 
 	"scepter.modifier.imbued_gear:healers_reward": "Healers Reward",
 	"scepter.modifier.imbued_gear:cosmic": "Cosmic",
+	"scepter.modifier.imbued_gear:call_of_the_void": "Call of the Void",
 	"scepter.modifier.imbued_gear:whisper_of_regret_scepter": "Murmur of Regret",
 	"scepter.modifier.imbued_gear:kindled_scepter": "Stoked",
 	"equipment.modifier.imbued_gear:wisened": "Wisened",
@@ -238,6 +239,7 @@
 
 	"scepter.modifier.imbued_gear:healers_reward.desc": "Gain 1 experience for every healing spell cast.",
 	"scepter.modifier.imbued_gear:cosmic.desc": "Spell level increased by 1, cooldown and mana cost decreased by 25%, damage increased by 2, spell effect duration increased by 25%.",
+	"scepter.modifier.imbued_gear:call_of_the_void.desc": "Chance to curse target(s) on hit. Spell cooldown reduced, but mana cost increased.",
 	"scepter.modifier.imbued_gear:whisper_of_regret_scepter.desc": "Damage increased by 25%, Spell level increased by 1, and spell amplification increased by 2 levels.",
 	"scepter.modifier.imbued_gear:kindled_scepter.desc": "spell cooldown decreased by 60%",
 	"equipment.modifier.imbued_gear:wisened.desc": "Adds 1.5 experience whenever a player gains xp",
@@ -309,7 +311,7 @@
 	"equipment.modifier.imbued_gear:compat/miners_luck.desc": "Increases quality and quantity of loot drop from mining.",
 	"equipment.modifier.imbued_gear:compat/miners_durability.desc": "Grants resistance when deep underground.",
 	"equipment.modifier.imbued_gear:compat/sunrise.desc": "Todo",
-	
+
 	"ia.readme.main_header.title": "README - Imbued Gear"
-	
+
 }
