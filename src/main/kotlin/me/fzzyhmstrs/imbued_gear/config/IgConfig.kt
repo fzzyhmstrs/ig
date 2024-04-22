@@ -1,6 +1,7 @@
 package me.fzzyhmstrs.imbued_gear.config
 
 import me.fzzyhmstrs.fzzy_config.annotations.ConvertFrom
+import me.fzzyhmstrs.fzzy_config.annotations.RequiresRestart
 import me.fzzyhmstrs.fzzy_config.api.ConfigApi
 import me.fzzyhmstrs.fzzy_config.config.Config
 import me.fzzyhmstrs.fzzy_config.config.ConfigSection
@@ -56,6 +57,7 @@ object IgConfig {
 
         var armor = Armor()
 
+        @RequiresRestart
         class Armor : ConfigSection() {
             var archon = IgArmorMaterialsConfig.ARCHON
             var celestial = IgArmorMaterialsConfig.CELESTIAL
@@ -72,6 +74,7 @@ object IgConfig {
 
         var tools = Tools()
 
+        @RequiresRestart
         class Tools : ConfigSection() {
             var nihil = IgToolMaterialsConfig.NIHIL
             var radiant = IgToolMaterialsConfig.RADIANT
