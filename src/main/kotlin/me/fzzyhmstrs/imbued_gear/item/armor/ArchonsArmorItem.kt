@@ -4,13 +4,13 @@ import com.google.common.collect.ArrayListMultimap
 import com.google.common.collect.Multimap
 import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
 import me.fzzyhmstrs.amethyst_core.registry.RegisterAttribute
-import me.fzzyhmstrs.imbued_gear.material.FzzyArmorMaterial
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
+import net.minecraft.item.ArmorMaterial
 import java.util.*
 
-class ArchonsArmorItem(fzzyMaterial: FzzyArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
+class ArchonsArmorItem(fzzyMaterial: ArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
 
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()

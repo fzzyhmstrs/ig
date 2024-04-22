@@ -49,6 +49,12 @@
     "trinkets": ">=${trinketsVersion}",
     "fzzy_core": ">=${fcVersion}",
     "amethyst_core": ">=${acVersion}",
-    "gear_core": ">=${gcVersion}"
+    "gear_core": ">=${gcVersion}",
+    "fzzy_config": ">=${fzzyConfigVersion}"
+  },
+  "custom": {
+    "fzzy_config": [
+      "imbued_gear"
+    ]
   }
 }

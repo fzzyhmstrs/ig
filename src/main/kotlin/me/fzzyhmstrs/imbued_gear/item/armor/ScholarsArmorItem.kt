@@ -3,12 +3,12 @@ package me.fzzyhmstrs.imbued_gear.item.armor
 import com.google.common.collect.ArrayListMultimap
 import com.google.common.collect.Multimap
 import me.fzzyhmstrs.amethyst_core.compat.spell_power.SpChecker
-import me.fzzyhmstrs.imbued_gear.material.FzzyArmorMaterial
+import net.minecraft.item.ArmorMaterial
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
 
-class ScholarsArmorItem(fzzyMaterial: FzzyArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
+class ScholarsArmorItem(fzzyMaterial: ArmorMaterial, type: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, type, settings) {
 
     private val attributeModifiers: Multimap<EntityAttribute, EntityAttributeModifier> by lazy {
         val map: ArrayListMultimap<EntityAttribute, EntityAttributeModifier> = ArrayListMultimap.create()

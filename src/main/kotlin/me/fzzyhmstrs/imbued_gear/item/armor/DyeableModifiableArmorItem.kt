@@ -1,8 +1,8 @@
 package me.fzzyhmstrs.imbued_gear.item.armor
 
 import me.fzzyhmstrs.imbued_gear.item.TwoLayerDyeable
-import me.fzzyhmstrs.imbued_gear.material.FzzyArmorMaterial
+import net.minecraft.item.ArmorMaterial
 
-class DyeableModifiableArmorItem(fzzyMaterial: FzzyArmorMaterial, slot: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, slot, settings), TwoLayerDyeable {
+class DyeableModifiableArmorItem(fzzyMaterial: ArmorMaterial, slot: Type, settings: Settings) : ModifiableArmorItem(fzzyMaterial, slot, settings), TwoLayerDyeable {
 
 }

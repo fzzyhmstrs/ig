@@ -3,6 +3,7 @@
 package me.fzzyhmstrs.imbued_gear
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap
+import me.fzzyhmstrs.imbued_gear.config.IgConfig
 import me.fzzyhmstrs.imbued_gear.item.BoneRattleItem
 import me.fzzyhmstrs.imbued_gear.item.TwoLayerDyeable
 import me.fzzyhmstrs.imbued_gear.registry.*
@@ -32,6 +33,7 @@ object IG: ModInitializer {
         RegisterLoot.registerAll()
         BoneRattleItem.registerServer()
         RegisterSound.registerAll()
+        IgConfig.initConfig()
     }
 
     fun igRandom(): Random{

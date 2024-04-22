@@ -124,8 +124,6 @@ tasks {
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions { jvmTarget = javaVersion.toString() }
-        sourceCompatibility = javaVersion.toString()
-        targetCompatibility = javaVersion.toString()
     }
     jar {
         from("LICENSE") { rename { "${base.archivesName.get()}_${it}" } }
@@ -140,6 +138,7 @@ tasks {
         val fcVersion: String by project
         val acVersion: String by project
         val gcVersion: String by project
+        val fzzyConfigVersion: String by project
         inputs.property("version", project.version)
         inputs.property("id", base.archivesName.get())
         inputs.property("loaderVersion", loaderVersion)
@@ -148,6 +147,7 @@ tasks {
         inputs.property("fcVersion", fcVersion)
         inputs.property("acVersion", acVersion)
         inputs.property("gcVersion", gcVersion)
+        inputs.property("fzzyConfigVersion",fzzyConfigVersion)
         filesMatching("fabric.mod.json") {
             expand(
                 mutableMapOf(
@@ -158,7 +158,8 @@ tasks {
                     "trinketsVersion" to trinketsVersion,
                     "fcVersion" to fcVersion,
                     "acVersion" to acVersion,
-                    "gcVersion" to gcVersion))
+                    "gcVersion" to gcVersion,
+                    "fzzyConfigVersion" to fzzyConfigVersion))
         }
     }
     java {

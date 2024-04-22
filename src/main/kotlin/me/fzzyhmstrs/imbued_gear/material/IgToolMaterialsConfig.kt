@@ -1,8 +1,9 @@
 package me.fzzyhmstrs.imbued_gear.material
 
-
+import me.fzzyhmstrs.amethyst_imbuement.AI
 import me.fzzyhmstrs.amethyst_imbuement.material.ScepterToolMaterial
-import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedToolMaterial
+import me.fzzyhmstrs.amethyst_imbuement.material.ValidatedToolMaterial
+import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.registry.RegisterItem
 import net.fabricmc.yarn.constants.MiningLevels
 import net.minecraft.recipe.Ingredient
@@ -14,7 +15,7 @@ object IgToolMaterialsConfig{
         .attackDamage(4.5f)
         .miningLevel(MiningLevels.NETHERITE)
         .enchantability(35)
-        .repairIngredient(Ingredient.ofItems(RegisterItem.VOIDSTEEL_INGOT))
+        .repairIngredient(IG.identity("voidsteel_ingot"))
         .build()
     val RADIANT = ValidatedToolMaterial.Builder()
         .durability(1851)
@@ -22,7 +23,7 @@ object IgToolMaterialsConfig{
         .attackDamage(6f)
         .miningLevel(MiningLevels.NETHERITE)
         .enchantability(15)
-        .repairIngredient(Ingredient.ofItems(RegisterItem.PURESTEEL_INGOT))
+        .repairIngredient(IG.identity("puresteel_ingot"))
         .build()
     val CELESTIAL = ValidatedToolMaterial.Builder()
         .durability(2650)
@@ -30,7 +31,7 @@ object IgToolMaterialsConfig{
         .attackDamage(10f)
         .miningLevel(MiningLevels.NETHERITE)
         .enchantability(45)
-        .repairIngredient(Ingredient.ofItems(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem.CELESTINE))
+        .repairIngredient(AI.identity("celestine"))
         .build()
     val SCEPTER_TIER_4 = ScepterToolMaterial.Builder(4)
         .attackSpeed(-3.0)
@@ -40,7 +41,7 @@ object IgToolMaterialsConfig{
         .attackDamage(0f)
         .miningLevel(1)
         .enchantability(25)
-        .repairIngredient(Ingredient.ofItems(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem.CELESTINE))
+        .repairIngredient(AI.identity("celestine"))
         .build()
     val CRACKLING = ScepterToolMaterial.Builder(2)
         .attackSpeed(-2.9)
@@ -50,6 +51,6 @@ object IgToolMaterialsConfig{
         .attackDamage(4f)
         .miningLevel(4)
         .enchantability(25)
-        .repairIngredient(Ingredient.ofItems(me.fzzyhmstrs.amethyst_imbuement.registry.RegisterItem.LETHAL_GEM))
+        .repairIngredient(AI.identity("lethal_gem"))
         .build()
 }

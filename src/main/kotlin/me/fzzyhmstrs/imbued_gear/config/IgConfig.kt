@@ -1,96 +1,62 @@
 package me.fzzyhmstrs.imbued_gear.config
 
-import me.fzzyhmstrs.fzzy_config.config_util.ConfigClass
-import me.fzzyhmstrs.fzzy_config.config_util.ConfigSection
-import me.fzzyhmstrs.fzzy_config.config_util.ReadMeText
-import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateAndValidate
-import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigHelperV1.readOrCreateUpdatedAndValidate
-import me.fzzyhmstrs.fzzy_config.config_util.SyncedConfigWithReadMe
-import me.fzzyhmstrs.fzzy_config.interfaces.OldClass
-import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedFloat
-import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedInt
-import me.fzzyhmstrs.fzzy_config.validated_field.ValidatedLong
-import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringBoolMap
-import me.fzzyhmstrs.fzzy_config.validated_field.map.ValidatedStringIntMap
+import me.fzzyhmstrs.fzzy_config.annotations.ConvertFrom
+import me.fzzyhmstrs.fzzy_config.api.ConfigApi
+import me.fzzyhmstrs.fzzy_config.config.Config
+import me.fzzyhmstrs.fzzy_config.config.ConfigSection
+import me.fzzyhmstrs.fzzy_config.validation.collection.ValidatedStringMap
+import me.fzzyhmstrs.fzzy_config.validation.misc.ValidatedBoolean
+import me.fzzyhmstrs.fzzy_config.validation.misc.ValidatedString
+import me.fzzyhmstrs.fzzy_config.validation.number.*
 import me.fzzyhmstrs.fzzy_core.coding_util.FzzyPort
 import me.fzzyhmstrs.imbued_gear.IG
 import me.fzzyhmstrs.imbued_gear.material.IgArmorMaterialsConfig
 import me.fzzyhmstrs.imbued_gear.material.IgToolMaterialsConfig
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener
 import net.minecraft.enchantment.Enchantment
-import net.minecraft.resource.ResourceManager
-import net.minecraft.resource.ResourceType
 import net.minecraft.util.Identifier
 
-object IgConfig:
-    SyncedConfigWithReadMe(
-        IG.MOD_ID,
-        "README.txt",
-        IG.MOD_ID,
-        Header.Builder()
-            .box("ia.readme.main_header.title")
-            .space()
-            .add("ia.readme.main_header.changelog")
-            .literal()
-            .add("0.1.0+1.20.1: Initial release of Imbued Gear.")
-            .add("0.2.2+1.20.1: Added hunters gear in materials_v1.")
-            .add("0.3.1+1.20.1: Added Archons set and new compat sets into materials_v2.")
-            .space()
-            .translate()
-            .add("ia.readme.main_header.note")
-            .space()
-            .space()
-            .build()), SimpleSynchronousResourceReloadListener
-{
+object IgConfig {
 
-    private val itemsHeader = buildSectionHeader("items")
-
-    class Items: ConfigClass(itemsHeader), OldClass<Items>{
+    @ConvertFrom("items_v0.json",IG.MOD_ID)
+    class Items: Config(IG.identity("items_config")){
 
         var ensouledTarget = ValidatedInt(32,Int.MAX_VALUE,0)
         var lootChanceMultiplier = ValidatedFloat(1f,10f,0f)
 
         val livingFlame = LivingFlame()
-        class LivingFlame(): ConfigSection(Header.Builder().space().add("ia.readme.items.living_flame").add("ia.readme.items.living_flame_2").build()){
+        class LivingFlame(): ConfigSection(){
             var effectDuration = ValidatedLong(600L, Long.MAX_VALUE,0L)
             var cooldown = ValidatedInt(3000,Int.MAX_VALUE,0)
         }
-        
+
         var boneRattle = BoneRattle()
-        class BoneRattle: ConfigSection(Header.Builder().space().add("ia.readme.items.bone_rattle").add("ia.readme.items.bone_rattle_2").build()){
+        class BoneRattle: ConfigSection(){
             var duplicationChance = ValidatedFloat(0.25f,1f,0f)
             var duplicationDamage = ValidatedInt(20,100,0)
             var repairTime = ValidatedInt(200,Int.MAX_VALUE,0)
         }
-        
+
         var ringOfSouls = RingOfSouls()
-        class RingOfSouls: ConfigSection(Header.Builder().space().add("ia.readme.items.ring_of_souls").add("ia.readme.items.ring_of_souls_2").build()){
+        class RingOfSouls: ConfigSection(){
             var maxTier = ValidatedInt(10, 25,1)
             var baseKillsPerTier = ValidatedInt(250, Int.MAX_VALUE,1)
             var killTierMultiplier = ValidatedFloat(2f, Float.MAX_VALUE,1f)
         }
 
         var crownOfSorrows = CrownOfSorrows()
-        class CrownOfSorrows: ConfigSection(Header.Builder().space().add("ia.readme.items.crown_of_sorrows").add("ia.readme.items.crown_of_sorrows_2").build()){
+        class CrownOfSorrows: ConfigSection(){
             var activeDuration = ValidatedLong(400, Long.MAX_VALUE,1)
             var defense50Percent = ValidatedInt(10000, Int.MAX_VALUE,10)
             var regret50Percent = ValidatedInt(25000, Int.MAX_VALUE,25)
         }
-
-        override fun generateNewClass(): Items {
-            return this
-        }
-
     }
 
-    private val materialsHeader = buildSectionHeader("materials")
-
-    class Materials: ConfigClass(materialsHeader), OldClass<Materials>{
+    @ConvertFrom("materials_v2.json",IG.MOD_ID)
+    class Materials: Config(IG.identity("materials_config")) {
 
         var armor = Armor()
 
-        class Armor: ConfigSection(Header.Builder().space().add("ia.readme.materials.armor_1").build()) {
+        class Armor : ConfigSection() {
             var archon = IgArmorMaterialsConfig.ARCHON
             var celestial = IgArmorMaterialsConfig.CELESTIAL
             var champion = IgArmorMaterialsConfig.CHAMPION
@@ -106,35 +72,24 @@ object IgConfig:
 
         var tools = Tools()
 
-        class Tools: ConfigSection(Header.Builder().space().add("ia.readme.materials.tools_1").build()) {
+        class Tools : ConfigSection() {
             var nihil = IgToolMaterialsConfig.NIHIL
             var radiant = IgToolMaterialsConfig.RADIANT
             var celestial = IgToolMaterialsConfig.CELESTIAL
             var scepterTier4 = IgToolMaterialsConfig.SCEPTER_TIER_4
-            var crackling = IgToolMaterialsConfig.CRACKLING        }
-        
-        
-        override fun generateNewClass(): Materials {
-            return this
+            var crackling = IgToolMaterialsConfig.CRACKLING
         }
-
     }
 
-    private val modifiersHeader = buildSectionHeader("modifiers")
-
-    class Modifiers: ConfigClass(modifiersHeader), OldClass<Modifiers>{
+    @ConvertFrom("modifiers_v0.json",IG.MOD_ID)
+    class Modifiers: Config(IG.identity("modifiers_config")) {
 
         fun isModifierEnabled(id: Identifier): Boolean{
             return enabledModifiers[id.toString()]?:false
         }
 
-        var enabledModifiers = ValidatedStringBoolMap(
-            mapOf(),
-            {str,_ -> Identifier.tryParse(str) != null},
-            invalidEntryMessage = "Needs to be a valid modifier identifier string"
-        )
+        var enabledModifiers = ValidatedStringMap(mapOf(), ValidatedString(), ValidatedBoolean())
 
-        @ReadMeText("ia.readme.modifiers.voidShroudedMultiplier")
         var nihilBladeNothingnessChance = ValidatedFloat(0.15f,1.0f)
         var nullAndVoidHitChance = ValidatedFloat(0.15f,1.0f)
         var voidStrikeHitChance = ValidatedFloat(0.15f,1.0f)
@@ -144,7 +99,7 @@ object IgConfig:
         var radiantBastionShieldChance = ValidatedFloat(0.333333f,1f)
 
         var gear = GearSection()
-        class GearSection: ConfigSection(Header.Builder().space().add("ia.readme.modifiers.gear").add("ia.readme.items.modifiers.gear_2").build()){
+        class GearSection: ConfigSection(){
             var manaVampiricHitChance = ValidatedFloat(0.15f,1f,0f)
             var manaVampiricHitAmount = ValidatedInt(10,100,1)
             var manaVampiricKillAmount = ValidatedInt(15,150,1)
@@ -153,16 +108,10 @@ object IgConfig:
             var manaDrainingKillAmount = ValidatedInt(10,150,1)
             var manaReactiveAmount = ValidatedInt(1,25,1)
         }
-
-        override fun generateNewClass(): Modifiers {
-            return this
-        }
-
     }
 
-    private val enchantsHeader = buildSectionHeader("enchants")
-
-    class Enchants: ConfigClass(enchantsHeader), OldClass<Enchants>{
+    @ConvertFrom("enchants_v1.json",IG.MOD_ID)
+    class Enchants: Config(IG.identity("enchants_config")) {
 
         fun isEnchantEnabled(enchantment: Enchantment): Boolean{
             val id = (FzzyPort.ENCHANTMENT.getId(enchantment) ?: return true).toString()
@@ -174,19 +123,17 @@ object IgConfig:
             return enchantMaxLevels[id]?:fallback
         }
 
-        @ReadMeText("ig.readme.enchants.enabledEnchants")
-        var enabledEnchants = ValidatedStringBoolMap(mapOf(
+        var enabledEnchants = ValidatedStringMap(mapOf(
             "imbued_gear:spell_rage" to true,
             "imbued_gear:spell_thrift" to true,
             "imbued_gear:spell_magnitude" to true,
             "imbued_gear:spell_stability" to true,
             "imbued_gear:spell_extent" to true,
             "imbued_gear:spell_alacrity" to true),
-            { id, _ -> Identifier.tryParse(id) != null},
-            "Needs a valid registered enchantment identifier.")
+            ValidatedString(),
+            ValidatedBoolean())
 
-        @ReadMeText("readme.enchants.aiEnchantMaxLevels")
-        var enchantMaxLevels = ValidatedStringIntMap(mapOf(
+        var enchantMaxLevels = ValidatedStringMap(mapOf(
             "imbued_gear:spell_rage" to 3,
             "imbued_gear:spell_thrift" to 3,
             "imbued_gear:spell_magnitude" to 1,
@@ -195,45 +142,17 @@ object IgConfig:
             "imbued_gear:spell_alacrity" to 3,
             "imbued_gear:spell_luck" to 3,
             "imbued_gear:spell_barbs" to 3),
-            { id, i -> Identifier.tryParse(id) != null && i > 0},
-            "Needs a valid registered enchantment identifier and a level greater than 0.")
-        override fun generateNewClass(): Enchants {
-            enchantMaxLevels.validateAndSet(mapOf(
-                "imbued_gear:spell_rage" to 3,
-                "imbued_gear:spell_thrift" to 3,
-                "imbued_gear:spell_magnitude" to 1,
-                "imbued_gear:spell_stability" to 3,
-                "imbued_gear:spell_extent" to 3,
-                "imbued_gear:spell_alacrity" to 3,
-                "imbued_gear:spell_luck" to 3,
-                "imbued_gear:spell_barbs" to 3))
-            return this
-        }
+            ValidatedString(),
+            ValidatedInt(1,7,1))
 
     }
 
-    var items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-    var materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
-    var modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
-    var enchants = readOrCreateUpdatedAndValidate("enchants_v1.json","enchants_v0.json", base = IG.MOD_ID, configClass =  {Enchants()}, previousClass = {Enchants()})
+    var items: Items = ConfigApi.registerAndLoadConfig({Items()})
+    var materials: Materials = ConfigApi.registerAndLoadConfig({Materials()})
+    var modifiers: Modifiers = ConfigApi.registerAndLoadConfig({Modifiers()})
+    var enchants: Enchants = ConfigApi.registerAndLoadConfig({Enchants()})
 
-    private fun buildSectionHeader(name:String): Header{
-        return Header.Builder().space().underoverscore("ig.readme.header.$name").add("ig.readme.header.$name.desc").space().build()
-    }
 
-    override fun initConfig() {
-        super.initConfig()
-        ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(this)
-    }
-
-    override fun reload(manager: ResourceManager?) {
-        items = readOrCreateAndValidate("items_v0.json", base = IG.MOD_ID) {Items()}
-        materials = readOrCreateUpdatedAndValidate("materials_v2.json","materials_v1.json", base = IG.MOD_ID, configClass =  {Materials()}, previousClass = {Materials()})
-        modifiers = readOrCreateAndValidate("modifiers_v0.json", base = IG.MOD_ID) {Modifiers()}
-        enchants = readOrCreateUpdatedAndValidate("enchants_v1.json","enchants_v0.json", base = IG.MOD_ID, configClass =  {Enchants()}, previousClass = {Enchants()})
-    }
-
-    override fun getFabricId(): Identifier {
-        return IG.identity("ig_configuration")
+    fun initConfig() {
     }
 }
